@@ -1,0 +1,6 @@
+{
+  "name": "Apex Relocations GTA",
+  "description": "Greater Toronto Area's premier moving company featuring instant interactive estimates, high-rise condo certificate of insurance guarantees, heavy item moving, GTA route calculators, packing supplies, storage vaults, and referral rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

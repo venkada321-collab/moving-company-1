@@ -24,154 +24,163 @@ export const COIModal: React.FC<COIModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="coi-modal-title"
     >
-      <div className="bg-[#131927] border border-slate-700 rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
+      <div className="bg-white text-neutral-900 border-2 border-amber-300 rounded-3xl shadow-2xl shadow-amber-950/20 max-w-2xl w-full overflow-hidden">
         
-        {/* Close Button */}
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute top-4 right-4 min-h-[44px] min-w-[44px] p-2.5 rounded-full bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
-          aria-label="Close modal"
-        >
-          <X className="w-5 h-5" aria-hidden="true" />
-        </button>
-
         {/* Modal Header */}
-        <div className="flex items-center gap-3">
-          <div className="p-3 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-            <ShieldCheck className="w-6 h-6" aria-hidden="true" />
+        <div className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 p-6 text-black border-b border-amber-400 flex items-start justify-between">
+          <div className="flex items-center gap-3">
+            <div className="p-3 rounded-2xl bg-white/40 text-amber-900 border border-amber-500/30">
+              <ShieldCheck className="w-6 h-6" aria-hidden="true" />
+            </div>
+            <div>
+              <h3 id="coi-modal-title" className="text-xl font-extrabold text-black font-['Outfit']">
+                Free {LEGAL.coiAmount} Condo Certificate of Insurance (COI)
+              </h3>
+              <p className="text-sm font-medium text-neutral-800 mt-1">
+                Directly transmitted to your {GEO.cities[0]} property management or concierge within 15 minutes.
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 id="coi-modal-title" className="text-xl font-black text-white font-['Outfit']">
-              Free {LEGAL.coiAmount} Condo Certificate of Insurance (COI)
-            </h3>
-            <p className="text-xs text-slate-300">
-              Directly transmitted to your {GEO.cities[0]} property management or concierge within 15 minutes.
-            </p>
-          </div>
+          
+          <button
+            type="button"
+            onClick={onClose}
+            className="min-h-[44px] min-w-[44px] p-2 rounded-full text-neutral-800 hover:text-black hover:bg-amber-500/20 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black transition-colors shrink-0"
+            aria-label="Close modal"
+          >
+            <X className="w-5 h-5" aria-hidden="true" />
+          </button>
         </div>
 
-        {!generated ? (
-          <form onSubmit={handleGenerateCOI} className="space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300">Condo Building Address *</label>
-                <input
-                  type="text"
-                  required
-                  value={condoAddress}
-                  onChange={(e) => setCondoAddress(e.target.value)}
-                  className="w-full bg-[#1c2438] border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
-                />
+        {/* Modal Body Content & Form */}
+        <div className="p-6 bg-white text-neutral-800 space-y-6">
+          {!generated ? (
+            <form onSubmit={handleGenerateCOI} className="space-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Condo Building Address *</label>
+                  <input
+                    type="text"
+                    required
+                    value={condoAddress}
+                    onChange={(e) => setCondoAddress(e.target.value)}
+                    className="w-full bg-white border border-neutral-300 text-neutral-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-400/20 rounded-xl p-3 font-medium focus:outline-none transition-all"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Condo Corporation Name *</label>
+                  <input
+                    type="text"
+                    required
+                    value={condoCorp}
+                    onChange={(e) => setCondoCorp(e.target.value)}
+                    placeholder={`e.g. ${GEO.condoCorpPrefix} #1982`}
+                    className="w-full bg-white border border-neutral-300 text-neutral-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-400/20 rounded-xl p-3 font-medium focus:outline-none transition-all"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Unit Number *</label>
+                  <input
+                    type="text"
+                    required
+                    value={unitNumber}
+                    onChange={(e) => setUnitNumber(e.target.value)}
+                    className="w-full bg-white border border-neutral-300 text-neutral-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-400/20 rounded-xl p-3 font-medium focus:outline-none transition-all"
+                  />
+                </div>
+
+                <div className="space-y-1.5 sm:col-span-2">
+                  <label className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Concierge / Manager Email *</label>
+                  <input
+                    type="email"
+                    required
+                    value={conciergeEmail}
+                    onChange={(e) => setConciergeEmail(e.target.value)}
+                    placeholder="concierge@building.com"
+                    className="w-full bg-white border border-neutral-300 text-neutral-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-400/20 rounded-xl p-3 font-medium focus:outline-none transition-all"
+                  />
+                </div>
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300">Condo Corporation Name (TSCC / PSCC #) *</label>
+                <label className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Reserved Elevator Date</label>
                 <input
-                  type="text"
+                  type="date"
                   required
-                  value={condoCorp}
-                  onChange={(e) => setCondoCorp(e.target.value)}
-                  placeholder={`e.g. ${GEO.condoCorpPrefix} #1982`}
-                  className="w-full bg-[#1c2438] border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300">Unit Number *</label>
-                <input
-                  type="text"
-                  required
-                  value={unitNumber}
-                  onChange={(e) => setUnitNumber(e.target.value)}
-                  className="w-full bg-[#1c2438] border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
+                  value={moveDate}
+                  onChange={(e) => setMoveDate(e.target.value)}
+                  className="w-full sm:w-1/2 bg-white border border-neutral-300 text-neutral-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-400/20 rounded-xl p-3 font-medium focus:outline-none transition-all"
                 />
               </div>
 
-              <div className="space-y-1.5 sm:col-span-2">
-                <label className="text-xs font-semibold text-slate-300">Concierge / Property Manager Email *</label>
-                <input
-                  type="email"
-                  required
-                  value={conciergeEmail}
-                  onChange={(e) => setConciergeEmail(e.target.value)}
-                  placeholder="concierge@building.com"
-                  className="w-full bg-[#1c2438] border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
-                />
+              {/* Information Badges / SLA Guarantee */}
+              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-neutral-800 font-medium text-sm flex gap-3 items-start">
+                <ShieldCheck className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-extrabold text-neutral-900">Coverage Details:</span> {BRAND.name} carries {LEGAL.coiAmount} Commercial General Liability under policy {LEGAL.coiPolicyNumber}, issued by {LEGAL.coiInsurer} with WSIB clearance.
+                </div>
               </div>
-            </div>
 
-            <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-300">Reserved Elevator Date</label>
-              <input
-                type="date"
-                required
-                value={moveDate}
-                onChange={(e) => setMoveDate(e.target.value)}
-                className="w-full sm:w-1/2 bg-[#1c2438] border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
-              />
-            </div>
-
-            <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 text-[11px] text-slate-300">
-              <span className="font-bold text-amber-400">Coverage Details:</span> {BRAND.name} carries {LEGAL.coiAmount} Commercial General Liability under policy {LEGAL.coiPolicyNumber}, issued by {LEGAL.coiInsurer} with WSIB clearance.
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 py-3 rounded-2xl font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20"
-            >
-              <Send className="w-4 h-4" />
-              <span>TRANSMIT COI TO CONCIERGE NOW</span>
-            </button>
-          </form>
-        ) : (
-          <div className="space-y-6 text-center py-4 animate-in fade-in duration-300">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-8 h-8" />
-            </div>
-
-            <h4 className="text-2xl font-black text-white font-['Outfit']">
-              CERTIFICATE OF INSURANCE TRANSMITTED!
-            </h4>
-
-            <p className="text-xs text-slate-300 max-w-md mx-auto">
-              An official PDF Certificate naming <span className="text-amber-400 font-bold">{condoCorp}</span> as Additional Insured has been emailed to <span className="text-white font-bold">{conciergeEmail}</span>.
-            </p>
-
-            {/* Mock Certificate Preview Card */}
-            <div className="bg-slate-900 border border-slate-700 p-4 rounded-2xl text-left text-xs font-mono space-y-1 text-slate-300">
-              <div className="text-amber-400 font-bold">CERTIFICATE OF LIABILITY INSURANCE {LEGAL.coiCertificateNumber}</div>
-              <div>INSURED: {BRAND.legalName} ({LEGAL.coiAmount} {GEO.currency})</div>
-              <div>ADDITIONAL INSURED: {condoCorp}</div>
-              <div>LOCATION: {condoAddress} ({unitNumber})</div>
-              <div>DATE OF MOVE: {moveDate}</div>
-              <div className="text-emerald-400 pt-1 font-sans text-[10px] font-bold">STATUS: Transmitted via Automated Insurance Portal</div>
-            </div>
-
-            <div className="flex items-center justify-center gap-3">
               <button
-                onClick={() => setGenerated(false)}
-                className="bg-slate-800 hover:bg-slate-700 text-slate-200 px-5 py-2.5 rounded-xl text-xs font-bold"
+                type="submit"
+                className="w-full bg-black hover:bg-neutral-800 text-amber-400 font-extrabold text-lg py-4 px-6 rounded-2xl shadow-xl shadow-black/15 transition-all flex items-center justify-center gap-2 uppercase tracking-wide"
               >
-                Edit Details
+                <Send className="w-5 h-5" />
+                <span>Transmit COI to Concierge Now</span>
               </button>
-              <button
-                onClick={onClose}
-                className="bg-amber-400 hover:bg-amber-300 text-slate-950 px-6 py-2.5 rounded-xl text-xs font-black uppercase"
-              >
-                Done
-              </button>
-            </div>
-          </div>
-        )}
+            </form>
+          ) : (
+            <div className="space-y-6 text-center py-6 animate-in fade-in duration-300">
+              <div className="w-20 h-20 rounded-full bg-green-100 text-green-600 border-4 border-green-200 flex items-center justify-center mx-auto shadow-inner">
+                <CheckCircle2 className="w-10 h-10" />
+              </div>
 
+              <h4 className="text-2xl font-extrabold text-neutral-900 font-['Outfit']">
+                CERTIFICATE OF INSURANCE TRANSMITTED!
+              </h4>
+
+              <p className="text-sm font-medium text-neutral-600 max-w-md mx-auto">
+                An official PDF Certificate naming <span className="text-amber-600 font-bold">{condoCorp}</span> as Additional Insured has been emailed to <span className="text-neutral-900 font-bold">{conciergeEmail}</span>.
+              </p>
+
+              {/* Mock Certificate Preview Card */}
+              <div className="bg-amber-50 border border-amber-200 p-5 rounded-2xl text-left text-xs font-mono space-y-1.5 text-neutral-700 shadow-sm max-w-lg mx-auto">
+                <div className="text-amber-700 font-bold text-sm mb-3 border-b border-amber-200 pb-2">CERTIFICATE OF LIABILITY INSURANCE {LEGAL.coiCertificateNumber}</div>
+                <div><span className="font-semibold text-neutral-900">INSURED:</span> {BRAND.legalName} ({LEGAL.coiAmount} {GEO.currency})</div>
+                <div><span className="font-semibold text-neutral-900">ADDITIONAL INSURED:</span> {condoCorp}</div>
+                <div><span className="font-semibold text-neutral-900">LOCATION:</span> {condoAddress} ({unitNumber})</div>
+                <div><span className="font-semibold text-neutral-900">DATE OF MOVE:</span> {moveDate}</div>
+                <div className="text-green-600 pt-3 font-sans text-[11px] font-bold flex items-center gap-1.5">
+                   <CheckCircle2 className="w-3.5 h-3.5" /> STATUS: Transmitted via Automated Insurance Portal
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center gap-3 pt-4">
+                <button
+                  onClick={() => setGenerated(false)}
+                  className="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 px-6 py-3 rounded-xl text-sm font-bold transition-colors border border-neutral-300"
+                >
+                  Edit Details
+                </button>
+                <button
+                  onClick={onClose}
+                  className="bg-black hover:bg-neutral-800 text-amber-400 px-8 py-3 rounded-xl text-sm font-extrabold uppercase shadow-lg shadow-black/10 transition-colors"
+                >
+                  Done
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,31 +1,31 @@
 // ============================================================
 // THEME CONFIG — Kratos Moving
-// Kratos uses a dark/gold/bronze aesthetic
+// Kratos Light & Warm Aesthetic: Amber & White (Major) + Black (Minor)
 // ============================================================
 
 export const THEME = {
-  // Primary accent color
+  // Primary accent & brand color (Amber & White dominant, with Black secondary/contrast)
   colors: {
-    primary: 'amber',       // Gold/bronze accent matching Kratos brand
-    secondary: 'emerald',   // Success states
+    primary: 'amber',       // Major accent color (buttons, highlights, badges, warm gradients)
+    secondary: 'black',     // Minor accent color (high-contrast text, secondary buttons, strong contrast accents)
   },
 
-  // Background hex codes (dark theme)
+  // Background hex codes (White & Amber major theme)
   backgrounds: {
-    page: '#0b0f19',
-    section: '#131927',
-    card: '#1c2438',
-    cardAlt: '#1a2033',
-    sectionAlt: '#0e1422',
-    heroOverlay: '#111726',
-    footerBottom: '#080b13',
+    page: '#ffffff',          // Crisp white primary background
+    section: '#fffbeb',       // Warm light amber tint (amber-50) for section container differentiation
+    card: '#ffffff',          // Pure white elevated cards with soft shadow
+    cardAlt: '#fef3c7',       // Amber-100 feature card background
+    sectionAlt: '#f8fafc',    // Clean slate-50 background for content breaks
+    heroOverlay: '#fffcf5',   // Soft warm amber-white ambient overlay
+    footerBottom: '#09090b',  // Black (minor color) anchoring footer
   },
 
   // Focus & selection
   focus: {
-    ringColor: '#fbbf24',
-    selectionBg: '#fbbf24',
-    selectionText: '#000000',
+    ringColor: '#d97706',     // amber-600 hex for sharp visibility on white and light backgrounds
+    selectionBg: '#fbbf24',   // Amber text selection background
+    selectionText: '#000000', // Black selection text
   },
 
   // Typography (matching Kratos' font stack)

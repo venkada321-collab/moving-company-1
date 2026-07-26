@@ -13,9 +13,6 @@ import { BookingConfirmationModal } from './components/BookingConfirmationModal'
 import { Footer } from './components/Footer';
 import { QuoteRequest } from './types';
 
-// Note: bg-[#0b0f19] and bg-amber-400 correspond to THEME colors
-// import { BRAND, GEO, LEGAL, PRICING } from './config';
-
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('quote');
   const [isCOIModalOpen, setIsCOIModalOpen] = useState<boolean>(false);
@@ -61,11 +58,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b0f19] text-slate-100 font-['Plus_Jakarta_Sans',sans-serif]">
+    <div className="min-h-screen bg-white text-neutral-900 font-['Montserrat',sans-serif]">
       {/* Skip to Main Content Link for Accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-amber-400 focus:text-slate-950 focus:font-extrabold focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-300 min-h-[44px] flex items-center"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-amber-400 focus:text-black focus:font-extrabold focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-black min-h-[44px] flex items-center"
       >
         Skip to main content
       </a>
@@ -78,7 +75,7 @@ export default function App() {
       />
 
       {/* Main View Router */}
-      <main id="main-content" tabIndex={-1}>
+      <main id="main-content" tabIndex={-1} className="bg-gradient-to-b from-white via-amber-50/20 to-white">
         {activeTab === 'quote' && (
           <>
             {/* Quote Calculator Front and Center in Hero */}
