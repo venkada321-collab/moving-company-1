@@ -8,12 +8,12 @@ interface COIModalProps {
 }
 
 export const COIModal: React.FC<COIModalProps> = ({ isOpen, onClose }) => {
-  const [condoAddress, setCondoAddress] = useState(GEO.defaultCondoAddress);
-  const [condoCorp, setCondoCorp] = useState(GEO.defaultCondoCorp);
-  const [unitNumber, setUnitNumber] = useState(GEO.defaultCondoUnit);
-  const [conciergeEmail, setConciergeEmail] = useState(GEO.defaultConciergeEmail);
-  const [moveDate, setMoveDate] = useState(new Date().toISOString().split('T')[0]);
-  const [generated, setGenerated] = useState(false);
+  const [condoAddress, setCondoAddress] = useState<string>(GEO.defaultCondoAddress);
+  const [condoCorp, setCondoCorp] = useState<string>(GEO.defaultCondoCorp);
+  const [unitNumber, setUnitNumber] = useState<string>(GEO.defaultCondoUnit);
+  const [conciergeEmail, setConciergeEmail] = useState<string>(GEO.defaultConciergeEmail);
+  const [moveDate, setMoveDate] = useState<string>(new Date().toISOString().split('T')[0]);
+  const [generated, setGenerated] = useState<boolean>(false);
 
   if (!isOpen) return null;
 

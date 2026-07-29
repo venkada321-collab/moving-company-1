@@ -4,3 +4,7 @@ dist/
 *.local
 .env
 .env.*
+mcp_config.json
+*.mcp*.json
+
+.vercel
