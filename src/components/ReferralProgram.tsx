@@ -35,7 +35,7 @@ export const ReferralProgram: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/10 border border-black/20 text-black text-xs font-bold uppercase tracking-widest mb-3">
             <Gift className="w-3.5 h-3.5" aria-hidden="true" /> {BRAND.referralProgramName}
           </div>
-          <h2 className="text-black font-black text-5xl md:text-6xl tracking-tight font-['Outfit']">
+          <h2 className="text-black font-black text-5xl md:text-6xl tracking-tight font-['Montserrat',sans-serif]">
             GIVE ${BRAND.referralGiveAmount}, <span className="text-neutral-900">GET ${BRAND.referralGetAmount} CASH BACK</span>
           </h2>
           <p className="mt-3 text-neutral-900 font-bold max-w-2xl md:mx-0 mx-auto text-lg">
@@ -52,7 +52,7 @@ export const ReferralProgram: React.FC = () => {
               <span className="text-xs font-bold text-amber-600 uppercase tracking-widest">
                 STEP 1: CREATE YOUR CUSTOM REFERRAL LINK
               </span>
-              <h3 className="text-2xl font-black text-neutral-900 font-['Outfit']">
+              <h3 className="text-2xl font-black text-neutral-900 font-['Montserrat',sans-serif]">
                 Generate Your Unique Ambassador Code
               </h3>
             </div>
@@ -130,7 +130,7 @@ export const ReferralProgram: React.FC = () => {
 
           {/* Right Column: Earnings Tracker Mockup & Rules */}
           <div className="lg:col-span-5 bg-white rounded-2xl p-6 border border-amber-200 shadow-xl shadow-amber-900/5 text-neutral-900 hover:border-amber-400 transition-all space-y-6">
-            <h4 className="text-lg font-bold text-neutral-900 font-['Outfit'] flex items-center gap-2">
+            <h4 className="text-lg font-bold text-neutral-900 font-['Montserrat',sans-serif] flex items-center gap-2">
               <DollarSign className="w-5 h-5 text-amber-500" aria-hidden="true" />
               How the ${BRAND.referralGetAmount} Reward Works
             </h4>

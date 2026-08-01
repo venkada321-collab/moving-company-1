@@ -1,0 +1,31 @@
+{
+  "name": "Atlas Premier Relocation",
+  "legalName": "Atlas Premier Relocations Group Inc.",
+  "shortName": "Atlas",
+  "logoSymbol": "A",
+  "domain": "atlasrelocation.ca",
+  "websiteUrl": "https://www.atlasrelocation.ca",
+  "phone": "(416) 555-8899",
+  "email": "concierge@atlasrelocation.ca",
+  "hqAddress": "180 Enterprise Blvd, Markham, ON L3R 5G5",
+  "pageTitle": "Atlas Premier Relocation | Luxury & Commercial Movers",
+  "metaDescription": "Canada's premier luxury relocation and climate-controlled storage company. Certified 5-Star service guaranteed.",
+  "heroTagline": "PRECISION RELOCATION & ULTRA-SECURITY STORAGE",
+  "heroSubtitle": "Seamless luxury residential moving, commercial office transitions, and climate-controlled storage solutions.",
+  "rankingClaim": "Canada's Top Rated Luxury Mover — 4,500+ Verified 5-Star Reviews",
+  "referralGiveAmount": 75,
+  "referralGetAmount": 150,
+  "oldBrandNameToReplace": "Kratos Moving",
+  "theme": {
+    "primary": "indigo",
+    "secondary": "slate",
+    "bgPage": "#f8fafc",
+    "bgSection": "#eff6ff",
+    "bgCardAlt": "#e0e7ff",
+    "bgSectionAlt": "#f1f5f9",
+    "bgHeroOverlay": "#f8fafc",
+    "bgFooter": "#0f172a",
+    "focusRing": "#4f46e5",
+    "selectionBg": "#c7d2fe"
+  }
+}

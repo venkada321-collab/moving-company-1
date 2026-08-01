@@ -22,7 +22,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-200 text-amber-700 text-xs font-bold uppercase tracking-widest mb-3">
             SPECIALIZED MOVING NICHES
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Outfit']">
+          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
             TAILORED CARE FOR <span className="text-amber-600">EVERY {GEO.regionName} SERVICE NICHE</span>
           </h2>
           <p className="mt-3 text-sm text-neutral-600">
@@ -56,7 +56,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                     <PackageCheck className={`w-6 h-6 ${isActive ? 'text-amber-400' : 'text-neutral-400'}`} aria-hidden="true" />
                   )}
                 </div>
-                <div className="text-sm font-extrabold font-['Outfit'] line-clamp-1">{niche.name}</div>
+                <div className="text-sm font-extrabold font-['Montserrat',sans-serif] line-clamp-1">{niche.name}</div>
                 <div className={`text-[11px] mt-1 ${isActive ? 'text-amber-400/90 font-semibold' : 'text-neutral-500'}`}>
                   From ${niche.baseRate}/hr
                 </div>
@@ -77,7 +77,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                 </span>
                 <span className="text-xs text-neutral-600 font-semibold">• {selectedNiche.extraFees}</span>
               </div>
-              <h2 className="text-2xl sm:text-4xl font-black text-black font-['Outfit']">
+              <h2 className="text-2xl sm:text-4xl font-black text-black font-['Montserrat',sans-serif]">
                 {selectedNiche.name}
               </h2>
             </div>
@@ -114,7 +114,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
 
               {/* Feature Check List */}
               <div className="space-y-3 pt-2">
-                <h3 className="text-sm font-extrabold uppercase tracking-wider font-['Outfit'] text-black">
+                <h3 className="text-sm font-extrabold uppercase tracking-wider font-['Montserrat',sans-serif] text-black">
                   Included Standards & Equipment Specs:
                 </h3>
                 {selectedNiche.features.map((feature, i) => (
@@ -135,7 +135,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
               <div className="grid grid-cols-3 gap-3 bg-gradient-to-r from-amber-100/80 to-amber-50 p-6 rounded-2xl border border-amber-300 text-neutral-900 shadow-sm">
                 {selectedNiche.stats.map((st, i) => (
                   <div key={i} className="text-center">
-                    <div className="text-lg sm:text-xl font-black text-black font-['Outfit']">{st.value}</div>
+                    <div className="text-lg sm:text-xl font-black text-black font-['Montserrat',sans-serif]">{st.value}</div>
                     <div className="text-[10px] font-semibold text-neutral-700 mt-0.5 leading-tight">{st.label}</div>
                   </div>
                 ))}

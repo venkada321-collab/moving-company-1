@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenC
             {BRAND.logoSymbol}
           </div>
           <div>
-            <div className="font-extrabold text-lg sm:text-xl tracking-tight text-neutral-900 flex items-center gap-1.5 font-['Outfit']">
+            <div className="font-extrabold text-lg sm:text-xl tracking-tight text-neutral-900 flex items-center gap-1.5 font-['Montserrat',sans-serif]">
               {BRAND.nameUpper.split(' ')[0]} <span className="text-amber-500">{BRAND.nameUpper.split(' ').slice(1).join(' ')}</span>
             </div>
             <div className="text-[10px] tracking-widest text-neutral-500 uppercase font-bold">

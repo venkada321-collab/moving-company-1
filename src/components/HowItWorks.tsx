@@ -61,7 +61,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
             <span className="text-black font-bold text-xs tracking-widest uppercase bg-amber-400 px-3 py-1 rounded-full border border-amber-500/20 shadow-sm">
               RELIABLE & PREDICTABLE
             </span>
-            <h2 className="text-3xl sm:text-5xl font-black text-neutral-900 mt-4 tracking-tight font-['Outfit']">
+            <h2 className="text-3xl sm:text-5xl font-black text-neutral-900 mt-4 tracking-tight font-['Montserrat',sans-serif]">
               HOW IT WORKS IN <span className="bg-amber-400 text-black px-3 py-1 rounded-lg inline-block mt-2 sm:mt-0">4 SIMPLE STEPS</span>
             </h2>
           </div>
@@ -82,7 +82,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
                 <div>
                   {/* Step Top Bar */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-3xl font-black text-neutral-300 group-hover:text-amber-400 transition-colors motion-reduce:transition-none font-['Outfit']">
+                    <span className="text-3xl font-black text-neutral-300 group-hover:text-amber-400 transition-colors motion-reduce:transition-none font-['Montserrat',sans-serif]">
                       {step.number}
                     </span>
                     <div className="w-12 h-12 rounded-2xl bg-black border border-black flex items-center justify-center text-amber-400 group-hover:bg-amber-400 group-hover:text-black transition-all motion-reduce:transition-none shadow-md">
@@ -94,7 +94,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
                     {step.badge}
                   </span>
 
-                  <h3 className="text-lg font-extrabold text-neutral-900 mb-1 font-['Outfit']">
+                  <h3 className="text-lg font-extrabold text-neutral-900 mb-1 font-['Montserrat',sans-serif]">
                     {step.title}
                   </h3>
                   <div className="text-xs font-bold text-amber-600 mb-3">{step.subtitle}</div>
@@ -138,7 +138,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
               <Zap className="w-7 h-7" aria-hidden="true" />
             </div>
             <div>
-              <h4 className="text-lg font-black text-neutral-900 font-['Outfit']">
+              <h4 className="text-lg font-black text-neutral-900 font-['Montserrat',sans-serif]">
                 Ready to Experience {GEO.regionLabel} Smooth Mover?
               </h4>
               <p className="text-xs text-neutral-600 font-medium mt-1">

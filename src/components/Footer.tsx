@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenCOIModal })
               <span className="text-[10px] font-extrabold text-black uppercase tracking-widest bg-black/10 px-3 py-1 rounded-full">
                 {GEO.regionName} MOVING NEWSLETTER
               </span>
-              <h3 className="text-xl sm:text-2xl font-black text-black font-['Outfit']">
+              <h3 className="text-xl sm:text-2xl font-black text-black font-['Montserrat',sans-serif]">
                 Subscribe for Moving Checklists & {PRICING.newsletterPromoLabel}
               </h3>
               <p className="text-xs text-neutral-900 font-medium">
@@ -81,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenCOIModal })
                 <div className="w-9 h-9 rounded-xl bg-amber-400 text-black font-black text-lg flex items-center justify-center" aria-hidden="true">
                   {BRAND.logoSymbol}
                 </div>
-                <div className="font-extrabold text-lg text-black font-['Outfit']">
+                <div className="font-extrabold text-lg text-black font-['Montserrat',sans-serif]">
                   {BRAND.nameUpper.split(' ')[0]} <span className="text-amber-600">{BRAND.nameUpper.split(' ')[1]}</span>
                 </div>
               </div>
@@ -108,7 +108,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenCOIModal })
 
             {/* Service Niches links */}
             <div className="space-y-3">
-              <h4 className="text-black font-extrabold tracking-wider mb-4 text-xs uppercase font-['Outfit']">
+              <h4 className="text-black font-extrabold tracking-wider mb-4 text-xs uppercase font-['Montserrat',sans-serif]">
                 Service Niches
               </h4>
               <ul className="space-y-2 text-neutral-600 font-medium">
@@ -142,7 +142,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenCOIModal })
 
             {/* GTA Route Directories */}
             <div className="space-y-3">
-              <h4 className="text-black font-extrabold tracking-wider mb-4 text-xs uppercase font-['Outfit']">
+              <h4 className="text-black font-extrabold tracking-wider mb-4 text-xs uppercase font-['Montserrat',sans-serif]">
                 Top {GEO.regionName} Routes
               </h4>
               <ul className="space-y-2 text-neutral-600 font-medium">
@@ -158,7 +158,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenCOIModal })
 
             {/* Company & Resources */}
             <div className="space-y-3">
-              <h4 className="text-black font-extrabold tracking-wider mb-4 text-xs uppercase font-['Outfit']">
+              <h4 className="text-black font-extrabold tracking-wider mb-4 text-xs uppercase font-['Montserrat',sans-serif]">
                 Resources & Program
               </h4>
               <ul className="space-y-2 text-neutral-600 font-medium">

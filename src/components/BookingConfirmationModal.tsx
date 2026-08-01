@@ -46,7 +46,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
           <span className="text-[10px] font-extrabold uppercase tracking-widest text-black/80 bg-white/30 px-3 py-1 rounded-full inline-block mb-1">
             ESTIMATE GUARANTEED & LOCKED
           </span>
-          <h3 id="booking-confirmation-title" className="text-2xl sm:text-3xl font-black text-black font-['Outfit']">
+          <h3 id="booking-confirmation-title" className="text-2xl sm:text-3xl font-black text-black font-['Montserrat',sans-serif]">
             QUOTE CONFIRMED #{refCode}
           </h3>
           <p className="text-sm font-medium text-black/80 max-w-md mx-auto">
@@ -122,7 +122,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
                 <div className="text-[10px] text-neutral-500 font-bold uppercase mb-1">Total All-Inclusive Estimate</div>
                 <div className="text-sm text-emerald-600 font-bold">Includes Crew, Truck, Fuel & COI</div>
               </div>
-              <div className="text-3xl font-black text-black font-['Outfit']">
+              <div className="text-3xl font-black text-black font-['Montserrat',sans-serif]">
                 ${quote.estimate.min} – ${quote.estimate.max}
               </div>
             </div>

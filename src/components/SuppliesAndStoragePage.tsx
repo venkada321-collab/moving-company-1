@@ -56,7 +56,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400 text-black text-xs font-black uppercase tracking-widest mb-3 shadow-md">
             <Sparkles className="w-4 h-4" /> PACKING SUPPLIES & VAULT STORAGE
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Outfit']">
+          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
             PREMIUM PACKING & <span className="text-amber-600">CLIMATE VAULTS</span>
           </h2>
           <p className="mt-3 text-sm text-neutral-600 font-medium">
@@ -136,7 +136,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                       {renderSupplyIcon(supply.id)}
                     </div>
 
-                    <h3 className="text-base font-bold text-black mb-1 font-['Outfit']">
+                    <h3 className="text-base font-bold text-black mb-1 font-['Montserrat',sans-serif]">
                       {supply.name}
                     </h3>
 
@@ -147,7 +147,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
 
                   <div className="pt-4 border-t border-neutral-200 flex items-center justify-between">
                     <div>
-                      <span className="text-2xl font-black text-amber-600 font-['Outfit']">
+                      <span className="text-2xl font-black text-amber-600 font-['Montserrat',sans-serif]">
                         ${supply.price.toFixed(2)}
                       </span>
                       <span className="text-[10px] text-neutral-500 ml-1 font-semibold">/ {supply.unit}</span>
@@ -189,7 +189,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
               <span className="text-xs font-black uppercase text-amber-700 tracking-widest bg-amber-200/50 px-3 py-1 rounded-full inline-flex items-center gap-1">
                 <Tag className="w-3 h-3" /> LIMITED {GEO.regionName} PROMOTION
               </span>
-              <h3 className="text-xl sm:text-2xl font-black text-black font-['Outfit']">
+              <h3 className="text-xl sm:text-2xl font-black text-black font-['Montserrat',sans-serif]">
                 {PRICING.storagePromoLabel}
               </h3>
               <p className="text-xs text-neutral-700">
@@ -219,7 +219,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                         <span className="text-[10px] text-amber-700 font-bold bg-amber-100 px-2 py-0.5 rounded">{PRICING.storagePromoPercent}% Promo Active</span>
                       </div>
 
-                      <h3 className="text-xl font-extrabold text-black mb-1 font-['Outfit']">
+                      <h3 className="text-xl font-extrabold text-black mb-1 font-['Montserrat',sans-serif]">
                         {vault.name}
                       </h3>
                       <div className="text-xs text-neutral-600 font-medium mb-3">Ideal for: {vault.idealFor}</div>
@@ -241,7 +241,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                     <div>
                       <div className={`mb-4 text-center p-3 rounded-2xl border ${isFeatured ? 'bg-white border-amber-300' : 'bg-amber-50/50 border-amber-200'}`}>
                         <div className="text-[10px] text-neutral-500 font-bold uppercase tracking-wider">First Month Special Price</div>
-                        <div className="text-3xl font-black text-black font-['Outfit']">
+                        <div className="text-3xl font-black text-black font-['Montserrat',sans-serif]">
                           ${(vault.pricePerMonth * (PRICING.storagePromoPercent / 100)).toFixed(0)} <span className="text-xs text-neutral-500 font-normal">/ month</span>
                         </div>
                         <div className="text-[11px] text-neutral-400 line-through">Regular ${vault.pricePerMonth}/mo</div>

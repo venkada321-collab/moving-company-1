@@ -1,0 +1,31 @@
+{
+  "name": "Kratos Moving",
+  "legalName": "Kratos Group of Companies Inc.",
+  "shortName": "Kratos",
+  "logoSymbol": "K",
+  "domain": "kratosmoving.com",
+  "websiteUrl": "https://www.kratosmoving.com",
+  "phone": "(647) 255-8444",
+  "email": "info@kratosmoving.com",
+  "hqAddress": "27 Roytec Rd, Unit 8B, Woodbridge, ON L4L 8E3",
+  "pageTitle": "Kratos Moving | Canada's #1 Trusted Moving Company",
+  "metaDescription": "Proudly serving all of Canada with Certified 5-Star moving and storage services. Call (647) 255-8444 for a free consultation.",
+  "heroTagline": "CANADA'S #1 TRUSTED MOVING COMPANY",
+  "heroSubtitle": "Done As Promised — certified 5-star moving, packing & storage across Ontario & beyond.",
+  "rankingClaim": "Certified 5-Star Service — 3,000+ Google Reviews",
+  "referralGiveAmount": 50,
+  "referralGetAmount": 100,
+  "oldBrandNameToReplace": "Atlas Premier Relocation",
+  "theme": {
+    "primary": "amber",
+    "secondary": "black",
+    "bgPage": "#ffffff",
+    "bgSection": "#fffbeb",
+    "bgCardAlt": "#fef3c7",
+    "bgSectionAlt": "#f8fafc",
+    "bgHeroOverlay": "#fffcf5",
+    "bgFooter": "#09090b",
+    "focusRing": "#d97706",
+    "selectionBg": "#fbbf24"
+  }
+}

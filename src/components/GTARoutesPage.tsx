@@ -21,7 +21,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-widest mb-3">
             {GEO.regionName} & ONTARIO CORRIDOR ROUTES
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Outfit']">
+          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
             POPULAR <span className="text-amber-600">{GEO.regionFull.toUpperCase()}</span> & LONG-DISTANCE ROUTES
           </h2>
           <p className="mt-3 text-sm text-neutral-600">
@@ -51,7 +51,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                   <span className="text-neutral-600">Est. ~{route.estHours} Hours</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-sm sm:text-base font-extrabold text-black font-['Outfit'] mb-1">
+                <div className="flex items-center gap-2 text-sm sm:text-base font-extrabold text-black font-['Montserrat',sans-serif] mb-1">
                   <span>{route.fromCity}</span>
                   <ArrowRight className={`w-4 h-4 shrink-0 ${isSelected ? 'text-amber-600' : 'text-amber-500'}`} aria-hidden="true" />
                   <span>{route.toCity}</span>
@@ -74,7 +74,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                 <Navigation className="w-4 h-4" aria-hidden="true" />
                 ROUTE EXPLORER DETAILS
               </div>
-              <h2 className="text-2xl sm:text-4xl font-black text-black font-['Outfit'] flex flex-wrap items-center gap-3">
+              <h2 className="text-2xl sm:text-4xl font-black text-black font-['Montserrat',sans-serif] flex flex-wrap items-center gap-3">
                 <span>{activeRoute.fromCity}</span>
                 <ArrowRight className="w-5 h-5 sm:w-7 sm:h-7 text-amber-500 shrink-0" aria-hidden="true" />
                 <span>{activeRoute.toCity}</span>
@@ -101,7 +101,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
 
               {/* Route Highlights */}
               <div className="space-y-3">
-                <h3 className="text-sm font-bold text-amber-600 uppercase tracking-wider font-['Outfit']">
+                <h3 className="text-sm font-bold text-amber-600 uppercase tracking-wider font-['Montserrat',sans-serif]">
                   Route Optimization & Special Logistics:
                 </h3>
                 {activeRoute.highlights.map((h, i) => (
@@ -119,15 +119,15 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
               {/* Route Metric Cards */}
               <div className="grid grid-cols-3 gap-3 bg-amber-50/50 p-4 rounded-2xl border border-amber-200 text-center">
                 <div>
-                  <div className="text-lg font-black text-black font-['Outfit']">{activeRoute.distance} km</div>
+                  <div className="text-lg font-black text-black font-['Montserrat',sans-serif]">{activeRoute.distance} km</div>
                   <div className="text-[10px] text-neutral-600 font-bold uppercase mt-1">Distance</div>
                 </div>
                 <div>
-                  <div className="text-lg font-black text-amber-600 font-['Outfit']">~{activeRoute.estHours} hrs</div>
+                  <div className="text-lg font-black text-amber-600 font-['Montserrat',sans-serif]">~{activeRoute.estHours} hrs</div>
                   <div className="text-[10px] text-neutral-600 font-bold uppercase mt-1">Est. Completion</div>
                 </div>
                 <div>
-                  <div className="text-lg font-black text-emerald-600 font-['Outfit']">{activeRoute.avgCostRange}</div>
+                  <div className="text-lg font-black text-emerald-600 font-['Montserrat',sans-serif]">{activeRoute.avgCostRange}</div>
                   <div className="text-[10px] text-neutral-600 font-bold uppercase mt-1">Est. Cost Range</div>
                 </div>
               </div>

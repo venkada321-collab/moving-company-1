@@ -38,7 +38,7 @@ export const COIModal: React.FC<COIModalProps> = ({ isOpen, onClose }) => {
               <ShieldCheck className="w-6 h-6" aria-hidden="true" />
             </div>
             <div>
-              <h3 id="coi-modal-title" className="text-xl font-extrabold text-black font-['Outfit']">
+              <h3 id="coi-modal-title" className="text-xl font-extrabold text-black font-['Montserrat',sans-serif]">
                 Free {LEGAL.coiAmount} Condo Certificate of Insurance (COI)
               </h3>
               <p className="text-sm font-medium text-neutral-800 mt-1">
@@ -144,7 +144,7 @@ export const COIModal: React.FC<COIModalProps> = ({ isOpen, onClose }) => {
                 <CheckCircle2 className="w-10 h-10" />
               </div>
 
-              <h4 className="text-2xl font-extrabold text-neutral-900 font-['Outfit']">
+              <h4 className="text-2xl font-extrabold text-neutral-900 font-['Montserrat',sans-serif]">
                 CERTIFICATE OF INSURANCE TRANSMITTED!
               </h4>
 

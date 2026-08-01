@@ -24,7 +24,7 @@ export const TrustSignals: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-600 text-xs font-bold uppercase tracking-widest mb-3">
             <Award className="w-3.5 h-3.5" aria-hidden="true" /> VERIFIED TRUST & REPUTATION
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-neutral-900 tracking-tight font-['Outfit']">
+          <h2 className="text-3xl sm:text-5xl font-black text-neutral-900 tracking-tight font-['Montserrat',sans-serif]">
             TRUSTED BY <span className="text-amber-600">{LEGAL.totalMoves} {GEO.regionName} RESIDENTS</span> & CONDO BOARDS
           </h2>
           <p className="mt-3 text-sm text-neutral-600">
@@ -43,7 +43,7 @@ export const TrustSignals: React.FC = () => {
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-black bg-amber-400 px-2 py-0.5 rounded-full inline-block mb-1.5">
                 {award.badgeText}
               </span>
-              <h4 className="text-sm font-extrabold text-neutral-900 font-['Outfit']">{award.title}</h4>
+              <h4 className="text-sm font-extrabold text-neutral-900 font-['Montserrat',sans-serif]">{award.title}</h4>
               <div className="text-[11px] text-neutral-600 mt-0.5">{award.organization}</div>
               <div className="text-[10px] font-bold text-neutral-500 mt-1">{award.year}</div>
             </div>
@@ -60,7 +60,7 @@ export const TrustSignals: React.FC = () => {
                 <Star key={i} className="w-6 h-6 fill-amber-400" aria-hidden="true" />
               ))}
             </div>
-            <div className="text-5xl font-black text-amber-600 font-['Outfit']">{LEGAL.starRatingDisplay}</div>
+            <div className="text-5xl font-black text-amber-600 font-['Montserrat',sans-serif]">{LEGAL.starRatingDisplay}</div>
             <div className="text-xs font-bold text-neutral-600 mt-1">VERIFIED HIGH-RATING SCORE</div>
             <p className="text-xs text-neutral-600 mt-3 leading-relaxed">
               Based on {LEGAL.reviewCount} combined reviews on {LEGAL.reviewPlatforms}.
@@ -164,7 +164,7 @@ export const TrustSignals: React.FC = () => {
           <div className="flex items-start gap-3 bg-black text-amber-400 rounded-2xl p-6 border border-black shadow-2xl">
             <ShieldCheck className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" aria-hidden="true" />
             <div>
-              <h4 className="text-sm font-bold text-white font-['Outfit']">{LEGAL.damageFreeGuarantee}</h4>
+              <h4 className="text-sm font-bold text-white font-['Montserrat',sans-serif]">{LEGAL.damageFreeGuarantee}</h4>
               <p className="text-xs text-slate-300 mt-1">Full replacement value protection option with zero deductible hassle.</p>
             </div>
           </div>
@@ -172,7 +172,7 @@ export const TrustSignals: React.FC = () => {
           <div className="flex items-start gap-3 bg-black text-amber-400 rounded-2xl p-6 border border-black shadow-2xl">
             <Award className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" aria-hidden="true" />
             <div>
-              <h4 className="text-sm font-bold text-white font-['Outfit']">{LEGAL.backgroundChecked}</h4>
+              <h4 className="text-sm font-bold text-white font-['Montserrat',sans-serif]">{LEGAL.backgroundChecked}</h4>
               <p className="text-xs text-slate-300 mt-1">Every mover is directly employed, drug-tested, and professionally trained.</p>
             </div>
           </div>
@@ -180,7 +180,7 @@ export const TrustSignals: React.FC = () => {
           <div className="flex items-start gap-3 bg-black text-amber-400 rounded-2xl p-6 border border-black shadow-2xl">
             <Star className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" aria-hidden="true" />
             <div>
-              <h4 className="text-sm font-bold text-white font-['Outfit']">Fast Free Condo COI</h4>
+              <h4 className="text-sm font-bold text-white font-['Montserrat',sans-serif]">Fast Free Condo COI</h4>
               <p className="text-xs text-slate-300 mt-1">Direct PDF transmission to your property manager with {LEGAL.coiAmountShort} liability coverage.</p>
             </div>
           </div>

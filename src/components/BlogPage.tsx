@@ -23,7 +23,7 @@ export const BlogPage: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-400 text-black text-xs font-bold uppercase tracking-widest mb-3">
             {GEO.regionName} RELOCATION KNOWLEDGE HUB
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Outfit']">
+          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
             {GEO.regionName} MOVING GUIDES & <span className="text-amber-600">EXPERT INSIGHTS</span>
           </h2>
           <p className="mt-3 text-sm text-neutral-600">
@@ -78,7 +78,7 @@ export const BlogPage: React.FC = () => {
                     <span className="flex items-center gap-1"><Clock className="w-3 h-3 text-amber-600" aria-hidden="true" /> {post.readTime}</span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-black mb-2 leading-snug font-['Outfit'] group-hover:text-amber-600 transition-colors motion-reduce:transition-none">
+                  <h3 className="text-lg font-bold text-black mb-2 leading-snug font-['Montserrat',sans-serif] group-hover:text-amber-600 transition-colors motion-reduce:transition-none">
                     {post.title}
                   </h3>
 
@@ -135,7 +135,7 @@ export const BlogPage: React.FC = () => {
                 {selectedPost.category} Guide
               </span>
 
-              <h2 id="blog-modal-title" className="text-2xl sm:text-3xl font-black text-black font-['Outfit']">
+              <h2 id="blog-modal-title" className="text-2xl sm:text-3xl font-black text-black font-['Montserrat',sans-serif]">
                 {selectedPost.title}
               </h2>
 
