@@ -1,11 +1,11 @@
 ---
 name: white-label-deploy-pro-max
-description: Encapsulates end-to-end automated workflows for target website intelligence extraction, modular design token & component architecture substitution, UI/UX Pro Max design compliance enforcement, zero-error compile testing, GitHub repository provisioning, and live Vercel production edge deployment. Activate this skill whenever white-labeling, re-theming, or building bespoke brand variations of the web application template.
+description: Encapsulates end-to-end automated workflows for engineering standard website templates into dynamic modular engines, target website intelligence extraction, automated substitution, UI/UX Pro Max compliance enforcement, zero-error compile testing, GitHub provisioning, and Vercel edge deployment. Activate this skill whenever building a template engine from a static site, white-labeling, re-theming, or deploying brand variations.
 ---
 
-# 🚀 White-Label Deploy Pro Max — Advanced Web Extraction, Modular Customization & Deployment Engine
+# 🚀 White-Label Deploy Pro Max — Template Engine Engineering, Extraction & Deployment Protocol
 
-This authoritative operational protocol defines an end-to-end, deterministic AI engine for transforming target website assets into production-grade, bespoke web applications on Vercel and GitHub using the **Antigravity Modular Web Template**.
+This authoritative operational protocol defines an end-to-end, deterministic AI framework for engineering static standard website templates into multi-tenant template engines, extracting target brand intelligence, and deploying production-grade bespoke web applications on Vercel and GitHub.
 
 ---
 
@@ -41,6 +41,24 @@ The template utilizes a library of stackable, toggleable, and re-orderable compo
 ---
 
 ## 📋 Operational Execution Workflow
+
+### Phase 0: Master Template Engine Engineering (Refactoring Normal Templates)
+When tasked with starting from a standard, static website template that lacks modular customization architecture, the agent **MUST** engineer the template into an automated white-label engine before attempting brand extraction or site cloning:
+
+1. **Extract Global Design Tokens (`src/config/theme.ts` & `src/index.css`):**
+   - Audit all component source files to identify hardcoded color hex codes, typography selections, border radii (e.g., `rounded-3xl`), elevation drop shadows, and transition timings.
+   - Extract these values into a centralized `THEME` export in `theme.ts`. Bind root CSS variable tokens (`:root { --radius-card: ... }`) into `@layer base` within `index.css` or inject via runtime stylesheet blocks so geometry and themes can be controlled programmatically.
+2. **Build Modular Layout Matrix & Component Sequencing (`src/config/layout.ts`):**
+   - Refactor hardcoded sequential JSX layouts in main routing components (`App.tsx` or `index.tsx`).
+   - Define a `sectionsEnabled` boolean visibility matrix and a dynamic `sectionOrder` rendering sequence array so page blocks can be re-ordered, toggled, or customized per client tier without modifying source JSX.
+3. **Centralize Copywriting & Microcopy Registries (`src/config/microcopy.ts` & `src/config/brand.ts`):**
+   - Isolate company identities, addresses, legal disclaimers, button call-to-action text, form placeholder strings, and guarantee claims into configuration modules.
+4. **Implement Shape Divider & Geometry Overlays (`src/components/SectionDivider.tsx`):**
+   - Build customizable decorative SVG section boundaries (`soft-wave`, `diagonal-cut`, `rounded-curve`, `flat`) between structural page blocks.
+5. **Develop Automated Substitution Automation (`scripts/populate_template.cjs`):**
+   - Write a Node automation script that ingests target JSON onboarding profiles and programmatically modifies `brand.ts`, `theme.ts`, `layout.ts`, and `microcopy.ts` to transform the application without manual code editing.
+
+---
 
 ### Phase 1: Target Website Intelligence Extraction & Asset Profiling
 1. **Information Retrieval:** Use `read_url_content`, web search, or browser tools to analyze the target brand website.
