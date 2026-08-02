@@ -26,6 +26,57 @@
     "bgHeroOverlay": "#fffcf5",
     "bgFooter": "#09090b",
     "focusRing": "#d97706",
-    "selectionBg": "#fbbf24"
+    "selectionBg": "#fbbf24",
+    "tokens": {
+      "borderRadius": {
+        "card": "24px",
+        "button": "16px",
+        "badge": "9999px"
+      },
+      "shadows": {
+        "card": "0 20px 25px -5px rgba(245, 158, 11, 0.12)"
+      },
+      "animation": {
+        "speed": "200ms",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "dividerStyle": {
+        "type": "soft-wave",
+        "color": "#fffbeb"
+      }
+    }
+  },
+  "layout": {
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    },
+    "sectionOrder": [
+      "hero_quote_calculator",
+      "how_it_works",
+      "trust_signals",
+      "service_niches",
+      "gta_routes",
+      "supplies_and_storage",
+      "referral_program",
+      "blog_page"
+    ],
+    "variants": {
+      "hero": "calculator-split"
+    }
+  },
+  "microcopy": {
+    "buttons": {
+      "getQuote": "Calculate Your Instant Estimate",
+      "submitQuote": "Lock In Your All-Inclusive Rate",
+      "requestCOI": "Need COI Sent To Your Condo Concierge Now?"
+    },
+    "toneProfile": "professional-approachable"
   }
 }

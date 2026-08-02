@@ -4,6 +4,8 @@ import {
   CheckCircle2, Plus, Minus, Tag, Shield, Star, Award, ChevronRight, Sparkles, AlertCircle, FileText, Lightbulb
 } from 'lucide-react';
 import { BRAND, GEO, LEGAL, PRICING } from '../config';
+import { THEME } from '../config/theme';
+import { MICROCOPY } from '../config/microcopy';
 import { SERVICE_NICHES, PACKING_SUPPLIES, STORAGE_OPTIONS } from '../data/mockData';
 import { QuoteRequest } from '../types';
 
@@ -679,7 +681,11 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
             </div>
 
             {/* RIGHT SIDE: Real-Time Dynamic Estimate Summary Panel */}
-            <div aria-live="polite" className="lg:col-span-6 bg-gradient-to-b from-white via-amber-50/60 to-amber-100/80 border-2 border-amber-400 rounded-3xl p-6 sm:p-8 md:p-10 relative overflow-hidden shadow-2xl shadow-amber-950/15">
+            <div 
+              aria-live="polite" 
+              style={{ borderRadius: THEME.borderRadius.card }}
+              className="lg:col-span-6 bg-gradient-to-b from-white via-amber-50/60 to-amber-100/80 border-2 border-amber-400 p-6 sm:p-8 md:p-10 relative overflow-hidden shadow-2xl shadow-amber-950/15"
+            >
               {/* Background badge icon */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-400/15 rounded-full blur-2xl pointer-events-none" />
 
@@ -698,7 +704,10 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
               </div>
 
               {/* Big Price Range Display */}
-              <div className="my-6 text-center bg-white rounded-2xl p-6 border-2 border-amber-400 shadow-xl shadow-amber-950/5">
+              <div 
+                style={{ borderRadius: THEME.borderRadius.card }}
+                className="my-6 text-center bg-white p-6 border-2 border-amber-400 shadow-xl shadow-amber-950/5"
+              >
                 <div className="text-xs text-neutral-700 font-black uppercase tracking-wider mb-1.5">TOTAL ALL-INCLUSIVE ESTIMATE</div>
                 <div className="text-4xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
                   ${liveEstimate.min} – ${liveEstimate.max}
@@ -768,10 +777,15 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
               <button
                 type="button"
                 onClick={onOpenCOIModal}
-                className="w-full mt-6 py-3.5 px-4 rounded-2xl bg-black hover:bg-neutral-900 border-2 border-black text-amber-400 shadow-xl shadow-black/15 font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 hover:scale-[1.01] transition-all"
+                style={{ 
+                  borderRadius: THEME.borderRadius.button,
+                  transitionDuration: THEME.animation.speed,
+                  transitionTimingFunction: THEME.animation.easing
+                }}
+                className="w-full mt-6 py-3.5 px-4 bg-black hover:bg-neutral-900 border-2 border-black text-amber-400 shadow-xl shadow-black/15 font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 hover:scale-[1.01] transition-all"
               >
                 <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 shrink-0" />
-                <span>Need COI Sent To Your Condo Concierge Now?</span>
+                <span>{MICROCOPY.buttons.requestCOI}</span>
               </button>
 
             </div>

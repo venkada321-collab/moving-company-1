@@ -16,7 +16,9 @@ const profile = JSON.parse(fs.readFileSync(profilePath, 'utf8'));
 // Helper to safely format string literals for TypeScript code generation
 const s = (val, defaultVal) => JSON.stringify(val !== undefined && val !== null ? val : defaultVal);
 
-// 1. Update src/config/brand.ts
+// ============================================================
+// 1. UPDATE src/config/brand.ts (Pillar 5: Identity & Content)
+// ============================================================
 const brandConfigPath = path.join(__dirname, '..', 'src', 'config', 'brand.ts');
 const brandContent = `// ============================================================
 // BRAND CONFIG — ${profile.name || 'White-Label Relocation'}
@@ -72,46 +74,173 @@ export const BRAND = {
 fs.writeFileSync(brandConfigPath, brandContent, 'utf8');
 console.log('✅ Updated src/config/brand.ts');
 
-// 2. Update src/config/theme.ts if custom color theme provided
-if (profile.theme && (profile.theme.primary || profile.theme.secondary)) {
+// ============================================================
+// 2. UPDATE src/config/theme.ts (Pillar 1, 3 & 4: Tokens, Geometry, Motion)
+// ============================================================
+if (profile.theme || profile.designTokens) {
+  const t = profile.theme || {};
+  const tokens = profile.designTokens || t.tokens || {};
   const themeConfigPath = path.join(__dirname, '..', 'src', 'config', 'theme.ts');
   const themeContent = `// ============================================================
-// THEME CONFIG — ${profile.name || 'Custom Relocations'}
-// UI/UX Pro Max Aesthetic: ${profile.theme.primary || 'amber'} (Major) + ${profile.theme.secondary || 'black'} (Minor)
+// THEME & DESIGN TOKENS CONFIG — ${profile.name || 'Custom Relocations'}
+// UI/UX Pro Max Aesthetic: ${t.primary || 'amber'} (Major) + ${t.secondary || 'black'} (Minor)
 // ============================================================
 
 export const THEME = {
   colors: {
-    primary: ${s(profile.theme.primary, 'amber')},
-    secondary: ${s(profile.theme.secondary, 'black')},
+    primary: ${s(t.primary, 'amber')},
+    secondary: ${s(t.secondary, 'black')},
+    semantic: {
+      success: ${s(tokens.semantic?.success, '#059669')},
+      warning: ${s(tokens.semantic?.warning, '#d97706')},
+      error: ${s(tokens.semantic?.error, '#e11d48')},
+      info: ${s(tokens.semantic?.info, '#0284c7')},
+    }
   },
   backgrounds: {
-    page: ${s(profile.theme.bgPage, '#ffffff')},
-    section: ${s(profile.theme.bgSection, '#fffbeb')},
+    page: ${s(t.bgPage, '#ffffff')},
+    section: ${s(t.bgSection, '#fffbeb')},
     card: '#ffffff',
-    cardAlt: ${s(profile.theme.bgCardAlt, '#fef3c7')},
-    sectionAlt: ${s(profile.theme.bgSectionAlt, '#f8fafc')},
-    heroOverlay: ${s(profile.theme.bgHeroOverlay, '#fffcf5')},
-    footerBottom: ${s(profile.theme.bgFooter, '#09090b')},
+    cardAlt: ${s(t.bgCardAlt, '#fef3c7')},
+    sectionAlt: ${s(t.bgSectionAlt, '#f8fafc')},
+    heroOverlay: ${s(t.bgHeroOverlay, '#fffcf5')},
+    footerBottom: ${s(t.bgFooter, '#09090b')},
+  },
+  borderRadius: {
+    card: ${s(tokens.borderRadius?.card, '24px')},
+    button: ${s(tokens.borderRadius?.button, '16px')},
+    badge: ${s(tokens.borderRadius?.badge, '9999px')},
+    input: ${s(tokens.borderRadius?.input, '12px')},
+  },
+  shadows: {
+    card: ${s(tokens.shadows?.card, '0 20px 25px -5px rgba(245, 158, 11, 0.12), 0 8px 10px -6px rgba(245, 158, 11, 0.08)')},
+    hover: ${s(tokens.shadows?.hover, '0 25px 50px -12px rgba(0, 0, 0, 0.25)')},
+    button: ${s(tokens.shadows?.button, '0 10px 15px -3px rgba(0, 0, 0, 0.15)')},
+  },
+  animation: {
+    speed: ${s(tokens.animation?.speed, '200ms')},
+    easing: ${s(tokens.animation?.easing, 'cubic-bezier(0.4, 0, 0.2, 1)')},
+    hoverScale: "scale(1.01)",
+  },
+  dividerStyle: {
+    type: ${s(tokens.dividerStyle?.type, 'soft-wave')},
+    color: ${s(tokens.dividerStyle?.color, t.bgSection || '#fffbeb')},
   },
   focus: {
-    ringColor: ${s(profile.theme.focusRing, '#d97706')},
-    selectionBg: ${s(profile.theme.selectionBg, '#fbbf24')},
+    ringColor: ${s(t.focusRing, '#d97706')},
+    selectionBg: ${s(t.selectionBg, '#fbbf24')},
     selectionText: '#000000',
   },
   fonts: {
-    heading: 'Montserrat',
-    body: 'Inter',
+    heading: ${s(tokens.fonts?.heading, 'Montserrat')},
+    body: ${s(tokens.fonts?.body, 'Inter')},
     googleFontsUrl:
-      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap',
+      ${s(tokens.fonts?.googleFontsUrl, 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap')},
   },
 } as const;
 `;
   fs.writeFileSync(themeConfigPath, themeContent, 'utf8');
-  console.log('✅ Updated src/config/theme.ts with targeted Major/Minor color aesthetics');
+  console.log('✅ Updated src/config/theme.ts with global Design Tokens and Geometry');
 }
 
-// 3. Update mock data references if applicable
+// ============================================================
+// 3. UPDATE src/config/layout.ts (Pillar 2: Modular Architecture)
+// ============================================================
+if (profile.layout) {
+  const l = profile.layout;
+  const layoutConfigPath = path.join(__dirname, '..', 'src', 'config', 'layout.ts');
+  
+  const defaultEnabled = {
+    hero_quote_calculator: true,
+    how_it_works: true,
+    trust_signals: true,
+    service_niches: true,
+    gta_routes: true,
+    supplies_and_storage: true,
+    referral_program: true,
+    blog_page: true,
+  };
+
+  const defaultOrder = [
+    'hero_quote_calculator',
+    'how_it_works',
+    'trust_signals',
+    'service_niches',
+    'gta_routes',
+    'supplies_and_storage',
+    'referral_program',
+    'blog_page',
+  ];
+
+  const layoutContent = `// ============================================================
+// LAYOUT & MODULAR COMPONENT ARCHITECTURE CONFIG — ${profile.name || 'Custom Relocations'}
+// ============================================================
+
+export type SectionId = 
+  | 'hero_quote_calculator'
+  | 'how_it_works'
+  | 'trust_signals'
+  | 'service_niches'
+  | 'gta_routes'
+  | 'supplies_and_storage'
+  | 'referral_program'
+  | 'blog_page';
+
+export const LAYOUT = {
+  sectionsEnabled: ${JSON.stringify(Object.assign({}, defaultEnabled, l.sectionsEnabled || {}), null, 4)} as Record<SectionId, boolean>,
+  sectionOrder: ${JSON.stringify(l.sectionOrder || defaultOrder, null, 4)} as SectionId[],
+  variants: {
+    hero: ${s(l.variants?.hero, 'calculator-split')},
+    reviews: ${s(l.variants?.reviews, 'grid-carousel')},
+    footer: ${s(l.variants?.footer, 'multi-column')},
+  },
+} as const;
+`;
+  fs.writeFileSync(layoutConfigPath, layoutContent, 'utf8');
+  console.log('✅ Updated src/config/layout.ts with customizable component sequencing');
+}
+
+// ============================================================
+// 4. UPDATE src/config/microcopy.ts (Pillar 5: Distinct Content)
+// ============================================================
+if (profile.microcopy) {
+  const m = profile.microcopy;
+  const microcopyConfigPath = path.join(__dirname, '..', 'src', 'config', 'microcopy.ts');
+  const microcopyContent = `// ============================================================
+// MICROCOPY & TONE OF VOICE CONFIG — ${profile.name || 'Custom Relocations'}
+// ============================================================
+
+export const MICROCOPY = {
+  buttons: {
+    getQuote: ${s(m.buttons?.getQuote, 'Calculate Your Instant Estimate')},
+    submitQuote: ${s(m.buttons?.submitQuote, 'Lock In Your All-Inclusive Rate')},
+    requestCOI: ${s(m.buttons?.requestCOI, 'Need COI Sent To Your Condo Concierge Now?')},
+    startEstimate: ${s(m.buttons?.startEstimate, 'Start Your Move Estimate Now')},
+    claimDiscount: ${s(m.buttons?.claimDiscount, 'Claim 50% Off Your 1st Month')},
+    callUsNow: ${s(m.buttons?.callUsNow, 'Call Concierge Now')},
+    learnMore: ${s(m.buttons?.learnMore, 'Explore Service Details')},
+  },
+  placeholders: {
+    originRegion: ${s(m.placeholders?.originRegion, 'Moving From (GTA Pickup)')},
+    destinationRegion: ${s(m.placeholders?.destinationRegion, 'Moving To (Select Destination Area)')},
+    moveDate: ${s(m.placeholders?.moveDate, 'Select Preferred Moving Day')},
+    homeSize: ${s(m.placeholders?.homeSize, 'Select Residence Size (e.g. 2-3 Bedroom Condo)')},
+    specialItems: ${s(m.placeholders?.specialItems, 'Any heavy pianos or glass cases?')},
+  },
+  reassurances: {
+    priceGuarantee: ${s(m.reassurances?.priceGuarantee, 'Total All-Inclusive Estimate — No Hidden Elevator or Stair Fees')},
+    protectionClaim: ${s(m.reassurances?.protectionClaim, 'Includes Full Replacement Value Protection & GPS Tracking')},
+    coiFastSLA: ${s(m.reassurances?.coiFastSLA, 'Free $1M - $5M Condo COI Issued in Under 2 Hours')},
+    noSpamPromise: ${s(m.reassurances?.noSpamPromise, 'Zero spam guarantee. We never sell your personal information.')},
+  },
+  toneProfile: ${s(m.toneProfile, 'professional-approachable')},
+} as const;
+`;
+  fs.writeFileSync(microcopyConfigPath, microcopyContent, 'utf8');
+  console.log('✅ Updated src/config/microcopy.ts with brand copywriting definitions');
+}
+
+// 5. Update mock data references if applicable
 const mockDataPath = path.join(__dirname, '..', 'src', 'data', 'mockData.ts');
 if (fs.existsSync(mockDataPath) && profile.oldBrandNameToReplace) {
   let mockContent = fs.readFileSync(mockDataPath, 'utf8');
@@ -121,4 +250,4 @@ if (fs.existsSync(mockDataPath) && profile.oldBrandNameToReplace) {
   console.log('✅ Updated brand references in src/data/mockData.ts');
 }
 
-console.log('🚀 Modular substitution complete! The codebase is ready for `npm run build` and Vercel edge deployment.');
+console.log('🚀 Modular 5-Pillar substitution complete! Ready for `npm run build` and Vercel edge deployment.');

@@ -26,6 +26,57 @@
     "bgHeroOverlay": "#f8fafc",
     "bgFooter": "#0f172a",
     "focusRing": "#4f46e5",
-    "selectionBg": "#c7d2fe"
+    "selectionBg": "#c7d2fe",
+    "tokens": {
+      "borderRadius": {
+        "card": "8px",
+        "button": "6px",
+        "badge": "4px"
+      },
+      "shadows": {
+        "card": "0 10px 30px -10px rgba(15, 23, 42, 0.20)"
+      },
+      "animation": {
+        "speed": "400ms",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "dividerStyle": {
+        "type": "diagonal-cut",
+        "color": "#eff6ff"
+      }
+    }
+  },
+  "layout": {
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": false,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    },
+    "sectionOrder": [
+      "hero_quote_calculator",
+      "trust_signals",
+      "how_it_works",
+      "service_niches",
+      "supplies_and_storage",
+      "referral_program",
+      "blog_page",
+      "gta_routes"
+    ],
+    "variants": {
+      "hero": "centered-cta"
+    }
+  },
+  "microcopy": {
+    "buttons": {
+      "getQuote": "Request VIP Concierge Estimate",
+      "submitQuote": "Reserve Your Executive Team",
+      "requestCOI": "Request Condo Concierge COI Issuance"
+    },
+    "toneProfile": "luxury-concierge"
   }
 }

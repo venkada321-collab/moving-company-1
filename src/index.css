@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --radius-card: 24px;
+    --radius-button: 16px;
+    --radius-badge: 9999px;
+    --anim-speed: 200ms;
+    --anim-easing: cubic-bezier(0.4, 0, 0.2, 1);
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
   html {
     scroll-behavior: smooth;
   }
