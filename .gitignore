@@ -8,3 +8,6 @@ mcp_config.json
 *.mcp*.json
 
 .vercel
+output/
+batch-output/
+*.log

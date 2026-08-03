@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Atlas Premier Relocation",
+    "legalName": "Atlas Premier Relocations Group Inc.",
+    "shortName": "Atlas",
+    "domain": "atlasrelocation.ca",
+    "phone": "(416) 555-8899",
+    "email": "concierge@atlasrelocation.ca",
+    "heroTagline": "PRECISION RELOCATION & ULTRA-SECURITY STORAGE",
+    "theme": {
+      "primary": "indigo",
+      "secondary": "slate",
+      "tokens": {
+        "borderRadius": { "card": "8px", "button": "6px" },
+        "dividerStyle": { "type": "diagonal-cut" }
+      }
+    },
+    "layout": {
+      "variants": { "hero": "centered-cta" }
+    },
+    "githubRepo": "atlas-relocation-site",
+    "vercelProject": "atlas-relocation"
+  },
+  {
+    "name": "Titan Express Movers",
+    "legalName": "Titan Express Relocations Ltd.",
+    "shortName": "Titan",
+    "domain": "titanexpress.ca",
+    "phone": "(905) 333-7712",
+    "email": "dispatch@titanexpress.ca",
+    "heroTagline": "CANADA'S FASTEST HIGHWAY RELOCATION TEAM",
+    "theme": {
+      "primary": "emerald",
+      "secondary": "zinc",
+      "tokens": {
+        "borderRadius": { "card": "0px", "button": "0px" },
+        "dividerStyle": { "type": "flat" }
+      }
+    },
+    "layout": {
+      "variants": { "hero": "calculator-split" }
+    },
+    "githubRepo": "titan-express-site",
+    "vercelProject": "titan-express"
+  }
+]

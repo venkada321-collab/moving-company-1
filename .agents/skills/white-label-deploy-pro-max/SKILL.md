@@ -151,3 +151,28 @@ All customized builds **MUST** pass strict design quality controls:
    npx --yes vercel@latest deploy --prod --yes --token <VERCEL_TOKEN>
    ```
 3. Retrieve and output live production links (`https://<new-project>.vercel.app`).
+
+---
+
+### Phase 6: Batch Production & Multi-Site Fleet Deployment
+When the Master Template Engine architecture is already built and the task requires generating **multi-site fleets** (e.g., producing 20 unique branded websites simultaneously from a JSON list of existing competitors or domain names), the agent can skip directly to batch execution:
+
+#### Supported Input Modes:
+1. **Mode A: Plain Domain Strings List (Agent Extraction Loop)**
+   - **Input Format:** `["atlasrelocation.ca", "titanexpress.ca", "elitevanlines.com"]`
+   - **Agent Protocol:** When given raw domain strings, the agent SHOULD first iterate over the array using web reading/browser tools to extract brand colors, taglines, and contact directories, writing an enriched JSON profile array before batch cloning. Alternatively, passing raw domain strings directly to the batch engine will trigger automated baseline profile generation.
+2. **Mode B: Pre-Extracted Profile JSON Array**
+   - **Input Format:** Array of full 5-Pillar target profile objects (see `examples/batch-targets.sample.json`).
+
+#### Execution Commands:
+1. **Local Batch Cloning & Verification (No Deployment):**
+   ```powershell
+   node scripts/batch_clone.cjs <path_to_batch.json>
+   ```
+   * *What happens:* Automatically creates isolated site builds under `./output/<brand-slug>/`, runs `populate_template.cjs` per brand, and executes Vite compiler testing across all builds with error isolation and resilience.
+2. **Automated Live Fleet Deployment (GitHub + Vercel):**
+   ```powershell
+   node scripts/batch_clone.cjs <path_to_batch.json> --deploy
+   ```
+   * *What happens:* After verification, initializes Git inside each isolated directory in `./output/<brand-slug>/`, provisions remote repositories, triggers Vercel Edge production deployments, and renders a unified tabular summary report of all production live URLs.
+
