@@ -628,18 +628,19 @@ const ATOMIC_ACCORDIONS = [
 ];
 
 function generateSubElementAtoms(brandSlug = 'default-brand', paradigm = 'SplitScreenSaaS') {
-  let hashVal = 0;
   const hashStr = crypto.createHash('sha256').update(brandSlug + '-subelements').digest('hex');
-  for (let i = 0; i < 8; i++) {
-    hashVal = (hashVal << 4) + parseInt(hashStr[i], 16);
-  }
-  const posHash = Math.abs(hashVal);
 
-  let button = ATOMIC_BUTTONS[posHash % ATOMIC_BUTTONS.length];
-  let input = ATOMIC_INPUTS[(posHash >> 2) % ATOMIC_INPUTS.length];
-  let card = ATOMIC_CARDS[(posHash >> 4) % ATOMIC_CARDS.length];
-  let badge = ATOMIC_BADGES[(posHash >> 6) % ATOMIC_BADGES.length];
-  let accordion = ATOMIC_ACCORDIONS[(posHash >> 8) % ATOMIC_ACCORDIONS.length];
+  const btnIdx = parseInt(hashStr.substring(0, 4), 16);
+  const inpIdx = parseInt(hashStr.substring(4, 8), 16);
+  const cardIdx = parseInt(hashStr.substring(8, 12), 16);
+  const bdgIdx = parseInt(hashStr.substring(12, 16), 16);
+  const accIdx = parseInt(hashStr.substring(16, 20), 16);
+
+  let button = ATOMIC_BUTTONS[btnIdx % ATOMIC_BUTTONS.length];
+  let input = ATOMIC_INPUTS[inpIdx % ATOMIC_INPUTS.length];
+  let card = ATOMIC_CARDS[cardIdx % ATOMIC_CARDS.length];
+  let badge = ATOMIC_BADGES[bdgIdx % ATOMIC_BADGES.length];
+  let accordion = ATOMIC_ACCORDIONS[accIdx % ATOMIC_ACCORDIONS.length];
 
   // PARADIGM OVERRIDES for Sub-Elements
   if (paradigm === 'SplitScreenSaaS') {

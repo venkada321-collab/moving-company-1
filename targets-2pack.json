@@ -1,0 +1,96 @@
+[
+  {
+    "name": "2Pack Movers",
+    "legalName": "2Pack Movers Inc.",
+    "shortName": "2Pack",
+    "slug": "2packmovers-ca",
+    "domain": "2packmovers.ca",
+    "websiteUrl": "https://www.2packmovers.ca/",
+    "phone": "647-222-2949",
+    "phoneRaw": "6472222949",
+    "email": "info@2packmovers.ca",
+    "hqAddress": "",
+    "logoSymbol": "2",
+    "logoUrl": "/assets/brand/logo.png",
+    "faviconUrl": "data:;base64,iVBORw0KGgo=",
+    "heroTagline": "Professional Movers in Toronto & GTA",
+    "heroSubtitle": "Looking for professional movers in Toronto & GTA? Our expert team ensures a stress-free moving experience. Trust the best movers in Toronto for all your relocation needs. Contact us today!",
+    "rankingClaim": "Trusted by thousands — 2Pack Movers",
+    "ctaText": "Get Your Free Estimate",
+    "pageTitle": "Stress-Free Moving with Professional Movers in Toronto | 2Pack Movers",
+    "metaDescription": "Looking for professional movers in Toronto & GTA? Our expert team ensures a stress-free moving experience. Trust the best movers in Toronto for all your relocation needs. Contact us today!",
+    "theme": {
+      "primary": "red",
+      "secondary": "slate",
+      "tertiary": "emerald",
+      "palette": {
+        "primary": "amber",
+        "secondary": "slate",
+        "tertiary": "emerald"
+      },
+      "designTokens": {
+        "colorPalette": "red",
+        "colorTriad": {
+          "primary": "amber",
+          "secondary": "slate",
+          "tertiary": "emerald"
+        },
+        "fonts": {
+          "heading": "DM Sans",
+          "body": "DM Sans"
+        },
+        "discoveredFonts": {
+          "heading": "DM Sans",
+          "body": "DM Sans"
+        },
+        "animation": {
+          "speed": "0.2s",
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+        },
+        "borderRadius": {
+          "card": "16px",
+          "button": "8px",
+          "badge": "9999px"
+        }
+      }
+    },
+    "layout": {
+      "variants": {},
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "how_it_works": true,
+        "trust_signals": true,
+        "service_niches": true,
+        "gta_routes": true,
+        "supplies_and_storage": true,
+        "referral_program": true,
+        "blog_page": true
+      }
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/2packmovers/",
+      "facebook": "https://www.facebook.com/2PackMovers",
+      "linkedin": "https://www.linkedin.com/company/2pack-movers"
+    },
+    "brandVibes": {
+      "architecture": "Content-Dense Classic",
+      "chromaticIntensity": "Vibrant HSL Triad",
+      "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+    },
+    "_extraction": {
+      "extractedAt": "2026-08-08T03:47:31.005Z",
+      "sourceUrl": "https://www.2packmovers.ca/",
+      "paletteScores": {
+        "emerald": 9,
+        "blue": 0,
+        "indigo": 3,
+        "violet": 0,
+        "rose": 0,
+        "amber": 24,
+        "slate": 10.5
+      },
+      "colorSampleCount": 57,
+      "referenceScreenshot": "C:\\Users\\venka\\Projects\\WhiteLabelMovingFleet\\output\\references\\2packmovers-existing-reference.png"
+    }
+  }
+]

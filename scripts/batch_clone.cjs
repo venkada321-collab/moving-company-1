@@ -131,20 +131,37 @@ for (let i = 0; i < rawBatch.length; i++) {
     { heading: 'Roboto', body: 'Inter' },
   ];
 
-  function getExpandedPermutation(index) {
-    const nav = navOptions[index % navOptions.length];
-    const hero = heroOptions[(index * 2) % heroOptions.length];
-    const svc = svcOptions[(index * 2 + 1) % svcOptions.length];
-    const how = howOptions[index % howOptions.length];
-    const sup = supOptions[(index + 1) % supOptions.length];
-    const rev = reviewsOptions[(index * 3 + 1) % reviewsOptions.length];
-    const footer = footerOptions[(index * 2 + 3) % footerOptions.length];
-    const motion = motionOptions[index % motionOptions.length];
-    const color = colorOptions[index % colorOptions.length];
-    const ui = uiOptions[index % uiOptions.length];
-    const seq = sectionOrderPermutations[index % sectionOrderPermutations.length];
-    const font = fontOptions[index % fontOptions.length];
-    const rad = radiusOptions[index % radiusOptions.length];
+  function getExpandedPermutation(baseHashHex, nonce = 0) {
+    const effectiveHash = crypto.createHash('sha256').update(baseHashHex + nonce.toString()).digest('hex');
+    
+    const navIdx = parseInt(effectiveHash.substring(0, 4), 16);
+    const heroIdx = parseInt(effectiveHash.substring(4, 8), 16);
+    const svcIdx = parseInt(effectiveHash.substring(8, 12), 16);
+    const howIdx = parseInt(effectiveHash.substring(12, 16), 16);
+    const supIdx = parseInt(effectiveHash.substring(16, 20), 16);
+    const revIdx = parseInt(effectiveHash.substring(20, 24), 16);
+    const footerIdx = parseInt(effectiveHash.substring(24, 28), 16);
+    const motionIdx = parseInt(effectiveHash.substring(28, 32), 16);
+    const colorIdx = parseInt(effectiveHash.substring(32, 36), 16);
+    const uiIdx = parseInt(effectiveHash.substring(36, 40), 16);
+    const seqIdx = parseInt(effectiveHash.substring(40, 44), 16);
+    const fontIdx = parseInt(effectiveHash.substring(44, 48), 16);
+    const radIdx = parseInt(effectiveHash.substring(48, 52), 16);
+
+    const nav = navOptions[navIdx % navOptions.length];
+    const hero = heroOptions[heroIdx % heroOptions.length];
+    const svc = svcOptions[svcIdx % svcOptions.length];
+    const how = howOptions[howIdx % howOptions.length];
+    const sup = supOptions[supIdx % supOptions.length];
+    const rev = reviewsOptions[revIdx % reviewsOptions.length];
+    const footer = footerOptions[footerIdx % footerOptions.length];
+    const motion = motionOptions[motionIdx % motionOptions.length];
+    const color = colorOptions[colorIdx % colorOptions.length];
+    const ui = uiOptions[uiIdx % uiOptions.length];
+    const seq = sectionOrderPermutations[seqIdx % sectionOrderPermutations.length];
+    const font = fontOptions[fontIdx % fontOptions.length];
+    const rad = radiusOptions[radIdx % radiusOptions.length];
+    
     return { ui, sectionOrder: seq, nav, hero, services: svc, howItWorks: how, supplies: sup, reviews: rev, footer, motion, color, font: font.heading, bodyFont: font.body, buttonRadius: rad.b, cardRadius: rad.c };
   }
 
@@ -155,8 +172,9 @@ for (let i = 0; i < rawBatch.length; i++) {
 
   // 🛡️ STATISTICAL PERCEPTUAL UNIQUENESS & HERO VARIATION ENGINE (Pre-Build Verification)
   // Ensures high-perception visual features (Hero Canvas + UI Profile + Palette) never repeat within the configured variationWindow
-  let perm = getExpandedPermutation(hashIdx);
   let mutationAttempts = 0;
+  let perm = getExpandedPermutation(hashHex, mutationAttempts);
+  
   while (mutationAttempts < 15) {
     const perceptionKey = `${perm.hero}|${perm.ui}|${perm.color}`;
     const isCollided = highPerceptionHistory.some(prevKey => prevKey.startsWith(`${perm.hero}|${perm.ui}`));
@@ -165,9 +183,9 @@ for (let i = 0; i < rawBatch.length; i++) {
       if (highPerceptionHistory.length > variationWindow) highPerceptionHistory.shift(); // Enforce dynamic variation sliding window
       break;
     }
-    hashIdx += 7; // Mutate cryptographic hash index to pick a divergent high-perception architecture
-    perm = getExpandedPermutation(hashIdx);
     mutationAttempts++;
+    hashIdx += 7; // Mutate cryptographic hash index to pick a divergent high-perception architecture
+    perm = getExpandedPermutation(hashHex, mutationAttempts);
   }
   console.log(`🛡️ Pre-Build Perceptual Uniqueness Confirmed [Hero: ${perm.hero} | UI: ${perm.ui} | Palette: ${perm.color}]`);
 
