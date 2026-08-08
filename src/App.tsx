@@ -11,6 +11,7 @@ import { HeroGlassWidget } from './components/core/HeroGlassWidget';
 import { HowItWorks } from './kits/kit-moving/components/HowItWorks';
 import { TrustSignals } from './components/core/TrustSignals';
 import { TrustStatsRibbon } from './components/core/TrustStatsRibbon';
+import { TrustSignalsAtomicProMax } from './components/core/TrustSignalsAtomicProMax';
 import { ServiceNichesPage } from './kits/kit-moving/components/ServiceNichesPage';
 import { GTARoutesPage } from './kits/kit-moving/components/GTARoutesPage';
 import { SuppliesAndStoragePage } from './kits/kit-moving/components/SuppliesAndStoragePage';
@@ -113,8 +114,10 @@ export default function App() {
         break;
       case 'trust_signals':
         sectionTag = 'reviews';
-        if (LAYOUT.variants.reviews === 'stats-ribbon') {
+        if (LAYOUT.variants.reviews === 'stats-ribbon' || LAYOUT.variants.reviews === 'stats-ribbon-ticker') {
           component = <TrustStatsRibbon key="trust-ribbon" />;
+        } else if (LAYOUT.variants.reviews === 'brutalist-monospaced-audit' || LAYOUT.variants.reviews === 'luxury-editorial-carousel') {
+          component = <TrustSignalsAtomicProMax key="trust" />;
         } else {
           component = <TrustSignals key="trust" />;
         }
@@ -213,7 +216,9 @@ export default function App() {
             </div>
             <SectionDivider />
             <div data-section="reviews">
-              {LAYOUT.variants.reviews === 'stats-ribbon' ? <TrustStatsRibbon /> : <TrustSignals />}
+              {(LAYOUT.variants.reviews === 'stats-ribbon' || LAYOUT.variants.reviews === 'stats-ribbon-ticker') ? <TrustStatsRibbon /> : 
+               (LAYOUT.variants.reviews === 'brutalist-monospaced-audit' || LAYOUT.variants.reviews === 'luxury-editorial-carousel') ? <TrustSignalsAtomicProMax /> : 
+               <TrustSignals />}
             </div>
             <SectionDivider />
             <div data-section="blog">
