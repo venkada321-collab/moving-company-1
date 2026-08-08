@@ -128,8 +128,15 @@ if (profile.theme || profile.designTokens) {
   const finalGoogleFontsUrl = tokens.fonts?.googleFontsUrl || generatedGoogleFontsUrl;
 
   // Dynamic Infinite Color Spectrum Engine & Hybrid Atmospheric Chemistry (16.7 Million Color Capacity)
-  const { synthesizeHybridAtmosphere } = require('./color_spectrum_engine.cjs');
-  const selectedColor = tokens.synthesizedHex || (t.primary || tokens.colorPalette || 'amber').toLowerCase();
+  const { synthesizeHybridAtmosphere, generateDynamicBrandPalette } = require('./color_spectrum_engine.cjs');
+  let selectedColor = tokens.synthesizedHex || t.primary || tokens.colorPalette;
+  if (!selectedColor || ['red', 'blue', 'emerald', 'amber', 'indigo', 'violet', 'slate', 'rose', 'teal', 'cyan', 'orange', 'purple'].includes(selectedColor.toLowerCase())) {
+    const slug = profile.slug || profile.shortName || profile.name || 'default-slug';
+    selectedColor = generateDynamicBrandPalette(slug).synthesizedHex;
+    console.log(`🎲 Generated dynamic infinite professional color fallback for ${slug}: ${selectedColor}`);
+  } else {
+    selectedColor = selectedColor.toLowerCase();
+  }
   const hybridResult = synthesizeHybridAtmosphere(profile.slug || profile.name || 'default-slug', selectedColor);
   const pal = hybridResult.primarySpectrum;
   const acc = hybridResult.accentSpectrum;

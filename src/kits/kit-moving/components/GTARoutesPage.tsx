@@ -13,7 +13,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
   const activeRoute = SEO_ROUTES.find(r => r.id === selectedRouteId) || SEO_ROUTES[0];
 
   return (
-    <div className="bg-zinc-900/60 text-white min-h-[600px] py-12 px-4">
+    <div className="bg-white dark:bg-neutral-50 dark:bg-zinc-900/60 text-neutral-900 dark:text-white min-h-[600px] py-12 px-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -24,7 +24,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
           <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
             ESTABLISHED <span className="text-primary-600">{GEO.regionFull.toUpperCase()}</span> & REGIONAL DISPATCH CORRIDORS
           </h2>
-          <p className="mt-3 text-sm text-zinc-400">
+          <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400">
             Analyze standard dispatch timelines, commercial route efficiency ({GEO.highways}), and real client costs across Southern Ontario & interprovincial corridors.
           </p>
         </div>
@@ -40,12 +40,12 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                 onClick={() => setSelectedRouteId(route.id)}
                 className={`p-5 rounded-md shadow-2xl border border text-left transition-all min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-white focus-visible:ring-offset-2 motion-reduce:transition-none ${
                   isSelected
-                    ? 'bg-gradient-to-br from-primary-100 via-primary-50 to-white border-2 border-primary-400 shadow-xl shadow-primary-500/10 text-white'
-                    : 'bg-zinc-900/60 hover:bg-primary-50/40 border border-zinc-800 hover:border-primary-300 shadow-md text-zinc-200'
+                    ? 'bg-gradient-to-br from-primary-100 via-primary-50 to-white border-2 border-primary-400 shadow-xl shadow-primary-500/10 text-neutral-900 dark:text-white'
+                    : 'bg-white dark:bg-neutral-50 dark:bg-zinc-900/60 hover:bg-primary-50/40 border border-neutral-200 dark:border-zinc-800 hover:border-primary-300 shadow-md text-neutral-700 dark:text-zinc-200'
                 }`}
               >
                 <div className="flex items-center justify-between text-xs font-bold mb-2">
-                  <span className="bg-primary-100 text-primary-900 px-2.5 py-1 rounded-lg border border-zinc-800">
+                  <span className="bg-primary-100 text-primary-900 px-2.5 py-1 rounded-lg border border-neutral-200 dark:border-zinc-800">
                     {route.distance} km ({Math.round(route.distance * 0.621)} mi)
                   </span>
                   <span className="opacity-80 font-semibold">Duration: ~{route.estHours} Hours</span>
@@ -66,9 +66,9 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
         </div>
 
         {/* Detailed Route Spotlight Panel */}
-        <div className="bg-zinc-900/60 rounded-md shadow-2xl border p-6 sm:p-10 border border-zinc-800 shadow-2xl shadow-primary-900/10 text-white space-y-8">
+        <div className="bg-white dark:bg-neutral-50 dark:bg-zinc-900/60 rounded-md shadow-2xl border p-6 sm:p-10 border border-neutral-200 dark:border-zinc-800 shadow-2xl shadow-primary-900/10 text-neutral-900 dark:text-white space-y-8">
           
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-zinc-800">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-neutral-200 dark:border-zinc-800">
             <div>
               <div className="flex items-center gap-2 text-xs font-bold text-primary-600 mb-2">
                 <Navigation className="w-4 h-4" aria-hidden="true" />
@@ -95,7 +95,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
             
             {/* Left side details */}
             <div className="lg:col-span-7 space-y-6">
-              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-neutral-600 dark:text-zinc-300 leading-relaxed font-normal">
                 {activeRoute.description}
               </p>
 
@@ -105,9 +105,9 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                   Corridor Features & Operational Protocols:
                 </h3>
                 {activeRoute.highlights.map((h, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-primary-50/50 p-3.5 rounded-xl border border-zinc-800">
+                  <div key={i} className="flex items-start gap-3 bg-primary-50/50 p-3.5 rounded-xl border border-neutral-200 dark:border-zinc-800">
                     <CheckCircle2 className="w-4 h-4 text-primary-500 shrink-0 mt-0.5" aria-hidden="true" />
-                    <span className="text-xs text-zinc-300 font-medium">{h}</span>
+                    <span className="text-xs text-neutral-600 dark:text-zinc-300 font-medium">{h}</span>
                   </div>
                 ))}
               </div>
@@ -117,24 +117,24 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
             <div className="lg:col-span-5 space-y-6">
               
               {/* Route Metric Cards */}
-              <div className="grid grid-cols-3 gap-3 bg-primary-50/50 p-4 rounded-2xl border border-zinc-800 text-center">
+              <div className="grid grid-cols-3 gap-3 bg-primary-50/50 p-4 rounded-2xl border border-neutral-200 dark:border-zinc-800 text-center">
                 <div>
                   <div className="text-lg font-black text-black font-['Montserrat',sans-serif]">{activeRoute.distance} km</div>
-                  <div className="text-[10px] text-zinc-400 font-bold uppercase mt-1">Distance</div>
+                  <div className="text-[10px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Distance</div>
                 </div>
                 <div>
                   <div className="text-lg font-black text-primary-600 font-['Montserrat',sans-serif]">~{activeRoute.estHours} hrs</div>
-                  <div className="text-[10px] text-zinc-400 font-bold uppercase mt-1">Estimated Time Window</div>
+                  <div className="text-[10px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Estimated Time Window</div>
                 </div>
                 <div>
                   <div className="text-lg font-black text-emerald-600 font-['Montserrat',sans-serif]">{activeRoute.avgCostRange}</div>
-                  <div className="text-[10px] text-zinc-400 font-bold uppercase mt-1">Expected Investment</div>
+                  <div className="text-[10px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Expected Investment</div>
                 </div>
               </div>
 
               {/* Client Story snippet on this route */}
               {activeRoute.testimonials.length > 0 && (
-                <div className="bg-primary-50/60 border-l-4 border-primary-400 p-4 rounded-r-xl text-zinc-300 italic space-y-3">
+                <div className="bg-primary-50/60 border-l-4 border-primary-400 p-4 rounded-r-xl text-neutral-600 dark:text-zinc-300 italic space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-bold uppercase text-primary-900 bg-primary-200 px-2.5 py-0.5 rounded-full not-italic">
                       Verified Relocation Testimonial
@@ -146,12 +146,12 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                     </div>
                   </div>
 
-                  <p className="text-xs text-zinc-300 italic leading-relaxed">
+                  <p className="text-xs text-neutral-600 dark:text-zinc-300 italic leading-relaxed">
                     "{activeRoute.testimonials[0].text}"
                   </p>
 
-                  <div className="text-xs font-bold text-black pt-2 border-t border-zinc-800 not-italic">
-                    {activeRoute.testimonials[0].author} • <span className="text-zinc-400 font-normal">{activeRoute.testimonials[0].date}</span>
+                  <div className="text-xs font-bold text-black pt-2 border-t border-neutral-200 dark:border-zinc-800 not-italic">
+                    {activeRoute.testimonials[0].author} • <span className="text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-normal">{activeRoute.testimonials[0].date}</span>
                   </div>
                 </div>
               )}

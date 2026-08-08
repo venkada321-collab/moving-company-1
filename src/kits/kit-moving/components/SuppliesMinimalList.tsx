@@ -77,7 +77,7 @@ export const SuppliesMinimalList: React.FC<SuppliesAndStoragePageProps> = ({
                     <span className="font-mono text-primary-600 font-bold">${storage.pricePerMonth}/mo</span>
                     <button 
                       onClick={() => onSelectStorageForEstimate(storage.id)}
-                      className="px-3 py-1 bg-black text-white text-xs font-bold hover:bg-primary-500 hover:text-black transition-colors uppercase"
+                      className="px-3 py-1 bg-neutral-100 dark:bg-black text-white dark:text-black text-xs font-bold hover:bg-primary-500 hover:text-black transition-colors uppercase"
                     >
                       Reserve
                     </button>

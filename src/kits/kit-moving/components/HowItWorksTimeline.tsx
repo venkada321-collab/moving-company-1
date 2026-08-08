@@ -36,7 +36,7 @@ export const HowItWorksTimeline: React.FC<HowItWorksProps> = ({ onStartEstimate,
   ];
 
   return (
-    <div className="py-24 bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white border-b border-zinc-200 dark:border-zinc-900 overflow-hidden relative">
+    <div className="py-24 bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-neutral-900 dark:text-white border-b border-zinc-200 dark:border-zinc-900 overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-50/50 dark:from-primary-900/10 to-transparent pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -49,7 +49,7 @@ export const HowItWorksTimeline: React.FC<HowItWorksProps> = ({ onStartEstimate,
           <h2 className="text-4xl md:text-5xl font-black mb-6 font-['var(--font-heading)']">
             OUR TIMELINE <span className="text-primary-500">TO STRESS-FREE</span>
           </h2>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 font-['var(--font-body)']">
+          <p className="text-lg text-zinc-600 dark:text-neutral-500 dark:text-zinc-400 font-['var(--font-body)']">
             A linear approach to complex logistics. See exactly how we execute your move from the first click to the final box.
           </p>
         </div>
@@ -65,9 +65,9 @@ export const HowItWorksTimeline: React.FC<HowItWorksProps> = ({ onStartEstimate,
                 
                 {/* Node */}
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full bg-white dark:bg-zinc-900 border-4 border-zinc-100 dark:border-zinc-800 flex items-center justify-center mb-8 relative z-10 shadow-xl group-hover:border-primary-500 transition-colors duration-500 cursor-default">
+                  <div className="w-24 h-24 rounded-full bg-white dark:bg-zinc-900 border-4 border-zinc-100 dark:border-neutral-200 dark:border-zinc-800 flex items-center justify-center mb-8 relative z-10 shadow-xl group-hover:border-primary-500 transition-colors duration-500 cursor-default">
                     <step.icon className="w-10 h-10 text-primary-500" />
-                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-black text-white font-bold flex items-center justify-center shadow-lg font-mono">
+                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-neutral-100 dark:bg-black text-white dark:text-black font-bold flex items-center justify-center shadow-lg font-mono">
                       {step.number}
                     </div>
                   </div>
@@ -77,7 +77,7 @@ export const HowItWorksTimeline: React.FC<HowItWorksProps> = ({ onStartEstimate,
                   </div>
 
                   <h3 className="text-2xl font-bold mb-4 font-['var(--font-heading)']">{step.title}</h3>
-                  <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-sm mb-6">
+                  <p className="text-zinc-600 dark:text-neutral-500 dark:text-zinc-400 leading-relaxed max-w-sm mb-6">
                     {step.description}
                   </p>
 

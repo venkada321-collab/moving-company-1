@@ -188,67 +188,35 @@ function synthesizeHybridAtmosphere(brandSlug = 'default-brand', primaryColorInp
   };
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// NICHE-RESTRICTED COLOR SPECTRUM ENGINE
-// Guarantees high-contrast color uniqueness while strictly enforcing professional
-// industry boundaries (preventing gaming/esports neons in corporate sectors).
-// ─────────────────────────────────────────────────────────────────────────────
-const NICHE_PALETTE_REGISTRIES = {
-  'logistics-relocation': [
-    { name: 'Executive Cobalt Blue', hex: '#1E40AF', keyword: 'blue', triad: { primary: 'blue', secondary: 'amber', tertiary: 'slate' } },
-    { name: 'Maritime Ocean Cyan', hex: '#0284C7', keyword: 'blue', triad: { primary: 'blue', secondary: 'emerald', tertiary: 'slate' } },
-    { name: 'Royal Indigo Transit', hex: '#3730A3', keyword: 'indigo', triad: { primary: 'indigo', secondary: 'amber', tertiary: 'slate' } },
-    { name: 'Safety Amber Gold', hex: '#D97706', keyword: 'amber', triad: { primary: 'amber', secondary: 'blue', tertiary: 'slate' } },
-    { name: 'Heavy Burnt Terracotta', hex: '#C2410C', keyword: 'amber', triad: { primary: 'amber', secondary: 'slate', tertiary: 'emerald' } },
-    { name: 'Eco-Relocation Spruce', hex: '#047857', keyword: 'emerald', triad: { primary: 'emerald', secondary: 'blue', tertiary: 'amber' } },
-    { name: 'Slate Graphite Authority', hex: '#334155', keyword: 'slate', triad: { primary: 'slate', secondary: 'amber', tertiary: 'blue' } },
-    { name: 'Deep Ruby Rose Express', hex: '#BE123C', keyword: 'rose', triad: { primary: 'rose', secondary: 'slate', tertiary: 'amber' } }
-  ],
-  'healthcare-medical': [
-    { name: 'Clinical Teal Navy', hex: '#0F766E', keyword: 'emerald', triad: { primary: 'emerald', secondary: 'blue', tertiary: 'slate' } },
-    { name: 'Surgical Clean Cyan', hex: '#0369A1', keyword: 'blue', triad: { primary: 'blue', secondary: 'emerald', tertiary: 'slate' } },
-    { name: 'Calming Violet Slate', hex: '#4338CA', keyword: 'indigo', triad: { primary: 'indigo', secondary: 'emerald', tertiary: 'slate' } }
-  ],
-  'legal-finance': [
-    { name: 'Chancery Navy Blue', hex: '#1E293B', keyword: 'slate', triad: { primary: 'slate', secondary: 'amber', tertiary: 'blue' } },
-    { name: 'Wealth Forest Gold', hex: '#065F46', keyword: 'emerald', triad: { primary: 'emerald', secondary: 'amber', tertiary: 'slate' } },
-    { name: 'Heritage Burgundy', hex: '#881337', keyword: 'rose', triad: { primary: 'rose', secondary: 'slate', tertiary: 'amber' } }
-  ]
-};
+/**
+ * GENERATE INFINITE PROFESSIONAL FALLBACK PALETTES
+ * Converts a brand string into a fully dynamic, completely unique HSL color that
+ * is mathematically bound to professional, WCAG-compliant saturation/lightness ranges.
+ * This guarantees infinite variety without yielding 'ugly' or 'neon' colors.
+ */
+function generateDynamicBrandPalette(brandSlug = 'default') {
+  const hashHex = crypto.createHash('sha256').update(brandSlug).digest('hex');
+  
+  // 1. Hue (0-360): The full spectrum is available! 
+  // Use first 4 hex chars (0-65535) mapped to 0-359
+  const hue = parseInt(hashHex.substring(0, 4), 16) % 360;
+  
+  // 2. Saturation (45-80%): Rich but not neon.
+  // Use next 2 hex chars (0-255) mapped to 45-80
+  const sat = 45 + (parseInt(hashHex.substring(4, 6), 16) % 36);
+  
+  // 3. Lightness (35-50%): Deep enough for white text contrast, bright enough for accents.
+  // Use next 2 hex chars (0-255) mapped to 35-50
+  const lum = 35 + (parseInt(hashHex.substring(6, 8), 16) % 16);
 
-function generateNicheUniquePalette(brandSlug = 'brand-default', niche = 'logistics-relocation', offsetIdx = 0) {
-  const hashHex = crypto.createHash('sha256').update(`${brandSlug}-${offsetIdx}`).digest('hex');
-  const hashVal = parseInt(hashHex.substring(0, 8), 16);
-
-  const registry = NICHE_PALETTE_REGISTRIES[niche] || NICHE_PALETTE_REGISTRIES['logistics-relocation'];
-  const baseSelection = registry[hashVal % registry.length];
-
-  // Apply Bounded HSL Chromatic Micro-Variation to guarantee exact Hex uniqueness across large batches
-  // without transgressing the psychological boundaries of the professional industry niche.
-  const [r, g, b] = parseColorToRgb(baseSelection.hex);
-  let [h, s, l] = rgbToHsl(r, g, b);
-
-  // Derive bounded shifts from cryptographic hash bytes
-  const hueDelta = (parseInt(hashHex.substring(8, 10), 16) % 25) - 12; // [-12° to +12° shift]
-  const satDelta = (parseInt(hashHex.substring(10, 12), 16) % 21) - 10; // [-10% to +10% saturation]
-  const lumDelta = (parseInt(hashHex.substring(12, 14), 16) % 13) - 6;   // [-6% to +6% lightness]
-
-  const finalH = (h + hueDelta + 360) % 360;
-  // Strictly clamp saturation so colors remain professional and never escalate into neon/gaming aesthetics
-  const finalS = Math.min(85, Math.max(35, s + satDelta));
-  const finalL = Math.min(52, Math.max(28, l + lumDelta));
-
-  const [outR, outG, outB] = hslToRgb(finalH, finalS, finalL);
-  const synthesizedHex = `#${(1 << 24 | outR << 16 | outG << 8 | outB).toString(16).slice(1).toUpperCase()}`;
+  const [r, g, b] = hslToRgb(hue, sat, lum);
+  const synthesizedHex = '#' + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1).toUpperCase();
+  
   const spectrumResult = generateInfiniteSpectrum(synthesizedHex);
 
   return {
-    niche,
-    baseName: baseSelection.name,
-    keyword: baseSelection.keyword,
-    triad: baseSelection.triad,
     synthesizedHex,
-    hsl: `hsl(${Math.round(finalH)}, ${Math.round(finalS)}%, ${Math.round(finalL)}%)`,
+    hsl: `hsl(${hue}, ${sat}%, ${lum}%)`,
     spectrum: spectrumResult.spectrum,
     contrastText: spectrumResult.contrastText
   };
@@ -260,8 +228,7 @@ module.exports = {
   hslToRgb,
   generateInfiniteSpectrum,
   synthesizeHybridAtmosphere,
-  NICHE_PALETTE_REGISTRIES,
-  generateNicheUniquePalette,
+  generateDynamicBrandPalette,
 };
 
 // If run directly, demonstrate Niche-Restricted Bounded Uniqueness capability

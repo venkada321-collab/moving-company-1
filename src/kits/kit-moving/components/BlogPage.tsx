@@ -41,7 +41,7 @@ export const BlogPage: React.FC = () => {
               aria-pressed={selectedCategory === cat}
               className={`min-h-[44px] min-w-[44px] px-4 py-2 rounded-full text-xs font-bold transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white inline-flex items-center justify-center ${
                 selectedCategory === cat
-                  ? 'bg-black text-primary-400 font-extrabold shadow-md shadow-black/20'
+                  ? 'bg-neutral-100 dark:bg-black text-primary-400 font-extrabold shadow-md shadow-black/20'
                   : 'bg-white shadow-sm text-zinc-600 border border-neutral-300 hover:text-black hover:border-primary-400'
               }`}
             >
@@ -139,7 +139,7 @@ export const BlogPage: React.FC = () => {
                 {selectedPost.title}
               </h2>
 
-              <div className="flex items-center gap-4 text-xs text-neutral-500 border-y border-zinc-200 py-3">
+              <div className="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 border-y border-zinc-200 py-3">
                 <div className="flex items-center gap-2">
                   <img src={selectedPost.author.avatar} className="w-7 h-7 rounded-full object-cover border border-zinc-200" alt="" />
                   <span className="font-bold text-black">{selectedPost.author.name}</span> ({selectedPost.author.role})
@@ -158,7 +158,7 @@ export const BlogPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setSelectedPost(null)}
-                  className="bg-black text-primary-400 hover:bg-zinc-900 shadow-md min-h-[44px] px-6 py-2.5 rounded-xl font-bold text-xs uppercase inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all motion-reduce:transition-none"
+                  className="bg-neutral-100 dark:bg-black text-primary-400 hover:bg-neutral-50 dark:bg-zinc-900 shadow-md min-h-[44px] px-6 py-2.5 rounded-xl font-bold text-xs uppercase inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all motion-reduce:transition-none"
                 >
                   Close Article
                 </button>

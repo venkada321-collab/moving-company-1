@@ -10,21 +10,21 @@ export const TrustStatsRibbon: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 bg-neutral-900 text-white border-y border-neutral-800 my-8 shadow-xl">
+    <section className="py-12 bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-white border-y border-neutral-200 dark:border-neutral-800 my-8 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header & Proof Intro */}
-        <div className="text-center md:text-left mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6 border-b border-neutral-800 pb-8">
+        <div className="text-center md:text-left mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6 border-b border-neutral-200 dark:border-neutral-800 pb-8">
           <div>
             <span className="text-xs uppercase tracking-widest font-extrabold text-primary-400">
               Executive Social Proof & Corporate Legitimacy
             </span>
-            <h2 className="text-2xl md:text-4xl font-extrabold text-white tracking-tight mt-2">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-neutral-900 dark:text-white tracking-tight mt-2">
               Tested, Verified & Certified by {BRAND.shortName} Clients
             </h2>
           </div>
           <div className="flex items-center justify-center md:justify-end gap-2 text-yellow-400 bg-neutral-800 px-4 py-2 rounded-[var(--radius-badge)] border border-neutral-700">
             <span className="text-lg font-bold">★★★★★</span>
-            <span className="text-sm font-semibold text-neutral-300">Verified Client Feedback</span>
+            <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">Verified Client Feedback</span>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export const TrustStatsRibbon: React.FC = () => {
                 <span>{stat.icon}</span>
                 <span>{stat.value}</span>
               </div>
-              <div className="text-xs sm:text-sm font-medium text-neutral-400">
+              <div className="text-xs sm:text-sm font-medium text-neutral-600 dark:text-neutral-400">
                 {stat.label}
               </div>
             </div>
@@ -59,8 +59,8 @@ export const TrustStatsRibbon: React.FC = () => {
               DR
             </div>
             <div>
-              <div className="font-bold text-white text-base">Dr. Arash Shariati</div>
-              <div className="text-xs text-neutral-400">Director of Clinical Operations • Greater Toronto & Canada Route</div>
+              <div className="font-bold text-neutral-900 dark:text-white text-base">Dr. Arash Shariati</div>
+              <div className="text-xs text-neutral-600 dark:text-neutral-400">Director of Clinical Operations • Greater Toronto & Canada Route</div>
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-gradient-to-b from-white via-primary-50/30 to-white text-white border-y border-primary-100 relative overflow-hidden">
+    <section id="how-it-works" className="py-20 bg-gradient-to-b from-white via-primary-50/30 to-white text-neutral-900 dark:text-white border-y border-primary-100 relative overflow-hidden">
       {/* Halo Lab subtle decorative background glow */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary-200/20 rounded-full blur-3xl pointer-events-none" />
 
@@ -70,14 +70,14 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
-            <span className="text-primary-700 font-bold text-xs tracking-widest uppercase bg-primary-50 px-4 py-1.5 rounded-full border border-zinc-800/50 shadow-sm">
+            <span className="text-primary-700 font-bold text-xs tracking-widest uppercase bg-primary-50 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-zinc-800/50 shadow-sm">
               RELIABLE & PREDICTABLE
             </span>
-            <h2 className="text-3xl sm:text-5xl font-black text-white mt-5 tracking-tight font-['Montserrat',sans-serif]">
+            <h2 className="text-3xl sm:text-5xl font-black text-neutral-900 dark:text-white mt-5 tracking-tight font-['Montserrat',sans-serif]">
               HOW IT WORKS IN <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">4 SIMPLE STEPS</span>
             </h2>
           </div>
-          <p className="text-zinc-400 text-sm max-w-md leading-relaxed font-medium">
+          <p className="text-neutral-500 dark:text-zinc-400 text-sm max-w-md leading-relaxed font-medium">
             From strict downtown {GEO.cities[0]} high-rise elevator slots to long-distance corridor deliveries, here is how we guarantee a stress-free move.
           </p>
         </div>
@@ -92,29 +92,29 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
               return (
                 <div
                   key={step.number}
-                  className="bg-zinc-900/60 border border-zinc-800/60 hover:border-primary-300 rounded-none p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-primary-900/10 hover:-translate-y-1.5 group"
+                  className="bg-white dark:bg-zinc-900/60 border border-neutral-200/60 dark:border-zinc-800/60 hover:border-primary-300 rounded-none p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-primary-900/10 hover:-translate-y-1.5 group"
                 >
                   <div>
                     {/* Step Top Bar */}
                     <div className="flex items-center justify-between mb-8">
-                      <span className="text-4xl font-black text-neutral-200 group-hover:text-primary-200 transition-colors duration-300 font-['Montserrat',sans-serif]">
+                      <span className="text-4xl font-black text-neutral-700 dark:text-neutral-200 group-hover:text-primary-200 transition-colors duration-300 font-['Montserrat',sans-serif]">
                         {step.number}
                       </span>
-                      <div className="w-12 h-12 rounded-2xl bg-zinc-900/40 border border-zinc-800 flex items-center justify-center text-primary-500 group-hover:bg-primary-50 group-hover:border-zinc-800 transition-all duration-300 shadow-sm">
+                      <div className="w-12 h-12 rounded-2xl bg-neutral-50 dark:bg-zinc-900/40 border border-neutral-200 dark:border-zinc-800 flex items-center justify-center text-primary-500 group-hover:bg-primary-50 group-hover:border-neutral-200 dark:border-zinc-800 transition-all duration-300 shadow-sm">
                         <Icon className="w-5 h-5" aria-hidden="true" />
                       </div>
                     </div>
 
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-primary-700 bg-primary-50 border border-zinc-800/50 px-3 py-1 rounded-full inline-block mb-4">
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-primary-700 bg-primary-50 border border-neutral-200 dark:border-zinc-800/50 px-3 py-1 rounded-full inline-block mb-4">
                       {step.badge}
                     </span>
 
-                    <h3 className="text-lg font-extrabold text-white mb-1 font-['Montserrat',sans-serif]">
+                    <h3 className="text-lg font-extrabold text-neutral-900 dark:text-white mb-1 font-['Montserrat',sans-serif]">
                       {step.title}
                     </h3>
                     <div className="text-xs font-bold text-primary-600 mb-3">{step.subtitle}</div>
 
-                    <p className="text-xs text-zinc-400 leading-relaxed mb-6 font-medium">
+                    <p className="text-xs text-neutral-500 dark:text-zinc-400 leading-relaxed mb-6 font-medium">
                       {step.description}
                     </p>
                   </div>
@@ -123,7 +123,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
                     {/* Highlights Bullet points */}
                     <div className="pt-4 border-t border-primary-100 space-y-2 mb-4">
                       {step.highlights.map((h, i) => (
-                        <div key={i} className="flex items-center gap-2 text-[11px] text-zinc-300 font-semibold">
+                        <div key={i} className="flex items-center gap-2 text-[11px] text-neutral-600 dark:text-zinc-300 font-semibold">
                           <CheckCircle2 className="w-4 h-4 text-primary-500 shrink-0" aria-hidden="true" />
                           <span>{h}</span>
                         </div>
@@ -134,7 +134,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
                       <button
                         type="button"
                         onClick={step.action.onClick}
-                        className="w-full py-2.5 px-3 min-h-[44px] rounded-xl bg-black hover:bg-neutral-800 text-primary-400 font-extrabold text-xs flex items-center justify-center gap-1.5 transition-all shadow-lg shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:ring-black motion-reduce:transition-none"
+                        className="w-full py-2.5 px-3 min-h-[44px] rounded-xl bg-neutral-100 dark:bg-black hover:bg-neutral-800 text-primary-400 font-extrabold text-xs flex items-center justify-center gap-1.5 transition-all shadow-lg shadow-black/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus-visible:ring-black motion-reduce:transition-none"
                       >
                         <span>{step.action.label}</span>
                         <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -160,16 +160,16 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
         </div>
 
         {/* Bottom CTA Banner */}
-        <div className="mt-12 bg-zinc-900/60 border border-zinc-800 rounded-none p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-primary-900/5">
+        <div className="mt-12 bg-white dark:bg-zinc-900/60 border border-neutral-200 dark:border-zinc-800 rounded-none p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-primary-900/5">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-black text-primary-400 font-black text-xl flex items-center justify-center shrink-0 shadow-lg shadow-black/20 border border-black" aria-hidden="true">
+            <div className="w-14 h-14 rounded-2xl bg-neutral-100 dark:bg-black text-primary-400 font-black text-xl flex items-center justify-center shrink-0 shadow-lg shadow-black/20 border border-black" aria-hidden="true">
               <Zap className="w-7 h-7" aria-hidden="true" />
             </div>
             <div>
-              <h4 className="text-lg font-black text-white font-['Montserrat',sans-serif]">
+              <h4 className="text-lg font-black text-neutral-900 dark:text-white font-['Montserrat',sans-serif]">
                 Ready to Experience {GEO.regionLabel} Smooth Mover?
               </h4>
-              <p className="text-xs text-zinc-400 font-medium mt-1">
+              <p className="text-xs text-neutral-500 dark:text-zinc-400 font-medium mt-1">
                 Lock your move date in under 3 minutes with zero cancellation penalties.
               </p>
             </div>

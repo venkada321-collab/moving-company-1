@@ -202,7 +202,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                   currentStep === s.step
                     ? 'bg-primary-500 text-black text-zinc-900 font-bold shadow-lg shadow-amber-400/20'
                     : currentStep > s.step
-                    ? 'bg-black text-amber-400 border border-black font-extrabold shadow-lg font-medium'
+                    ? 'bg-neutral-100 dark:bg-black text-amber-400 border border-black font-extrabold shadow-lg font-medium'
                     : 'bg-zinc-100 text-zinc-600 border border-zinc-200 hover:bg-amber-50 hover:text-black font-bold'
                 }`}
               >
@@ -524,7 +524,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         }`}
                       >
                         <div className="text-xs font-bold text-zinc-600">No Storage Needed</div>
-                        <div className="text-[10px] text-neutral-500 mt-1">Direct move to new home</div>
+                        <div className="text-[10px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 mt-1">Direct move to new home</div>
                       </button>
 
                       {STORAGE_OPTIONS.slice(0, 2).map((st) => {
@@ -545,7 +545,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                               {isSelected && <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />}
                             </div>
                             <div className="text-[11px] text-amber-400 font-bold mt-1">
-                              ${(st.pricePerMonth * 0.5).toFixed(0)}/mo <span className="line-through text-neutral-500 text-[10px]">${st.pricePerMonth}</span>
+                              ${(st.pricePerMonth * 0.5).toFixed(0)}/mo <span className="line-through text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 text-[10px]">${st.pricePerMonth}</span>
                             </div>
                             <div className="text-[10px] text-zinc-500 mt-0.5">{st.idealFor}</div>
                           </button>
@@ -641,7 +641,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         <button
                           type="button"
                           onClick={handleApplyPromo}
-                          className="bg-black hover:bg-zinc-900 text-amber-400 shadow-md px-3 py-2 rounded-xl text-xs font-bold"
+                          className="bg-neutral-100 dark:bg-black hover:bg-neutral-50 dark:bg-zinc-900 text-amber-400 shadow-md px-3 py-2 rounded-xl text-xs font-bold"
                         >
                           Apply
                         </button>
@@ -691,7 +691,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
               <div className="flex items-center justify-between pb-5 border-b border-zinc-200">
                 <div>
-                  <span className="text-[10px] tracking-widest text-neutral-500 font-bold uppercase">
+                  <span className="text-[10px] tracking-widest text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 font-bold uppercase">
                     ESTIMATE CALCULATOR
                   </span>
                   <h4 className="text-2xl font-black text-zinc-900 font-['Montserrat',sans-serif] mt-1">
@@ -708,9 +708,9 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                 style={{ borderRadius: THEME.borderRadius.card }}
                 className="my-8 text-center bg-gradient-to-b from-white to-neutral-50/50 p-8 border border-zinc-200 shadow-sm"
               >
-                <div className="text-[11px] text-neutral-500 font-bold uppercase tracking-widest mb-2">TOTAL ALL-INCLUSIVE ESTIMATE</div>
+                <div className="text-[11px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 font-bold uppercase tracking-widest mb-2">TOTAL ALL-INCLUSIVE ESTIMATE</div>
                 <div className="text-4xl sm:text-5xl font-black text-zinc-900 tracking-tight font-['Montserrat',sans-serif]">
-                  ${liveEstimate.min} <span className="text-neutral-300 font-light mx-1">–</span> ${liveEstimate.max}
+                  ${liveEstimate.min} <span className="text-neutral-700 dark:text-neutral-300 font-light mx-1">–</span> ${liveEstimate.max}
                 </div>
                 <div className="text-xs text-zinc-500 font-semibold mt-4 flex items-center justify-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0 stroke-[2.5]" /> 
@@ -788,7 +788,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                   transitionDuration: THEME.animation.speed,
                   transitionTimingFunction: THEME.animation.easing
                 }}
-                className="w-full mt-8 py-4 px-6 bg-zinc-900 hover:bg-zinc-800 text-zinc-900 shadow-lg shadow-neutral-900/10 font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-all"
+                className="w-full mt-8 py-4 px-6 bg-neutral-50 dark:bg-zinc-900 hover:bg-zinc-800 text-zinc-900 shadow-lg shadow-neutral-900/10 font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-all"
               >
                 <Shield className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>{MICROCOPY.buttons.requestCOI}</span>
