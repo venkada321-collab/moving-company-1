@@ -1,0 +1,80 @@
+{
+  "name": "Mansa Graphic Truck with Logo RGB",
+  "legalName": "Mansa Graphic Truck with Logo RGB Inc.",
+  "shortName": "Mansa",
+  "slug": "mansamovers-com",
+  "domain": "mansamovers.com",
+  "websiteUrl": "https://mansamovers.com/",
+  "phone": "20647-3605-520",
+  "phoneRaw": "206473605520",
+  "email": "",
+  "hqAddress": "",
+  "logoSymbol": "M",
+  "logoUrl": "https://mansamovers.com/wp-content/uploads/2021/12/Mansa-Graphic-Truck-with-Logo-RGB.png",
+  "faviconUrl": "https://mansamovers.com/wp-content/uploads/2020/09/cropped-Mansa-DIgital-Icon-Pixelated-PNG-32x32.png",
+  "heroTagline": "HOME PAGE",
+  "heroSubtitle": "With Mansa Movers Experience top-rated moving services from residential and commercial relocations to packing storage & junk removal.",
+  "rankingClaim": "Trusted by thousands — Mansa Graphic Truck with Logo RGB",
+  "ctaText": "Submit",
+  "pageTitle": "Mansa Movers - Your Move matters",
+  "metaDescription": "With Mansa Movers Experience top-rated moving services from residential and commercial relocations to packing storage & junk removal.",
+  "theme": {
+    "primary": "amber",
+    "designTokens": {
+      "colorPalette": "amber",
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "Open Sans",
+        "body": "-apple-system"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "google": "https://g.page/r/CaZofMiGqU8OEAg/review",
+    "facebook": "https://www.facebook.com/MansamoversInc",
+    "tiktok": "https://www.tiktok.com/@mansamovers?",
+    "yelp": "https://www.yelp.ca/biz/mansa-movers-toronto",
+    "instagram": "https://www.instagram.com/mansamovers/?hl=en",
+    "youtube": "https://www.youtube.com/channel/UC0jn_1WfbAChAHVukQ5cvVA",
+    "linkedin": "https://www.linkedin.com/company/mansa-movers"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-03T15:34:02.479Z",
+    "sourceUrl": "https://mansamovers.com/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 0,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 51,
+      "slate": 13.5
+    },
+    "colorSampleCount": 100
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { THEME } from '../config/theme';
+import { THEME } from '../../config/theme';
 
 interface SectionDividerProps {
   type?: string;
@@ -15,7 +15,7 @@ export const SectionDivider: React.FC<SectionDividerProps> = ({
   flip = false,
 }) => {
   if (type === 'flat' || !type) {
-    return <div className={`w-full border-b border-amber-200/40 ${className}`} />;
+    return <div className={`w-full border-b border-zinc-800/40 ${className}`} />;
   }
 
   const transformStyle = flip ? 'scale-y-[-1] scale-x-[-1]' : '';

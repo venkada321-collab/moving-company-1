@@ -1,0 +1,112 @@
+[
+  {
+    "name": "High Level Movers",
+    "legalName": "High Level Movers Toronto Inc.",
+    "shortName": "High Level",
+    "slug": "high-level-movers-site",
+    "domain": "highlevelmovers.ca",
+    "websiteUrl": "https://highlevelmovers.ca/",
+    "phone": "(416) 333-0259",
+    "phoneRaw": "416-333-0259",
+    "email": "info@highlevelmovers.ca",
+    "hqAddress": "350 Supertest Rd, Toronto, ON M3J 2M2, Canada",
+    "logoSymbol": "H",
+    "logoUrl": "https://highlevelmovers.ca/wp-content/uploads/2019/08/logohighlevelmoversnewcolor.png",
+    "faviconUrl": "https://highlevelmovers.ca/wp-content/themes/highlevelmovers/fvicon/favicon-96x96.png",
+    "heroTagline": "HIGH LEVEL MOVERS — TOP TORONTO RELOCATION EXPERTS",
+    "heroSubtitle": "Reliable moving company offering trusted movers and customizable relocation solutions at competitive prices. Experience a smooth, stress-free move today.",
+    "rankingClaim": "Top Toronto Moving Company — Reliable & Customizable Solutions",
+    "pageTitle": "High Level Movers | Top Toronto Moving Company",
+    "metaDescription": "Reliable Toronto moving company offering trusted movers and affordable relocation services across Greater Toronto. Experience a smooth, stress-free move today.",
+    "theme": {
+      "primaryColor": "rose",
+      "designTokens": {
+        "colorPalette": "rose",
+        "fonts": {
+          "heading": "Montserrat",
+          "body": "Inter"
+        },
+        "animation": {
+          "speed": "0.2s",
+          "easing": "ease-out"
+        }
+      },
+      "primary": "rose"
+    },
+    "layout": {
+      "variants": {
+        "nav": "sticky-standard",
+        "hero": "calculator-split",
+        "services": "icon-grid",
+        "howItWorks": "cards-grid",
+        "supplies": "cards-catalog",
+        "reviews": "cards-grid",
+        "footer": "multi-column"
+      },
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "service_niches": true,
+        "how_it_works": true,
+        "supplies_and_storage": true,
+        "trust_signals": true,
+        "gta_routes": true,
+        "referral_program": true
+      }
+    }
+  },
+  {
+    "name": "Ecoway Movers",
+    "legalName": "Ecoway Movers Canada Inc.",
+    "shortName": "Ecoway",
+    "slug": "ecoway-movers-site",
+    "domain": "ecowaymovers.com",
+    "websiteUrl": "https://ecowaymovers.com/",
+    "phone": "+1 (888) 807-2040",
+    "phoneRaw": "18888072040",
+    "email": "move@ecowaymovers.ca",
+    "hqAddress": "70 Temperance St Unit 5307, Toronto, ON M5H 0B1, Canada",
+    "logoSymbol": "E",
+    "logoUrl": "https://ecowaymovers.com/wp-content/uploads/2024/10/2.png",
+    "faviconUrl": "https://ecowaymovers.com/wp-content/uploads/2024/10/2.png",
+    "heroTagline": "ECOWAY MOVERS — CANADA'S #1 RELIABLE MOVING COMPANY",
+    "heroSubtitle": "Professional local, long-distance, and international moving & white-glove storage services across Canada. Prompt, reliable, and diligent execution.",
+    "rankingClaim": "Rated #1 Reliable Moving & White Glove Storage Services in Canada",
+    "pageTitle": "Ecoway Movers | Local, Long Distance & Reliable Moving Services",
+    "metaDescription": "Ecoway Movers is a #1 Moving Company in Canada. Offering local, long distance & international moving & storage services with prompt, white-glove care.",
+    "theme": {
+      "primaryColor": "blue",
+      "designTokens": {
+        "colorPalette": "blue",
+        "fonts": {
+          "heading": "Space Grotesk",
+          "body": "DM Sans"
+        },
+        "animation": {
+          "speed": "0.3s",
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+        }
+      },
+      "primary": "blue"
+    },
+    "layout": {
+      "variants": {
+        "nav": "transparent-overlay",
+        "hero": "centered-cta",
+        "services": "accordion-panels",
+        "howItWorks": "accordion-protocol",
+        "supplies": "pricing-table",
+        "reviews": "stats-ribbon",
+        "footer": "cta-banner"
+      },
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "service_niches": true,
+        "how_it_works": true,
+        "supplies_and_storage": true,
+        "trust_signals": true,
+        "gta_routes": true,
+        "referral_program": true
+      }
+    }
+  }
+]

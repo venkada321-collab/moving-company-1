@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Gift, Copy, Check, Share2, DollarSign, Users, Sparkles, Send, ArrowRight, PartyPopper } from 'lucide-react';
-import { BRAND, GEO } from '../config';
+import { BRAND, GEO } from '../../../config';
+import { THEME } from '../../../config/theme';
 
 export const ReferralProgram: React.FC = () => {
   const [userName, setUserName] = useState<string>('');
@@ -27,18 +28,18 @@ export const ReferralProgram: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-amber-50 via-white to-amber-50/50 py-16 px-4 text-neutral-900 border-y border-amber-200">
+    <div className="bg-gradient-to-b from-primary-50 via-white to-primary-50/50 py-16 px-4 text-white border-y border-zinc-800">
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 text-black rounded-3xl p-8 md:p-12 shadow-2xl shadow-amber-500/20 border border-amber-400/50 text-center md:text-left mb-12">
+        <div className="bg-gradient-to-r from-primary-400 via-primary-300 to-primary-400 text-black rounded-3xl p-8 md:p-12 shadow-2xl shadow-primary-500/20 border border-primary-400/50 text-center md:text-left mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/10 border border-black/20 text-black text-xs font-bold uppercase tracking-widest mb-3">
             <Gift className="w-3.5 h-3.5" aria-hidden="true" /> {BRAND.referralProgramName}
           </div>
           <h2 className="text-black font-black text-5xl md:text-6xl tracking-tight font-['Montserrat',sans-serif]">
-            GIVE ${BRAND.referralGiveAmount}, <span className="text-neutral-900">GET ${BRAND.referralGetAmount} CASH BACK</span>
+            GIVE ${BRAND.referralGiveAmount}, <span className="text-white">GET ${BRAND.referralGetAmount} CASH BACK</span>
           </h2>
-          <p className="mt-3 text-neutral-900 font-bold max-w-2xl md:mx-0 mx-auto text-lg">
+          <p className="mt-3 text-white font-bold max-w-2xl md:mx-0 mx-auto text-lg">
             Know someone moving in {GEO.cities.slice(0, 3).join(', ')}, or {GEO.cities[3]}? Send them ${BRAND.referralGiveAmount} off their move and collect ${BRAND.referralGetAmount} direct e-Transfer reward when they complete their booking.
           </p>
         </div>
@@ -47,12 +48,12 @@ export const ReferralProgram: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative overflow-hidden">
           
           {/* Left Form: Code Generator */}
-          <div className="lg:col-span-7 bg-white border-2 border-amber-300 rounded-2xl p-6 shadow-lg text-neutral-900 space-y-6">
+          <div className="lg:col-span-7 bg-zinc-900/60 border-2 border-primary-300 rounded-2xl p-6 shadow-lg text-white space-y-6">
             <div className="space-y-1">
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-widest">
+              <span className="text-xs font-bold text-primary-600 uppercase tracking-widest">
                 STEP 1: CREATE YOUR CUSTOM REFERRAL LINK
               </span>
-              <h3 className="text-2xl font-black text-neutral-900 font-['Montserrat',sans-serif]">
+              <h3 className="text-2xl font-black text-white font-['Montserrat',sans-serif]">
                 Generate Your Unique Ambassador Code
               </h3>
             </div>
@@ -60,7 +61,7 @@ export const ReferralProgram: React.FC = () => {
             <form onSubmit={handleGenerate} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label htmlFor="referral-user-name" className="text-xs font-semibold text-neutral-700">Your Full Name</label>
+                  <label htmlFor="referral-user-name" className="text-xs font-semibold text-zinc-300">Your Full Name</label>
                   <input
                     id="referral-user-name"
                     type="text"
@@ -68,12 +69,12 @@ export const ReferralProgram: React.FC = () => {
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     placeholder="e.g. Sarah Jenkins"
-                    className="w-full bg-neutral-50 border border-neutral-300 text-neutral-900 font-mono p-3 rounded-xl focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-400/30 min-h-[44px]"
+                    className="w-full bg-zinc-900/40 border border-neutral-300 text-white font-mono p-3 rounded-xl focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-400/30 min-h-[44px]"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="referral-user-email" className="text-xs font-semibold text-neutral-700">Your Email (for ${BRAND.referralGetAmount} e-Transfer)</label>
+                  <label htmlFor="referral-user-email" className="text-xs font-semibold text-zinc-300">Your Email (for ${BRAND.referralGetAmount} e-Transfer)</label>
                   <input
                     id="referral-user-email"
                     type="email"
@@ -81,14 +82,14 @@ export const ReferralProgram: React.FC = () => {
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
                     placeholder="sarah@example.com"
-                    className="w-full bg-neutral-50 border border-neutral-300 text-neutral-900 font-mono p-3 rounded-xl focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-400/30 min-h-[44px]"
+                    className="w-full bg-zinc-900/40 border border-neutral-300 text-white font-mono p-3 rounded-xl focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-400/30 min-h-[44px]"
                   />
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="bg-black hover:bg-neutral-900 text-amber-400 font-black px-6 py-3 rounded-xl shadow-lg uppercase tracking-wider flex items-center justify-center gap-2 w-full sm:w-auto min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-colors motion-reduce:transition-none"
+                className="bg-black hover:bg-neutral-900 text-primary-400 font-black px-6 py-3 rounded-xl shadow-lg uppercase tracking-wider flex items-center justify-center gap-2 w-full sm:w-auto min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-colors motion-reduce:transition-none"
               >
                 <span>Generate My ${BRAND.referralGetAmount} Link</span>
                 <Sparkles className="w-4 h-4" aria-hidden="true" />
@@ -97,31 +98,31 @@ export const ReferralProgram: React.FC = () => {
 
             {/* Generated Code Display Box */}
             {submitted && (
-              <div className="mt-6 bg-amber-50/50 border border-amber-200 rounded-2xl p-5 space-y-3 animate-in fade-in duration-300 motion-reduce:animate-none">
-                <div className="flex items-center justify-between text-xs font-bold text-amber-700">
+              <div className="mt-6 bg-primary-50/50 border border-zinc-800 rounded-2xl p-5 space-y-3 animate-in fade-in duration-300 motion-reduce:animate-none">
+                <div className="flex items-center justify-between text-xs font-bold text-primary-700">
                   <span className="flex items-center gap-1.5">
-                    <PartyPopper className="w-4 h-4 text-amber-600" aria-hidden="true" />
+                    <PartyPopper className="w-4 h-4 text-primary-600" aria-hidden="true" />
                     YOUR REFERRAL CODE IS READY!
                   </span>
                   <span className="text-green-600">100% Active</span>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-2">
-                  <div className="w-full bg-neutral-50 border border-neutral-300 p-3 rounded-xl font-mono text-sm text-neutral-900 font-bold break-all min-h-[44px] flex items-center">
+                  <div className="w-full bg-zinc-900/40 border border-neutral-300 p-3 rounded-xl font-mono text-sm text-white font-bold break-all min-h-[44px] flex items-center">
                     {shareableUrl}
                   </div>
                   <button
                     type="button"
                     onClick={handleCopy}
                     aria-label={copied ? 'Copied referral link to clipboard' : 'Copy referral link to clipboard'}
-                    className="w-full sm:w-auto bg-black hover:bg-neutral-900 text-amber-400 font-black px-6 py-3 rounded-xl shadow-lg uppercase flex items-center justify-center gap-2 shrink-0 transition-all motion-reduce:transition-none min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    className="w-full sm:w-auto bg-black hover:bg-neutral-900 text-primary-400 font-black px-6 py-3 rounded-xl shadow-lg uppercase flex items-center justify-center gap-2 shrink-0 transition-all motion-reduce:transition-none min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   >
                     {copied ? <Check className="w-4 h-4" aria-hidden="true" /> : <Copy className="w-4 h-4" aria-hidden="true" />}
                     <span>{copied ? 'Copied Link!' : 'Copy Link'}</span>
                   </button>
                 </div>
 
-                <p className="text-[11px] text-neutral-600 font-medium">
+                <p className="text-[11px] text-zinc-400 font-medium">
                   Share this link on WhatsApp, iMessage, or Instagram. Anyone using this code receives ${BRAND.referralGiveAmount} off instantly!
                 </p>
               </div>
@@ -129,40 +130,49 @@ export const ReferralProgram: React.FC = () => {
           </div>
 
           {/* Right Column: Earnings Tracker Mockup & Rules */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-6 border border-amber-200 shadow-xl shadow-amber-900/5 text-neutral-900 hover:border-amber-400 transition-all space-y-6">
-            <h4 className="text-lg font-bold text-neutral-900 font-['Montserrat',sans-serif] flex items-center gap-2">
-              <DollarSign className="w-5 h-5 text-amber-500" aria-hidden="true" />
+          <div className="lg:col-span-5 bg-zinc-900/60 rounded-2xl p-6 border border-zinc-800 shadow-xl shadow-primary-900/5 text-white hover:border-primary-400 transition-all space-y-6">
+            <h4 className="text-lg font-bold text-white font-['Montserrat',sans-serif] flex items-center gap-2">
+              <DollarSign className="w-5 h-5 text-primary-500" aria-hidden="true" />
               How the ${BRAND.referralGetAmount} Reward Works
             </h4>
 
-            <div className="space-y-4 text-sm text-neutral-700">
+            <div className="space-y-4 text-sm text-zinc-300">
               <div className="flex items-start gap-4">
-                <div className="bg-black text-amber-400 font-black w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-md shrink-0" aria-hidden="true">1</div>
+                <div className="bg-black text-primary-400 font-black w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-md shrink-0" aria-hidden="true">1</div>
                 <div className="pt-1">
-                  <div className="font-bold text-neutral-900">Share Your Link</div>
+                  <div className="font-bold text-white">Share Your Link</div>
                   <div className="mt-1 text-xs">Send your custom code to friends, family, or {GEO.regionName} neighbors.</div>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-black text-amber-400 font-black w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-md shrink-0" aria-hidden="true">2</div>
+                <div className="bg-black text-primary-400 font-black w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-md shrink-0" aria-hidden="true">2</div>
                 <div className="pt-1">
-                  <div className="font-bold text-neutral-900">Friend Saves ${BRAND.referralGiveAmount} Instantly</div>
+                  <div className="font-bold text-white">Friend Saves ${BRAND.referralGiveAmount} Instantly</div>
                   <div className="mt-1 text-xs">They apply your code during checkout for an automatic ${BRAND.referralGiveAmount} price reduction.</div>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-black text-amber-400 font-black w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-md shrink-0" aria-hidden="true">3</div>
+                <div className="bg-black text-primary-400 font-black w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-md shrink-0" aria-hidden="true">3</div>
                 <div className="pt-1">
-                  <div className="font-bold text-neutral-900">You Get ${BRAND.referralGetAmount} e-Transfer</div>
+                  <div className="font-bold text-white">You Get ${BRAND.referralGetAmount} e-Transfer</div>
                   <div className="mt-1 text-xs">Once their move completes, ${BRAND.referralGetAmount} is deposited directly to your {GEO.paymentMethod}.</div>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-amber-200 text-xs text-neutral-600 text-center font-bold">
+            <div className="pt-4 border-t border-zinc-800 text-xs text-zinc-400 text-center font-bold">
               Unlimited referrals allowed! Top ambassadors earn over {BRAND.referralTopEarning}.
+            </div>
+            
+            {/* Contextual Referral Art */}
+            <div className="mt-4 rounded-xl overflow-hidden h-40 relative shadow-md border border-primary-100 hidden sm:block">
+              <img 
+                src={THEME.customArt?.referral || "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&q=80"}
+                alt="Happy Customer Shaking Hands"
+                className="content-art-layer referral-art absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
 

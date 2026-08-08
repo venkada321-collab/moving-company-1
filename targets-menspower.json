@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Men's Power Movers",
+    "domain": "menspowermovers.ca",
+    "websiteUrl": "https://menspowermovers.ca/",
+    "slug": "menspowermovers",
+    "theme": {
+      "primary": "red"
+    },
+    "logoUrl": "https://menspowermovers.ca/wp-content/themes/menspower/img/logo.svg",
+    "faviconUrl": "https://menspowermovers.ca/wp-content/themes/menspower/img/favicon.ico"
+  }
+]

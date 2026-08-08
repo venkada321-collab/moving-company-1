@@ -1,0 +1,97 @@
+{
+  "name": "Bravos Moving",
+  "legalName": "Bravos Moving Inc.",
+  "shortName": "Bravos",
+  "slug": "bravos-moving",
+  "domain": "bravosmoving.com",
+  "websiteUrl": "https://bravosmoving.com/",
+  "phone": "+1 437-385-7254",
+  "phoneRaw": "14373857254",
+  "email": "info@bravosmoving.com",
+  "hqAddress": "4915 Bathurst St Suite 223, North York, ON M2R 1X8, Canada (North York)",
+  "logoSymbol": "B",
+  "logoUrl": "https://bravosmoving.com/wp-content/uploads/2024/02/Bravos-moving-120-x-44-px-1200-x-440-px.webp",
+  "faviconUrl": "https://bravosmoving.com/wp-content/uploads/2026/03/cropped-Untitled-design-15-1-32x32.png",
+  "heroTagline": "BRAVOSMOVING.COM — PREMIUM SERVICE",
+  "heroSubtitle": "Bravos Moving provides reliable residential, commercial, and long-distance moving. Professional movers delivering safe relocation.",
+  "rankingClaim": "Trusted by thousands — bravosmoving.com",
+  "ctaText": "Get Your Free Estimate",
+  "pageTitle": "Professional Moving Services You Can Trust | Bravos Moving",
+  "metaDescription": "Bravos Moving provides reliable residential, commercial, and long-distance moving. Professional movers delivering safe relocation.",
+  "theme": {
+    "primary": "amber",
+    "secondary": "slate",
+    "tertiary": "emerald",
+    "palette": {
+      "primary": "amber",
+      "secondary": "slate",
+      "tertiary": "emerald"
+    },
+    "designTokens": {
+      "colorPalette": "amber",
+      "colorTriad": {
+        "primary": "amber",
+        "secondary": "slate",
+        "tertiary": "emerald"
+      },
+      "fonts": {
+        "heading": "Outfit",
+        "body": "Outfit"
+      },
+      "discoveredFonts": {
+        "heading": "Outfit",
+        "body": "Outfit"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/bravosmoving",
+    "linkedin": "https://in.linkedin.com/bravosmoving",
+    "instagram": "https://instagram.com/bravosmoving"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Vibrant HSL Triad",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-06T03:02:02.741Z",
+    "sourceUrl": "https://bravosmoving.com/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 0,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 54,
+      "slate": 43.5
+    },
+    "colorSampleCount": 169,
+    "referenceScreenshot": "C:\\Users\\venka\\.gemini\\antigravity\\scratch\\moving-company-1\\output\\references\\bravosmoving-existing-reference.png"
+  },
+  "rating": 4.8,
+  "reviewCount": 106,
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bravos%20Moving&query_place_id=ChIJ8wIQMzgtK4gRfvwcRp1F9yI"
+}

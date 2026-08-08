@@ -1,0 +1,96 @@
+{
+  "name": "Shuttle Moving Company",
+  "legalName": "Shuttle Moving Company Inc.",
+  "shortName": "Shuttle",
+  "slug": "shuttle-moving-company",
+  "domain": "shuttlemoving.com",
+  "websiteUrl": "https://shuttlemoving.com/",
+  "phone": "+1 647-704-9249",
+  "phoneRaw": "16477049249",
+  "email": "shuttlemoving@gmail.com",
+  "hqAddress": "4590 Dufferin St, North York, ON M3H 5S4, Canada (North York)",
+  "logoSymbol": "S",
+  "logoUrl": "https://shuttlemoving.com/img/Moving-services-North-York.svg",
+  "faviconUrl": "https://shuttlemoving.com/img/favicon-32x32.png",
+  "heroTagline": "NORTH YORK\nMOVING SERVICES",
+  "heroSubtitle": "Regardless the scope and size of your move, Shuttle Moving will get it done safely.",
+  "rankingClaim": "Trusted by thousands — North York Movers",
+  "ctaText": "Get Your Free Quote",
+  "pageTitle": "North York Movers | Moving Services | Shuttle Moving Inc.",
+  "metaDescription": "Need movers in North York or the GTA? Shuttle Moving - North York’s Top Rated Moving Company. Moving services, storage. Call Us: 647-704-9249",
+  "theme": {
+    "primary": "amber",
+    "secondary": "blue",
+    "tertiary": "slate",
+    "palette": {
+      "primary": "amber",
+      "secondary": "blue",
+      "tertiary": "slate"
+    },
+    "designTokens": {
+      "colorPalette": "amber",
+      "colorTriad": {
+        "primary": "amber",
+        "secondary": "blue",
+        "tertiary": "slate"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "Work Sans",
+        "body": "Work Sans"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "google": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2kxTmVtNVBSR3RtUzFCME56TmpXbE5KUmtsNWRVRRAB!2m1!1s0x0:0x8244f0e89630728c!3m1!1s2@1:CAIQACodChtycF9oOi1Nem5PRGtmS1B0NzNjWlNJRkl5dUE%7C%7C",
+    "instagram": "https://www.instagram.com/shuttlemoving"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Vibrant HSL Triad",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-06T03:01:53.376Z",
+    "sourceUrl": "https://shuttlemoving.com/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 19,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 27,
+      "slate": 9
+    },
+    "colorSampleCount": 88,
+    "referenceScreenshot": "C:\\Users\\venka\\.gemini\\antigravity\\scratch\\moving-company-1\\output\\references\\shuttlemoving-existing-reference.png"
+  },
+  "rating": 5,
+  "reviewCount": 109,
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Shuttle%20Moving%20Company&query_place_id=ChIJLTzQYMktK4gRjHIwlujwRII"
+}

@@ -1,0 +1,74 @@
+{
+  "name": "Logo2.png",
+  "legalName": "Logo2.png Inc.",
+  "shortName": "Logo2.png",
+  "slug": "goldentobymovers-ca",
+  "domain": "goldentobymovers.ca",
+  "websiteUrl": "https://www.goldentobymovers.ca/",
+  "phone": "123-456-7890",
+  "phoneRaw": "1234567890",
+  "email": "",
+  "hqAddress": "",
+  "logoSymbol": "L",
+  "logoUrl": "https://static.wixstatic.com/media/bb20fa_a2d14c2601174502bc08522f164d4c20~mv2.png/v1/fill/w_102,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo2.png",
+  "faviconUrl": "https://static.wixstatic.com/media/bb20fa_a2d14c2601174502bc08522f164d4c20%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/bb20fa_a2d14c2601174502bc08522f164d4c20%7Emv2.png",
+  "heroTagline": "YOUR MOVE.\nOUR MUSCLE.",
+  "heroSubtitle": "Professional services by Logo2.png.",
+  "rankingClaim": "Trusted by thousands — Logo2.png",
+  "ctaText": "Get Your Free Estimate",
+  "pageTitle": "Home | Golden Toby Movers",
+  "metaDescription": "",
+  "theme": {
+    "primary": "slate",
+    "designTokens": {
+      "colorPalette": "slate",
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "wfont_95627a_85af6ff465b54bc39924b8dd6cf32cf0",
+        "body": "Arial"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/p/Golden-Toby-Moving-and-Junk-Removal-61576203082635/"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-03T15:34:38.265Z",
+    "sourceUrl": "https://www.goldentobymovers.ca/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 33,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 39,
+      "slate": 42
+    },
+    "colorSampleCount": 168
+  }
+}

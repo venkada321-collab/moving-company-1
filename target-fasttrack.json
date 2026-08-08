@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Fast Track Moving & Storage",
+    "legalName": "Fast Track Moving & Storage Inc.",
+    "shortName": "Fast Track",
+    "slug": "fast-track-moving",
+    "domain": "fasttrackmove.com",
+    "websiteUrl": "https://www.fasttrackmove.com/",
+    "phone": "1-888-920-8722",
+    "phoneRaw": "18889208722",
+    "email": "dispatch@fasttrackmove.com",
+    "hqAddress": "Toronto & GTA Regional Operations, Canada",
+    "logoSymbol": "F",
+    "heroTagline": "FAST TRACK YOUR RELOCATION — PRECISION TRANSIT & CLIMATE STORAGE",
+    "heroSubtitle": "Canada's trusted relocation team delivering professional white-glove residential moving, commercial office transit, and secure climate-regulated storage.",
+    "rankingClaim": "Top-Rated Precision Moving Experts",
+    "pageTitle": "Fast Track Moving & Storage | Professional Relocation",
+    "metaDescription": "Fast Track Moving & Storage provides seamless local and long-distance moving solutions. WSIB insured, expert packers, transparent pricing with zero hidden fees.",
+    "theme": {
+      "primary": "slate",
+      "designTokens": {
+        "colorPalette": "blue",
+        "fonts": {
+          "heading": "Plus Jakarta Sans",
+          "body": "Inter"
+        },
+        "animation": {
+          "speed": "0.2s",
+          "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "nav": "floating-pill-glass",
+        "hero": "calculator-split",
+        "services": "icon-grid",
+        "howItWorks": "cards-grid",
+        "supplies": "cards-catalog",
+        "reviews": "stats-ribbon-ticker",
+        "footer": "saas-mega-directory"
+      },
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "service_niches": true,
+        "how_it_works": true,
+        "supplies_and_storage": true,
+        "trust_signals": true,
+        "gta_routes": true,
+        "referral_program": true
+      }
+    },
+    "logoUrl": "https://www.fasttrackmove.com/_next/image?url=%2Flogo-clean.webp&w=1200&q=75",
+    "faviconUrl": "https://www.fasttrackmove.com/favicon.svg"
+  }
+]

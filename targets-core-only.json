@@ -1,0 +1,197 @@
+[
+  {
+    "name": "GetMovers Canada",
+    "legalName": "GetMovers Canadian Relocation Inc.",
+    "shortName": "GetMovers",
+    "slug": "getmovers-canada",
+    "domain": "getmovers.ca",
+    "websiteUrl": "https://getmovers.ca",
+    "phone": "(416) 555-0199",
+    "phoneRaw": "416-555-0199",
+    "email": "dispatch@getmovers.ca",
+    "hqAddress": "100 King St W, Toronto, ON M5X 1A9, Canada",
+    "logoSymbol": "G",
+    "logoUrl": "https://getmovers.ca/wp-content/themes/arch/img/logo.png",
+    "faviconUrl": "https://getmovers.ca/wp-content/uploads/2024/09/cropped-cropped-log-192x192.png",
+    "heroTagline": "GETMOVERS — CANADA-WIDE LOGISTIC TRANSPORT",
+    "heroSubtitle": "Professional residential and executive relocation specialists offering fully insured transit, upfront transparent billing, and dedicated moving technicians across Canada.",
+    "rankingClaim": "Canada's Premier Logistic Transport & Relocation Technicians",
+    "pageTitle": "GetMovers Canada | Professional Relocation Specialists",
+    "metaDescription": "Professional Canada-wide residential and executive relocation specialists. Get guaranteed transit quotes and white-glove logistical support today.",
+    "theme": {
+      "primary": "emerald",
+      "designTokens": {
+        "colorPalette": "emerald",
+        "fonts": {
+          "heading": "Outfit",
+          "body": "Roboto"
+        },
+        "animation": {
+          "speed": "0.2s",
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+        },
+        "borderRadius": {
+          "card": "16px",
+          "button": "8px",
+          "badge": "9999px"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "nav": "sticky-standard",
+        "hero": "centered-cta",
+        "services": "icon-grid",
+        "process": "cards-grid",
+        "supplies": "cards-catalog",
+        "reviews": "cards-grid",
+        "footer": "multi-column"
+      },
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "how_it_works": false,
+        "trust_signals": true,
+        "service_niches": false,
+        "gta_routes": false,
+        "supplies_and_storage": false,
+        "referral_program": false,
+        "blog_page": false
+      }
+    },
+    "copywriting": {
+      "navCtaButton": "Instant Estimate",
+      "calculatorHeading": "Instant Digital Estimate",
+      "trustSectionTitle": "VERIFIED TRUST & REPUTATION"
+    }
+  },
+  {
+    "name": "Unique Movers",
+    "legalName": "Unique Movers Greater Toronto Ltd.",
+    "shortName": "Unique",
+    "slug": "unique-movers",
+    "domain": "uniquemovers.ca",
+    "websiteUrl": "https://www.uniquemovers.ca",
+    "phone": "(647) 555-0288",
+    "phoneRaw": "647-555-0288",
+    "email": "contact@uniquemovers.ca",
+    "hqAddress": "250 University Ave, Toronto, ON M5H 3E5, Canada",
+    "logoSymbol": "U",
+    "logoUrl": "https://www.uniquemovers.ca/images/logo1.png",
+    "faviconUrl": "https://www.uniquemovers.ca/images/um-fav-icon.png",
+    "heroTagline": "UNIQUE MOVERS — SPECIALIZED CONDO TRANSPORT",
+    "heroSubtitle": "Toronto's premier white-glove moving professionals specializing in high-rise condominium relocations, tight elevator reservations, and fine art transport.",
+    "rankingClaim": "White-Glove High-Rise Relocation & Specialized Transport",
+    "pageTitle": "Unique Movers | Specialized High-Rise & Condo Transport",
+    "metaDescription": "Toronto's premier white-glove moving professionals specializing in high-rise condominium relocations and fine art transport.",
+    "theme": {
+      "primary": "gold",
+      "designTokens": {
+        "colorPalette": "gold",
+        "fonts": {
+          "heading": "Playfair Display",
+          "body": "Source Serif 4"
+        },
+        "animation": {
+          "speed": "0.25s",
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+        },
+        "borderRadius": {
+          "card": "0px",
+          "button": "0px",
+          "badge": "0px"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "nav": "transparent-overlay",
+        "hero": "compact-banner",
+        "services": "horizontal-cards",
+        "process": "timeline-horizontal",
+        "supplies": "pricing-table",
+        "reviews": "stats-ribbon",
+        "footer": "cta-banner"
+      },
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "how_it_works": false,
+        "trust_signals": true,
+        "service_niches": false,
+        "gta_routes": false,
+        "supplies_and_storage": false,
+        "referral_program": false,
+        "blog_page": false
+      }
+    },
+    "copywriting": {
+      "navCtaButton": "Reserve Transit",
+      "calculatorHeading": "Concierge Estimate Portal",
+      "trustSectionTitle": "EXECUTIVE REPUTATION & PROOF"
+    }
+  },
+  {
+    "name": "Maple Mover",
+    "legalName": "Maple Movers Logistics Corporation",
+    "shortName": "Maple",
+    "slug": "maple-mover",
+    "domain": "maple-mover.com",
+    "websiteUrl": "https://maple-mover.com",
+    "phone": "(905) 555-0377",
+    "phoneRaw": "905-555-0377",
+    "email": "support@maple-mover.com",
+    "hqAddress": "500 Confederation Pkwy, Mississauga, ON L5B 4E7, Canada",
+    "logoSymbol": "M",
+    "logoUrl": "https://maple-mover.com/wp-content/uploads/2026/01/560309190_17843342121592477_7127191675640157132_n.jpg",
+    "faviconUrl": "https://i0.wp.com/maple-mover.com/wp-content/uploads/2026/01/cropped-560309190_17843342121592477_7127191675640157132_n.jpg?fit=192%2C192&ssl=1",
+    "heroTagline": "MAPLE MOVER — ONTARIO'S FASTEST RELOCATION TEAM",
+    "heroSubtitle": "Dependable local and provincial transit specialists offering same-day fleet dispatches, guaranteed fixed-rate pricing, and modern equipment.",
+    "rankingClaim": "Dependable Ontario Local & Provincial Transit Specialists",
+    "pageTitle": "Maple Mover | Ontario's Fastest Relocation Team",
+    "metaDescription": "Dependable local and provincial transit specialists offering same-day fleet dispatches and guaranteed fixed-rate pricing across Ontario.",
+    "theme": {
+      "primary": "crimson",
+      "designTokens": {
+        "colorPalette": "crimson",
+        "fonts": {
+          "heading": "Plus Jakarta Sans",
+          "body": "Manrope"
+        },
+        "animation": {
+          "speed": "0.15s",
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+        },
+        "borderRadius": {
+          "card": "24px",
+          "button": "9999px",
+          "badge": "12px"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "nav": "centered-split",
+        "hero": "centered-cta",
+        "services": "accordion-panels",
+        "process": "accordion-protocol",
+        "supplies": "minimal-list",
+        "reviews": "stats-ribbon",
+        "footer": "minimal-compact"
+      },
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "how_it_works": false,
+        "trust_signals": true,
+        "service_niches": false,
+        "gta_routes": false,
+        "supplies_and_storage": false,
+        "referral_program": false,
+        "blog_page": false
+      }
+    },
+    "copywriting": {
+      "navCtaButton": "Quick Quote",
+      "calculatorHeading": "Instant Provincial Estimate",
+      "trustSectionTitle": "VERIFIED ONTARIO REPUTATION"
+    }
+  }
+]

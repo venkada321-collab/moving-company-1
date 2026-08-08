@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Get Movers Canada",
+    "legalName": "Get Movers Canada Inc.",
+    "shortName": "Get Movers",
+    "slug": "get-movers-site",
+    "domain": "getmovers.ca",
+    "websiteUrl": "https://getmovers.ca/",
+    "phone": "1-888-890-0988",
+    "phoneRaw": "18888900988",
+    "email": "info@getmovers.ca",
+    "hqAddress": "Toronto, ON, Canada",
+    "logoSymbol": "G",
+    "heroTagline": "GET MOVERS — CANADA'S PREMIER RELOCATION EXPERTS",
+    "heroSubtitle": "Professional residential and commercial relocation specialists offering nationwide white-glove transit and storage solutions.",
+    "rankingClaim": "Trusted Relocation Specialists Across Canada",
+    "pageTitle": "Get Movers | Professional Movers Canada",
+    "metaDescription": "Get Movers provides top-rated local and long-distance relocation services across Canada. Professional packing, secure transit, and competitive rates.",
+    "theme": {
+      "primary": "red",
+      "designTokens": {
+        "colorPalette": "blue",
+        "fonts": {
+          "heading": "Space Grotesk",
+          "body": "Inter"
+        },
+        "animation": {
+          "speed": "0.2s",
+          "easing": "ease-out"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "nav": "floating-pill-glass",
+        "hero": "calculator-split",
+        "services": "icon-grid",
+        "howItWorks": "cards-grid",
+        "supplies": "cards-catalog",
+        "reviews": "stats-ribbon-ticker",
+        "footer": "gigantic-cta-banner"
+      },
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "service_niches": true,
+        "how_it_works": true,
+        "supplies_and_storage": true,
+        "trust_signals": true,
+        "gta_routes": true,
+        "referral_program": true
+      }
+    },
+    "logoUrl": "https://getmovers.ca/wp-content/themes/arch/img/logo.png",
+    "faviconUrl": "https://getmovers.ca/wp-content/uploads/2024/09/cropped-cropped-log-32x32.png"
+  }
+]

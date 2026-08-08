@@ -1,0 +1,97 @@
+{
+  "name": "Sheffield Moving & Storage",
+  "legalName": "Sheffield Moving & Storage Inc.",
+  "shortName": "Sheffield",
+  "slug": "sheffield-moving-storage",
+  "domain": "sheffieldmoving.com",
+  "websiteUrl": "https://sheffieldmoving.com/",
+  "phone": "+1 416-291-1200",
+  "phoneRaw": "14162911200",
+  "email": "info@sheffieldmoving.com",
+  "hqAddress": "4069 Gordon Baker Rd Suite 1, Scarborough, ON M1W 2P3, Canada (Scarborough)",
+  "logoSymbol": "S",
+  "logoUrl": "",
+  "faviconUrl": "",
+  "heroTagline": "PROFESSIONAL MOVING COMPANIES IN TORONTO, ON, AND THE SURROUNDING AREAS",
+  "heroSubtitle": "Sheffield Moving and Storage is a Leader Among Moving Companies in Toronto, London, Ottawa, and the Surrounding Areas\nExperienced Movers for Your Moving and Storage Needs\nWith almost a century of experience, Sheffield Moving & Storage is proud to provide exceptional service founded on our family’s v",
+  "rankingClaim": "Trusted by thousands — sheffieldmoving.com",
+  "ctaText": "request a quote",
+  "pageTitle": "Moving Companies in Toronto, ON | Sheffield Moving and Storage",
+  "metaDescription": "\n            Sheffield Moving and Storage is one of the best moving companies in Toronto, ON, and the surrounding areas for your moving and storage needs.        ",
+  "theme": {
+    "primary": "blue",
+    "secondary": "amber",
+    "tertiary": "slate",
+    "palette": {
+      "primary": "blue",
+      "secondary": "amber",
+      "tertiary": "slate"
+    },
+    "designTokens": {
+      "colorPalette": "blue",
+      "colorTriad": {
+        "primary": "blue",
+        "secondary": "amber",
+        "tertiary": "slate"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "miller-display",
+        "body": "ITC Franklin Gothic LT W01 Bk"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "twitter": "https://twitter.com/SheffieldMoving",
+    "instagram": "https://www.instagram.com/sheffieldmoving",
+    "linkedin": "https://www.linkedin.com/company/sheffieldmoving"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Vibrant HSL Triad",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-06T03:02:15.197Z",
+    "sourceUrl": "https://sheffieldmoving.com/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 69,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 9,
+      "slate": 6
+    },
+    "colorSampleCount": 96,
+    "referenceScreenshot": "C:\\Users\\venka\\.gemini\\antigravity\\scratch\\moving-company-1\\output\\references\\sheffieldmoving-existing-reference.png"
+  },
+  "rating": 4.5,
+  "reviewCount": 100,
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sheffield%20Moving%20and%20Storage%20Inc.&query_place_id=ChIJq6pqBHbT1IkReVs_Ik1mroQ"
+}

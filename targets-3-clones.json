@@ -1,0 +1,235 @@
+[
+  {
+    "name": "Let's Get Moving",
+    "legalName": "Let's Get Moving logo Inc.",
+    "shortName": "Let's Get Moving",
+    "slug": "lets-get-moving",
+    "domain": "letsgetmoving.ca",
+    "websiteUrl": "https://letsgetmoving.ca/",
+    "phone": "1877-245-3254",
+    "phoneRaw": "18772453254",
+    "email": "sales@letsgetmoving.ca",
+    "hqAddress": "",
+    "logoSymbol": "L",
+    "logoUrl": "https://letsgetmoving.ca/wp-content/uploads/2025/05/LGM-Dark-Logo.webp",
+    "faviconUrl": "https://letsgetmoving.ca/wp-content/uploads/2023/10/lgm-favicon.png",
+    "heroTagline": "LET'S GET MOVING - SUCCESSFULLY MOVING CANADIANS SINCE 2010",
+    "heroSubtitle": "Wherever Life Takes You in Canada, We Move You",
+    "rankingClaim": "Trusted by thousands — Let's Get Moving logo",
+    "ctaText": "Read More",
+    "pageTitle": "Canada Moving Company | Local Movers Since 2010",
+    "metaDescription": "Looking for a trustworthy moving company in Canada? We are professional movers who will help you in any kind of business or home move across Canada. Call now!",
+    "theme": {
+      "primary": "blue",
+      "designTokens": {
+        "colorPalette": "blue",
+        "fonts": {
+          "heading": "Montserrat",
+          "body": "Roboto"
+        },
+        "discoveredFonts": {
+          "heading": "Gabarito",
+          "body": "Roboto"
+        },
+        "animation": {
+          "speed": "0.2s",
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+        },
+        "borderRadius": {
+          "card": "16px",
+          "button": "8px",
+          "badge": "9999px"
+        }
+      }
+    },
+    "layout": {
+      "variants": {},
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "how_it_works": true,
+        "trust_signals": true,
+        "service_niches": true,
+        "gta_routes": true,
+        "supplies_and_storage": true,
+        "referral_program": true,
+        "blog_page": true
+      }
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/company/letsgetmovingofficial/",
+      "instagram": "https://www.instagram.com/letsgetmovingofficial/",
+      "facebook": "https://www.facebook.com/letsgetmovingofficial",
+      "tiktok": "https://www.tiktok.com/@letsgetmovingofficial",
+      "twitter": "https://twitter.com/LetsGetMovingNA",
+      "youtube": "https://www.youtube.com/@LetsGetMovingOfficial"
+    },
+    "_extraction": {
+      "extractedAt": "2026-08-03T15:33:16.390Z",
+      "sourceUrl": "https://letsgetmoving.ca/",
+      "paletteScores": {
+        "emerald": 0,
+        "blue": 669,
+        "indigo": 0,
+        "violet": 0,
+        "rose": 9,
+        "amber": 0,
+        "slate": 42
+      },
+      "colorSampleCount": 525
+    }
+  },
+  {
+    "name": "Mansa Movers",
+    "legalName": "Mansa Movers Inc.",
+    "shortName": "Mansa Movers",
+    "slug": "mansa-movers",
+    "domain": "mansamovers.com",
+    "websiteUrl": "https://mansamovers.com/",
+    "phone": "(647) 360-5520",
+    "phoneRaw": "206473605520",
+    "email": "info@mansamovers.com",
+    "hqAddress": "Toronto, ON, Canada",
+    "logoSymbol": "M",
+    "logoUrl": "https://mansamovers.com/wp-content/uploads/2021/12/Mansa-Graphic-Truck-with-Logo-RGB.png",
+    "faviconUrl": "https://mansamovers.com/wp-content/uploads/2020/09/cropped-Mansa-DIgital-Icon-Pixelated-PNG-32x32.png",
+    "heroTagline": "PREMIUM RELOCATION & LOGISTICS IN THE GTA",
+    "heroSubtitle": "With Mansa Movers Experience top-rated moving services from residential and commercial relocations to packing storage & junk removal.",
+    "rankingClaim": "Trusted by thousands across Greater Toronto — Mansa Movers",
+    "ctaText": "Get Your Free Quote",
+    "pageTitle": "Mansa Movers - Your Move matters",
+    "metaDescription": "With Mansa Movers Experience top-rated moving services from residential and commercial relocations to packing storage & junk removal.",
+    "theme": {
+      "primary": "rose",
+      "designTokens": {
+        "colorPalette": "amber",
+        "fonts": {
+          "heading": "Montserrat",
+          "body": "Inter"
+        },
+        "discoveredFonts": {
+          "heading": "Open Sans",
+          "body": "-apple-system"
+        },
+        "animation": {
+          "speed": "0.2s",
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+        },
+        "borderRadius": {
+          "card": "16px",
+          "button": "8px",
+          "badge": "9999px"
+        }
+      }
+    },
+    "layout": {
+      "variants": {},
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "how_it_works": true,
+        "trust_signals": true,
+        "service_niches": true,
+        "gta_routes": true,
+        "supplies_and_storage": true,
+        "referral_program": true,
+        "blog_page": true
+      }
+    },
+    "social": {
+      "google": "https://g.page/r/CaZofMiGqU8OEAg/review",
+      "facebook": "https://www.facebook.com/MansamoversInc",
+      "tiktok": "https://www.tiktok.com/@mansamovers?",
+      "yelp": "https://www.yelp.ca/biz/mansa-movers-toronto",
+      "instagram": "https://www.instagram.com/mansamovers/?hl=en",
+      "youtube": "https://www.youtube.com/channel/UC0jn_1WfbAChAHVukQ5cvVA",
+      "linkedin": "https://www.linkedin.com/company/mansa-movers"
+    },
+    "_extraction": {
+      "extractedAt": "2026-08-03T15:34:02.479Z",
+      "sourceUrl": "https://mansamovers.com/",
+      "paletteScores": {
+        "emerald": 0,
+        "blue": 0,
+        "indigo": 0,
+        "violet": 0,
+        "rose": 0,
+        "amber": 51,
+        "slate": 13.5
+      },
+      "colorSampleCount": 100
+    }
+  },
+  {
+    "name": "Golden Toby Movers",
+    "legalName": "Golden Toby Movers Inc.",
+    "shortName": "Golden Toby",
+    "slug": "golden-toby-movers",
+    "domain": "goldentobymovers.ca",
+    "websiteUrl": "https://www.goldentobymovers.ca/",
+    "phone": "(416) 882-9104",
+    "phoneRaw": "4168829104",
+    "email": "contact@goldentobymovers.ca",
+    "hqAddress": "Toronto, Ontario",
+    "logoSymbol": "G",
+    "logoUrl": "https://static.wixstatic.com/media/bb20fa_a2d14c2601174502bc08522f164d4c20~mv2.png/v1/fill/w_102,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo2.png",
+    "faviconUrl": "https://static.wixstatic.com/media/bb20fa_a2d14c2601174502bc08522f164d4c20%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/bb20fa_a2d14c2601174502bc08522f164d4c20%7Emv2.png",
+    "heroTagline": "GOLDEN TOBY MOVERS — YOUR MOVE. OUR MUSCLE.",
+    "heroSubtitle": "Professional residential and commercial moving solutions by Golden Toby Movers.",
+    "rankingClaim": "Trusted by hundreds across the GTA — Golden Toby Movers",
+    "ctaText": "Get Your Free Estimate",
+    "pageTitle": "Home | Golden Toby Movers",
+    "metaDescription": "",
+    "theme": {
+      "primary": "slate",
+      "designTokens": {
+        "colorPalette": "slate",
+        "fonts": {
+          "heading": "Montserrat",
+          "body": "Inter"
+        },
+        "discoveredFonts": {
+          "heading": "wfont_95627a_85af6ff465b54bc39924b8dd6cf32cf0",
+          "body": "Arial"
+        },
+        "animation": {
+          "speed": "0.2s",
+          "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+        },
+        "borderRadius": {
+          "card": "16px",
+          "button": "8px",
+          "badge": "9999px"
+        }
+      }
+    },
+    "layout": {
+      "variants": {},
+      "sectionsEnabled": {
+        "hero_quote_calculator": true,
+        "how_it_works": true,
+        "trust_signals": true,
+        "service_niches": true,
+        "gta_routes": true,
+        "supplies_and_storage": true,
+        "referral_program": true,
+        "blog_page": true
+      }
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/p/Golden-Toby-Moving-and-Junk-Removal-61576203082635/"
+    },
+    "_extraction": {
+      "extractedAt": "2026-08-03T15:34:38.265Z",
+      "sourceUrl": "https://www.goldentobymovers.ca/",
+      "paletteScores": {
+        "emerald": 0,
+        "blue": 33,
+        "indigo": 0,
+        "violet": 0,
+        "rose": 0,
+        "amber": 39,
+        "slate": 42
+      },
+      "colorSampleCount": 168
+    }
+  }
+]

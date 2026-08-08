@@ -10,13 +10,27 @@
     "theme": {
       "primary": "indigo",
       "secondary": "slate",
-      "tokens": {
-        "borderRadius": { "card": "8px", "button": "6px" },
-        "dividerStyle": { "type": "diagonal-cut" }
+      "designTokens": {
+        "borderRadius": {
+          "card": "8px",
+          "button": "6px"
+        },
+        "dividerStyle": {
+          "type": "diagonal-cut"
+        },
+        "animation": {
+          "profile": "luxury-smooth"
+        }
       }
     },
     "layout": {
-      "variants": { "hero": "centered-cta" }
+      "variants": {
+        "nav": "transparent-overlay",
+        "hero": "centered-cta",
+        "heroBackground": "dark-gradient-overlay",
+        "services": "horizontal-cards",
+        "footer": "cta-banner"
+      }
     },
     "githubRepo": "atlas-relocation-site",
     "vercelProject": "atlas-relocation"
@@ -32,15 +46,65 @@
     "theme": {
       "primary": "emerald",
       "secondary": "zinc",
-      "tokens": {
-        "borderRadius": { "card": "0px", "button": "0px" },
-        "dividerStyle": { "type": "flat" }
+      "designTokens": {
+        "borderRadius": {
+          "card": "0px",
+          "button": "0px"
+        },
+        "dividerStyle": {
+          "type": "flat"
+        },
+        "animation": {
+          "profile": "snappy-tech"
+        }
       }
     },
     "layout": {
-      "variants": { "hero": "calculator-split" }
+      "variants": {
+        "nav": "sticky-standard",
+        "hero": "calculator-split",
+        "heroBackground": "geometric-mesh",
+        "services": "icon-grid",
+        "footer": "multi-column"
+      }
     },
     "githubRepo": "titan-express-site",
     "vercelProject": "titan-express"
+  },
+  {
+    "name": "Elite Van Lines & Logistics",
+    "legalName": "Elite Global Relocations Corp.",
+    "shortName": "Elite",
+    "domain": "elitevanlines.ca",
+    "phone": "(800) 222-9988",
+    "email": "vip@elitevanlines.ca",
+    "heroTagline": "EXECUTIVE CROSS-BORDER VAN LINES & WHITE GLOVE CARE",
+    "theme": {
+      "primary": "amber",
+      "secondary": "black",
+      "designTokens": {
+        "borderRadius": {
+          "card": "24px",
+          "button": "16px"
+        },
+        "dividerStyle": {
+          "type": "soft-wave"
+        },
+        "animation": {
+          "profile": "playful-bounce"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "nav": "centered-split",
+        "hero": "compact-banner",
+        "heroBackground": "clean-minimal",
+        "services": "accordion-panels",
+        "footer": "minimal-compact"
+      }
+    },
+    "githubRepo": "elite-van-lines-site",
+    "vercelProject": "elite-van-lines"
   }
 ]

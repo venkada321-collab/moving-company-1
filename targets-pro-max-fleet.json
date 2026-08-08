@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Fast Track Moving & Storage",
+    "legalName": "Fast Track Moving & Storage Inc.",
+    "shortName": "Fast Track",
+    "slug": "fast-track-moving-storage",
+    "domain": "fasttrackmove.com",
+    "websiteUrl": "https://www.fasttrackmove.com/",
+    "phone": "1-888-920-8722",
+    "email": "dispatch@fasttrackmove.com",
+    "hqAddress": "Toronto & GTA Regional Operations, Canada",
+    "logoSymbol": "F",
+    "logoUrl": "https://www.fasttrackmove.com/_next/image?url=%2Flogo-clean.webp&w=1200&q=75",
+    "faviconUrl": "https://www.fasttrackmove.com/favicon.svg",
+    "heroTagline": "FAST TRACK YOUR RELOCATION — PRECISION TRANSIT & CLIMATE STORAGE",
+    "heroSubtitle": "Canada's trusted relocation team delivering professional white-glove residential moving, commercial office transit, and secure climate-regulated storage.",
+    "rankingClaim": "Top-Rated Precision Moving Experts",
+    "niche": "logistics-relocation",
+    "theme": {
+      "primary": "slate",
+      "designTokens": {
+        "colorPalette": "blue",
+        "fonts": {
+          "heading": "Plus Jakarta Sans",
+          "body": "Inter"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "nav": "floating-pill-glass",
+        "hero": "calculator-split",
+        "services": "icon-grid",
+        "howItWorks": "cards-grid",
+        "supplies": "cards-catalog",
+        "reviews": "stats-ribbon-ticker",
+        "footer": "saas-mega-directory"
+      }
+    }
+  },
+  {
+    "name": "Golden Toby Movers",
+    "legalName": "Golden Toby Movers & Junk Removal Inc.",
+    "shortName": "Golden Toby",
+    "slug": "golden-toby-movers",
+    "domain": "goldentobymovers.ca",
+    "websiteUrl": "https://www.goldentobymovers.ca/",
+    "phone": "(416) 555-8629",
+    "email": "info@goldentobymovers.ca",
+    "hqAddress": "Greater Toronto Area, Ontario, Canada",
+    "logoSymbol": "G",
+    "logoUrl": "https://static.wixstatic.com/media/bb20fa_a2d14c2601174502bc08522f164d4c20~mv2.png/v1/fill/w_102,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo2.png",
+    "faviconUrl": "https://static.wixstatic.com/media/bb20fa_a2d14c2601174502bc08522f164d4c20%7Emv2.png",
+    "heroTagline": "YOUR MOVE. OUR MUSCLE. RELIABLE ONTARIO RELOCATION.",
+    "heroSubtitle": "Expert moving, secure packing, and dependable cleanout solutions delivered across Ontario with zero hidden costs.",
+    "rankingClaim": "Trusted by thousands across Ontario",
+    "niche": "logistics-relocation",
+    "theme": {
+      "primary": "slate",
+      "designTokens": {
+        "colorPalette": "blue",
+        "fonts": {
+          "heading": "Montserrat",
+          "body": "Inter"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "nav": "transparent-scroll-morph",
+        "hero": "step-quiz-interactive",
+        "services": "accordion-panels",
+        "reviews": "grid-carousel",
+        "footer": "minimal-dual-column"
+      }
+    }
+  },
+  {
+    "name": "Mansa Logistics Executive",
+    "legalName": "Mansa Movers & Logistics Inc.",
+    "shortName": "Mansa Logistics",
+    "slug": "mansa-logistics-executive",
+    "domain": "mansamovers.com",
+    "websiteUrl": "https://mansamovers.com/",
+    "phone": "(647) 360-5520",
+    "email": "dispatch@mansamovers.com",
+    "hqAddress": "Toronto & GTA Operations Hub, Canada",
+    "logoSymbol": "M",
+    "logoUrl": "https://mansamovers.com/wp-content/uploads/2021/12/Mansa-Graphic-Truck-with-Logo-RGB.png",
+    "faviconUrl": "https://mansamovers.com/wp-content/uploads/2020/09/cropped-Mansa-DIgital-Icon-Pixelated-PNG-32x32.png",
+    "heroTagline": "EXECUTIVE WHITE-GLOVE LOGISTICS & RELOCATION SERVICES",
+    "heroSubtitle": "Experience top-rated moving services from precision residential relocations to commercial logistics, specialized vault storage, and white-glove transport.",
+    "rankingClaim": "Top-Rated GTA Executive Relocation Specialists",
+    "niche": "logistics-relocation",
+    "theme": {
+      "primary": "red",
+      "designTokens": {
+        "colorPalette": "indigo",
+        "fonts": {
+          "heading": "Space Grotesk",
+          "body": "DM Sans"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "uiProfile": "brutalist-high-contrast",
+        "nav": "floating-pill-glass",
+        "hero": "architectural-arch-split",
+        "heroBackground": "isometric-warehouse-grid",
+        "services": "accordion-panels",
+        "reviews": "brutalist-monospaced-audit",
+        "footer": "brutalist-monospaced-ledger"
+      }
+    }
+  },
+  {
+    "name": "T&M Movers Canada",
+    "legalName": "T&M Movers Canada Inc.",
+    "shortName": "T&M Movers",
+    "slug": "tm-movers-canada",
+    "domain": "tmmoverscanada.ca",
+    "websiteUrl": "https://www.tmmoverscanada.ca",
+    "phone": "(416) 726-7115",
+    "email": "totmmoverscanadainc@gmail.com",
+    "hqAddress": "Toronto, Mississauga & Greater Ontario Area, Canada",
+    "logoSymbol": "T",
+    "logoUrl": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/V8gF7S3HJW24dr8WyOHY/media/6202bb70f198c44d4b3f28ae.png",
+    "faviconUrl": "https://stcdn.leadconnectorhq.com/funnel/icon/favicon.ico",
+    "heroTagline": "#1 LONG DISTANCE MOVERS — YOUR ONTARIO RELOCATION PARTNER",
+    "heroSubtitle": "T&M Movers Canada Inc is your best choice for local and inter-provincial moves for residential or commercial spaces across Toronto, Mississauga, and all of Ontario.",
+    "rankingClaim": "Family Owned — Ontario's #1 Long Distance Movers",
+    "niche": "logistics-relocation",
+    "theme": {
+      "primary": "blue",
+      "designTokens": {
+        "colorPalette": "indigo",
+        "fonts": {
+          "heading": "Outfit",
+          "body": "Inter"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "uiProfile": "soft-glassmorphic",
+        "nav": "floating-pill-glass",
+        "hero": "neomorphic-command-console",
+        "heroBackground": "ambient-3d-glassmorphism",
+        "services": "horizontal-cards",
+        "reviews": "luxury-editorial-carousel",
+        "footer": "saas-mega-directory"
+      }
+    }
+  }
+]

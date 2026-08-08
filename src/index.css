@@ -1,3 +1,4 @@
+@import "./config/theme-tokens.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,8 +10,6 @@
     --radius-badge: 9999px;
     --anim-speed: 200ms;
     --anim-easing: cubic-bezier(0.4, 0, 0.2, 1);
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Inter', sans-serif;
   }
 
   html {
@@ -40,6 +39,29 @@
   ::selection {
     background-color: #fbbf24;
     color: #000000;
+  }
+}
+
+@layer components {
+  .motion-profile-snappy {
+    transition-duration: var(--anim-speed, 200ms);
+    transition-timing-function: var(--anim-easing, ease-in-out);
+  }
+  .motion-profile-luxury {
+    transition-duration: var(--anim-speed, 400ms);
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .motion-profile-playful {
+    transition-duration: var(--anim-speed, 300ms);
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .bg-mesh-pattern {
+    background-image: radial-gradient(rgba(245, 158, 11, 0.15) 1px, transparent 1px), radial-gradient(rgba(245, 158, 11, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+  .bg-gradient-overlay {
+    background: linear-gradient(135deg, rgba(9, 9, 11, 0.95) 0%, rgba(24, 24, 27, 0.98) 100%);
   }
 }
 

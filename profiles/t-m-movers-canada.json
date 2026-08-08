@@ -1,0 +1,95 @@
+{
+  "name": "T&M Movers Canada",
+  "legalName": "T&M Movers Canada Inc.",
+  "shortName": "T&M",
+  "slug": "t-m-movers-canada",
+  "domain": "tmmoverscanada.ca",
+  "websiteUrl": "https://www.tmmoverscanada.ca/",
+  "phone": "+1 416-726-7115",
+  "phoneRaw": "14167267115",
+  "email": "tmmoverscanadainc@gmail.com",
+  "hqAddress": "1050 Markham Rd #1606, Scarborough, ON M1H 2Y7, Canada (Scarborough)",
+  "logoSymbol": "T",
+  "logoUrl": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/V8gF7S3HJW24dr8WyOHY/media/6202bb70f198c44d4b3f28ae.png",
+  "faviconUrl": "https://stcdn.leadconnectorhq.com/funnel/icon/favicon.ico",
+  "heroTagline": "#1 LONG DISTANCE MOVERS.",
+  "heroSubtitle": "T&M Movers Canada Inc is Your Best Choice for local and Inter-provincial moves for home or commercial spaces in Toronto, Mississauga ETC. We are family owned moving business that offers complete relocation services all over Ontario.",
+  "rankingClaim": "Trusted by thousands — #1 Long Distance Movers.",
+  "ctaText": "Get Your Free Estimate",
+  "pageTitle": "Movers and Packers Toronto | Commercial & Residential Moving Ontario",
+  "metaDescription": "T&M Movers Canada Inc is Your Best Choice for local and Inter-provincial moves for home or commercial spaces in Toronto, Mississauga ETC. We are family owned moving business that offers complete relocation services all over Ontario.",
+  "theme": {
+    "primary": "blue",
+    "secondary": "amber",
+    "tertiary": "emerald",
+    "palette": {
+      "primary": "blue",
+      "secondary": "amber",
+      "tertiary": "emerald"
+    },
+    "designTokens": {
+      "colorPalette": "blue",
+      "colorTriad": {
+        "primary": "blue",
+        "secondary": "amber",
+        "tertiary": "emerald"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "Montserrat",
+        "body": "Times New Roman"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/TMMoversofficial"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Vibrant HSL Triad",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-06T03:02:09.327Z",
+    "sourceUrl": "https://www.tmmoverscanada.ca/",
+    "paletteScores": {
+      "emerald": 3,
+      "blue": 162,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 48,
+      "slate": 0
+    },
+    "colorSampleCount": 205,
+    "referenceScreenshot": "C:\\Users\\venka\\.gemini\\antigravity\\scratch\\moving-company-1\\output\\references\\tmmoverscanada-existing-reference.png"
+  },
+  "rating": 4.5,
+  "reviewCount": 105,
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=T%26M%20MOVERS%20CANADA%20INC&query_place_id=ChIJ13H89YvR1IkRwleEVnLROAY"
+}

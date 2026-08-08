@@ -1,0 +1,79 @@
+{
+  "name": "Let's Get Moving logo",
+  "legalName": "Let's Get Moving logo Inc.",
+  "shortName": "Let's",
+  "slug": "letsgetmoving-ca",
+  "domain": "letsgetmoving.ca",
+  "websiteUrl": "https://letsgetmoving.ca/",
+  "phone": "1877-245-3254",
+  "phoneRaw": "18772453254",
+  "email": "sales@letsgetmoving.ca",
+  "hqAddress": "",
+  "logoSymbol": "L",
+  "logoUrl": "https://letsgetmoving.ca/wp-content/uploads/2025/05/LGM-Dark-Logo.webp",
+  "faviconUrl": "https://letsgetmoving.ca/wp-content/uploads/2023/10/lgm-favicon.png",
+  "heroTagline": "LET'S GET MOVING - SUCCESSFULLY MOVING CANADIANS SINCE 2010",
+  "heroSubtitle": "Wherever Life Takes You in Canada, We Move You",
+  "rankingClaim": "Trusted by thousands — Let's Get Moving logo",
+  "ctaText": "Read More",
+  "pageTitle": "Canada Moving Company | Local Movers Since 2010",
+  "metaDescription": "Looking for a trustworthy moving company in Canada? We are professional movers who will help you in any kind of business or home move across Canada. Call now!",
+  "theme": {
+    "primary": "blue",
+    "designTokens": {
+      "colorPalette": "blue",
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Roboto"
+      },
+      "discoveredFonts": {
+        "heading": "Gabarito",
+        "body": "Roboto"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/letsgetmovingofficial/",
+    "instagram": "https://www.instagram.com/letsgetmovingofficial/",
+    "facebook": "https://www.facebook.com/letsgetmovingofficial",
+    "tiktok": "https://www.tiktok.com/@letsgetmovingofficial",
+    "twitter": "https://twitter.com/LetsGetMovingNA",
+    "youtube": "https://www.youtube.com/@LetsGetMovingOfficial"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-03T15:33:16.390Z",
+    "sourceUrl": "https://letsgetmoving.ca/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 669,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 9,
+      "amber": 0,
+      "slate": 42
+    },
+    "colorSampleCount": 525
+  }
+}

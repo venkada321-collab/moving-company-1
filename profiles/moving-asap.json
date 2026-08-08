@@ -1,0 +1,100 @@
+{
+  "name": "Moving ASAP",
+  "legalName": "Moving ASAP Inc.",
+  "shortName": "Moving",
+  "slug": "moving-asap",
+  "domain": "movingasap.ca",
+  "websiteUrl": "http://movingasap.ca/",
+  "phone": "+1 647-540-1453",
+  "phoneRaw": "16475401453",
+  "email": "info@movingasap.ca",
+  "hqAddress": "98 Merkley Square, Scarborough, ON M1G 2Y7, Canada (Scarborough)",
+  "logoSymbol": "M",
+  "logoUrl": "https://movingasap.ca/wp-content/uploads/2024/01/logo.webp",
+  "faviconUrl": "https://movingasap.ca/wp-content/uploads/2024/01/cropped-Moving1-150x150-1.webp",
+  "heroTagline": "MOVING COMPANIES ONTARIO",
+  "heroSubtitle": "We are a Trusted Moving Companies Ontario, Canada. We are provide residential and commercial clients with reliable moving service solutions.",
+  "rankingClaim": "Trusted by thousands — Moving Asap",
+  "ctaText": "Get Your Free Estimate",
+  "pageTitle": "Moving Asap - Moving Companies Ontario, Canada",
+  "metaDescription": "We are a Trusted Moving Companies Ontario, Canada. We are provide residential and commercial clients with reliable moving service solutions.",
+  "theme": {
+    "primary": "blue",
+    "secondary": "slate",
+    "tertiary": "emerald",
+    "palette": {
+      "primary": "blue",
+      "secondary": "slate",
+      "tertiary": "emerald"
+    },
+    "designTokens": {
+      "colorPalette": "blue",
+      "colorTriad": {
+        "primary": "blue",
+        "secondary": "slate",
+        "tertiary": "emerald"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "Open Sans",
+        "body": "-apple-system"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/movingasap.ca",
+    "instagram": "https://instagram.com/moving_asap",
+    "tiktok": "https://www.tiktok.com/@movingasap?_t=8irN5RqzVif&_r=1",
+    "twitter": "https://x.com/moving_asap",
+    "youtube": "https://youtube.com/@movingasap1382?si=zMziCUxcPXBLyoZl",
+    "google": "https://maps.app.goo.gl/3LDkUPW5aEpAoRVV9"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Vibrant HSL Triad",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-06T03:01:43.070Z",
+    "sourceUrl": "http://movingasap.ca/",
+    "paletteScores": {
+      "emerald": 3,
+      "blue": 195,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 0,
+      "slate": 7
+    },
+    "colorSampleCount": 176,
+    "referenceScreenshot": "C:\\Users\\venka\\.gemini\\antigravity\\scratch\\moving-company-1\\output\\references\\movingasap-existing-reference.png"
+  },
+  "rating": 4.9,
+  "reviewCount": 121,
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Moving%20ASAP&query_place_id=ChIJ8baC9v7R1IkRYMQMptZdLAk"
+}

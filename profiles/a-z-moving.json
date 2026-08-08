@@ -1,0 +1,97 @@
+{
+  "name": "A-Z Moving",
+  "legalName": "A-Z Moving Inc.",
+  "shortName": "A-Z",
+  "slug": "a-z-moving",
+  "domain": "az-moving.com",
+  "websiteUrl": "https://az-moving.com/",
+  "phone": "+1 647-878-6683",
+  "phoneRaw": "16478786683",
+  "email": "contact@az-moving.com",
+  "hqAddress": "25 Parkway Forest Dr, North York, ON M2J 1L4, Canada (North York)",
+  "logoSymbol": "A",
+  "logoUrl": "https://az-moving.com/wp-content/themes/azmoving/assets/images/Logo_maple_leaf_v2.svg",
+  "faviconUrl": "https://az-moving.com/wp-content/themes/azmoving/favicons/favicon-32x32.png",
+  "heroTagline": "YOUR RELIABLE, FAST AND QUALITY MOVING SERVICE",
+  "heroSubtitle": "Reliable Toronto movers for residential and commercial relocations. Stress-free service from A-Z Moving, your top moving company Toronto. Book now!",
+  "rankingClaim": "Trusted by thousands — Toronto Movers | A-Z Moving Company Toronto",
+  "ctaText": "Get Your Free Estimate",
+  "pageTitle": "Toronto Movers | A-Z Moving Company Toronto",
+  "metaDescription": "Reliable Toronto movers for residential and commercial relocations. Stress-free service from A-Z Moving, your top moving company Toronto. Book now!",
+  "theme": {
+    "primary": "slate",
+    "secondary": "blue",
+    "tertiary": "emerald",
+    "palette": {
+      "primary": "slate",
+      "secondary": "blue",
+      "tertiary": "emerald"
+    },
+    "designTokens": {
+      "colorPalette": "slate",
+      "colorTriad": {
+        "primary": "slate",
+        "secondary": "blue",
+        "tertiary": "emerald"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "Poppins",
+        "body": "Poppins"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/75476048",
+    "facebook": "https://www.facebook.com/azmovinginc",
+    "instagram": "https://www.instagram.com/az_moving"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Subdued Monolithic",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-06T03:01:48.450Z",
+    "sourceUrl": "https://az-moving.com/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 15,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 0,
+      "slate": 19.5
+    },
+    "colorSampleCount": 84,
+    "referenceScreenshot": "C:\\Users\\venka\\.gemini\\antigravity\\scratch\\moving-company-1\\output\\references\\az-moving-existing-reference.png"
+  },
+  "rating": 4.9,
+  "reviewCount": 116,
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=A-Z%20Moving&query_place_id=ChIJ-bIvYo_T1IkR1aWGmh7uTr8"
+}

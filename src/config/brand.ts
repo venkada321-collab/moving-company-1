@@ -10,8 +10,10 @@ export const BRAND = {
   legalName: "Kratos Group of Companies Inc.",
   shortName: "Kratos",
 
-  // Logo
+  // Logo & Branding
   logoSymbol: "K",
+  logoUrl: "",
+  faviconUrl: "",
 
   // Domain & URLs
   domain: "kratosmoving.com",
