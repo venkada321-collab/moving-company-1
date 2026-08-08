@@ -144,7 +144,7 @@ function generateInfiniteSpectrum(colorInput) {
 
 const crypto = require('crypto');
 
-function synthesizeHybridAtmosphere(brandSlug = 'default-brand', primaryColorInput = '#E11D48') {
+function synthesizeHybridAtmosphere(brandSlug = 'default-brand', primaryColorInput = '#64748B') {
   const hash = crypto.createHash('sha256').update(brandSlug).digest('hex');
   const index = parseInt(hash.substring(0, 8), 16);
 

@@ -108,7 +108,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
         </div>
 
         {/* Featured Custom Storage Art Banner */}
-        <div className="mb-12 rounded-3xl overflow-hidden h-64 sm:h-80 relative shadow-2xl border border-zinc-800">
+        <div className="mb-12 rounded-sm overflow-hidden h-64 sm:h-80 relative shadow-2xl border border-zinc-800">
           <img 
             src={THEME.customArt?.storage || "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80"}
             alt="Climate Controlled Storage Vaults"
@@ -207,7 +207,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
           <div className="space-y-8 animate-in fade-in duration-300 motion-reduce:animate-none">
             
             {/* Promo Banner */}
-            <div className="bg-gradient-to-r from-primary-100 via-primary-50 to-primary-100 border border-primary-300 rounded-3xl p-6 text-center max-w-3xl mx-auto space-y-2 shadow-sm">
+            <div className="bg-gradient-to-r from-primary-100 via-primary-50 to-primary-100 border border-primary-300 rounded-sm p-6 text-center max-w-3xl mx-auto space-y-2 shadow-sm">
               <span className="text-xs font-black uppercase text-primary-700 tracking-widest bg-primary-200/50 px-3 py-1 rounded-full inline-flex items-center gap-1">
                 <Tag className="w-3 h-3" /> LIMITED {GEO.regionName} PROMOTION
               </span>
@@ -229,8 +229,8 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                     key={vault.id}
                     className={`flex flex-col justify-between transition-all motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 relative ${
                       isFeatured 
-                        ? 'bg-gradient-to-br from-primary-100/80 via-primary-50 to-white border-2 border-primary-400 rounded-3xl p-6 sm:p-8 shadow-xl shadow-primary-500/15 text-white' 
-                        : 'bg-zinc-900/60 border border-zinc-800 hover:border-primary-400 rounded-3xl p-6 sm:p-8 shadow-xl shadow-primary-900/5 text-white'
+                        ? 'bg-gradient-to-br from-primary-100/80 via-primary-50 to-white border-2 border-primary-400 rounded-sm p-6 sm:p-8 shadow-xl shadow-primary-500/15 text-white' 
+                        : 'bg-zinc-900/60 border border-zinc-800 hover:border-primary-400 rounded-sm p-6 sm:p-8 shadow-xl shadow-primary-900/5 text-white'
                     }`}
                   >
                     <div>

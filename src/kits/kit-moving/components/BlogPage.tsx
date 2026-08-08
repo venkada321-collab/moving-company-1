@@ -21,13 +21,13 @@ export const BlogPage: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-primary-400 text-black text-xs font-bold uppercase tracking-widest mb-3">
-            {GEO.regionName} RELOCATION KNOWLEDGE HUB
+            {GEO.regionName} EXECUTIVE ADVISORY ARCHIVE
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
-            {GEO.regionName} MOVING GUIDES & <span className="text-primary-600">EXPERT INSIGHTS</span>
+            {GEO.regionName} STRATEGIC BRIEFINGS & <span className="text-primary-600">TECHNICAL STANDARDS</span>
           </h2>
           <p className="mt-3 text-sm text-zinc-400">
-            Everything you need to know about high-rise elevator reservations, {LEGAL.coiAmountShort} COI requirements, winter road survival, and interprovincial transit.
+            In-depth documentation covering elevator permits, municipal transit clearance, and structural inventory protection, {LEGAL.coiAmountShort} COI requirements, winter road survival, and interprovincial transit.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export const BlogPage: React.FC = () => {
           {filteredPosts.map((post) => (
             <div
               key={post.id}
-              className="bg-zinc-900/60 border border-zinc-800/80 hover:border-primary-400 rounded-3xl overflow-hidden flex flex-col justify-between transition-all motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 shadow-lg shadow-primary-900/5 hover:shadow-2xl group text-white"
+              className="bg-zinc-900/60 border border-zinc-800/80 hover:border-primary-400 rounded-md overflow-hidden flex flex-col justify-between transition-all motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 shadow-lg shadow-primary-900/5 hover:shadow-2xl group text-white"
             >
               <div>
                 {/* Image Cover */}
@@ -104,7 +104,7 @@ export const BlogPage: React.FC = () => {
                   onClick={() => setSelectedPost(post)}
                   className="btn-atomic-primary !py-2.5 !px-5 shadow-md inline-flex items-center gap-2 min-h-[44px] transition-all motion-reduce:transition-none"
                 >
-                  <span className="text-xs font-bold">Read More</span>
+                  <span className="text-xs font-bold">Review Brief</span>
                   <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </button>
               </div>
@@ -120,7 +120,7 @@ export const BlogPage: React.FC = () => {
             aria-modal="true"
             aria-labelledby="blog-modal-title"
           >
-            <div className="bg-zinc-900/60 text-white border border-primary-300 rounded-3xl max-w-3xl w-full p-6 sm:p-8 space-y-6 relative max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="bg-zinc-900/60 text-white border border-primary-300 rounded-md max-w-3xl w-full p-6 sm:p-8 space-y-6 relative max-h-[90vh] overflow-y-auto shadow-2xl">
               
               <button
                 type="button"

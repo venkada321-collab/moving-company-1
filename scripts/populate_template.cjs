@@ -129,7 +129,7 @@ if (profile.theme || profile.designTokens) {
 
   // Dynamic Infinite Color Spectrum Engine & Hybrid Atmospheric Chemistry (16.7 Million Color Capacity)
   const { synthesizeHybridAtmosphere } = require('./color_spectrum_engine.cjs');
-  const selectedColor = (t.primary || tokens.colorPalette || 'amber').toLowerCase();
+  const selectedColor = tokens.synthesizedHex || (t.primary || tokens.colorPalette || 'amber').toLowerCase();
   const hybridResult = synthesizeHybridAtmosphere(profile.slug || profile.name || 'default-slug', selectedColor);
   const pal = hybridResult.primarySpectrum;
   const acc = hybridResult.accentSpectrum;

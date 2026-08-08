@@ -13,16 +13,16 @@ export const HowItWorksAccordion: React.FC<HowItWorksProps> = ({ onStartEstimate
   const steps = [
     {
       number: 'Phase 01',
-      title: 'Precision Estimator & Date Booking',
-      subtitle: 'Transparent Guaranteed Pricing',
+      title: 'Automated Cost Calculator & Reservation',
+      subtitle: 'All-Inclusive Tariff Guarantee',
       description: `Utilize our executive scheduling console to set your ${GEO.regionName} origins and destinations. Lock in a guaranteed maximum price ceiling with zero unexpected travel surcharges.`,
       icon: CalendarCheck,
       highlights: ['Digital Volume Analysis', 'Zero Rescheduling Penalties', 'Guaranteed Rate Cap']
     },
     {
       number: 'Phase 02',
-      title: 'High-Rise & Building Compliance Certification',
-      subtitle: 'Full Condominium Assurance',
+      title: 'Property Management Certificate Assurance',
+      subtitle: 'Executive Skyscraper Compliance',
       description: `We instantaneously file our official ${LEGAL.coiAmountShort} Certificate of Insurance (COI) directly with your property manager, ensuring flawless loading dock and elevator clearances.`,
       icon: ShieldCheck,
       highlights: [`${LEGAL.coiAmountShort} Liability Protection`, 'Custom Concierge Filing in 15 Mins', 'Elevator Interior Protective Wraps'],
@@ -31,16 +31,16 @@ export const HowItWorksAccordion: React.FC<HowItWorksProps> = ({ onStartEstimate
     },
     {
       number: 'Phase 03',
-      title: 'White-Glove Disassembly & Encasement',
-      subtitle: 'Surgical Protection for Heirlooms',
+      title: 'Turnkey Boxing & Custom Wrapping',
+      subtitle: 'Specialized Cushioning for Fine Assets',
       description: `Our full-time, vetted ${BRAND.shortName} specialists install neoprene floor pathways and encase every furniture piece inside multi-layered quilted transit blanketing.`,
       icon: Truck,
       highlights: ['Wall & Jamb Corner Protectors', 'Custom Wardrobe Garment Closets', 'Full Component Disassembly']
     },
     {
       number: 'Phase 04',
-      title: 'Dedicated Express Transit & Unpack Routing',
-      subtitle: 'Non-Stop Direct Delivery',
+      title: 'Satellite Tracking & Unpacking Assistance',
+      subtitle: 'Express Highway Routing to Destination',
       description: `Monitor your vehicle in real-time across ${GEO.regionName} thoroughfares. Upon arrival, our crew delivers each container to its designated room and reassembles all furnishings.`,
       icon: Sparkles,
       highlights: ['Dedicated Exclusive Vehicle', 'Room-by-Room Placement', 'Final Quality Inspection']

@@ -97,6 +97,24 @@ async function runQACapture() {
     console.log(`📸 Capturing Full Page Master Screenshot -> ${fullPagePath}...`);
     await page.screenshot({ path: fullPagePath, fullPage: true });
 
+    // Capture Component-by-Component Screenshots
+    const sections = await page.locator('[data-section]').all();
+    if (sections.length > 0) {
+      console.log(`📸 Capturing Component Screenshots (${sections.length} found)...`);
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const sectionName = await section.getAttribute('data-section') || `section-${i}`;
+        const componentPath = path.join(outputDir, `${sectionName}-component.png`);
+        const isVisible = await section.isVisible();
+        if (isVisible) {
+          console.log(`   -> Capturing ${sectionName} component...`);
+          await section.screenshot({ path: componentPath });
+        } else {
+          console.log(`   -> Skipping ${sectionName} component (not visible)...`);
+        }
+      }
+    }
+
     console.log(`\n═══════════════════════════════════════════════════════════════════════════════`);
     console.log(`🏁 SCREENSHOT CAPTURE COMPLETE — READY FOR AI MULTIMODAL INSPECTION`);
     console.log(`═══════════════════════════════════════════════════════════════════════════════`);

@@ -142,8 +142,15 @@ export default function App() {
     );
   };
 
+  const pageBg = THEME.backgrounds.page as string;
+  const canvas = THEME.hybrid?.atmosphericCanvas as string | undefined;
+  const isDarkMode = canvas === 'obsidian-midnight' || pageBg === '#09090b' || pageBg === '#000000';
+
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-50 font-body bg-atmosphere selection:bg-primary-500 selection:text-zinc-950">
+    <div 
+      className={`min-h-screen font-body bg-atmosphere selection:bg-primary-500 selection:text-zinc-950 ${isDarkMode ? 'text-zinc-50' : 'text-zinc-900'}`}
+      style={{ backgroundColor: THEME.backgrounds.page }}
+    >
       {/* Dynamic Design Token Injection — Controls Geometry, Physics, and Font Stacks Globally */}
       <style id="runtime-design-tokens">{`
         :root {
@@ -175,7 +182,7 @@ export default function App() {
       </div>
 
       {/* Main View Router & Modular Engine */}
-      <main id="main-content" tabIndex={-1} className="bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950">
+      <main id="main-content" tabIndex={-1} style={{ backgroundColor: THEME.backgrounds.page }}>
         {isAuditAllMode ? (
           /* Single-Page Blueprint Dump Mode (?audit=all) — Renders every single component sequentially for thorough automated testing */
           <div className="flex flex-col gap-8 py-4">
@@ -199,7 +206,7 @@ export default function App() {
               )}
             </div>
             <SectionDivider />
-            <div data-section="services">
+            <div data-section="routes">
               <ServiceNichesPage onSelectNicheForEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
             </div>
             <SectionDivider />
@@ -207,7 +214,7 @@ export default function App() {
               <HowItWorks onStartEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
             </div>
             <SectionDivider />
-            <div data-section="routes">
+            <div data-section="services">
               <GTARoutesPage onSelectRouteForEstimate={scrollToCalculator} />
             </div>
             <SectionDivider />

@@ -23,8 +23,8 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
   const steps = [
     {
       number: '01',
-      title: 'Instant Estimate & Date Lock',
-      subtitle: 'Transparent Pricing Model',
+      title: 'Automated Appraisal & Priority Reservation',
+      subtitle: 'Fixed Tariff Assurance',
       description: `Use our online calculator to select your ${GEO.regionName} addresses, move size, and optional packing supplies. Lock in your exact hourly or corridor rate with no surprise fees.`,
       icon: CalendarCheck,
       badge: 'Zero Hidden Fees',
@@ -32,7 +32,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
     },
     {
       number: '02',
-      title: 'Condo COI & Pre-Move Check',
+      title: 'Property Bond Certification & Elevator Audit',
       subtitle: '100% High-Rise Compliance',
       description: `We generate a custom ${LEGAL.coiAmount} Certificate of Insurance (COI) directly to your condo concierge or property manager within 15 minutes.`,
       icon: ShieldCheck,
@@ -42,7 +42,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
     },
     {
       number: '03',
-      title: 'White-Glove Packing & Loading',
+      title: 'Specialized Packaging & Transit Rigging',
       subtitle: 'Surgical Care for Heirlooms',
       description: `Our background-checked, uniformed ${GEO.regionName} crew lays down neoprene carpet runners, door jamb guards, and wraps every furniture piece in double-layered quilted pads.`,
       icon: Truck,
@@ -51,7 +51,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
     },
     {
       number: '04',
-      title: 'GPS Transit & Unpack Delivery',
+      title: 'Satellite Fleet Tracking & Unboxing Dispatch',
       subtitle: 'Direct Dedicated Transit',
       description: `Follow your truck in real time via smartphone GPS link across the ${GEO.highways}. We unload each box into designated rooms and complete a post-move inspection.`,
       icon: Sparkles,
@@ -92,7 +92,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
               return (
                 <div
                   key={step.number}
-                  className="bg-zinc-900/60 border border-zinc-800/60 hover:border-primary-300 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-primary-900/10 hover:-translate-y-1.5 group"
+                  className="bg-zinc-900/60 border border-zinc-800/60 hover:border-primary-300 rounded-none p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-primary-900/10 hover:-translate-y-1.5 group"
                 >
                   <div>
                     {/* Step Top Bar */}
@@ -147,7 +147,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
           </div>
 
           {/* Right: Custom Art Block */}
-          <div className="lg:col-span-5 xl:col-span-4 h-full min-h-[500px] relative hidden lg:block rounded-3xl overflow-hidden shadow-2xl">
+          <div className="lg:col-span-5 xl:col-span-4 h-full min-h-[500px] relative hidden lg:block rounded-none overflow-hidden shadow-2xl">
             <img 
               src={THEME.customArt?.howItWorks || "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80"}
               alt="Professional Moving Crew"
@@ -160,7 +160,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
         </div>
 
         {/* Bottom CTA Banner */}
-        <div className="mt-12 bg-zinc-900/60 border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-primary-900/5">
+        <div className="mt-12 bg-zinc-900/60 border border-zinc-800 rounded-none p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-primary-900/5">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-2xl bg-black text-primary-400 font-black text-xl flex items-center justify-center shrink-0 shadow-lg shadow-black/20 border border-black" aria-hidden="true">
               <Zap className="w-7 h-7" aria-hidden="true" />

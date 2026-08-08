@@ -22,10 +22,10 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
             {GEO.regionName} & ONTARIO CORRIDOR ROUTES
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
-            POPULAR <span className="text-primary-600">{GEO.regionFull.toUpperCase()}</span> & LONG-DISTANCE ROUTES
+            ESTABLISHED <span className="text-primary-600">{GEO.regionFull.toUpperCase()}</span> & REGIONAL DISPATCH CORRIDORS
           </h2>
           <p className="mt-3 text-sm text-zinc-400">
-            Compare average completion times, highway toll routing ({GEO.highways}), and real client costs across Southern Ontario & interprovincial corridors.
+            Analyze standard dispatch timelines, commercial route efficiency ({GEO.highways}), and real client costs across Southern Ontario & interprovincial corridors.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                 key={route.id}
                 type="button"
                 onClick={() => setSelectedRouteId(route.id)}
-                className={`p-5 rounded-3xl border text-left transition-all min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-white focus-visible:ring-offset-2 motion-reduce:transition-none ${
+                className={`p-5 rounded-md shadow-2xl border border text-left transition-all min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-white focus-visible:ring-offset-2 motion-reduce:transition-none ${
                   isSelected
                     ? 'bg-gradient-to-br from-primary-100 via-primary-50 to-white border-2 border-primary-400 shadow-xl shadow-primary-500/10 text-white'
                     : 'bg-zinc-900/60 hover:bg-primary-50/40 border border-zinc-800 hover:border-primary-300 shadow-md text-zinc-200'
@@ -48,7 +48,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                   <span className="bg-primary-100 text-primary-900 px-2.5 py-1 rounded-lg border border-zinc-800">
                     {route.distance} km ({Math.round(route.distance * 0.621)} mi)
                   </span>
-                  <span className="opacity-80 font-semibold">Est. ~{route.estHours} Hours</span>
+                  <span className="opacity-80 font-semibold">Duration: ~{route.estHours} Hours</span>
                 </div>
 
                 <div className="flex items-center gap-2 text-sm sm:text-base font-black text-current font-['Montserrat',sans-serif] mb-1">
@@ -58,7 +58,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                 </div>
 
                 <div className={`text-xs font-bold mt-2 ${isSelected ? 'text-primary-600' : 'opacity-80'}`}>
-                  Avg Rate: {route.avgCostRange}
+                  Target Tariff: {route.avgCostRange}
                 </div>
               </button>
             );
@@ -66,13 +66,13 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
         </div>
 
         {/* Detailed Route Spotlight Panel */}
-        <div className="bg-zinc-900/60 rounded-3xl p-6 sm:p-10 border border-zinc-800 shadow-2xl shadow-primary-900/10 text-white space-y-8">
+        <div className="bg-zinc-900/60 rounded-md shadow-2xl border p-6 sm:p-10 border border-zinc-800 shadow-2xl shadow-primary-900/10 text-white space-y-8">
           
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-zinc-800">
             <div>
               <div className="flex items-center gap-2 text-xs font-bold text-primary-600 mb-2">
                 <Navigation className="w-4 h-4" aria-hidden="true" />
-                ROUTE EXPLORER DETAILS
+                INTERPROVINCIAL ROUTE METRICS
               </div>
               <h2 className="text-2xl sm:text-4xl font-black text-black font-['Montserrat',sans-serif] flex flex-wrap items-center gap-3">
                 <span>{activeRoute.fromCity}</span>
@@ -86,7 +86,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
               onClick={() => onSelectRouteForEstimate(activeRoute.fromCity, activeRoute.toCity)}
               className="bg-primary-400 hover:bg-primary-500 text-black px-6 py-3.5 rounded-2xl text-xs font-extrabold uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-primary-500/20 shrink-0 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-white"
             >
-              <span>Book This Exact Route</span>
+              <span>Secure This Transport Corridor</span>
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </button>
           </div>
@@ -102,7 +102,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
               {/* Route Highlights */}
               <div className="space-y-3">
                 <h3 className="text-sm font-bold text-primary-600 uppercase tracking-wider font-['Montserrat',sans-serif]">
-                  Route Optimization & Special Logistics:
+                  Corridor Features & Operational Protocols:
                 </h3>
                 {activeRoute.highlights.map((h, i) => (
                   <div key={i} className="flex items-start gap-3 bg-primary-50/50 p-3.5 rounded-xl border border-zinc-800">
@@ -124,11 +124,11 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                 </div>
                 <div>
                   <div className="text-lg font-black text-primary-600 font-['Montserrat',sans-serif]">~{activeRoute.estHours} hrs</div>
-                  <div className="text-[10px] text-zinc-400 font-bold uppercase mt-1">Est. Completion</div>
+                  <div className="text-[10px] text-zinc-400 font-bold uppercase mt-1">Estimated Time Window</div>
                 </div>
                 <div>
                   <div className="text-lg font-black text-emerald-600 font-['Montserrat',sans-serif]">{activeRoute.avgCostRange}</div>
-                  <div className="text-[10px] text-zinc-400 font-bold uppercase mt-1">Est. Cost Range</div>
+                  <div className="text-[10px] text-zinc-400 font-bold uppercase mt-1">Expected Investment</div>
                 </div>
               </div>
 
@@ -137,7 +137,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                 <div className="bg-primary-50/60 border-l-4 border-primary-400 p-4 rounded-r-xl text-zinc-300 italic space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-bold uppercase text-primary-900 bg-primary-200 px-2.5 py-0.5 rounded-full not-italic">
-                      Verified Client Story
+                      Verified Relocation Testimonial
                     </span>
                     <div className="flex text-primary-500">
                       {[...Array(5)].map((_, i) => (
