@@ -4,6 +4,16 @@ const { execSync } = require('child_process');
 const { getCopyVariation } = require('./copy-variations.cjs');
 const { generateNicheUniquePalette } = require('./color_spectrum_engine.cjs');
 
+// Load .env file
+const envPath = path.join(__dirname, '..', '.env');
+if (fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, 'utf8');
+  envContent.split('\n').forEach(line => {
+    const match = line.match(/^([^=]+)=(.*)$/);
+    if (match) process.env[match[1].trim()] = match[2].trim();
+  });
+}
+
 // Usage: node scripts/batch_clone.cjs <path_to_batch.json> [--deploy] [--skip-build] [--variation-window=N]
 const batchFilePath = process.argv[2];
 const shouldDeploy = process.argv.includes('--deploy');
@@ -331,9 +341,11 @@ for (let i = 0; i < rawBatch.length; i++) {
       itemResult.buildStatus = '⏭️  Skipped';
     }
 
-    // Step 4: Automated GitHub & Vercel Edge Deployment
+    // Step 4: Automated GitHub & Cloudflare Pages Deployment
     if (shouldDeploy) {
       console.log(`🚀 Triggering automated live edge deployment...`);
+      
+      // Git provisioning (can fail safely)
       try {
         execSync(`git init; git add -A; git commit -m "feat: initial batch release for ${brandName}"`, {
           cwd: targetDir,
@@ -342,22 +354,38 @@ for (let i = 0; i < rawBatch.length; i++) {
 
         if (profile.githubRepo && process.env.GITHUB_TOKEN) {
           console.log(`🌐 Provisioning GitHub repository: ${profile.githubRepo}...`);
-          // Execute gh repo creation if available
           execSync(`gh repo create ${profile.githubRepo} --public --source=. --push`, { cwd: targetDir, stdio: 'inherit' });
         }
+      } catch (gitErr) {
+        console.warn(`⚠️ Git provisioning warning (safe to ignore): ${gitErr.message.split('\\n')[0]}`);
+      }
 
-        console.log(`⚡ Deploying to Vercel Edge Production...`);
-        const vercelProject = profile.vercelProject || slug;
-        const deployOutput = execSync(`npx --yes vercel@latest deploy --prod --yes --name ${vercelProject}`, {
+      // Cloudflare Pages Deployment
+      try {
+        console.log(`⚡ Deploying to Cloudflare Pages...`);
+        const cfProject = profile.cloudflareProject || profile.vercelProject || slug;
+        
+        // Create project first if it doesn't exist
+        try {
+          execSync(`npx --yes wrangler@latest pages project create ${cfProject} --production-branch main`, {
+            cwd: targetDir,
+            encoding: 'utf8',
+            stdio: 'ignore'
+          });
+        } catch (e) {
+          // Ignore if it already exists
+        }
+
+        const deployOutput = execSync(`npx --yes wrangler@latest pages deploy dist --project-name ${cfProject} --branch main`, {
           cwd: targetDir,
           encoding: 'utf8'
         });
         
         // Extract live URL from deployment output
-        const urlMatch = deployOutput.match(/https:\/\/[^\s]+\.vercel\.app/);
-        itemResult.deployUrl = urlMatch ? urlMatch[0] : 'Deployed (Check Vercel Dashboard)';
+        const urlMatch = deployOutput.match(/https:\/\/[^\s]+\.pages\.dev/);
+        itemResult.deployUrl = urlMatch ? urlMatch[0] : 'Deployed (Check Cloudflare Dashboard)';
       } catch (deployErr) {
-        console.warn(`⚠️ Deployment step encountered warning: ${deployErr.message.split('\n')[0]}`);
+        console.warn(`⚠️ Cloudflare deployment encountered warning: ${deployErr.message.split('\\n')[0]}`);
         itemResult.deployUrl = '⚠️ Manual push required';
       }
     }
