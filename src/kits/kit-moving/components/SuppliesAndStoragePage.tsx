@@ -68,7 +68,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-400 text-black text-xs font-black uppercase tracking-widest mb-3 shadow-md">
             <Sparkles className="w-4 h-4" /> PACKING SUPPLIES & VAULT STORAGE
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+          <h2 className="text-3xl sm:text-5xl font-black text-neutral-900 dark:text-white tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
             PREMIUM PACKING & <span className="text-primary-600 bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400">CLIMATE VAULTS</span>
           </h2>
           <p className="mt-3 text-sm text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 font-medium">
