@@ -15,7 +15,7 @@ export const BlogPage: React.FC = () => {
     : BLOG_POSTS.filter(p => p.category === selectedCategory);
 
   return (
-    <div className="bg-gradient-to-b from-white via-primary-50/20 to-white py-14 px-4 text-white">
+    <div className="bg-gradient-to-b from-white via-primary-50/20 to-white py-14 px-4 text-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -26,7 +26,7 @@ export const BlogPage: React.FC = () => {
           <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
             {GEO.regionName} STRATEGIC BRIEFINGS & <span className="text-primary-600">TECHNICAL STANDARDS</span>
           </h2>
-          <p className="mt-3 text-sm text-zinc-400">
+          <p className="mt-3 text-sm text-zinc-600">
             In-depth documentation covering elevator permits, municipal transit clearance, and structural inventory protection, {LEGAL.coiAmountShort} COI requirements, winter road survival, and interprovincial transit.
           </p>
         </div>
@@ -42,7 +42,7 @@ export const BlogPage: React.FC = () => {
               className={`min-h-[44px] min-w-[44px] px-4 py-2 rounded-full text-xs font-bold transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white inline-flex items-center justify-center ${
                 selectedCategory === cat
                   ? 'bg-black text-primary-400 font-extrabold shadow-md shadow-black/20'
-                  : 'bg-zinc-900/60 text-zinc-400 border border-neutral-300 hover:text-black hover:border-primary-400'
+                  : 'bg-white shadow-sm text-zinc-600 border border-neutral-300 hover:text-black hover:border-primary-400'
               }`}
             >
               {cat}
@@ -55,7 +55,7 @@ export const BlogPage: React.FC = () => {
           {filteredPosts.map((post) => (
             <div
               key={post.id}
-              className="bg-zinc-900/60 border border-zinc-800/80 hover:border-primary-400 rounded-md overflow-hidden flex flex-col justify-between transition-all motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 shadow-lg shadow-primary-900/5 hover:shadow-2xl group text-white"
+              className="bg-white shadow-sm border border-zinc-200 hover:border-primary-400 rounded-md overflow-hidden flex flex-col justify-between transition-all motion-reduce:transition-none motion-reduce:transform-none hover:-translate-y-1 shadow-lg shadow-primary-900/5 hover:shadow-2xl group text-zinc-900"
             >
               <div>
                 {/* Image Cover */}
@@ -94,7 +94,7 @@ export const BlogPage: React.FC = () => {
                   <img
                     src={post.author.avatar}
                     alt={post.author.name}
-                    className="w-7 h-7 rounded-full object-cover border border-zinc-800/40"
+                    className="w-7 h-7 rounded-full object-cover border border-zinc-200/40"
                   />
                   <span className="text-[11px] font-bold opacity-85">{post.author.name}</span>
                 </div>
@@ -120,12 +120,12 @@ export const BlogPage: React.FC = () => {
             aria-modal="true"
             aria-labelledby="blog-modal-title"
           >
-            <div className="bg-zinc-900/60 text-white border border-primary-300 rounded-md max-w-3xl w-full p-6 sm:p-8 space-y-6 relative max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="bg-white shadow-sm text-zinc-900 border border-primary-300 rounded-md max-w-3xl w-full p-6 sm:p-8 space-y-6 relative max-h-[90vh] overflow-y-auto shadow-2xl">
               
               <button
                 type="button"
                 onClick={() => setSelectedPost(null)}
-                className="absolute top-4 right-4 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-zinc-800 text-zinc-400 hover:text-black hover:bg-primary-100 border border-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-colors motion-reduce:transition-none"
+                className="absolute top-4 right-4 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full bg-zinc-100 text-zinc-600 hover:text-black hover:bg-primary-100 border border-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-colors motion-reduce:transition-none"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" aria-hidden="true" />
@@ -139,9 +139,9 @@ export const BlogPage: React.FC = () => {
                 {selectedPost.title}
               </h2>
 
-              <div className="flex items-center gap-4 text-xs text-neutral-500 border-y border-zinc-800 py-3">
+              <div className="flex items-center gap-4 text-xs text-neutral-500 border-y border-zinc-200 py-3">
                 <div className="flex items-center gap-2">
-                  <img src={selectedPost.author.avatar} className="w-7 h-7 rounded-full object-cover border border-zinc-800" alt="" />
+                  <img src={selectedPost.author.avatar} className="w-7 h-7 rounded-full object-cover border border-zinc-200" alt="" />
                   <span className="font-bold text-black">{selectedPost.author.name}</span> ({selectedPost.author.role})
                 </div>
                 <span>•</span>
@@ -150,15 +150,15 @@ export const BlogPage: React.FC = () => {
                 <span>{selectedPost.readTime}</span>
               </div>
 
-              <div className="text-sm text-zinc-300 leading-relaxed space-y-4 whitespace-pre-line font-normal">
+              <div className="text-sm text-zinc-600 leading-relaxed space-y-4 whitespace-pre-line font-normal">
                 {selectedPost.content}
               </div>
 
-              <div className="pt-6 border-t border-zinc-800 flex justify-end">
+              <div className="pt-6 border-t border-zinc-200 flex justify-end">
                 <button
                   type="button"
                   onClick={() => setSelectedPost(null)}
-                  className="bg-black text-primary-400 hover:bg-neutral-900 shadow-md min-h-[44px] px-6 py-2.5 rounded-xl font-bold text-xs uppercase inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all motion-reduce:transition-none"
+                  className="bg-black text-primary-400 hover:bg-zinc-900 shadow-md min-h-[44px] px-6 py-2.5 rounded-xl font-bold text-xs uppercase inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-all motion-reduce:transition-none"
                 >
                   Close Article
                 </button>

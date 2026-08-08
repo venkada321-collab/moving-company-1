@@ -1353,5 +1353,5 @@ ${animationEntrance}
   fs.writeFileSync(tokensCssPath, tokensCss, 'utf8');
 }
 
-console.log('🚀 Modular 6-Pillar + Universal Atomic Matrix substitution complete! Ready for `npm run build` and Vercel edge deployment.');
+console.log('🚀 Modular 6-Pillar + Universal Atomic Matrix substitution complete! Ready for `npm run build` and Cloudflare edge deployment.');
 

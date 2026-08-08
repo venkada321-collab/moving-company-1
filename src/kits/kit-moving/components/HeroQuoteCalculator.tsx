@@ -149,18 +149,18 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
   return (
     <section id="hero-quote-calculator" className="relative pt-8 pb-16 overflow-hidden">
       {/* Halo Lab signature dark subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-zinc-100/50 to-white pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Hero Trust Ribbon */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900/50/70 backdrop-blur-md border border-white/40 text-zinc-200 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-md border border-zinc-200 text-zinc-700 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
             <Sparkles className="w-4 h-4 text-amber-600 shrink-0" />
             <span>{BRAND.rankingClaim}</span>
           </div>
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900/50/70 backdrop-blur-md border border-white/40 text-zinc-200 text-xs sm:text-sm font-bold shadow-sm">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/90 backdrop-blur-md border border-zinc-200 text-zinc-700 text-xs sm:text-sm font-bold shadow-sm">
             <Star className="w-4 h-4 text-amber-500 fill-amber-500 shrink-0" />
             <span>{`${LEGAL.starRating}/5 Rating (${LEGAL.reviewCount} Google & HomeStars Reviews)`}</span>
           </div>
@@ -175,7 +175,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
         {/* Hero Title Header */}
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] font-['Montserrat',sans-serif]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-zinc-900 tracking-tight leading-[1.1] font-['Montserrat',sans-serif]">
             {BRAND.heroTagline.split(' WHITE-GLOVE')[0]} <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400">WHITE-GLOVE MOVING</span> & RELOCATION
           </h1>
@@ -185,10 +185,10 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
         </div>
 
         {/* The Interactive Quote / Estimate Tool Box */}
-        <div className="bg-zinc-900/50 border border-zinc-800 rounded-3xl shadow-2xl shadow-amber-950/15 p-5 sm:p-8 lg:p-10 relative">
+        <div className="bg-white shadow-sm border border-zinc-200 rounded-3xl shadow-2xl shadow-amber-950/15 p-5 sm:p-8 lg:p-10 relative">
           
           {/* Top Step Selector Tabs */}
-          <div className="flex items-center justify-between border-b border-zinc-800/80 pb-5 mb-8 overflow-x-auto no-scrollbar gap-2">
+          <div className="flex items-center justify-between border-b border-zinc-200 pb-5 mb-8 overflow-x-auto no-scrollbar gap-2">
             {[
               { step: 1, title: '1. Locations & Date', sub: `${GEO.regionName} Addresses` },
               { step: 2, title: '2. Move Size & Niche', sub: 'Home, Condo, Piano' },
@@ -200,18 +200,18 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                 onClick={() => setCurrentStep(s.step)}
                 className={`flex items-center gap-3 px-4 py-2.5 rounded-2xl transition-all min-w-fit ${
                   currentStep === s.step
-                    ? 'bg-primary-500 text-black text-slate-950 font-bold shadow-lg shadow-amber-400/20'
+                    ? 'bg-primary-500 text-black text-zinc-900 font-bold shadow-lg shadow-amber-400/20'
                     : currentStep > s.step
                     ? 'bg-black text-amber-400 border border-black font-extrabold shadow-lg font-medium'
-                    : 'bg-zinc-800/80 text-zinc-400 border border-zinc-800 hover:bg-amber-50 hover:text-black font-bold'
+                    : 'bg-zinc-100 text-zinc-600 border border-zinc-200 hover:bg-amber-50 hover:text-black font-bold'
                 }`}
               >
                 <div className={`w-7 h-7 rounded-xl flex items-center justify-center text-xs font-black ${
                   currentStep === s.step
-                    ? 'bg-slate-950 text-amber-400'
+                    ? 'bg-zinc-100 text-amber-400'
                     : currentStep > s.step
-                    ? 'bg-primary-500 text-black text-slate-950'
-                    : 'bg-neutral-200 text-zinc-400'
+                    ? 'bg-primary-500 text-black text-zinc-900'
+                    : 'bg-neutral-200 text-zinc-600'
                 }`}>
                   {currentStep > s.step ? '✓' : s.step}
                 </div>
@@ -233,7 +233,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
               {currentStep === 1 && (
                 <div className="space-y-5 animate-in fade-in duration-300">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-bold text-white flex items-center gap-2 font-['Montserrat',sans-serif]">
+                    <h3 className="text-lg font-bold text-zinc-900 flex items-center gap-2 font-['Montserrat',sans-serif]">
                       <MapPin className="w-5 h-5 text-amber-400" />
                       Move Origin & Destination
                     </h3>
@@ -243,7 +243,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Pickup Postal / Area */}
                     <div className="space-y-1.5">
-                      <label htmlFor="fromZip" className="text-xs font-semibold text-zinc-400">Moving From ({GEO.regionName} Pickup)</label>
+                      <label htmlFor="fromZip" className="text-xs font-semibold text-zinc-600">Moving From ({GEO.regionName} Pickup)</label>
                       <select
                         id="fromZip"
                         value={quoteForm.fromZip}
@@ -255,7 +255,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                             fromAddress: matched ? `Building in ${matched.name}` : prev.fromAddress
                           }));
                         }}
-                        className="w-full bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-amber-400 font-medium"
+                        className="w-full bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3.5 py-3 text-sm text-zinc-900 focus:outline-none focus:border-amber-400 font-medium"
                       >
                         {GTA_NEIGHBORHOODS.map(n => (
                           <option key={n.zip} value={n.zip}>
@@ -267,7 +267,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
                     {/* Destination Postal / Area */}
                     <div className="space-y-1.5">
-                      <label htmlFor="toZip" className="text-xs font-semibold text-zinc-400">Moving To (Destination)</label>
+                      <label htmlFor="toZip" className="text-xs font-semibold text-zinc-600">Moving To (Destination)</label>
                       <select
                         id="toZip"
                         value={quoteForm.toZip}
@@ -279,7 +279,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                             toAddress: matched ? `Destination in ${matched.name}` : prev.toAddress
                           }));
                         }}
-                        className="w-full bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-amber-400 font-medium"
+                        className="w-full bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3.5 py-3 text-sm text-zinc-900 focus:outline-none focus:border-amber-400 font-medium"
                       >
                         {GTA_NEIGHBORHOODS.map(n => (
                           <option key={n.zip} value={n.zip}>
@@ -300,7 +300,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         value={quoteForm.fromAddress}
                         onChange={(e) => setQuoteForm(p => ({ ...p, fromAddress: e.target.value }))}
                         placeholder={`e.g. ${GEO.placeholderFrom}`}
-                        className="w-full bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-neutral-400 focus:outline-none focus:border-amber-400"
+                        className="w-full bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs text-zinc-900 placeholder-neutral-400 focus:outline-none focus:border-amber-400"
                       />
                     </div>
                     <div className="space-y-1.5">
@@ -311,14 +311,14 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         value={quoteForm.toAddress}
                         onChange={(e) => setQuoteForm(p => ({ ...p, toAddress: e.target.value }))}
                         placeholder={`e.g. ${GEO.placeholderTo}`}
-                        className="w-full bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-neutral-400 focus:outline-none focus:border-amber-400"
+                        className="w-full bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3.5 py-2.5 text-xs text-zinc-900 placeholder-neutral-400 focus:outline-none focus:border-amber-400"
                       />
                     </div>
                   </div>
 
                   {/* Move Date Selector */}
                   <div className="space-y-1.5 pt-2">
-                    <label htmlFor="moveDate" className="text-xs font-semibold text-zinc-400 flex items-center gap-1.5">
+                    <label htmlFor="moveDate" className="text-xs font-semibold text-zinc-600 flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5 text-amber-400" aria-hidden="true" />
                       Target Move Date
                     </label>
@@ -328,7 +328,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                       value={quoteForm.moveDate}
                       onChange={(e) => setQuoteForm(p => ({ ...p, moveDate: e.target.value }))}
                       min={new Date().toISOString().split('T')[0]}
-                      className="w-full sm:w-1/2 bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-amber-400 font-medium"
+                      className="w-full sm:w-1/2 bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3.5 py-3 text-sm text-zinc-900 focus:outline-none focus:border-amber-400 font-medium"
                     />
                     <p className="text-[11px] text-amber-400/90 font-medium mt-1 flex items-center gap-1">
                       <Lightbulb className="w-3.5 h-3.5" aria-hidden="true" /> Tip: Mid-month moves ({PRICING.midMonthRange}) enjoy an extra {PRICING.midMonthDiscount * 100}% rate reduction!
@@ -339,7 +339,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                     <button
                       type="button"
                       onClick={() => setCurrentStep(2)}
-                      className="bg-primary-500 text-black hover:bg-amber-300 text-slate-950 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-amber-400/20"
+                      className="bg-primary-500 text-black hover:bg-amber-300 text-zinc-900 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-amber-400/20"
                     >
                       Next: Choose Move Size <ArrowRight className="w-4 h-4" />
                     </button>
@@ -351,7 +351,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
               {currentStep === 2 && (
                 <div className="space-y-6 animate-in fade-in duration-300">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-bold text-white flex items-center gap-2 font-['Montserrat',sans-serif]">
+                    <h3 className="text-lg font-bold text-zinc-900 flex items-center gap-2 font-['Montserrat',sans-serif]">
                       <Building2 className="w-5 h-5 text-amber-400" />
                       Select Property Size & Service Care
                     </h3>
@@ -360,7 +360,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
                   {/* Property Size Selector Cards */}
                   <div>
-                    <label className="text-xs font-semibold text-zinc-400 mb-2.5 block">Property Size</label>
+                    <label className="text-xs font-semibold text-zinc-600 mb-2.5 block">Property Size</label>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                       {MOVE_SIZES.map((size) => {
                         const isSelected = quoteForm.size === size.id;
@@ -372,14 +372,14 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                             onClick={() => setQuoteForm(p => ({ ...p, size: size.id }))}
                             className={`p-3 min-h-[44px] rounded-2xl text-left border transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
                               isSelected
-                                ? 'bg-primary-500 text-black/10 border-amber-400 text-white shadow-md shadow-amber-400/10'
-                                : 'bg-zinc-900/40 shadow-sm border-zinc-800 text-zinc-400 hover:border-neutral-300'
+                                ? 'bg-primary-500 text-black/10 border-amber-400 text-zinc-900 shadow-md shadow-amber-400/10'
+                                : 'bg-white shadow-sm shadow-sm border-zinc-200 text-zinc-600 hover:border-neutral-300'
                             }`}
                             aria-pressed={isSelected}
                           >
                             <SizeIcon className={`w-5 h-5 mb-1.5 ${isSelected ? 'text-amber-400' : 'text-zinc-500'}`} aria-hidden="true" />
-                            <div className="text-xs font-bold text-white">{size.label}</div>
-                            <div className="text-[10px] text-zinc-400 mt-1">
+                            <div className="text-xs font-bold text-zinc-900">{size.label}</div>
+                            <div className="text-[10px] text-zinc-600 mt-1">
                               ~{size.estHours} hrs • {size.movers} Movers
                             </div>
                           </button>
@@ -390,7 +390,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
                   {/* Service Niche Selection */}
                   <div>
-                    <label className="text-xs font-semibold text-zinc-400 mb-2.5 block">Specialized Niche Care</label>
+                    <label className="text-xs font-semibold text-zinc-600 mb-2.5 block">Specialized Niche Care</label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {SERVICE_NICHES.map((niche) => {
                         const isSelected = quoteForm.serviceNicheId === niche.id;
@@ -401,15 +401,15 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                             onClick={() => setQuoteForm(p => ({ ...p, serviceNicheId: niche.id }))}
                             className={`p-3.5 rounded-2xl text-left border flex items-start gap-3 transition-all ${
                               isSelected
-                                ? 'bg-primary-500 text-black/10 border-amber-400 text-white'
-                                : 'bg-zinc-900/40 shadow-sm border-zinc-800 text-zinc-400 hover:border-neutral-300'
+                                ? 'bg-primary-500 text-black/10 border-amber-400 text-zinc-900'
+                                : 'bg-white shadow-sm shadow-sm border-zinc-200 text-zinc-600 hover:border-neutral-300'
                             }`}
                           >
-                            <div className={`p-2 rounded-xl text-xs font-bold ${isSelected ? 'bg-primary-500 text-black text-slate-950' : 'bg-neutral-200 text-zinc-200 font-bold'}`}>
+                            <div className={`p-2 rounded-xl text-xs font-bold ${isSelected ? 'bg-primary-500 text-black text-zinc-900' : 'bg-neutral-200 text-zinc-700 font-bold'}`}>
                               {niche.id === 'condo-moves' ? '🏙️' : niche.id === 'piano-moves' ? '🎹' : niche.id === 'long-distance' ? '🚚' : '📦'}
                             </div>
                             <div className="flex-1">
-                              <div className="text-xs font-bold text-white flex items-center justify-between">
+                              <div className="text-xs font-bold text-zinc-900 flex items-center justify-between">
                                 {niche.name}
                                 {isSelected && <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />}
                               </div>
@@ -427,14 +427,14 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                     <button
                       type="button"
                       onClick={() => setCurrentStep(1)}
-                      className="text-xs text-zinc-500 hover:text-white font-semibold"
+                      className="text-xs text-zinc-500 hover:text-zinc-900 font-semibold"
                     >
                       ← Back
                     </button>
                     <button
                       type="button"
                       onClick={() => setCurrentStep(3)}
-                      className="bg-primary-500 text-black hover:bg-amber-300 text-slate-950 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-amber-400/20"
+                      className="bg-primary-500 text-black hover:bg-amber-300 text-zinc-900 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-amber-400/20"
                     >
                       Next: Add Supplies & Storage <ArrowRight className="w-4 h-4" />
                     </button>
@@ -446,7 +446,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
               {currentStep === 3 && (
                 <div className="space-y-6 animate-in fade-in duration-300">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-bold text-white flex items-center gap-2 font-['Montserrat',sans-serif]">
+                    <h3 className="text-lg font-bold text-zinc-900 flex items-center gap-2 font-['Montserrat',sans-serif]">
                       <Tag className="w-5 h-5 text-amber-400" />
                       Baked-in Upsells: Packing Supplies & Storage Vaults
                     </h3>
@@ -456,7 +456,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                   {/* Packing Supplies Upsell List */}
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <label className="text-xs font-semibold text-zinc-400">Popular Moving Supply Bundles</label>
+                      <label className="text-xs font-semibold text-zinc-600">Popular Moving Supply Bundles</label>
                       <span className="text-[11px] text-amber-400">Delivered directly to your door prior to move day</span>
                     </div>
 
@@ -466,11 +466,11 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         return (
                           <div
                             key={supply.id}
-                            className="bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-2xl p-3.5 flex items-center justify-between gap-3"
+                            className="bg-white shadow-sm shadow-sm border border-zinc-200 rounded-2xl p-3.5 flex items-center justify-between gap-3"
                           >
                             <div className="flex-1">
                               <div className="flex items-center gap-2">
-                                <span className="text-xs font-bold text-white">{supply.name}</span>
+                                <span className="text-xs font-bold text-zinc-900">{supply.name}</span>
                                 {supply.popular && (
                                   <span className="bg-primary-500 text-black/20 text-amber-400 text-[10px] font-extrabold px-2 py-0.5 rounded-full">
                                     POPULAR
@@ -482,19 +482,19 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
                             <div className="flex items-center gap-3">
                               <span className="text-xs font-bold text-amber-400">${supply.price.toFixed(2)}</span>
-                              <div className="flex items-center gap-1.5 bg-zinc-800 p-1 rounded-xl border border-zinc-800">
+                              <div className="flex items-center gap-1.5 bg-zinc-100 p-1 rounded-xl border border-zinc-200">
                                 <button
                                   type="button"
                                   onClick={() => handleSupplyQtyChange(supply.id, -1)}
-                                  className="w-6 h-6 rounded-lg bg-neutral-200 text-zinc-200 hover:bg-amber-200 flex items-center justify-center text-xs font-bold"
+                                  className="w-6 h-6 rounded-lg bg-neutral-200 text-zinc-700 hover:bg-amber-200 flex items-center justify-center text-xs font-bold"
                                 >
                                   -
                                 </button>
-                                <span className="w-6 text-center text-xs font-bold text-white">{qty}</span>
+                                <span className="w-6 text-center text-xs font-bold text-zinc-900">{qty}</span>
                                 <button
                                   type="button"
                                   onClick={() => handleSupplyQtyChange(supply.id, 1)}
-                                  className="w-6 h-6 rounded-lg bg-primary-500 text-black text-slate-950 hover:bg-amber-300 flex items-center justify-center text-xs font-bold"
+                                  className="w-6 h-6 rounded-lg bg-primary-500 text-black text-zinc-900 hover:bg-amber-300 flex items-center justify-center text-xs font-bold"
                                 >
                                   +
                                 </button>
@@ -509,7 +509,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                   {/* Climate Controlled Storage Vault Upsell */}
                   <div className="pt-2">
                     <div className="flex items-center justify-between mb-2">
-                      <label className="text-xs font-semibold text-zinc-400">Need Secure {GEO.regionName} Vault Storage?</label>
+                      <label className="text-xs font-semibold text-zinc-600">Need Secure {GEO.regionName} Vault Storage?</label>
                       <span className="text-[11px] text-emerald-400 font-semibold">🎉 {PRICING.storagePromoPercent}% OFF First {PRICING.storagePromoDays} Days</span>
                     </div>
 
@@ -519,11 +519,11 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         onClick={() => setQuoteForm(p => ({ ...p, storageOptionId: p.storageOptionId === null ? 'storage-5x10' : null }))}
                         className={`p-3 rounded-2xl border text-left transition-all ${
                           quoteForm.storageOptionId === null
-                            ? 'bg-zinc-900/50 border-neutral-300 text-zinc-500'
-                            : 'bg-zinc-900/50/80 border-zinc-800 text-zinc-500'
+                            ? 'bg-white shadow-sm border-neutral-300 text-zinc-500'
+                            : 'bg-white shadow-sm/80 border-zinc-200 text-zinc-500'
                         }`}
                       >
-                        <div className="text-xs font-bold text-zinc-400">No Storage Needed</div>
+                        <div className="text-xs font-bold text-zinc-600">No Storage Needed</div>
                         <div className="text-[10px] text-neutral-500 mt-1">Direct move to new home</div>
                       </button>
 
@@ -536,11 +536,11 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                             onClick={() => setQuoteForm(p => ({ ...p, storageOptionId: isSelected ? null : st.id }))}
                             className={`p-3 rounded-2xl border text-left transition-all ${
                               isSelected
-                                ? 'bg-primary-500 text-black/10 border-amber-400 text-white'
-                                : 'bg-zinc-900/50 shadow-sm border-zinc-800 text-zinc-400 hover:border-neutral-300'
+                                ? 'bg-primary-500 text-black/10 border-amber-400 text-zinc-900'
+                                : 'bg-white shadow-sm shadow-sm border-zinc-200 text-zinc-600 hover:border-neutral-300'
                             }`}
                           >
-                            <div className="text-xs font-bold text-white flex items-center justify-between">
+                            <div className="text-xs font-bold text-zinc-900 flex items-center justify-between">
                               {st.name}
                               {isSelected && <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />}
                             </div>
@@ -558,14 +558,14 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                     <button
                       type="button"
                       onClick={() => setCurrentStep(2)}
-                      className="text-xs text-zinc-500 hover:text-white font-semibold"
+                      className="text-xs text-zinc-500 hover:text-zinc-900 font-semibold"
                     >
                       ← Back
                     </button>
                     <button
                       type="button"
                       onClick={() => setCurrentStep(4)}
-                      className="bg-primary-500 text-black hover:bg-amber-300 text-slate-950 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-amber-400/20"
+                      className="bg-primary-500 text-black hover:bg-amber-300 text-zinc-900 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-amber-400/20"
                     >
                       Next: Contact & Lock Quote <ArrowRight className="w-4 h-4" />
                     </button>
@@ -577,7 +577,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
               {currentStep === 4 && (
                 <form onSubmit={handleSubmit} className="space-y-5 animate-in fade-in duration-300">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-bold text-white flex items-center gap-2 font-['Montserrat',sans-serif]">
+                    <h3 className="text-lg font-bold text-zinc-900 flex items-center gap-2 font-['Montserrat',sans-serif]">
                       <FileText className="w-5 h-5 text-amber-400" />
                       Enter Contact Details to Guarantee Price
                     </h3>
@@ -586,7 +586,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label htmlFor="fullName" className="text-xs font-semibold text-zinc-400">Full Name *</label>
+                      <label htmlFor="fullName" className="text-xs font-semibold text-zinc-600">Full Name *</label>
                       <input
                         id="fullName"
                         type="text"
@@ -594,12 +594,12 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         value={quoteForm.fullName}
                         onChange={(e) => setQuoteForm(p => ({ ...p, fullName: e.target.value }))}
                         placeholder="e.g. Sarah Jenkins"
-                        className="w-full bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3.5 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-amber-400"
+                        className="w-full bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3.5 py-3 text-sm text-zinc-900 placeholder-neutral-400 focus:outline-none focus:border-amber-400"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label htmlFor="email" className="text-xs font-semibold text-zinc-400">Email Address *</label>
+                      <label htmlFor="email" className="text-xs font-semibold text-zinc-600">Email Address *</label>
                       <input
                         id="email"
                         type="email"
@@ -607,14 +607,14 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         value={quoteForm.email}
                         onChange={(e) => setQuoteForm(p => ({ ...p, email: e.target.value }))}
                         placeholder="s.jenkins@example.com"
-                        className="w-full bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3.5 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-amber-400"
+                        className="w-full bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3.5 py-3 text-sm text-zinc-900 placeholder-neutral-400 focus:outline-none focus:border-amber-400"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label htmlFor="phone" className="text-xs font-semibold text-zinc-400">Phone Number *</label>
+                      <label htmlFor="phone" className="text-xs font-semibold text-zinc-600">Phone Number *</label>
                       <input
                         id="phone"
                         type="tel"
@@ -622,13 +622,13 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                         value={quoteForm.phone}
                         onChange={(e) => setQuoteForm(p => ({ ...p, phone: e.target.value }))}
                         placeholder={GEO.phonePlaceholder}
-                        className="w-full bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3.5 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-amber-400"
+                        className="w-full bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3.5 py-3 text-sm text-zinc-900 placeholder-neutral-400 focus:outline-none focus:border-amber-400"
                       />
                     </div>
 
                     {/* Promo Code Input */}
                     <div className="space-y-1.5">
-                      <label htmlFor="promoCode" className="text-xs font-semibold text-zinc-400">Promo / Referral Code</label>
+                      <label htmlFor="promoCode" className="text-xs font-semibold text-zinc-600">Promo / Referral Code</label>
                       <div className="flex gap-2">
                         <input
                           id="promoCode"
@@ -636,12 +636,12 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                           value={quoteForm.promoCode}
                           onChange={(e) => setQuoteForm(p => ({ ...p, promoCode: e.target.value }))}
                           placeholder={`e.g. ${PRICING.promoCodes.welcome.code}`}
-                          className="w-full bg-zinc-900/50 shadow-sm border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white uppercase focus:outline-none focus:border-amber-400"
+                          className="w-full bg-white shadow-sm shadow-sm border border-zinc-200 rounded-xl px-3 py-2 text-xs text-zinc-900 uppercase focus:outline-none focus:border-amber-400"
                         />
                         <button
                           type="button"
                           onClick={handleApplyPromo}
-                          className="bg-black hover:bg-neutral-900 text-amber-400 shadow-md px-3 py-2 rounded-xl text-xs font-bold"
+                          className="bg-black hover:bg-zinc-900 text-amber-400 shadow-md px-3 py-2 rounded-xl text-xs font-bold"
                         >
                           Apply
                         </button>
@@ -654,8 +654,8 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
                   <div className="bg-primary-500/10 border border-amber-500/20 rounded-2xl p-4 flex items-start gap-3">
                     <Shield className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                    <div className="text-xs text-zinc-400">
-                      <span className="font-bold text-white">{LEGAL.noPriceSurprises.split(' — ')[0]}:</span> {LEGAL.noPriceSurprises.split(' — ')[1]}
+                    <div className="text-xs text-zinc-600">
+                      <span className="font-bold text-zinc-900">{LEGAL.noPriceSurprises.split(' — ')[0]}:</span> {LEGAL.noPriceSurprises.split(' — ')[1]}
                     </div>
                   </div>
 
@@ -663,13 +663,13 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                     <button
                       type="button"
                       onClick={() => setCurrentStep(3)}
-                      className="text-xs text-zinc-500 hover:text-white font-semibold"
+                      className="text-xs text-zinc-500 hover:text-zinc-900 font-semibold"
                     >
                       ← Back
                     </button>
                     <button
                       type="submit"
-                      className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 px-8 py-3.5 rounded-2xl font-black text-sm uppercase tracking-wider flex items-center gap-2 shadow-xl shadow-amber-400/25 hover:scale-[1.02] transition-transform"
+                      className="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-zinc-900 px-8 py-3.5 rounded-2xl font-black text-sm uppercase tracking-wider flex items-center gap-2 shadow-xl shadow-amber-400/25 hover:scale-[1.02] transition-transform"
                     >
                       <span>CONFIRM & GET INSTANT QUOTE</span>
                       <ArrowRight className="w-5 h-5" />
@@ -684,17 +684,17 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
             <div 
               aria-live="polite" 
               style={{ borderRadius: THEME.borderRadius.card }}
-              className="lg:col-span-6 bg-zinc-900/50/60 backdrop-blur-2xl border border-white/50 p-6 sm:p-8 md:p-10 relative overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
+              className="lg:col-span-6 bg-white/80 backdrop-blur-2xl border border-zinc-200 p-6 sm:p-8 md:p-10 relative overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
             >
               {/* Background badge icon */}
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary-500 text-black/10 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="flex items-center justify-between pb-5 border-b border-zinc-800/60">
+              <div className="flex items-center justify-between pb-5 border-b border-zinc-200">
                 <div>
                   <span className="text-[10px] tracking-widest text-neutral-500 font-bold uppercase">
                     ESTIMATE CALCULATOR
                   </span>
-                  <h4 className="text-2xl font-black text-white font-['Montserrat',sans-serif] mt-1">
+                  <h4 className="text-2xl font-black text-zinc-900 font-['Montserrat',sans-serif] mt-1">
                     Estimated Cost Range
                   </h4>
                 </div>
@@ -706,10 +706,10 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
               {/* Big Price Range Display */}
               <div 
                 style={{ borderRadius: THEME.borderRadius.card }}
-                className="my-8 text-center bg-gradient-to-b from-white to-neutral-50/50 p-8 border border-zinc-800/60 shadow-sm"
+                className="my-8 text-center bg-gradient-to-b from-white to-neutral-50/50 p-8 border border-zinc-200 shadow-sm"
               >
                 <div className="text-[11px] text-neutral-500 font-bold uppercase tracking-widest mb-2">TOTAL ALL-INCLUSIVE ESTIMATE</div>
-                <div className="text-4xl sm:text-5xl font-black text-white tracking-tight font-['Montserrat',sans-serif]">
+                <div className="text-4xl sm:text-5xl font-black text-zinc-900 tracking-tight font-['Montserrat',sans-serif]">
                   ${liveEstimate.min} <span className="text-neutral-300 font-light mx-1">–</span> ${liveEstimate.max}
                 </div>
                 <div className="text-xs text-zinc-500 font-semibold mt-4 flex items-center justify-center gap-1.5">
@@ -720,32 +720,32 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
 
               {/* Itemized Line Items */}
               <div className="space-y-4 text-xs sm:text-sm font-semibold pt-2 my-2">
-                <div className="flex items-center justify-between text-zinc-200">
+                <div className="flex items-center justify-between text-zinc-700">
                   <span>Estimated Labor (~{liveEstimate.estHours} hrs x {liveEstimate.movers} Movers):</span>
-                  <span className="font-black text-white text-base">${liveEstimate.hourlyLabor}</span>
+                  <span className="font-black text-zinc-900 text-base">${liveEstimate.hourlyLabor}</span>
                 </div>
 
-                <div className="flex items-center justify-between text-zinc-200">
+                <div className="flex items-center justify-between text-zinc-700">
                   <span>Dispatch, Fuel & Highway Truck Fee:</span>
-                  <span className="font-black text-white text-base">${liveEstimate.truckFuelFee}</span>
+                  <span className="font-black text-zinc-900 text-base">${liveEstimate.truckFuelFee}</span>
                 </div>
 
-                <div className="flex items-center justify-between text-zinc-200">
+                <div className="flex items-center justify-between text-zinc-700">
                   <span>Certificate of Insurance (COI) Issuance:</span>
                   <span className="font-black text-emerald-700 text-base">FREE ($0)</span>
                 </div>
 
                 {liveEstimate.suppliesCost > 0 && (
-                  <div className="flex items-center justify-between text-zinc-200">
+                  <div className="flex items-center justify-between text-zinc-700">
                     <span>Packing Supplies Bundles:</span>
-                    <span className="font-black text-white text-base">+${liveEstimate.suppliesCost}</span>
+                    <span className="font-black text-zinc-900 text-base">+${liveEstimate.suppliesCost}</span>
                   </div>
                 )}
 
                 {liveEstimate.storageCost > 0 && (
-                  <div className="flex items-center justify-between text-zinc-200">
+                  <div className="flex items-center justify-between text-zinc-700">
                     <span>Storage Vault (Month 1 50% Off):</span>
-                    <span className="font-black text-white text-base">+${liveEstimate.storageCost}</span>
+                    <span className="font-black text-zinc-900 text-base">+${liveEstimate.storageCost}</span>
                   </div>
                 )}
 
@@ -758,7 +758,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
               </div>
 
               {/* Trust Badges bottom */}
-              <div className="mt-8 pt-5 border-t border-zinc-800/60 space-y-3 text-[13px] text-zinc-500 font-medium">
+              <div className="mt-8 pt-5 border-t border-zinc-200 space-y-3 text-[13px] text-zinc-500 font-medium">
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-amber-50 flex items-center justify-center shrink-0">
                     <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 stroke-[3]" />
@@ -788,7 +788,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
                   transitionDuration: THEME.animation.speed,
                   transitionTimingFunction: THEME.animation.easing
                 }}
-                className="w-full mt-8 py-4 px-6 bg-neutral-900 hover:bg-neutral-800 text-white shadow-lg shadow-neutral-900/10 font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-all"
+                className="w-full mt-8 py-4 px-6 bg-zinc-900 hover:bg-zinc-800 text-zinc-900 shadow-lg shadow-neutral-900/10 font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-all"
               >
                 <Shield className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>{MICROCOPY.buttons.requestCOI}</span>

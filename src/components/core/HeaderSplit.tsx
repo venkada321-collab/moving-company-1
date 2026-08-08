@@ -12,12 +12,12 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const allLinks = [
-    { id: 'quote', label: 'Estimator', enabled: true },
-    { id: 'niches', label: 'Services', enabled: LAYOUT.sectionsEnabled.service_niches },
-    { id: 'routes', label: 'Routes & Network', enabled: LAYOUT.sectionsEnabled.gta_routes },
-    { id: 'how-it-works', label: 'Safety Protocol', enabled: LAYOUT.sectionsEnabled.how_it_works },
-    { id: 'supplies-storage', label: 'Vault Storage', enabled: LAYOUT.sectionsEnabled.supplies_and_storage },
-    { id: 'referral', label: `Refer Rewards`, enabled: LAYOUT.sectionsEnabled.referral_program },
+    { id: 'hero_quote_calculator', label: 'Estimator', enabled: true },
+    { id: 'service_niches', label: 'Services', enabled: LAYOUT.sectionsEnabled.service_niches },
+    { id: 'gta_routes', label: 'Routes & Network', enabled: LAYOUT.sectionsEnabled.gta_routes },
+    { id: 'how_it_works', label: 'Safety Protocol', enabled: LAYOUT.sectionsEnabled.how_it_works },
+    { id: 'supplies_and_storage', label: 'Vault Storage', enabled: LAYOUT.sectionsEnabled.supplies_and_storage },
+    { id: 'referral_program', label: `Refer Rewards`, enabled: LAYOUT.sectionsEnabled.referral_program },
   ].filter(item => item.enabled !== false);
 
   const midpoint = Math.ceil(allLinks.length / 2);

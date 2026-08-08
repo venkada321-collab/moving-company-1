@@ -12,13 +12,13 @@ export const HeaderStandard: React.FC<HeaderProps> = ({ activeTab, setActiveTab,
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'quote', label: 'Home & Estimate', icon: Tag, enabled: true },
-    { id: 'niches', label: 'Service Niches', icon: Truck, enabled: LAYOUT.sectionsEnabled.service_niches },
-    { id: 'routes', label: `${GEO.regionName} Routes`, icon: MapPin, enabled: LAYOUT.sectionsEnabled.gta_routes },
-    { id: 'how-it-works', label: 'How It Works', icon: ShieldCheck, enabled: LAYOUT.sectionsEnabled.how_it_works },
-    { id: 'supplies-storage', label: 'Supplies & Storage', icon: Box, enabled: LAYOUT.sectionsEnabled.supplies_and_storage },
+    { id: 'hero_quote_calculator', label: 'Home & Estimate', icon: Tag, enabled: true },
+    { id: 'service_niches', label: 'Service Niches', icon: Truck, enabled: LAYOUT.sectionsEnabled.service_niches },
+    { id: 'gta_routes', label: `${GEO.regionName} Routes`, icon: MapPin, enabled: LAYOUT.sectionsEnabled.gta_routes },
+    { id: 'how_it_works', label: 'How It Works', icon: ShieldCheck, enabled: LAYOUT.sectionsEnabled.how_it_works },
+    { id: 'supplies_and_storage', label: 'Supplies & Storage', icon: Box, enabled: LAYOUT.sectionsEnabled.supplies_and_storage },
     { id: 'blog', label: `${GEO.regionName} Blog`, icon: Award, enabled: LAYOUT.sectionsEnabled.blog_page },
-    { id: 'referral', label: `Referral (${BRAND.referralGetAmount})`, icon: Gift, highlight: true, enabled: LAYOUT.sectionsEnabled.referral_program },
+    { id: 'referral_program', label: `Referral (${BRAND.referralGetAmount})`, icon: Gift, highlight: true, enabled: LAYOUT.sectionsEnabled.referral_program },
   ].filter(item => item.enabled !== false);
 
   return (
