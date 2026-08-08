@@ -30,7 +30,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
         </div>
 
         {/* Route Selector Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+        <div className="flex flex-wrap md:flex-nowrap justify-between gap-4 p-4 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50/60 dark:bg-slate-900/60 mb-10">
           {SEO_ROUTES.map((route) => {
             const isSelected = route.id === selectedRouteId;
             return (

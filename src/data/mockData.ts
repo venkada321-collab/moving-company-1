@@ -79,7 +79,7 @@ export const SERVICE_NICHES: ServiceNiche[] = [
   {
     id: 'white-glove-packing',
     name: 'Full White-Glove Packing & Unpacking',
-    description: 'Complete hands-free relocation. Our professional Kratos packing crews bring eco-friendly boxes, pack every drawer and closet, transport, and unpack your new home down to the last spoon.',
+    description: 'Complete hands-free relocation. Our professional PROFEESIONAL packing crews bring eco-friendly boxes, pack every drawer and closet, transport, and unpack your new home down to the last spoon.',
     icon: 'PackageCheck',
     baseRate: 160,
     extraFees: 'Supplies charged at wholesale cost',
@@ -113,7 +113,7 @@ export const SEO_ROUTES: SEORoute[] = [
     distance: 30,
     estHours: 3.5,
     avgCostRange: '$550 - $850',
-    description: 'Our most requested corridor. Seamless moves from Woodbridge suburban homes directly to downtown Toronto high-rise condos, executed flawlessly by our Hercules team.',
+    description: 'Our most requested corridor. Seamless moves from Woodbridge suburban homes directly to downtown Toronto high-rise condos, executed flawlessly by our Elite Crew team.',
     highlights: [
       'Expert highway traffic timing to avoid peak congestion hours',
       'Insurance delivery for Toronto property managers',
@@ -123,7 +123,7 @@ export const SEO_ROUTES: SEORoute[] = [
       {
         author: 'Marcus & Julian Vance',
         rating: 5,
-        text: 'Moved from our Woodbridge home to a King West condo. Kratos Moving had the insurance sent directly to the concierge. Truly Done As Promised!',
+        text: 'Moved from our Woodbridge home to a King West condo. PROFEESIONAL MOVING SERVICES had the insurance sent directly to the concierge. Truly Done As Promised!',
         date: 'July 14, 2026'
       }
     ]
@@ -147,7 +147,7 @@ export const SEO_ROUTES: SEORoute[] = [
       {
         author: 'Victoria Sterling',
         rating: 5,
-        text: 'Moving our 4,000 sq ft home from Aurora to South Oakville was intimidating. The Kratos Hercules crew handled our art and grand piano flawlessly.',
+        text: 'Moving our 4,000 sq ft home from Aurora to South Oakville was intimidating. The PROFEESIONAL Elite Crew crew handled our art and grand piano flawlessly.',
         date: 'June 28, 2026'
       }
     ]
@@ -165,13 +165,13 @@ export const SEO_ROUTES: SEORoute[] = [
     highlights: [
       'Flexible same-day or evening start times',
       'Specialized mattress hygienic encasement included free',
-      'Top-tier Hercules Academy trained professional crews'
+      'Top-tier Pro-Certified Safety Academy trained professional crews'
     ],
     testimonials: [
       {
         author: 'David & Ling Chen',
         rating: 5,
-        text: 'Extremely polite Kratos crew, arrived 10 minutes early in Vaughan. Nothing scratched and the price was exact to the Cicero quote!',
+        text: 'Extremely polite PROFEESIONAL crew, arrived 10 minutes early in Vaughan. Nothing scratched and the price was exact to the Direct-Quote quote!',
         date: 'May 19, 2026'
       }
     ]
@@ -195,7 +195,7 @@ export const SEO_ROUTES: SEORoute[] = [
       {
         author: 'Dr. Aris Thorne',
         rating: 5,
-        text: 'Loaded in Toronto on Tuesday morning, unpacked in Ottawa Kanata by Wednesday 11 AM. Kratos Moving delivered exactly as promised!',
+        text: 'Loaded in Toronto on Tuesday morning, unpacked in Ottawa Kanata by Wednesday 11 AM. PROFEESIONAL MOVING SERVICES delivered exactly as promised!',
         date: 'April 02, 2026'
       }
     ]
@@ -213,13 +213,13 @@ export const SEO_ROUTES: SEORoute[] = [
     highlights: [
       '407 ETR toll highway routing included to bypass heavy 401 traffic',
       'Heavy gym equipment and garage workshop tool packing',
-      'Friendly 3-4 man Hercules crew configurations available for quick dispatch'
+      'Friendly 3-4 man Elite Crew crew configurations available for quick dispatch'
     ],
     testimonials: [
       {
         author: 'Rohan Sharma',
         rating: 5,
-        text: 'Top notch Kratos movers. Took 407 highway so we arrived ahead of schedule. Very careful with our big 75 inch TVs.',
+        text: 'Top notch PROFEESIONAL movers. Took 407 highway so we arrived ahead of schedule. Very careful with our big 75 inch TVs.',
         date: 'February 24, 2026'
       }
     ]
@@ -236,14 +236,14 @@ export const SEO_ROUTES: SEORoute[] = [
     description: 'Efficient relocations from Barrie through to the Kitchener-Waterloo tech hub. Reliable and seamless.',
     highlights: [
       'Guaranteed transit times',
-      'Hercules Academy certified drivers and loaders',
+      'Pro-Certified Safety Academy certified drivers and loaders',
       'Full inventory tagging & digital itemized manifests'
     ],
     testimonials: [
       {
         author: 'Sarah Jenkins',
         rating: 5,
-        text: 'The Kratos Moving process is incredible. Cicero gave us a great quote, Hermes scheduled it perfectly, and the Hercules crew executed without a hitch.',
+        text: 'The PROFEESIONAL MOVING SERVICES process is incredible. Direct-Quote gave us a great quote, Logistics-Coordination scheduled it perfectly, and the Elite Crew crew executed without a hitch.',
         date: 'January 15, 2026'
       }
     ]
@@ -256,7 +256,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Siddharth & Priya Patel',
     role: 'Condo Homeowners',
     rating: 5,
-    text: 'Moving out of a downtown Toronto condo can be a nightmare with 2-hour elevator limits. The Kratos Moving team had 4 Hercules Academy trained guys, padded the elevator walls in 5 mins, and finished moving our entire 2-bedroom with 15 mins to spare. Done As Promised!',
+    text: 'Moving out of a downtown Toronto condo can be a nightmare with 2-hour elevator limits. The PROFEESIONAL MOVING SERVICES team had 4 Pro-Certified Safety Academy trained guys, padded the elevator walls in 5 mins, and finished moving our entire 2-bedroom with 15 mins to spare. Done As Promised!',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80',
     verified: true,
     serviceType: 'Condo & High-Rise Move',
@@ -268,7 +268,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Claire Montpetit',
     role: 'Concert Pianist & Instructor',
     rating: 5,
-    text: 'Kratos Moving relocated my Yamaha C3 Grand Piano down a flight of historic Toronto Victorian steps. Their piano skid board system and care were astonishing. Not a single scratch and held pitch beautifully. Highly recommend their single-item service.',
+    text: 'PROFEESIONAL MOVING SERVICES relocated my Yamaha C3 Grand Piano down a flight of historic Toronto Victorian steps. Their piano skid board system and care were astonishing. Not a single scratch and held pitch beautifully. Highly recommend their single-item service.',
     avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80',
     verified: true,
     serviceType: 'Piano & Heavy Instrument',
@@ -280,7 +280,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Michael Zhang',
     role: 'Tech Executive',
     rating: 5,
-    text: 'The Cicero quoting process was 100% accurate. No surprise fees at the end. Hermes scheduled everything smoothly, and the Hercules crew brought wardrobe boxes that made closet packing take 10 minutes. A premium experience start to finish.',
+    text: 'The Direct-Quote quoting process was 100% accurate. No surprise fees at the end. Logistics-Coordination scheduled everything smoothly, and the Elite Crew crew brought wardrobe boxes that made closet packing take 10 minutes. A premium experience start to finish.',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
     verified: true,
     serviceType: 'White-Glove Packing',
@@ -292,7 +292,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Hannah & Derek Ross',
     role: 'Relocating Family',
     rating: 5,
-    text: 'We moved from Woodbridge to Ottawa for work. Kratos provided a direct dedicated truck with real-time GPS tracking. The 3-step process from quote to execution was flawless. Arrived exactly when promised.',
+    text: 'We moved from Woodbridge to Ottawa for work. PROFEESIONAL provided a direct dedicated truck with real-time GPS tracking. The 3-step process from quote to execution was flawless. Arrived exactly when promised.',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
     verified: true,
     serviceType: 'Long-Distance Express',
@@ -313,8 +313,8 @@ export const AWARDS: Award[] = [
   {
     id: 'a2',
     title: 'Top Rated Google Business',
-    organization: '3,000+ Reviews',
-    year: '5.0 ★★★★★',
+    organization: '2,450+ Verified Client Reviews',
+    year: '4.9 ★★★★★',
     logo: '⭐️',
     badgeText: '5-Star Rating'
   },
@@ -322,7 +322,7 @@ export const AWARDS: Award[] = [
     id: 'a3',
     title: 'Trustpilot Excellence',
     organization: 'Verified Customers',
-    year: '5.0 ★★★★★',
+    year: '4.9 ★★★★★',
     logo: '🔍',
     badgeText: 'Done As Promised'
   },
@@ -341,7 +341,7 @@ export const PACKING_SUPPLIES: PackingSupply[] = [
     id: 'wardrobe-box',
     name: 'Heavy Duty Wardrobe Box w/ Metal Bar',
     description: 'Holds 2 feet of hanging closet clothes. Keeps suits and dresses wrinkle-free during transit.',
-    price: 18.50,
+    price: 16.99,
     unit: 'box',
     category: 'boxes',
     image: '👕',
@@ -351,7 +351,7 @@ export const PACKING_SUPPLIES: PackingSupply[] = [
     id: 'dish-pack',
     name: 'Dish & Glassware Specialty Box Set',
     description: 'Double-walled box with corrugated cell dividers for 18 plates and 24 wine glasses.',
-    price: 24.00,
+    price: 21.50,
     unit: 'kit',
     category: 'boxes',
     image: '🍽️',
@@ -380,7 +380,7 @@ export const PACKING_SUPPLIES: PackingSupply[] = [
     id: 'starter-pack-kit',
     name: 'Condo 1-2 Bedroom Complete Move Bundle',
     description: '15 Medium Boxes, 10 Large Boxes, 2 Wardrobe Boxes, 1 Bubble Roll, 3 Tape Rolls, 1 Marker.',
-    price: 149.00,
+    price: 139.00,
     unit: 'bundle',
     category: 'kits',
     image: '📦',
@@ -390,7 +390,7 @@ export const PACKING_SUPPLIES: PackingSupply[] = [
     id: 'house-bundle-kit',
     name: '3-4 Bedroom House Master Packing Bundle',
     description: '30 Medium Boxes, 20 Large Boxes, 5 Wardrobe Boxes, 2 Dishpacks, 2 Bubble Rolls, 6 Tape Rolls.',
-    price: 289.00,
+    price: 269.00,
     unit: 'bundle',
     category: 'kits',
     image: '🏠'
@@ -454,10 +454,10 @@ export const BLOG_POSTS: BlogPost[] = [
       Most condo boards restrict moving hours to weekdays between 9:00 AM – 12:00 PM and 1:00 PM – 4:00 PM. Weekend slots fill up 3 to 4 weeks in advance. Always contact your concierge or property manager early to secure your preferred 3-hour window.
 
       ### 2. The Insurance Requirement
-      Property managers will NOT allow moving trucks to back into the loading bay unless the moving company provides proof of insurance naming the Condominium Corporation as an "Additional Insured". At Kratos Moving, our $1,000,000 Goods-in-Transit insurance guarantees you're covered, and we handle the paperwork as part of our Hermes scheduling process.
+      Property managers will NOT allow moving trucks to back into the loading bay unless the moving company provides proof of insurance naming the Condominium Corporation as an "Additional Insured". At PROFEESIONAL MOVING SERVICES, our $1,000,000 Goods-in-Transit insurance guarantees you're covered, and we handle the paperwork as part of our Logistics-Coordination scheduling process.
 
       ### 3. Elevator Padding & Key Service
-      On move day, our Hercules Academy trained crew inspects the cab before and after with concierge to ensure your damage deposit check is returned in full.
+      On move day, our Pro-Certified Safety Academy trained crew inspects the cab before and after with concierge to ensure your damage deposit check is returned in full.
 
       ### Pro Tip:
       Measure your loading bay height clearance. Older downtown Toronto buildings often have 8ft clearances, requiring specialized low-profile moving trucks.
@@ -480,7 +480,7 @@ export const BLOG_POSTS: BlogPost[] = [
       Winter in Southern Ontario can mean sudden lake-effect snowstorms and icy driveways. Moving between December and March requires extra precautions to keep both your family and belongings warm and safe.
 
       ### Floor Protection Against Road Salt & Slush
-      Road salt tears through hardwood flooring and carpet fibers. Our professional Kratos Hercules crews lay down heavy neoprene carpet runners and heavy plastic floor film across all main pathways from entry door to truck.
+      Road salt tears through hardwood flooring and carpet fibers. Our professional PROFEESIONAL Elite Crew crews lay down heavy neoprene carpet runners and heavy plastic floor film across all main pathways from entry door to truck.
 
       ### Protecting Cold-Sensitive Electronics
       OLED TVs, computers, and musical instruments should never be turned on immediately after being brought inside from -15°C weather. Allow electronics to warm up to indoor room temperature for 3 to 4 hours to prevent internal condensation short circuits.
@@ -493,7 +493,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: 'June 28, 2026',
     author: {
       name: 'Elena Rostova',
-      role: 'Hercules Academy Safety Lead',
+      role: 'Pro-Certified Safety Academy Safety Lead',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80'
     },
     image: 'https://images.unsplash.com/photo-1517299321609-52687d1bc55a?auto=format&fit=crop&w=800&q=80'
@@ -501,14 +501,14 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'toronto-to-ottawa-moving-checklist',
     title: 'The Ultimate Toronto to Ottawa Relocation Checklist',
-    excerpt: 'Navigating long-distance moves, Highway 401 East express routes, and planning for a stress-free transition with Kratos Moving.',
+    excerpt: 'Navigating long-distance moves, Highway 401 East express routes, and planning for a stress-free transition with PROFEESIONAL MOVING SERVICES.',
     content: `
       Relocating 450 kilometers from Toronto to Ottawa is a major journey. Here is your timeline for a seamless transition.
 
-      - **4 Weeks Before**: Engage with Cicero to get an accurate quote and reserve your direct express truck with Kratos Moving. Unlike freight carriers that mix cargo, we guarantee a dedicated truck.
-      - **2 Weeks Before**: Let our Hermes team finalize the scheduling and confirm any parking or access requirements at your destination.
+      - **4 Weeks Before**: Engage with Direct-Quote to get an accurate quote and reserve your direct express truck with PROFEESIONAL MOVING SERVICES. Unlike freight carriers that mix cargo, we guarantee a dedicated truck.
+      - **2 Weeks Before**: Let our Logistics-Coordination team finalize the scheduling and confirm any parking or access requirements at your destination.
       - **1 Week Before**: Transfer utility accounts and set up internet installation for your arrival date.
-      - **Move Day**: Sit back as our Hercules team executes the move, Done As Promised.
+      - **Move Day**: Sit back as our Elite Crew team executes the move, Done As Promised.
     `,
     category: 'Long-Distance',
     readTime: '6 min read',

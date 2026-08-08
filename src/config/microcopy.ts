@@ -1,5 +1,5 @@
 // ============================================================
-// MICROCOPY & TONE OF VOICE CONFIG — Kratos Moving
+// MICROCOPY & TONE OF VOICE CONFIG — PROFEESIONAL MOVING SERVICES
 // ============================================================
 
 export const MICROCOPY = {

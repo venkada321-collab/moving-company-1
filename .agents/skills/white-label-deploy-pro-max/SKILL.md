@@ -206,12 +206,15 @@ All customized builds **MUST** pass strict design quality controls:
    node scripts/qa_playwright_auditor.cjs ./output/brand-slug ./output/qa-screenshots/brand-slug
    ```
    * **Visual Evidence Generation:** Playwright automatically captures our singular, efficient proof asset: `full-page-master.png`.
-   * **AI Multimodal Visual Evaluation:** The AI Agent MUST directly inspect these captured image files (using image viewing/vision capabilities) to judge:
+   * **AI Multimodal Visual Evaluation (Design Expert Role):** The AI Agent MUST act as a rigorous Design Expert and directly inspect these captured image files (using image viewing/vision capabilities) to judge:
      1. **Intended Design & Theme Cohesion:** Ensure harmonious visual integration without harsh styling breaks.
      2. **Authentic Logo Recognition:** Assert that scraped live logos or emblems appear prominently without overlap.
      3. **Text Visibility & Picture Collision Defense:** Confirm headings and body text maintain clear contrast and are never obscured by background imagery.
      4. **Text Artifacts & Glitch Freedom:** Verify the absolute absence of strange replacement symbols, encoding errors, or raw square bracket UI scaffolding (`[{...}]`).
-   * **Autonomous Frontend Remediation:** If visual defects are observed by AI image judgment, the agent immediately patches the component JSX/CSS source files and re-captures screenshots to prove zero remaining visual defects!
+     5. **Latest Design Trends & Premium Feel:** Evaluate the screenshots against modern, premium aesthetics (e.g., glassmorphism, dynamic layouts, modern typography). The site must look completely custom and high-end, eliminating any generic "templaty" look.
+     6. **Image & Element Positioning:** Rigorously check that all hero images, icons, and background assets are correctly positioned, scaled properly without distortion, and aligned harmoniously with text blocks.
+     7. **Batch Uniqueness Verification:** Compare the screenshot against others in the current batch. If the design looks too visually similar to a sibling site, the agent MUST proactively implement new component variables and layout seeds to force a unique presentation.
+   * **Autonomous Aesthetic Remediation:** If visual defects are observed, the site looks dated/templaty, or fails batch uniqueness, the agent immediately patches the component variables, Tailwind configurations, layout structures, and CSS source files, then re-captures screenshots to prove zero remaining visual defects!
 
 ---
 

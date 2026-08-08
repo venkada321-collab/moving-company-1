@@ -1,39 +1,39 @@
 // ============================================================
-// LEGAL CONFIG — Kratos Moving
+// LEGAL CONFIG — PROFEESIONAL MOVING SERVICES
 // ============================================================
 
 export const LEGAL = {
   // Certificate of Insurance (COI)
-  coiAmount: '$1,000,000',
-  coiAmountShort: '$1M',
-  coiDeliverySLA: '24 Hours',
-  coiDeliverySLAShort: '24 Hrs',
-  coiPolicyNumber: '#KRT-5520-ON',
-  coiCertificateNumber: '#COI-KRT-10042',
-  coiInsurer: 'Aviva Canada',
+  coiAmount: "$1,000,000",
+  coiAmountShort: "$1M",
+  coiDeliverySLA: "24 Hours",
+  coiDeliverySLAShort: "24 Hrs",
+  coiPolicyNumber: "#PRO-POL-2026-ON",
+  coiCertificateNumber: "#COI-PRO-10042",
+  coiInsurer: "Aviva Canada & WSIB Bonded",
 
   // WSIB (Workplace Safety & Insurance Board)
-  wsibNumber: '#KRT-220198',
-  wsibLabel: 'WSIB Insured',
-  wsibCovered: '100% WSIB Covered',
+  wsibNumber: "#PRO-219485-ON",
+  wsibLabel: "WSIB Insured & Bonded",
+  wsibCovered: "100% WSIB Covered",
 
   // Provincial registration
-  registrationBody: 'Ontario Ministry of Transportation',
+  registrationBody: "Ontario Ministry of Transportation",
 
   // Trust signals
-  totalMoves: '3,000+',
-  starRating: '5.0',
-  starRatingDisplay: '5.0 / 5.0',
-  reviewCount: '3,000+',
-  reviewPlatforms: 'Google Reviews, Trustindex, & Trustpilot',
+  totalMoves: "2,450+",
+  starRating: "4.9",
+  starRatingDisplay: "4.9 / 5.0",
+  reviewCount: "2,450+",
+  reviewPlatforms: "Google Reviews, Trustindex, & BBB",
 
   // Guarantees
-  damageFreeGuarantee: 'Done As Promised Guarantee',
-  backgroundChecked: 'Hercules Academy Trained Crews',
-  replacementValue: 'Full Replacement Value Protection Available',
-  gpsTracking: 'Dedicated Move Manager Assigned',
-  noPriceSurprises: 'Our Price Lock Guarantee — No hidden fees or surprise surcharges.',
+  damageFreeGuarantee: "Done As Promised Guarantee",
+  backgroundChecked: "Certified Academy Trained Crews",
+  replacementValue: "Full Replacement Value Protection Available",
+  gpsTracking: "Dedicated Move Manager Assigned",
+  noPriceSurprises: "Our Price Lock Guarantee — No hidden fees or surprise surcharges.",
 
   // Specialty insurance
-  pianoInsuranceCoverage: '$50,000',
+  pianoInsuranceCoverage: "$50,000",
 } as const;

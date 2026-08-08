@@ -4,14 +4,16 @@ const { execSync } = require('child_process');
 const { getCopyVariation } = require('./copy-variations.cjs');
 const { generateNicheUniquePalette } = require('./color_spectrum_engine.cjs');
 
-// Usage: node scripts/batch_clone.cjs <path_to_batch.json> [--deploy] [--skip-build]
+// Usage: node scripts/batch_clone.cjs <path_to_batch.json> [--deploy] [--skip-build] [--variation-window=N]
 const batchFilePath = process.argv[2];
 const shouldDeploy = process.argv.includes('--deploy');
 const skipBuild = process.argv.includes('--skip-build');
+const variationWindowArg = process.argv.find(arg => arg.startsWith('--variation-window='));
+const variationWindow = variationWindowArg ? parseInt(variationWindowArg.split('=')[1], 10) : 8;
 
 if (!batchFilePath || !fs.existsSync(batchFilePath)) {
   console.error('❌ Error: Please provide a valid path to a JSON list of target websites or domain strings.');
-  console.log('Usage: node scripts/batch_clone.cjs examples/batch-targets.sample.json [--deploy] [--skip-build]');
+  console.log('Usage: node scripts/batch_clone.cjs examples/batch-targets.sample.json [--deploy] [--skip-build] [--variation-window=N]');
   process.exit(1);
 }
 
@@ -70,7 +72,7 @@ if (!fs.existsSync(outputRootDir)) {
 console.log(`🚀 Starting Batch Engine for ${rawBatch.length} target websites...`);
 
 const results = [];
-const highPerceptionHistory = []; // Tracks sliding window of High-Perception features across 8 websites
+const highPerceptionHistory = []; // Tracks sliding window of High-Perception features across variationWindow sites
 const masterRepoDir = path.resolve(__dirname, '..');
 const masterNodeModules = path.join(masterRepoDir, 'node_modules');
 
@@ -152,7 +154,7 @@ for (let i = 0; i < rawBatch.length; i++) {
   let hashIdx = parseInt(hashHex.substring(0, 8), 16) + (i * 11);
 
   // 🛡️ STATISTICAL PERCEPTUAL UNIQUENESS & HERO VARIATION ENGINE (Pre-Build Verification)
-  // Ensures high-perception visual features (Hero Canvas + UI Profile + Palette) never repeat within an 8-site window
+  // Ensures high-perception visual features (Hero Canvas + UI Profile + Palette) never repeat within the configured variationWindow
   let perm = getExpandedPermutation(hashIdx);
   let mutationAttempts = 0;
   while (mutationAttempts < 15) {
@@ -160,7 +162,7 @@ for (let i = 0; i < rawBatch.length; i++) {
     const isCollided = highPerceptionHistory.some(prevKey => prevKey.startsWith(`${perm.hero}|${perm.ui}`));
     if (!isCollided) {
       highPerceptionHistory.push(perceptionKey);
-      if (highPerceptionHistory.length > 8) highPerceptionHistory.shift(); // Enforce 7-8 site variation sliding window
+      if (highPerceptionHistory.length > variationWindow) highPerceptionHistory.shift(); // Enforce dynamic variation sliding window
       break;
     }
     hashIdx += 7; // Mutate cryptographic hash index to pick a divergent high-perception architecture

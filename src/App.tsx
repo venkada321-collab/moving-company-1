@@ -3,6 +3,11 @@ import { Header } from './components/core/Header';
 import { HeroQuoteCalculator } from './kits/kit-moving/components/HeroQuoteCalculator';
 import { HeroCenteredCta } from './components/core/HeroCenteredCta';
 import { HeroCompactBanner } from './components/core/HeroCompactBanner';
+import { HeroInteractiveStepQuiz } from './components/core/HeroInteractiveStepQuiz';
+import { HeroSlideoutExecutive } from './components/core/HeroSlideoutExecutive';
+import { HeroNeomorphicConsole } from './components/core/HeroNeomorphicConsole';
+import { HeroBrutalistLedger } from './components/core/HeroBrutalistLedger';
+import { HeroGlassWidget } from './components/core/HeroGlassWidget';
 import { HowItWorks } from './kits/kit-moving/components/HowItWorks';
 import { TrustSignals } from './components/core/TrustSignals';
 import { TrustStatsRibbon } from './components/core/TrustStatsRibbon';
@@ -74,6 +79,16 @@ export default function App() {
           component = <HeroCenteredCta key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
         } else if (LAYOUT.variants.hero === 'compact-banner') {
           component = <HeroCompactBanner key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
+        } else if (LAYOUT.variants.hero === 'interactive-step-quiz') {
+          component = <HeroInteractiveStepQuiz key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
+        } else if (LAYOUT.variants.hero === 'slideout-executive-drawer') {
+          component = <HeroSlideoutExecutive key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
+        } else if (LAYOUT.variants.hero === 'neomorphic-command-console') {
+          component = <HeroNeomorphicConsole key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
+        } else if (LAYOUT.variants.hero === 'brutalist-tariff-ledger') {
+          component = <HeroBrutalistLedger key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
+        } else if (LAYOUT.variants.hero === 'glass-floating-widget') {
+          component = <HeroGlassWidget key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
         } else {
           component = <HeroQuoteCalculator key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
         }
@@ -166,6 +181,16 @@ export default function App() {
                 <HeroCenteredCta onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
               ) : LAYOUT.variants.hero === 'compact-banner' ? (
                 <HeroCompactBanner onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
+              ) : LAYOUT.variants.hero === 'interactive-step-quiz' ? (
+                <HeroInteractiveStepQuiz onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
+              ) : LAYOUT.variants.hero === 'slideout-executive-drawer' ? (
+                <HeroSlideoutExecutive onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
+              ) : LAYOUT.variants.hero === 'neomorphic-command-console' ? (
+                <HeroNeomorphicConsole onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
+              ) : LAYOUT.variants.hero === 'brutalist-tariff-ledger' ? (
+                <HeroBrutalistLedger onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
+              ) : LAYOUT.variants.hero === 'glass-floating-widget' ? (
+                <HeroGlassWidget onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
               ) : (
                 <HeroQuoteCalculator onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
               )}

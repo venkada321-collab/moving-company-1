@@ -51,7 +51,7 @@ export const BlogPage: React.FC = () => {
         </div>
 
         {/* Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col gap-6 relative before:absolute before:left-6 before:top-4 before:bottom-4 before:w-0.5 before:bg-gradient-to-b before:from-primary-500 before:to-neutral-300 w-full max-w-4xl mx-auto">
           {filteredPosts.map((post) => (
             <div
               key={post.id}

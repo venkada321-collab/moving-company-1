@@ -1,29 +1,52 @@
 /* ============================================================
-   DYNAMIC THEME TOKENS — DEFAULT: AMBER & MONTSERRAT
-   This file is dynamically overwritten by scripts/populate_template.cjs
-   during batch white-label generation to transform brand colors & typography.
-   ============================================================ */
+    DYNAMIC THEME TOKENS — INJECTED PALETTE: SLATE & TYPOGRAPHY: MONTSERRAT
+    HYBRID ATMOSPHERIC STUDIO: ICE-WHITE-GLASS | LOGO TREATMENT: MONOCHROME-LUXURY-WHITE
+    ============================================================ */
 
 :root {
-  /* Dynamic Palette: Amber */
-  --primary-50: 255 251 235;
-  --primary-100: 254 243 199;
-  --primary-200: 253 230 138;
-  --primary-300: 252 211 77;
-  --primary-400: 251 191 36;
-  --primary-500: 245 158 11;
-  --primary-600: 217 119 6;
-  --primary-700: 180 83 9;
-  --primary-800: 146 64 14;
-  --primary-900: 120 53 15;
-  --primary-950: 69 26 3;
+  /* Dynamic Primary Palette (Anchored to Brand Logo): slate */
+  --primary-50: 237 239 242;
+  --primary-100: 219 224 229;
+  --primary-200: 184 192 204;
+  --primary-300: 148 161 178;
+  --primary-400: 121 137 159;
+  --primary-500: 100 116 139;
+  --primary-600: 81 94 113;
+  --primary-700: 60 69 83;
+  --primary-800: 43 50 59;
+  --primary-900: 30 35 42;
+  --primary-950: 17 20 23;
+
+  /* SHA-Driven Secondary Accent Spectrum (Harmonized Triadic/Complementary Offset) */
+  --accent-50: 242 237 239;
+  --accent-100: 229 219 224;
+  --accent-200: 204 184 192;
+  --accent-300: 180 151 163;
+  --accent-400: 165 131 145;
+  --accent-500: 148 107 124;
+  --accent-600: 118 86 99;
+  --accent-700: 89 64 74;
+  --accent-800: 59 43 50;
+  --accent-900: 41 30 35;
+  --accent-950: 23 17 20;
+
+  /* Intelligent WCAG Perceived Luminance Contrast Tokens */
+  --primary-contrast-text: #ffffff;
+  --accent-contrast-text: #ffffff;
 
   /* Dynamic Typography */
   --font-heading: 'Montserrat';
   --font-body: 'Inter';
+
+  /* Dynamic Geometry */
+  --radius-button: 8px;
+  --radius-card: 16px;
 }
 
-/* Bind typography utilities and arbitrary Tailwind fonts to dynamic custom properties */
+.text-primary-contrast, [class*="text-primary-contrast"] {
+  color: var(--primary-contrast-text) !important;
+}
+
 .font-heading, [class*="font-['Montserrat"], [class*="font-[\'Montserrat\'"] {
   font-family: var(--font-heading), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
@@ -32,67 +55,17 @@
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
-/* ============================================================
-   MACRO UI PERSONALITY PROFILES (Shape, Density & Shadow Entropy)
-   ============================================================ */
+/* Injected Universal Sub-Element Primitives ([BTN-01 | INP-01 | CRD-01 | BDG-01 | ACC-01]) */
+.btn-atomic-primary { @apply rounded-full bg-primary-500 hover:bg-primary-600 text-[color:var(--primary-contrast-text)] font-black tracking-wide px-8 py-4 shadow-xl shadow-primary-500/30 hover:shadow-2xl hover:scale-105 transition-all min-h-[44px] inline-flex items-center justify-center gap-2 drop-shadow-sm; }
+.input-atomic-field { @apply rounded-2xl bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 border border-neutral-300 dark:border-neutral-700 focus:bg-white dark:focus:bg-neutral-950 focus:border-primary-500 px-5 py-3.5 text-sm outline-none transition-all shadow-inner focus:ring-4 focus:ring-primary-500/20 w-full font-medium; }
+.card-atomic-surface { @apply bg-white/95 dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-100 backdrop-blur-md rounded-3xl border border-neutral-200/80 dark:border-neutral-800/80 shadow-2xl shadow-neutral-900/10 p-6 sm:p-8; }
+.badge-atomic-pill { @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-primary-500 text-[color:var(--primary-contrast-text)] shadow-sm; }
+.accordion-atomic-box { @apply mb-4 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 shadow-md transition-all hover:border-primary-400; }
 
-[data-ui-profile="brutalist-high-contrast"],
-.ui-brutalist {
-  --ui-radius: 0px !important;
-  --ui-border: 3px solid #000000 !important;
-  --ui-shadow: 6px 6px 0px #000000 !important;
-}
-
-[data-ui-profile="soft-glassmorphic"],
-.ui-glass {
-  --ui-radius: 28px !important;
-  --ui-border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  --ui-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
-  backdrop-filter: blur(16px);
-}
-
-[data-ui-profile="luxury-minimalist"],
-.ui-minimal {
-  --ui-radius: 4px !important;
-  --ui-border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  --ui-shadow: none !important;
-}
-
-/* ============================================================
-   CUSTOM ART LAYERS (Agency-Grade Polish)
-   ============================================================ */
-.content-art-layer {
-  border-radius: 20px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-  object-fit: cover;
-}
-
-.content-art-layer:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.4);
-}
-
-.how-it-works-art {
-  border-radius: 24px;
-  box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.3);
-  filter: contrast(1.05) saturate(1.1);
-}
-
-.niche-art {
-  clip-path: polygon(0 0, 100% 2%, 98% 100%, 2% 98%);
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(255, 59, 48, 0.1); /* Subtle red tint for dark mode */
-}
-
-.storage-art {
-  border-radius: 32px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-  object-position: center top;
-}
-
-.referral-art {
-  border-radius: 24px 24px 8px 8px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
+/* Injected Paradigm Architecture (SplitScreenSaaS) */
+.heading-scale { @apply text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight; }
+.body-scale { @apply text-base md:text-lg font-normal; }
+.bg-atmosphere { background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px; } .dark .bg-atmosphere { background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px); }
+.hero-art-layer { opacity: 0.8; clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%); filter: brightness(0.8) contrast(1.1); }
+.animate-paradigm-entrance { animation: saas-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; opacity: 0; }
+@keyframes saas-pop { 0% { transform: scale(0.95) translateY(15px); opacity: 0; } 100% { transform: scale(1) translateY(0); opacity: 1; } }

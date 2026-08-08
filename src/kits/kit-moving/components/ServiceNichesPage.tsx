@@ -49,7 +49,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
         {/* VARIANT 1: STANDARD ICON GRID & DEDICATED VIEW */}
         {servicesVariant === 'icon-grid' && (
           <>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 -space-y-4 md:space-y-0 md:-space-x-4 hover:space-x-0 transition-all duration-500 w-full mb-10">
               {SERVICE_NICHES.map((niche) => {
                 const isActive = niche.id === activeNicheId;
                 return (

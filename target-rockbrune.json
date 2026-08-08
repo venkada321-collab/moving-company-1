@@ -1,0 +1,94 @@
+{
+  "name": "PROFEESIONAL MOVING SERVICES",
+  "legalName": "PROFEESIONAL MOVING SERVICES Inc.",
+  "shortName": "PROFEESIONAL",
+  "slug": "rockbrune-com",
+  "domain": "rockbrune.com",
+  "websiteUrl": "https://www.rockbrune.com/",
+  "phone": "1.800.561.4139",
+  "phoneRaw": "18005614139",
+  "email": "info@rockbrune.com",
+  "hqAddress": "",
+  "logoSymbol": "P",
+  "logoUrl": "/assets/brand/logo.png",
+  "faviconUrl": "/assets/brand/favicon.png",
+  "heroTagline": "PROFEESIONAL MOVING SERVICES",
+  "heroSubtitle": "Reliable Residential & Commercial Movers Serving the Greater Toronto Area",
+  "rankingClaim": "Trusted by thousands — PROFEESIONAL MOVING SERVICES",
+  "ctaText": "‹",
+  "pageTitle": "Ajax, Barrie, Oshawa's Best Moving Company | Rockbrune Bros Movers",
+  "metaDescription": "Rockbrune asks the right questions to get you an accurate & honest rate. Let our Moving Coordinators get you an affordable price. Call us today!",
+  "theme": {
+    "primary": "slate",
+    "secondary": "blue",
+    "tertiary": "slate",
+    "palette": {
+      "primary": "amber",
+      "secondary": "blue",
+      "tertiary": "slate"
+    },
+    "designTokens": {
+      "colorPalette": "slate",
+      "colorTriad": {
+        "primary": "amber",
+        "secondary": "blue",
+        "tertiary": "slate"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "Oswald",
+        "body": "Lato"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/RockbruneBrosMovers/",
+    "instagram": "https://www.instagram.com/rockbrunebrosmovers/",
+    "google": "https://www.google.com/maps?cid=16971464570674253777"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Vibrant HSL Triad",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-08T02:57:54.029Z",
+    "sourceUrl": "https://www.rockbrune.com/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 81,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 222,
+      "slate": 10.5
+    },
+    "colorSampleCount": 296,
+    "referenceScreenshot": "C:\\Users\\venka\\Projects\\WhiteLabelMovingFleet\\output\\references\\rockbrune-existing-reference.png"
+  }
+}
