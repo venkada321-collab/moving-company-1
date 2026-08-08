@@ -41,7 +41,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
           <h2 className="heading-scale animate-paradigm-entrance" style={{ fontFamily: 'var(--font-heading)' }}>
             TAILORED CARE FOR <span className="text-primary-600 bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400">EVERY {GEO.regionName} SERVICE NICHE</span>
           </h2>
-          <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400">
+          <p className="mt-3 text-sm text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400">
             Explore our specialized moving capabilities, high-rise building protocols, and transparent base rates.
           </p>
         </div>
@@ -59,7 +59,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                     onClick={() => setActiveNicheId(niche.id)}
                     className={`p-4 rounded-2xl border text-left transition-all min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-white ${
                       isActive
-                        ? 'bg-black text-primary-400 font-bold border-black shadow-lg'
+                        ? 'bg-white dark:bg-black text-primary-400 font-bold border-black shadow-lg'
                         : 'bg-neutral-50 dark:bg-zinc-900 border-neutral-200 dark:border-zinc-800 text-neutral-600 dark:text-zinc-300 hover:border-primary-400'
                     }`}
                   >
@@ -75,7 +75,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                       )}
                     </div>
                     <div className="text-sm font-extrabold font-['Montserrat',sans-serif] line-clamp-1">{niche.name}</div>
-                    <div className={`text-[11px] mt-1 ${isActive ? 'text-primary-400/90 font-semibold' : 'text-neutral-500 dark:text-neutral-600 dark:text-neutral-400'}`}>
+                    <div className={`text-[11px] mt-1 ${isActive ? 'text-primary-400/90 font-semibold' : 'text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400'}`}>
                       From ${niche.baseRate}/hr
                     </div>
                   </button>
@@ -88,10 +88,10 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-primary-100">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="bg-black text-primary-400 font-bold text-xs px-3 py-1 rounded-full border border-black">
+                    <span className="bg-white dark:bg-black text-primary-400 font-bold text-xs px-3 py-1 rounded-full border border-black">
                       DEDICATED LANDING PAGE
                     </span>
-                    <span className="text-xs text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-semibold">• {selectedNiche.extraFees}</span>
+                    <span className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-semibold">• {selectedNiche.extraFees}</span>
                   </div>
                   <h2 className="text-2xl sm:text-4xl font-black text-neutral-900 dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
                     {selectedNiche.name}
@@ -103,7 +103,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                     <button
                       type="button"
                       onClick={onOpenCOIModal}
-                      className="bg-black text-primary-400 hover:bg-neutral-800 px-5 py-3 rounded-2xl text-xs font-extrabold flex items-center gap-2 transition-colors min-h-[44px] shadow-lg shadow-black/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
+                      className="bg-white dark:bg-black text-primary-400 hover:bg-neutral-800 px-5 py-3 rounded-2xl text-xs font-extrabold flex items-center gap-2 transition-colors min-h-[44px] shadow-lg shadow-black/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
                     >
                       <Shield className="w-4 h-4" aria-hidden="true" />
                       Issue {LEGAL.coiAmountShort} Condo COI
@@ -167,8 +167,8 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                   </div>
 
                   {selectedNiche.id === 'condo-moves' && (
-                    <div className="bg-black border border-black p-4 rounded-2xl text-xs space-y-2 shadow-xl">
-                      <div className="font-bold text-white flex items-center gap-2">
+                    <div className="bg-white dark:bg-black border border-black p-4 rounded-2xl text-xs space-y-2 shadow-xl">
+                      <div className="font-bold text-neutral-900 dark:text-white flex items-center gap-2">
                         <FileText className="w-4 h-4 text-primary-400" aria-hidden="true" />
                         Instant COI Generator Active
                       </div>
@@ -210,7 +210,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                     <span className="px-3 py-1 rounded-full bg-primary-400 text-black font-black text-xs">
                       From ${niche.baseRate}/hr
                     </span>
-                    <span className="text-xs text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 font-bold">{niche.extraFees}</span>
+                    <span className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 font-bold">{niche.extraFees}</span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-black text-neutral-900 dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>{niche.name}</h3>
                   <p className="text-sm sm:text-base text-neutral-600 dark:text-zinc-300 leading-relaxed">{niche.description}</p>
@@ -263,7 +263,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                   <button
                     type="button"
                     onClick={() => setOpenAccordionId(isOpen ? '' : niche.id)}
-                    className={`w-full p-6 text-left flex items-center justify-between gap-4 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 ${isOpen ? 'bg-black text-primary-400 font-bold' : 'bg-white dark:bg-zinc-950 text-neutral-900 dark:text-white'}`}
+                    className={`w-full p-6 text-left flex items-center justify-between gap-4 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 ${isOpen ? 'bg-white dark:bg-black text-primary-400 font-bold' : 'bg-white dark:bg-zinc-950 text-neutral-900 dark:text-white'}`}
                   >
                     <div className="flex items-center gap-4">
                       <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg ${isOpen ? 'bg-primary-400 text-black' : 'bg-primary-100 text-primary-800'}`}>
@@ -271,10 +271,10 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                       </div>
                       <div>
                         <h3 className="text-lg sm:text-xl font-black" style={{ fontFamily: 'var(--font-heading)' }}>{niche.name}</h3>
-                        <div className={`text-xs ${isOpen ? 'text-neutral-700 dark:text-neutral-300 font-normal' : 'text-neutral-500 dark:text-neutral-600 dark:text-neutral-400'}`}>Base Rate: ${niche.baseRate}/hr • {niche.extraFees}</div>
+                        <div className={`text-xs ${isOpen ? 'text-neutral-700 dark:text-neutral-300 font-normal' : 'text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400'}`}>Base Rate: ${niche.baseRate}/hr • {niche.extraFees}</div>
                       </div>
                     </div>
-                    {isOpen ? <ChevronUp className="w-6 h-6 text-primary-400" /> : <ChevronDown className="w-6 h-6 text-neutral-500 dark:text-neutral-600 dark:text-neutral-400" />}
+                    {isOpen ? <ChevronUp className="w-6 h-6 text-primary-400" /> : <ChevronDown className="w-6 h-6 text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400" />}
                   </button>
                   {isOpen && (
                     <div className="p-6 sm:p-8 bg-neutral-50 dark:bg-zinc-900 border-t border-neutral-200 dark:border-zinc-800 space-y-6 text-neutral-900 dark:text-white">
@@ -292,7 +292,7 @@ export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNi
                           <button
                             type="button"
                             onClick={onOpenCOIModal}
-                            className="min-h-[44px] px-5 py-2.5 bg-black text-primary-400 rounded-xl font-bold text-xs flex items-center gap-2"
+                            className="min-h-[44px] px-5 py-2.5 bg-white dark:bg-black text-primary-400 rounded-xl font-bold text-xs flex items-center gap-2"
                           >
                             <Shield className="w-4 h-4" />
                             Request Condo COI

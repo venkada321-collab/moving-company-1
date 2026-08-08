@@ -33,7 +33,7 @@ export const ReferralProgram: React.FC = () => {
         
         {/* Header */}
         <div className="bg-gradient-to-r from-primary-400 via-primary-300 to-primary-400 text-black rounded-sm shadow-2xl p-8 md:p-12 shadow-2xl shadow-primary-500/20 border border-primary-400/50 text-center md:text-left mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/10 border border-black/20 text-black text-xs font-bold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-black/10 border border-black/20 text-black text-xs font-bold uppercase tracking-widest mb-3">
             <Gift className="w-3.5 h-3.5" aria-hidden="true" /> {BRAND.referralProgramName}
           </div>
           <h2 className="text-black font-black text-5xl md:text-6xl tracking-tight font-['Montserrat',sans-serif]">
@@ -89,7 +89,7 @@ export const ReferralProgram: React.FC = () => {
 
               <button
                 type="submit"
-                className="bg-neutral-100 dark:bg-black hover:bg-neutral-900 text-primary-400 font-black px-6 py-3 rounded-xl shadow-lg uppercase tracking-wider flex items-center justify-center gap-2 w-full sm:w-auto min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-colors motion-reduce:transition-none"
+                className="bg-neutral-100 dark:bg-black hover:bg-white dark:bg-neutral-900 text-primary-400 font-black px-6 py-3 rounded-xl shadow-lg uppercase tracking-wider flex items-center justify-center gap-2 w-full sm:w-auto min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-colors motion-reduce:transition-none"
               >
                 <span>Register My ${BRAND.referralGetAmount} Voucher</span>
                 <Sparkles className="w-4 h-4" aria-hidden="true" />
@@ -115,14 +115,14 @@ export const ReferralProgram: React.FC = () => {
                     type="button"
                     onClick={handleCopy}
                     aria-label={copied ? 'Copied referral link to clipboard' : 'Copy referral link to clipboard'}
-                    className="w-full sm:w-auto bg-neutral-100 dark:bg-black hover:bg-neutral-900 text-primary-400 font-black px-6 py-3 rounded-xl shadow-lg uppercase flex items-center justify-center gap-2 shrink-0 transition-all motion-reduce:transition-none min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    className="w-full sm:w-auto bg-neutral-100 dark:bg-black hover:bg-white dark:bg-neutral-900 text-primary-400 font-black px-6 py-3 rounded-xl shadow-lg uppercase flex items-center justify-center gap-2 shrink-0 transition-all motion-reduce:transition-none min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   >
                     {copied ? <Check className="w-4 h-4" aria-hidden="true" /> : <Copy className="w-4 h-4" aria-hidden="true" />}
                     <span>{copied ? 'Copied Link!' : 'Copy Link'}</span>
                   </button>
                 </div>
 
-                <p className="text-[11px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-medium">
+                <p className="text-[11px] text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-medium">
                   Share this link on WhatsApp, iMessage, or Instagram. Anyone using this code receives ${BRAND.referralGiveAmount} off instantly!
                 </p>
               </div>
@@ -162,7 +162,7 @@ export const ReferralProgram: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-neutral-200 dark:border-zinc-800 text-xs text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 text-center font-bold">
+            <div className="pt-4 border-t border-neutral-200 dark:border-zinc-800 text-xs text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 text-center font-bold">
               Unlimited referrals allowed! Top ambassadors earn over {BRAND.referralTopEarning}.
             </div>
             

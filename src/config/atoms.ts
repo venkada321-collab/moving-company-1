@@ -2,7 +2,7 @@
 export const ATOMS = {
   matrixCode: "[BTN-01 | INP-01 | CRD-01 | BDG-01 | ACC-01]",
   buttonPrimary: "rounded-full bg-primary-500 hover:bg-primary-600 text-[color:var(--primary-contrast-text)] font-black tracking-wide px-8 py-4 shadow-xl shadow-primary-500/30 hover:shadow-2xl hover:scale-105 transition-all min-h-[44px] inline-flex items-center justify-center gap-2 drop-shadow-sm",
-  input: "rounded-2xl bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 border border-neutral-300 dark:border-neutral-700 focus:bg-white dark:focus:bg-neutral-950 focus:border-primary-500 px-5 py-3.5 text-sm outline-none transition-all shadow-inner focus:ring-4 focus:ring-primary-500/20 w-full font-medium",
+  input: "rounded-2xl bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 border border-neutral-300 dark:border-neutral-700 focus:bg-white dark:focus:bg-white dark:bg-neutral-950 focus:border-primary-500 px-5 py-3.5 text-sm outline-none transition-all shadow-inner focus:ring-4 focus:ring-primary-500/20 w-full font-medium",
   card: "bg-white/95 dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-100 backdrop-blur-md rounded-3xl border border-neutral-200/80 dark:border-neutral-800/80 shadow-2xl shadow-neutral-900/10 p-6 sm:p-8",
   badge: "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-primary-500 text-[color:var(--primary-contrast-text)] shadow-sm",
   accordion: "mb-4 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 shadow-md transition-all hover:border-primary-400",

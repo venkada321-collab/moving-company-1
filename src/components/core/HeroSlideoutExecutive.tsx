@@ -35,7 +35,7 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative min-h-[85vh] bg-neutral-950 flex items-center overflow-hidden">
+    <div id="hero-quote-calculator" className="relative min-h-[85vh] bg-white dark:bg-neutral-950 flex items-center overflow-hidden">
       {/* Heavy dark luxury background */}
       <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-950">
         <div className="absolute right-0 top-0 w-1/2 h-full bg-primary-900/10 blur-[150px] mix-blend-screen pointer-events-none" />
@@ -45,7 +45,7 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
         
         {/* Left: Luxury Editorial Typography */}
         <div className="flex-1 py-20 px-8 lg:px-12 flex flex-col justify-center max-w-3xl">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-white mb-6 font-['var(--font-heading)'] leading-[1.1]">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-neutral-900 dark:text-white mb-6 font-['var(--font-heading)'] leading-[1.1]">
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-white">Premium</span> Relocation.
             <br /> Without Compromise.
           </h1>
@@ -58,7 +58,7 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
               <div className="w-12 h-12 rounded-full border-2 border-neutral-950 bg-neutral-700" />
               <div className="w-12 h-12 rounded-full border-2 border-neutral-950 bg-primary-900 flex items-center justify-center text-xs font-bold text-primary-400">4.9+</div>
             </div>
-            <div className="text-sm text-neutral-500 uppercase tracking-widest font-semibold">
+            <div className="text-sm text-neutral-900 dark:text-neutral-500 uppercase tracking-widest font-semibold">
               Trusted by {BRAND.rankingClaim}
             </div>
           </div>
@@ -70,7 +70,7 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
             <div className="mb-8">
               <div className="w-12 h-1 bg-primary-500 mb-6" />
               <h2 className="text-2xl font-bold font-['var(--font-heading)'] mb-2">Request an Audit</h2>
-              <p className="text-neutral-500 text-sm">Speak directly with an executive logistics coordinator.</p>
+              <p className="text-neutral-900 dark:text-neutral-500 text-sm">Speak directly with an executive logistics coordinator.</p>
             </div>
 
             <form onSubmit={handleQuickSubmit} className="space-y-6">
@@ -104,7 +104,7 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
 
               <button 
                 type="submit" 
-                className="w-full mt-8 flex items-center justify-between px-6 py-4 bg-neutral-950 hover:bg-neutral-900 text-white font-bold rounded-[var(--radius-button)] transition-all group"
+                className="w-full mt-8 flex items-center justify-between px-6 py-4 bg-white dark:bg-neutral-950 hover:bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white font-bold rounded-[var(--radius-button)] transition-all group"
               >
                 <span>{MICROCOPY.buttons?.getQuote || "Initiate Consultation"}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

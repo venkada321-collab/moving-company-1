@@ -52,13 +52,13 @@ export const HeroNeomorphicConsole: React.FC<HeroProps> = ({ onQuoteSubmitted })
 
         {/* Neomorphic Console */}
         <div className="rounded-[var(--radius-card)] p-2 bg-[#e0e5ec] dark:bg-[#1a1e23] shadow-[9px_9px_16px_rgb(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] dark:shadow-[9px_9px_16px_rgba(0,0,0,0.6),-9px_-9px_16px_rgba(40,45,50,0.5)] border border-white/20 dark:border-white/5 transition-all">
-          <div className="bg-neutral-900 rounded-[calc(var(--radius-card)-0.5rem)] p-6 shadow-inner font-mono relative overflow-hidden">
+          <div className="bg-white dark:bg-neutral-900 rounded-[calc(var(--radius-card)-0.5rem)] p-6 shadow-inner font-mono relative overflow-hidden">
             {/* Terminal Header */}
             <div className="flex items-center gap-2 mb-6 border-b border-neutral-800 pb-4">
               <div className="w-3 h-3 rounded-full bg-red-500" />
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
               <div className="w-3 h-3 rounded-full bg-green-500" />
-              <span className="ml-4 text-xs text-neutral-500 flex items-center gap-2">
+              <span className="ml-4 text-xs text-neutral-900 dark:text-neutral-500 flex items-center gap-2">
                 <Terminal className="w-4 h-4" /> quote-engine.exe
               </span>
             </div>
@@ -67,14 +67,14 @@ export const HeroNeomorphicConsole: React.FC<HeroProps> = ({ onQuoteSubmitted })
               <div className="text-primary-400 font-bold mb-2">&gt; Initializing estimation matrix...</div>
               <div className="text-neutral-300 mb-6">Enter origin postal code or city to begin route calculation:</div>
               
-              <div className="flex items-center bg-neutral-950 p-4 rounded-[var(--radius-button)] border border-neutral-800 focus-within:border-primary-500 focus-within:shadow-[0_0_15px_rgba(var(--color-primary-500),0.3)] transition-all">
+              <div className="flex items-center bg-white dark:bg-neutral-950 p-4 rounded-[var(--radius-button)] border border-neutral-800 focus-within:border-primary-500 focus-within:shadow-[0_0_15px_rgba(var(--color-primary-500),0.3)] transition-all">
                 <ChevronRight className="w-5 h-5 text-primary-500 mr-2" />
                 <input 
                   type="text" 
                   value={commandStr}
                   onChange={e => setCommandStr(e.target.value)}
                   placeholder="e.g. M5V 2H1"
-                  className="bg-transparent w-full focus:outline-none text-white font-mono placeholder:text-neutral-700"
+                  className="bg-transparent w-full focus:outline-none text-neutral-900 dark:text-white font-mono placeholder:text-neutral-700"
                   autoFocus
                 />
               </div>

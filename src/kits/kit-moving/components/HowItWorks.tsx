@@ -77,7 +77,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
               HOW IT WORKS IN <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">4 SIMPLE STEPS</span>
             </h2>
           </div>
-          <p className="text-neutral-500 dark:text-zinc-400 text-sm max-w-md leading-relaxed font-medium">
+          <p className="text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 text-sm max-w-md leading-relaxed font-medium">
             From strict downtown {GEO.cities[0]} high-rise elevator slots to long-distance corridor deliveries, here is how we guarantee a stress-free move.
           </p>
         </div>
@@ -114,7 +114,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
                     </h3>
                     <div className="text-xs font-bold text-primary-600 mb-3">{step.subtitle}</div>
 
-                    <p className="text-xs text-neutral-500 dark:text-zinc-400 leading-relaxed mb-6 font-medium">
+                    <p className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 leading-relaxed mb-6 font-medium">
                       {step.description}
                     </p>
                   </div>
@@ -169,7 +169,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenC
               <h4 className="text-lg font-black text-neutral-900 dark:text-white font-['Montserrat',sans-serif]">
                 Ready to Experience {GEO.regionLabel} Smooth Mover?
               </h4>
-              <p className="text-xs text-neutral-500 dark:text-zinc-400 font-medium mt-1">
+              <p className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 font-medium mt-1">
                 Lock your move date in under 3 minutes with zero cancellation penalties.
               </p>
             </div>

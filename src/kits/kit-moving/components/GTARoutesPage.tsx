@@ -24,7 +24,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
           <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight font-['Montserrat',sans-serif]">
             ESTABLISHED <span className="text-primary-600">{GEO.regionFull.toUpperCase()}</span> & REGIONAL DISPATCH CORRIDORS
           </h2>
-          <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400">
+          <p className="mt-3 text-sm text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400">
             Analyze standard dispatch timelines, commercial route efficiency ({GEO.highways}), and real client costs across Southern Ontario & interprovincial corridors.
           </p>
         </div>
@@ -120,15 +120,15 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
               <div className="grid grid-cols-3 gap-3 bg-primary-50/50 p-4 rounded-2xl border border-neutral-200 dark:border-zinc-800 text-center">
                 <div>
                   <div className="text-lg font-black text-black font-['Montserrat',sans-serif]">{activeRoute.distance} km</div>
-                  <div className="text-[10px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Distance</div>
+                  <div className="text-[10px] text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Distance</div>
                 </div>
                 <div>
                   <div className="text-lg font-black text-primary-600 font-['Montserrat',sans-serif]">~{activeRoute.estHours} hrs</div>
-                  <div className="text-[10px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Estimated Time Window</div>
+                  <div className="text-[10px] text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Estimated Time Window</div>
                 </div>
                 <div>
                   <div className="text-lg font-black text-emerald-600 font-['Montserrat',sans-serif]">{activeRoute.avgCostRange}</div>
-                  <div className="text-[10px] text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Expected Investment</div>
+                  <div className="text-[10px] text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-bold uppercase mt-1">Expected Investment</div>
                 </div>
               </div>
 
@@ -151,7 +151,7 @@ export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEs
                   </p>
 
                   <div className="text-xs font-bold text-black pt-2 border-t border-neutral-200 dark:border-zinc-800 not-italic">
-                    {activeRoute.testimonials[0].author} • <span className="text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-normal">{activeRoute.testimonials[0].date}</span>
+                    {activeRoute.testimonials[0].author} • <span className="text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 font-normal">{activeRoute.testimonials[0].date}</span>
                   </div>
                 </div>
               )}

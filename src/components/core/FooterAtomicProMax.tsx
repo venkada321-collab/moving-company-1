@@ -56,7 +56,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             </button>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 border-t border-neutral-200 dark:border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500 gap-6">
+        <div className="max-w-7xl mx-auto px-6 border-t border-neutral-200 dark:border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-900 dark:text-neutral-500 gap-6">
           <div className="flex items-center gap-4">
             <FooterLogoCapsule />
             <span>&copy; {new Date().getFullYear()} {BRAND.legalName || BRAND.name}. All rights reserved.</span>
@@ -77,7 +77,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
   // ============================================================================
   if (variant === 'saas-mega-directory') {
     return (
-      <footer className="bg-neutral-900 dark:bg-white dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300 pt-20 pb-12 border-t border-neutral-200 dark:border-neutral-800">
+      <footer className="bg-white dark:bg-neutral-900 dark:bg-white dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300 pt-20 pb-12 border-t border-neutral-200 dark:border-neutral-800">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3 cursor-pointer" onClick={scrollToTop}>
@@ -139,7 +139,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             </form>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 border-t border-neutral-200 dark:border-neutral-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-500 gap-4">
+        <div className="max-w-7xl mx-auto px-6 border-t border-neutral-200 dark:border-neutral-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-900 dark:text-neutral-500 gap-4">
           <div>&copy; {new Date().getFullYear()} {BRAND.legalName || BRAND.name}. WSIB Lic #{LEGAL.wsibNumber || 'W-9442'}. Built on Antigravity Engine.</div>
           <div className="flex items-center gap-6 font-bold text-neutral-600 dark:text-neutral-400">
             <button onClick={scrollToTop} className="hover:text-neutral-900 dark:text-white transition-colors">Back to top &uarr;</button>
@@ -154,7 +154,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
   // ============================================================================
   if (variant === 'brutalist-monospaced-ledger') {
     return (
-      <footer className="bg-zinc-900/60 dark:bg-black text-neutral-900 dark:text-neutral-100 font-mono border-t-4 border-black dark:border-white pt-12 pb-12">
+      <footer className="bg-white dark:bg-zinc-900/60 dark:bg-black text-neutral-900 dark:text-neutral-100 font-mono border-t-4 border-black dark:border-white pt-12 pb-12">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 border-2 border-black dark:border-white divide-y lg:divide-y-0 lg:divide-x-2 divide-black dark:divide-white mb-12">
           <div className="p-8 bg-primary-400 text-black">
             <div className="text-2xl font-black uppercase tracking-wider mb-4 border-b-2 border-black pb-2">
@@ -163,7 +163,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             <p className="text-xs font-bold leading-relaxed mb-6">
               CANONICAL DISPATCH LEDGER. FULLY WSIB CERTIFIED UNDER TARRIF REGISTER #{LEGAL.wsibNumber || 'TR-09884'}. ZERO HIDDEN CHARGES ALLOWED.
             </p>
-            <a href={`tel:${BRAND.phone}`} className="inline-block bg-black text-white px-6 py-3 font-black uppercase text-xs border-2 border-black shadow-[4px_4px_0px_#fff] hover:translate-x-1 hover:translate-y-1 transition-transform">
+            <a href={`tel:${BRAND.phone}`} className="inline-block bg-white dark:bg-black text-neutral-900 dark:text-white px-6 py-3 font-black uppercase text-xs border-2 border-black shadow-[4px_4px_0px_#fff] hover:translate-x-1 hover:translate-y-1 transition-transform">
               TEL: {BRAND.phone} &rarr;
             </a>
           </div>
@@ -182,7 +182,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             </div>
           </div>
 
-          <div className="p-8 bg-zinc-900/40 dark:bg-neutral-50 dark:bg-neutral-900 text-xs flex flex-col justify-between">
+          <div className="p-8 bg-white dark:bg-zinc-900/40 dark:bg-neutral-50 dark:bg-neutral-900 text-xs flex flex-col justify-between">
             <div>
               <div className="font-black mb-2 uppercase">// REGISTRY CREDENTIALS</div>
               <div className="space-y-1.5 font-semibold text-zinc-400 dark:text-neutral-600 dark:text-neutral-400">
@@ -191,12 +191,12 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
                 <div>HQ LOCATION: {BRAND.hqAddress || 'Greater Toronto Area'}</div>
               </div>
             </div>
-            <button onClick={scrollToTop} className="mt-6 bg-black dark:bg-white dark:bg-zinc-900/60 text-neutral-900 dark:text-white dark:text-black py-2 text-center font-bold uppercase hover:bg-neutral-800">
+            <button onClick={scrollToTop} className="mt-6 bg-white dark:bg-black dark:bg-white dark:bg-zinc-900/60 text-neutral-900 dark:text-white dark:text-black py-2 text-center font-bold uppercase hover:bg-neutral-800">
               ▲ RETURN TO VIEWPORT TOP
             </button>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 text-center text-xs font-black uppercase text-neutral-500">
+        <div className="max-w-7xl mx-auto px-6 text-center text-xs font-black uppercase text-neutral-900 dark:text-neutral-500">
           &copy; {new Date().getFullYear()} {BRAND.legalName || BRAND.name} // ALL ARCHITECTURAL TOKENS RESERVED.
         </div>
       </footer>
@@ -208,13 +208,13 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
   // ============================================================================
   if (variant === 'minimal-dual-column' || variant === 'minimal-compact') {
     return (
-      <footer className="bg-zinc-900/60 dark:bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 py-16 border-t border-neutral-200 dark:border-zinc-800 dark:border-neutral-200 dark:border-neutral-800">
+      <footer className="bg-white dark:bg-zinc-900/60 dark:bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 py-16 border-t border-neutral-200 dark:border-zinc-800 dark:border-neutral-200 dark:border-neutral-800">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-12 mb-16">
           <div className="max-w-md space-y-4">
             <div className="cursor-pointer text-2xl font-black tracking-tight" onClick={scrollToTop}>
               <FooterLogoCapsule />
             </div>
-            <p className="text-sm text-neutral-500 font-normal leading-relaxed">
+            <p className="text-sm text-neutral-900 dark:text-neutral-500 font-normal leading-relaxed">
               Dedicated to delivering flawless residential and commercial relocation experiences across {GEO.regionName || 'North America'}. Licensed, bonded, and committed to complete precision transit.
             </p>
           </div>
@@ -222,7 +222,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             <div className="space-y-3">
               <div className="text-xs font-extrabold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">Dispatch Channels</div>
               <div><a href={`tel:${BRAND.phone}`} className="hover:text-primary-600 transition-colors">{BRAND.phone}</a></div>
-              <div><a href={`mailto:${BRAND.email}`} className="text-neutral-500 font-normal hover:underline">{BRAND.email || `info@${BRAND.domain || 'company.com'}`}</a></div>
+              <div><a href={`mailto:${BRAND.email}`} className="text-neutral-900 dark:text-neutral-500 font-normal hover:underline">{BRAND.email || `info@${BRAND.domain || 'company.com'}`}</a></div>
               <div className="text-xs text-neutral-600 dark:text-neutral-400 font-normal pt-2">{BRAND.hqAddress || 'Ontario, Canada'}</div>
             </div>
             <div className="space-y-3 flex flex-col items-start">
@@ -288,7 +288,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto border-t border-neutral-200 dark:border-neutral-800 pt-8 flex justify-between items-center text-xs text-neutral-500">
+      <div className="max-w-7xl mx-auto border-t border-neutral-200 dark:border-neutral-800 pt-8 flex justify-between items-center text-xs text-neutral-900 dark:text-neutral-500">
         <div>&copy; {new Date().getFullYear()} {BRAND.legalName || BRAND.name}. All rights reserved.</div>
         <button onClick={scrollToTop} className="hover:text-neutral-900 dark:text-white font-bold">&uarr; Return to Top</button>
       </div>

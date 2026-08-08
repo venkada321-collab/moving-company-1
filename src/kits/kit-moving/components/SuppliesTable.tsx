@@ -22,7 +22,7 @@ export const SuppliesTable: React.FC<SuppliesTableProps> = ({ onSelectTab }) => 
             <h2 className="text-3xl sm:text-4xl font-extrabold uppercase font-['var(--font-heading)']">
               Materials & Climate Storage Vaults
             </h2>
-            <p className="text-neutral-500 dark:text-zinc-400 font-medium text-sm mt-2 max-w-xl">
+            <p className="text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 font-medium text-sm mt-2 max-w-xl">
               Professional-grade protective encasement materials and climate-regulated repository vaults available across {GEO.regionName}.
             </p>
           </div>
@@ -31,7 +31,7 @@ export const SuppliesTable: React.FC<SuppliesTableProps> = ({ onSelectTab }) => 
             <button
               onClick={() => setActiveView('supplies')}
               className={`px-6 py-2.5 rounded-[var(--radius-button)] text-xs font-bold uppercase transition-all ${
-                activeView === 'supplies' ? 'bg-neutral-950 text-neutral-900 dark:text-white shadow' : 'text-neutral-500 dark:text-zinc-400 hover:text-black'
+                activeView === 'supplies' ? 'bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white shadow' : 'text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 hover:text-black'
               }`}
             >
               Packing Inventory
@@ -39,7 +39,7 @@ export const SuppliesTable: React.FC<SuppliesTableProps> = ({ onSelectTab }) => 
             <button
               onClick={() => setActiveView('storage')}
               className={`px-6 py-2.5 rounded-[var(--radius-button)] text-xs font-bold uppercase transition-all ${
-                activeView === 'storage' ? 'bg-neutral-950 text-neutral-900 dark:text-white shadow' : 'text-neutral-500 dark:text-zinc-400 hover:text-black'
+                activeView === 'storage' ? 'bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white shadow' : 'text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 hover:text-black'
               }`}
             >
               Storage Vaults
@@ -51,7 +51,7 @@ export const SuppliesTable: React.FC<SuppliesTableProps> = ({ onSelectTab }) => 
           <div className="bg-neutral-50 dark:bg-zinc-900/40 border border-neutral-200 dark:border-zinc-800 rounded-[var(--radius-card)] overflow-hidden shadow-sm">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-neutral-900 text-neutral-900 dark:text-white text-xs uppercase font-bold tracking-wider">
+                <tr className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white text-xs uppercase font-bold tracking-wider">
                   <th className="py-4 px-6">Material Item / Bundle</th>
                   <th className="py-4 px-6 hidden sm:table-cell">Specification & Purpose</th>
                   <th className="py-4 px-6 text-right">Unit Rate</th>
@@ -70,7 +70,7 @@ export const SuppliesTable: React.FC<SuppliesTableProps> = ({ onSelectTab }) => 
                         </div>
                       </div>
                     </td>
-                    <td className="py-5 px-6 hidden sm:table-cell text-neutral-500 dark:text-zinc-400 text-xs font-normal max-w-md">
+                    <td className="py-5 px-6 hidden sm:table-cell text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 text-xs font-normal max-w-md">
                       {item.description}
                     </td>
                     <td className="py-5 px-6 text-right font-mono font-black text-lg text-neutral-900 dark:text-white">
@@ -79,7 +79,7 @@ export const SuppliesTable: React.FC<SuppliesTableProps> = ({ onSelectTab }) => 
                     <td className="py-5 px-6 text-right">
                       <button
                         onClick={() => onSelectTab('quote')}
-                        className="px-4 py-2 bg-neutral-900 hover:bg-primary-500 hover:text-neutral-900 dark:text-white text-neutral-900 dark:text-white text-xs uppercase font-black rounded-[var(--radius-button)] transition-colors inline-flex items-center gap-1 shadow-sm"
+                        className="px-4 py-2 bg-white dark:bg-neutral-900 hover:bg-primary-500 hover:text-neutral-900 dark:text-white text-neutral-900 dark:text-white text-xs uppercase font-black rounded-[var(--radius-button)] transition-colors inline-flex items-center gap-1 shadow-sm"
                       >
                         <Plus className="w-3.5 h-3.5" />
                         <span>Reserve</span>
@@ -102,10 +102,10 @@ export const SuppliesTable: React.FC<SuppliesTableProps> = ({ onSelectTab }) => 
                     <Shield className="w-5 h-5 text-primary-600" />
                   </div>
                   <h3 className="text-2xl font-black mb-2">{vault.name}</h3>
-                  <p className="text-neutral-500 dark:text-zinc-400 text-xs font-normal leading-relaxed mb-6">{vault.description}</p>
+                  <p className="text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 text-xs font-normal leading-relaxed mb-6">{vault.description}</p>
                   
                   <div className="bg-neutral-50 dark:bg-zinc-900/40 p-4 rounded-[var(--radius-button)] border border-neutral-200 dark:border-zinc-800 mb-6">
-                    <span className="text-xs text-neutral-500 block">Monthly Repossession Rate</span>
+                    <span className="text-xs text-neutral-900 dark:text-neutral-500 block">Monthly Repossession Rate</span>
                     <span className="text-3xl font-black font-mono text-neutral-900 dark:text-white">${vault.pricePerMonth}</span>
                     <span className="text-xs font-semibold text-emerald-700 block mt-1">✓ First 30 Days 50% Off Promotion</span>
                   </div>
@@ -122,7 +122,7 @@ export const SuppliesTable: React.FC<SuppliesTableProps> = ({ onSelectTab }) => 
 
                 <button
                   onClick={() => onSelectTab('quote')}
-                  className="w-full py-3.5 bg-neutral-950 hover:bg-neutral-800 text-neutral-900 dark:text-white font-black text-xs uppercase tracking-wider rounded-[var(--radius-button)] shadow-md flex items-center justify-center gap-2"
+                  className="w-full py-3.5 bg-white dark:bg-neutral-950 hover:bg-neutral-800 text-neutral-900 dark:text-white font-black text-xs uppercase tracking-wider rounded-[var(--radius-button)] shadow-md flex items-center justify-center gap-2"
                 >
                   <span>Book Vault Space</span>
                   <ArrowRight className="w-4 h-4 text-primary-400" />

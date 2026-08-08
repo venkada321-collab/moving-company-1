@@ -46,7 +46,7 @@ export const HeaderMinimal: React.FC<HeaderProps> = ({ activeTab, setActiveTab, 
             aria-label={BRAND.headerAriaLabel || "Home"}
           >
             {BRAND.logoUrl ? (
-              <div className="bg-zinc-900/60/95 px-3 py-1.5 rounded-xl shadow-md flex items-center justify-center max-w-[200px] hover:bg-white dark:bg-zinc-900/60 transition-colors">
+              <div className="bg-white/95 dark:bg-zinc-900/95 px-3 py-1.5 rounded-xl shadow-md flex items-center justify-center max-w-[200px] hover:bg-neutral-50 dark:hover:bg-zinc-800 transition-colors">
                 <img src={BRAND.logoUrl} alt={BRAND.name} className="h-7 sm:h-8 w-auto object-contain" />
               </div>
             ) : (

@@ -115,7 +115,7 @@ export const BlogPage: React.FC = () => {
         {/* Article Full View Modal */}
         {selectedPost && (
           <div 
-            className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto"
+            className="fixed inset-0 z-50 bg-white dark:bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto"
             role="dialog"
             aria-modal="true"
             aria-labelledby="blog-modal-title"
@@ -139,7 +139,7 @@ export const BlogPage: React.FC = () => {
                 {selectedPost.title}
               </h2>
 
-              <div className="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 border-y border-zinc-200 py-3">
+              <div className="flex items-center gap-4 text-xs text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 border-y border-zinc-200 py-3">
                 <div className="flex items-center gap-2">
                   <img src={selectedPost.author.avatar} className="w-7 h-7 rounded-full object-cover border border-zinc-200" alt="" />
                   <span className="font-bold text-black">{selectedPost.author.name}</span> ({selectedPost.author.role})

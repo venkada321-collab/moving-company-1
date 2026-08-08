@@ -67,7 +67,7 @@ export const HowItWorksTimeline: React.FC<HowItWorksProps> = ({ onStartEstimate,
                 <div className="flex flex-col items-center text-center">
                   <div className="w-24 h-24 rounded-full bg-white dark:bg-zinc-900 border-4 border-zinc-100 dark:border-neutral-200 dark:border-zinc-800 flex items-center justify-center mb-8 relative z-10 shadow-xl group-hover:border-primary-500 transition-colors duration-500 cursor-default">
                     <step.icon className="w-10 h-10 text-primary-500" />
-                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-neutral-100 dark:bg-black text-white dark:text-black font-bold flex items-center justify-center shadow-lg font-mono">
+                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-neutral-100 dark:bg-black text-neutral-900 dark:text-white dark:text-black font-bold flex items-center justify-center shadow-lg font-mono">
                       {step.number}
                     </div>
                   </div>
@@ -99,7 +99,7 @@ export const HowItWorksTimeline: React.FC<HowItWorksProps> = ({ onStartEstimate,
         <div className="mt-20 text-center">
           <button 
             onClick={onStartEstimate}
-            className="inline-flex items-center gap-3 px-10 py-5 bg-black dark:bg-white text-white dark:text-black hover:bg-primary-500 hover:text-black dark:hover:bg-primary-500 rounded-[var(--radius-button)] font-extrabold text-lg transition-all shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-primary-500/30"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-white dark:bg-black dark:bg-white text-neutral-900 dark:text-white dark:text-black hover:bg-primary-500 hover:text-black dark:hover:bg-primary-500 rounded-[var(--radius-button)] font-extrabold text-lg transition-all shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-primary-500/30"
           >
             Start the Protocol <ArrowRight className="w-5 h-5" />
           </button>

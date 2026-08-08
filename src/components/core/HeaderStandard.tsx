@@ -22,7 +22,7 @@ export const HeaderStandard: React.FC<HeaderProps> = ({ activeTab, setActiveTab,
   ].filter(item => item.enabled !== false);
 
   return (
-    <header className="sticky top-0 bg-zinc-900/60/95 backdrop-blur-md border-b border-neutral-200 dark:border-zinc-800 shadow-sm text-neutral-900 dark:text-white z-50 transition-all">
+    <header className="sticky top-0 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md border-b border-neutral-200 dark:border-zinc-800 shadow-sm text-neutral-900 dark:text-white z-50 transition-all">
       {/* Top micro bar */}
       <div className="bg-primary-400 border-b border-primary-500/30 py-1.5 px-4 text-xs font-semibold text-neutral-900 dark:text-white">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
@@ -77,7 +77,7 @@ export const HeaderStandard: React.FC<HeaderProps> = ({ activeTab, setActiveTab,
                 <div className="font-extrabold text-lg sm:text-xl tracking-tight text-neutral-900 dark:text-white flex items-center gap-1.5 font-['var(--font-heading)']">
                   {BRAND.nameUpper.split(' ')[0]} <span className="text-primary-600">{BRAND.nameUpper.split(' ').slice(1).join(' ')}</span>
                 </div>
-                <div className="text-[10px] tracking-widest text-neutral-500 uppercase font-bold">
+                <div className="text-[10px] tracking-widest text-neutral-900 dark:text-neutral-500 uppercase font-bold">
                   {GEO.regionFull} • 100% Insured
                 </div>
               </div>
@@ -86,7 +86,7 @@ export const HeaderStandard: React.FC<HeaderProps> = ({ activeTab, setActiveTab,
         </button>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-1 bg-white dark:bg-zinc-900/60 border border-neutral-200 dark:border-zinc-800 text-zinc-300 p-1.5 rounded-xl shadow-sm">
+        <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-1 bg-white dark:bg-zinc-900 border border-neutral-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 p-1.5 rounded-xl shadow-sm">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -104,7 +104,7 @@ export const HeaderStandard: React.FC<HeaderProps> = ({ activeTab, setActiveTab,
                 }`}
                 aria-current={isActive ? 'page' : undefined}
               >
-                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-neutral-900 dark:text-white' : item.highlight ? 'text-primary-600' : 'text-neutral-500'}`} aria-hidden="true" />
+                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-neutral-900 dark:text-white' : item.highlight ? 'text-primary-600' : 'text-neutral-900 dark:text-neutral-500'}`} aria-hidden="true" />
                 {item.label}
               </button>
             );
@@ -133,7 +133,7 @@ export const HeaderStandard: React.FC<HeaderProps> = ({ activeTab, setActiveTab,
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden min-h-[44px] min-w-[44px] p-2.5 rounded-lg bg-white dark:bg-zinc-900/60 border border-neutral-200 dark:border-zinc-800 shadow-sm text-neutral-900 dark:text-white hover:text-black flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
+          className="lg:hidden min-h-[44px] min-w-[44px] p-2.5 rounded-lg bg-white dark:bg-zinc-900 border border-neutral-200 dark:border-zinc-800 shadow-sm text-neutral-900 dark:text-white hover:text-black flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
           aria-label="Toggle Navigation Menu"
           aria-expanded={mobileMenuOpen}
         >
@@ -143,7 +143,7 @@ export const HeaderStandard: React.FC<HeaderProps> = ({ activeTab, setActiveTab,
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-zinc-900/60 border-b border-l border-neutral-200 dark:border-zinc-800 shadow-2xl px-4 py-4 space-y-2 animate-in slide-in-from-top-2 text-neutral-900 dark:text-white">
+        <div className="lg:hidden bg-white dark:bg-zinc-900 border-b border-l border-neutral-200 dark:border-zinc-800 shadow-2xl px-4 py-4 space-y-2 animate-in slide-in-from-top-2 text-neutral-900 dark:text-white">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;

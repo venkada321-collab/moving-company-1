@@ -25,7 +25,7 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
   const rightLinks = allLinks.slice(midpoint);
 
   return (
-    <header className="bg-white dark:bg-zinc-900/60 border-b border-neutral-200 dark:border-zinc-800 shadow-sm relative z-50 text-neutral-900 dark:text-white">
+    <header className="bg-white dark:bg-zinc-900 border-b border-neutral-200 dark:border-zinc-800 shadow-sm relative z-50 text-neutral-900 dark:text-white">
       {/* Corporate Editorial Contact Header Strip */}
       <div className="bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 py-2 px-4 text-xs border-b border-neutral-200 dark:border-neutral-800">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 font-mono">
@@ -78,7 +78,7 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
               {BRAND.name}
             </div>
           )}
-          <div className="text-[9px] tracking-[0.25em] text-neutral-500 font-extrabold uppercase mt-0.5">
+          <div className="text-[9px] tracking-[0.25em] text-neutral-900 dark:text-neutral-500 font-extrabold uppercase mt-0.5">
             {GEO.regionName} • Executive Relocations
           </div>
         </button>
@@ -118,7 +118,7 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-zinc-900/60 border-t border-neutral-200 dark:border-zinc-800 px-6 py-6 space-y-3">
+        <div className="lg:hidden bg-white dark:bg-zinc-900 border-t border-neutral-200 dark:border-zinc-800 px-6 py-6 space-y-3">
           {allLinks.map((item) => (
             <button
               key={item.id}
@@ -127,7 +127,7 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
                 setMobileMenuOpen(false);
               }}
               className={`block w-full text-left py-2 px-4 rounded-lg text-sm font-bold uppercase ${
-                activeTab === item.id ? 'bg-primary-50 text-neutral-900 dark:text-white' : 'text-zinc-300 hover:bg-neutral-50 dark:bg-zinc-900/40'
+                activeTab === item.id ? 'bg-primary-50 text-neutral-900 dark:text-neutral-900' : 'text-zinc-600 dark:text-zinc-300 hover:bg-neutral-50 dark:hover:bg-zinc-800'
               }`}
             >
               {item.label}

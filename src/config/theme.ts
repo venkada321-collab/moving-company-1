@@ -1,6 +1,6 @@
 // ============================================================
-// THEME & DESIGN TOKENS CONFIG — PROFEESIONAL MOVING SERVICES
-// UI/UX Pro Max Aesthetic: slate (Major) + blue (Minor)
+// THEME & DESIGN TOKENS CONFIG — Moving Company Mississauga | Advance Moving
+// UI/UX Pro Max Aesthetic: red (Major) + blue (Minor)
 // ============================================================
 
 export type MotionProfile = "snappy-tech" | "luxury-smooth" | "playful-bounce";
@@ -9,7 +9,7 @@ export type StructuralParadigm = 'SplitScreenSaaS' | 'LuxuryEditorial' | 'NeoBru
 export const THEME = {
   paradigm: 'SplitScreenSaaS' as StructuralParadigm,
   colors: {
-    primary: "slate",
+    primary: "red",
     secondary: "blue",
     semantic: {
       success: "#059669",
@@ -65,7 +65,7 @@ export const THEME = {
       referral: "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&q=80",
     },
     hybrid: {
-      atmosphericCanvas: "ice-white-glass",
-      logoTreatment: "monochrome-luxury-white" as "authentic-full-color" | "monochrome-luxury-white" | "monochrome-luxury-black",
+      atmosphericCanvas: "slate-executive",
+      logoTreatment: "authentic-full-color" as "authentic-full-color" | "monochrome-luxury-white" | "monochrome-luxury-black",
     }
 } as const;

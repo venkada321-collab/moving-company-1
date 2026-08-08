@@ -1,5 +1,5 @@
 // ============================================================
-// LAYOUT & MODULAR COMPONENT ARCHITECTURE CONFIG — PROFEESIONAL MOVING SERVICES
+// LAYOUT & MODULAR COMPONENT ARCHITECTURE CONFIG — Moving Company Mississauga | Advance Moving
 // ============================================================
 
 export type SectionId = 

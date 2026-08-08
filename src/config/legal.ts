@@ -1,5 +1,5 @@
 // ============================================================
-// LEGAL CONFIG — PROFEESIONAL MOVING SERVICES
+// LEGAL CONFIG — Moving Company Mississauga | Advance Moving
 // ============================================================
 
 export const LEGAL = {
@@ -8,12 +8,12 @@ export const LEGAL = {
   coiAmountShort: "$1M",
   coiDeliverySLA: "24 Hours",
   coiDeliverySLAShort: "24 Hrs",
-  coiPolicyNumber: "#PRO-POL-2026-ON",
-  coiCertificateNumber: "#COI-PRO-10042",
+  coiPolicyNumber: "#MOV-POL-2026-ON",
+  coiCertificateNumber: "#COI-MOV-10042",
   coiInsurer: "Aviva Canada & WSIB Bonded",
 
   // WSIB (Workplace Safety & Insurance Board)
-  wsibNumber: "#PRO-219485-ON",
+  wsibNumber: "#MOV-219485-ON",
   wsibLabel: "WSIB Insured & Bonded",
   wsibCovered: "100% WSIB Covered",
 

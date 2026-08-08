@@ -80,7 +80,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <a href={`tel:${BRAND.phone}`} className="hidden sm:flex items-center gap-2 text-xs font-black px-5 py-2.5 rounded-full bg-zinc-100 dark:bg-white dark:bg-zinc-900/60 text-neutral-900 dark:text-neutral-900 dark:text-white hover:bg-primary-400 dark:hover:bg-primary-400 transition-colors shadow-md">
+            <a href={`tel:${BRAND.phone}`} className="hidden sm:flex items-center gap-2 text-xs font-black px-5 py-2.5 rounded-full bg-zinc-100 dark:bg-zinc-900/60 text-neutral-900 dark:text-white hover:bg-primary-400 dark:hover:bg-primary-400 transition-colors shadow-md">
               <Phone className="w-3.5 h-3.5 fill-current" />
               <span>{BRAND.phone}</span>
             </a>
@@ -103,7 +103,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-emerald-400 font-black uppercase">Dispatch Active</span>
-            <span className="hidden sm:inline text-neutral-500">|</span>
+            <span className="hidden sm:inline text-neutral-900 dark:text-neutral-500">|</span>
             <span className="hidden sm:inline">Licensed & WSIB Bonded Carrier</span>
           </div>
           <div className="flex items-center gap-6">
@@ -174,14 +174,14 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
               <button 
                 key={link.id} 
                 onClick={() => handleNavClick(link.id)} 
-                className={`px-3.5 py-1.5 rounded-none border-2 border-transparent hover:border-black dark:hover:border-white transition-colors ${activeTab === link.id ? 'bg-black text-white dark:bg-zinc-900/60 dark:text-neutral-900 dark:text-white border-black dark:border-white font-black' : 'text-black dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-50 dark:bg-neutral-900'}`}
+                className={`px-3.5 py-1.5 rounded-none border-2 border-transparent hover:border-black dark:hover:border-white transition-colors ${activeTab === link.id ? 'bg-white dark:bg-black text-neutral-900 dark:text-white dark:bg-white dark:text-black border-black dark:border-white font-black' : 'text-black dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800'}`}
               >
                 {link.label}
               </button>
             ))}
           </nav>
           <div className="flex items-center gap-4">
-            <a href={`tel:${BRAND.phone}`} className="bg-black text-white dark:bg-white dark:text-black px-5 py-2.5 font-black text-xs border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-x-1 hover:translate-y-1 transition-transform inline-flex items-center gap-2">
+            <a href={`tel:${BRAND.phone}`} className="bg-white dark:bg-black text-neutral-900 dark:text-white dark:bg-white dark:text-black px-5 py-2.5 font-black text-xs border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-x-1 hover:translate-y-1 transition-transform inline-flex items-center gap-2">
               <Phone className="w-4 h-4 fill-current" />
               <span>TEL: {BRAND.phone}</span>
             </a>
@@ -241,7 +241,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
         </div>
         <div className="hidden lg:flex w-2/5 bg-primary-500 text-[color:var(--primary-contrast-text)] px-8 py-3 items-center justify-between font-black uppercase tracking-tight shadow-xl">
           <span className="text-xs">Instant Dispatch Terminal &rarr;</span>
-          <a href={`tel:${BRAND.phone}`} className="text-xs bg-black text-white px-5 py-2.5 rounded-xl hover:bg-neutral-50 dark:bg-neutral-900 transition-colors shadow-md inline-flex items-center gap-2">
+          <a href={`tel:${BRAND.phone}`} className="text-xs bg-white dark:bg-black text-neutral-900 dark:text-white px-5 py-2.5 rounded-xl hover:bg-neutral-50 dark:bg-neutral-900 transition-colors shadow-md inline-flex items-center gap-2">
             <Phone className="w-3.5 h-3.5 fill-current text-primary-400" />
             <span>{BRAND.phone}</span>
           </a>

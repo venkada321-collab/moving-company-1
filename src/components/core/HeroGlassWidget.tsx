@@ -35,7 +35,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative min-h-[90vh] flex items-center justify-center py-20 px-4 overflow-hidden bg-zinc-950">
+    <div id="hero-quote-calculator" className="relative min-h-[90vh] flex items-center justify-center py-20 px-4 overflow-hidden bg-white dark:bg-zinc-950">
       {/* Background Graphic & Atmosphere */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/40 via-zinc-950 to-zinc-900 mix-blend-screen" />
@@ -46,7 +46,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
         
         {/* Left Copy */}
-        <div className="flex-1 text-center lg:text-left text-white">
+        <div className="flex-1 text-center lg:text-left text-neutral-900 dark:text-white">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
             <Sparkles className="w-4 h-4 text-primary-400" />
             <span className="text-sm font-medium tracking-wide text-zinc-300">{BRAND.rankingClaim}</span>
@@ -63,7 +63,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
         <div className="w-full max-w-md bg-white/5 dark:bg-white/5 border border-white/10 backdrop-blur-2xl p-8 rounded-3xl shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-400 to-primary-600" />
           
-          <h3 className="text-2xl font-semibold text-white mb-6 font-['var(--font-heading)']">
+          <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white mb-6 font-['var(--font-heading)']">
             Calculate your move
           </h3>
           
@@ -74,7 +74,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
                 type="text" 
                 value={fromZip}
                 onChange={(e) => setFromZip(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-black/20 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-primary-400 focus:bg-black/40 transition-all backdrop-blur-sm"
+                className="w-full pl-12 pr-4 py-4 bg-white dark:bg-black/20 border border-white/10 rounded-xl text-neutral-900 dark:text-white placeholder-zinc-500 focus:outline-none focus:border-primary-400 focus:bg-white dark:bg-black/40 transition-all backdrop-blur-sm"
                 placeholder="Moving from (Postal/City)"
               />
             </div>
@@ -85,17 +85,17 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
                 type="text" 
                 value={toZip}
                 onChange={(e) => setToZip(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-black/20 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-primary-400 focus:bg-black/40 transition-all backdrop-blur-sm"
+                className="w-full pl-12 pr-4 py-4 bg-white dark:bg-black/20 border border-white/10 rounded-xl text-neutral-900 dark:text-white placeholder-zinc-500 focus:outline-none focus:border-primary-400 focus:bg-white dark:bg-black/40 transition-all backdrop-blur-sm"
                 placeholder="Moving to (Postal/City)"
               />
             </div>
 
             <div className="relative">
               <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-400" />
-              <select className="w-full pl-12 pr-4 py-4 bg-black/20 border border-white/10 rounded-xl text-white appearance-none focus:outline-none focus:border-primary-400 focus:bg-black/40 transition-all backdrop-blur-sm">
-                <option value="asap" className="bg-zinc-900">As soon as possible</option>
-                <option value="this-month" className="bg-zinc-900">Sometime this month</option>
-                <option value="next-month" className="bg-zinc-900">Next month or later</option>
+              <select className="w-full pl-12 pr-4 py-4 bg-white dark:bg-black/20 border border-white/10 rounded-xl text-neutral-900 dark:text-white appearance-none focus:outline-none focus:border-primary-400 focus:bg-white dark:bg-black/40 transition-all backdrop-blur-sm">
+                <option value="asap" className="bg-white dark:bg-zinc-900">As soon as possible</option>
+                <option value="this-month" className="bg-white dark:bg-zinc-900">Sometime this month</option>
+                <option value="next-month" className="bg-white dark:bg-zinc-900">Next month or later</option>
               </select>
             </div>
 
@@ -108,7 +108,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
             </button>
           </form>
           
-          <p className="text-center text-xs text-zinc-500 mt-6 flex justify-center items-center gap-2">
+          <p className="text-center text-xs text-neutral-900 dark:text-zinc-500 mt-6 flex justify-center items-center gap-2">
             <Box className="w-4 h-4" /> 100% Free & No Obligation
           </p>
         </div>

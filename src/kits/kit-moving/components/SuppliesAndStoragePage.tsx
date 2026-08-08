@@ -71,7 +71,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
           <h2 className="text-3xl sm:text-5xl font-black text-black tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
             PREMIUM PACKING & <span className="text-primary-600 bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400">CLIMATE VAULTS</span>
           </h2>
-          <p className="mt-3 text-sm text-neutral-500 dark:text-zinc-400 font-medium">
+          <p className="mt-3 text-sm text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 font-medium">
             Eco-friendly moving supplies delivered directly to your door, plus 24/7 monitored temperature-controlled storage facilities in {GEO.storageFacilityCities}.
           </p>
         </div>
@@ -85,7 +85,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
             className={`min-h-[44px] px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-2 transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-white ${
               activeTab === 'supplies'
                 ? 'bg-neutral-100 dark:bg-black text-primary-400 shadow-xl shadow-black/20'
-                : 'bg-white dark:bg-zinc-900/60 text-neutral-500 dark:text-zinc-400 border border-neutral-300 hover:border-primary-400'
+                : 'bg-white dark:bg-zinc-900/60 text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 border border-neutral-300 hover:border-primary-400'
             }`}
           >
             <Box className="w-4 h-4" aria-hidden="true" />
@@ -99,7 +99,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
             className={`min-h-[44px] px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider flex items-center gap-2 transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-white ${
               activeTab === 'storage'
                 ? 'bg-neutral-100 dark:bg-black text-primary-400 shadow-xl shadow-black/20'
-                : 'bg-white dark:bg-zinc-900/60 text-neutral-500 dark:text-zinc-400 border border-neutral-300 hover:border-primary-400'
+                : 'bg-white dark:bg-zinc-900/60 text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 border border-neutral-300 hover:border-primary-400'
             }`}
           >
             <Shield className="w-4 h-4" aria-hidden="true" />
@@ -132,7 +132,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                   className={`min-h-[44px] min-w-[44px] px-4 py-2 rounded-full text-xs font-bold uppercase transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-white inline-flex items-center justify-center ${
                     selectedSupplyFilter === cat
                       ? 'bg-primary-400 text-black border border-primary-400'
-                      : 'bg-white dark:bg-zinc-900/60 text-neutral-500 dark:text-zinc-400 border border-neutral-200 dark:border-zinc-800 hover:text-black hover:border-primary-300'
+                      : 'bg-white dark:bg-zinc-900/60 text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 border border-neutral-200 dark:border-zinc-800 hover:text-black hover:border-primary-300'
                   }`}
                 >
                   {cat === 'all' ? 'All Supplies' : cat === 'kits' ? 'Complete Move Bundles' : cat === 'boxes' ? 'Specialty Boxes' : 'Protection Wrap'}
@@ -162,7 +162,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                       {supply.name}
                     </h3>
 
-                    <p className="text-xs text-neutral-500 dark:text-zinc-400 leading-relaxed mb-4">
+                    <p className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 leading-relaxed mb-4">
                       {supply.description}
                     </p>
                   </div>
@@ -172,7 +172,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                       <span className="text-2xl font-black text-primary-600" style={{ fontFamily: 'var(--font-heading)' }}>
                         ${supply.price.toFixed(2)}
                       </span>
-                      <span className="text-[10px] text-neutral-500 ml-1 font-semibold">/ {supply.unit}</span>
+                      <span className="text-[10px] text-neutral-900 dark:text-neutral-500 ml-1 font-semibold">/ {supply.unit}</span>
                     </div>
 
                     <button
@@ -244,9 +244,9 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                       <h3 className="text-xl font-extrabold text-black mb-1" style={{ fontFamily: 'var(--font-heading)' }}>
                         {vault.name}
                       </h3>
-                      <div className="text-xs text-neutral-500 dark:text-zinc-400 font-medium mb-3">Ideal for: {vault.idealFor}</div>
+                      <div className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 font-medium mb-3">Ideal for: {vault.idealFor}</div>
 
-                      <p className="text-xs text-neutral-500 dark:text-zinc-400 leading-relaxed mb-6">
+                      <p className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 leading-relaxed mb-6">
                         {vault.description}
                       </p>
 
@@ -262,11 +262,11 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
 
                     <div>
                       <div className={`mb-4 text-center p-3 rounded-2xl border ${isFeatured ? 'bg-white dark:bg-zinc-900/60 border-primary-300' : 'bg-primary-50/50 border-neutral-200 dark:border-zinc-800'}`}>
-                        <div className="text-[10px] text-neutral-500 font-bold uppercase tracking-wider">First Month Special Price</div>
+                        <div className="text-[10px] text-neutral-900 dark:text-neutral-500 font-bold uppercase tracking-wider">First Month Special Price</div>
                         <div className="text-3xl font-black text-black" style={{ fontFamily: 'var(--font-heading)' }}>
-                          ${(vault.pricePerMonth * (PRICING.storagePromoPercent / 100)).toFixed(0)} <span className="text-xs text-neutral-500 font-normal">/ month</span>
+                          ${(vault.pricePerMonth * (PRICING.storagePromoPercent / 100)).toFixed(0)} <span className="text-xs text-neutral-900 dark:text-neutral-500 font-normal">/ month</span>
                         </div>
-                        <div className="text-[11px] text-neutral-500 dark:text-neutral-400 line-through">Regular ${vault.pricePerMonth}/mo</div>
+                        <div className="text-[11px] text-neutral-900 dark:text-neutral-500 dark:text-neutral-400 line-through">Regular ${vault.pricePerMonth}/mo</div>
                       </div>
 
                       <button

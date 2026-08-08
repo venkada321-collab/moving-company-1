@@ -100,10 +100,10 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x-2 divide-black dark:divide-white text-xs">
               {AWARDS.slice(0, 4).map((award, i) => (
-                <div key={i} className="p-5 flex items-center justify-between bg-white dark:bg-zinc-900/60 dark:bg-white dark:bg-neutral-950">
+                <div key={i} className="p-5 flex items-center justify-between bg-white dark:bg-neutral-950">
                   <div>
                     <div className="font-black text-primary-600 dark:text-primary-400 text-sm">{award.title}</div>
-                    <div className="text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 dark:text-neutral-600 dark:text-neutral-400 font-semibold">{award.organization} &bull; {award.year}</div>
+                    <div className="text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 dark:text-neutral-600 dark:text-neutral-400 font-semibold">{award.organization} &bull; {award.year}</div>
                   </div>
                   <span className="border border-black dark:border-white px-2.5 py-1 font-extrabold bg-neutral-200 dark:bg-neutral-800 text-[10px]">
                     {award.badgeText}
@@ -116,7 +116,7 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
           {/* Monospaced Quotations Deck */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {TESTIMONIALS.slice(0, 4).map((t, index) => (
-              <div key={index} className="border-2 border-black dark:border-white p-6 bg-neutral-50 dark:bg-zinc-900/40 dark:bg-neutral-50 dark:bg-neutral-900 shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#fff] relative">
+              <div key={index} className="border-2 border-black dark:border-white p-6 bg-neutral-50 dark:bg-neutral-900 shadow-[6px_6px_0px_#000] dark:shadow-[6px_6px_0px_#fff] relative">
                 <div className="text-xs font-black text-primary-600 dark:text-primary-400 uppercase mb-2">
                   // CLIENT FILE #{index + 104} &bull; {t.serviceType.toUpperCase()}
                 </div>
@@ -167,13 +167,13 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
             </div>
 
             <div className="flex justify-between items-center mt-10 border-t border-neutral-200 dark:border-neutral-800 pt-6">
-              <button onClick={handlePrev} className="p-3 rounded-full bg-neutral-50 dark:bg-black hover:bg-neutral-800 text-white border border-neutral-700 transition-colors flex items-center gap-2 text-xs font-bold px-5">
+              <button onClick={handlePrev} className="p-3 rounded-full bg-neutral-50 dark:bg-black hover:bg-neutral-800 text-neutral-900 dark:text-white border border-neutral-700 transition-colors flex items-center gap-2 text-xs font-bold px-5">
                 <ArrowLeft className="w-4 h-4" /> Previous Review
               </button>
-              <div className="text-xs text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 font-bold">
+              <div className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 font-bold">
                 {activeTestimonialIdx + 1} of {filteredTestimonials.length}
               </div>
-              <button onClick={handleNext} className="p-3 rounded-full bg-neutral-50 dark:bg-black hover:bg-neutral-800 text-white border border-neutral-700 transition-colors flex items-center gap-2 text-xs font-bold px-5">
+              <button onClick={handleNext} className="p-3 rounded-full bg-neutral-50 dark:bg-black hover:bg-neutral-800 text-neutral-900 dark:text-white border border-neutral-700 transition-colors flex items-center gap-2 text-xs font-bold px-5">
                 Next Review <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -207,7 +207,7 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight font-heading">
             TRUSTED BY <span className="text-primary-600 dark:text-primary-400">{LEGAL.totalMoves} {GEO.regionName?.toUpperCase()} RESIDENTS</span> &amp; BUSINESSES
           </h2>
-          <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 dark:text-neutral-600 dark:text-neutral-400 font-medium">
+          <p className="mt-3 text-sm text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 dark:text-neutral-600 dark:text-neutral-400 font-medium">
             Inspect our recent verified customer reviews, condo concierge feedback, and active insurance credentials.
           </p>
         </div>
@@ -219,7 +219,7 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
               key={f}
               onClick={() => { setSelectedFilter(f); setActiveTestimonialIdx(0); }}
               className={`px-4 py-2 rounded-full text-xs font-extrabold transition-all ${
-                selectedFilter === f ? 'btn-atomic-primary shadow-lg' : 'bg-white dark:bg-zinc-900/60 dark:bg-neutral-50 dark:bg-neutral-900 text-neutral-600 dark:text-zinc-300 dark:text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-zinc-800 dark:border-neutral-200 dark:border-neutral-800 hover:border-primary-500'
+                selectedFilter === f ? 'btn-atomic-primary shadow-lg' : 'bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-800 hover:border-primary-500'
               }`}
             >
               {f}

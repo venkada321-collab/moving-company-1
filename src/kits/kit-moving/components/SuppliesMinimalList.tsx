@@ -19,7 +19,7 @@ export const SuppliesMinimalList: React.FC<SuppliesAndStoragePageProps> = ({
           <h2 className="text-3xl font-black mb-4 font-['var(--font-heading)'] uppercase tracking-tight">
             Logistics & Materials Catalog
           </h2>
-          <p className="text-zinc-500 max-w-2xl text-sm">
+          <p className="text-neutral-900 dark:text-zinc-500 max-w-2xl text-sm">
             High-grade industrial packing supplies and secure climate-controlled storage vaults. Add requirements to your estimate below.
           </p>
         </div>
@@ -38,7 +38,7 @@ export const SuppliesMinimalList: React.FC<SuppliesAndStoragePageProps> = ({
                 <li key={supply.id} className="flex items-center justify-between group py-2 border-b border-zinc-100 hover:border-primary-200 transition-colors">
                   <div>
                     <div className="font-bold">{supply.name}</div>
-                    <div className="text-xs text-zinc-500 font-mono">SKU: {supply.id.toUpperCase()}</div>
+                    <div className="text-xs text-neutral-900 dark:text-zinc-500 font-mono">SKU: {supply.id.toUpperCase()}</div>
                   </div>
                   <div className="flex items-center gap-6 text-sm">
                     <span className="font-mono">${supply.price.toFixed(2)}</span>
@@ -68,16 +68,16 @@ export const SuppliesMinimalList: React.FC<SuppliesAndStoragePageProps> = ({
                     <div className="font-bold flex items-center gap-2">
                       {storage.name}
                       {storage.features.includes('Climate Controlled') && (
-                         <span className="text-[10px] bg-zinc-100 text-zinc-500 px-2 py-0.5 rounded-sm">CLIMATE</span>
+                         <span className="text-[10px] bg-zinc-100 text-neutral-900 dark:text-zinc-500 px-2 py-0.5 rounded-sm">CLIMATE</span>
                       )}
                     </div>
-                    <div className="text-xs text-zinc-500 font-mono mt-1">{storage.description}</div>
+                    <div className="text-xs text-neutral-900 dark:text-zinc-500 font-mono mt-1">{storage.description}</div>
                   </div>
                   <div className="flex items-center gap-6 text-sm shrink-0">
                     <span className="font-mono text-primary-600 font-bold">${storage.pricePerMonth}/mo</span>
                     <button 
                       onClick={() => onSelectStorageForEstimate(storage.id)}
-                      className="px-3 py-1 bg-neutral-100 dark:bg-black text-white dark:text-black text-xs font-bold hover:bg-primary-500 hover:text-black transition-colors uppercase"
+                      className="px-3 py-1 bg-neutral-100 dark:bg-black text-neutral-900 dark:text-white dark:text-black text-xs font-bold hover:bg-primary-500 hover:text-black transition-colors uppercase"
                     >
                       Reserve
                     </button>

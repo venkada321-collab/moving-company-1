@@ -40,7 +40,7 @@ export const HeroBrutalistLedger: React.FC<HeroProps> = ({ onQuoteSubmitted }) =
         
         {/* Brutalist Header Block */}
         <div className="border-4 border-black p-6 md:p-12 mb-8 bg-primary-400 shadow-[8px_8px_0_0_#000]">
-          <div className="inline-block bg-black text-white font-mono uppercase px-3 py-1 text-xs font-bold mb-6">
+          <div className="inline-block bg-white dark:bg-black text-neutral-900 dark:text-white font-mono uppercase px-3 py-1 text-xs font-bold mb-6">
             FRT-LOGISTICS-LEDGER // {new Date().getFullYear()}
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-none mb-6">
@@ -90,7 +90,7 @@ export const HeroBrutalistLedger: React.FC<HeroProps> = ({ onQuoteSubmitted }) =
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full md:w-auto bg-black text-white hover:bg-primary-500 hover:text-black border-4 border-black font-black uppercase px-8 py-4 text-xl flex items-center justify-center gap-3 transition-colors"
+                  className="w-full md:w-auto bg-white dark:bg-black text-neutral-900 dark:text-white hover:bg-primary-500 hover:text-black border-4 border-black font-black uppercase px-8 py-4 text-xl flex items-center justify-center gap-3 transition-colors"
                 >
                   {MICROCOPY.buttons?.getQuote || "DISPATCH ESTIMATE"}
                   <ArrowRight className="w-6 h-6" />

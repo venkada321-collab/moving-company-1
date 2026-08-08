@@ -48,7 +48,7 @@ export const HowItWorksAccordion: React.FC<HowItWorksProps> = ({ onStartEstimate
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-neutral-950 text-neutral-900 dark:text-white border-y border-neutral-200 dark:border-neutral-800 relative">
+    <section id="how-it-works" className="py-24 bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white border-y border-neutral-200 dark:border-neutral-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-16">
           <span className="text-xs font-black uppercase tracking-[0.25em] text-primary-400 block mb-3">
@@ -74,21 +74,21 @@ export const HowItWorksAccordion: React.FC<HowItWorksProps> = ({ onStartEstimate
                   className={`w-full text-left p-6 rounded-[var(--radius-card)] transition-all flex items-center justify-between border ${
                     isActive
                       ? 'bg-primary-500/10 border-primary-500 text-neutral-900 dark:text-white shadow-xl translate-x-1'
-                      : 'bg-neutral-100 dark:bg-neutral-900/40 border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400 hover:bg-neutral-900 hover:text-neutral-700 dark:text-neutral-200'
+                      : 'bg-neutral-100 dark:bg-neutral-900/40 border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-neutral-500 dark:text-neutral-400 hover:bg-white dark:bg-neutral-900 hover:text-neutral-700 dark:text-neutral-200'
                   }`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className={`p-3 rounded-lg ${isActive ? 'bg-primary-500 text-neutral-900 dark:text-white font-black' : 'bg-neutral-800 text-neutral-500 dark:text-neutral-400'}`}>
+                    <div className={`p-3 rounded-lg ${isActive ? 'bg-primary-500 text-neutral-900 dark:text-white font-black' : 'bg-neutral-800 text-neutral-900 dark:text-neutral-500 dark:text-neutral-400'}`}>
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className={`text-xs font-mono font-bold uppercase ${isActive ? 'text-primary-400' : 'text-neutral-500'}`}>
+                      <span className={`text-xs font-mono font-bold uppercase ${isActive ? 'text-primary-400' : 'text-neutral-900 dark:text-neutral-500'}`}>
                         {step.number}
                       </span>
                       <h3 className="text-base font-bold tracking-tight mt-0.5">{step.title}</h3>
                     </div>
                   </div>
-                  <ChevronRight className={`w-5 h-5 transition-transform ${isActive ? 'text-primary-400 translate-x-1' : 'text-neutral-500 dark:text-zinc-400'}`} />
+                  <ChevronRight className={`w-5 h-5 transition-transform ${isActive ? 'text-primary-400 translate-x-1' : 'text-neutral-900 dark:text-neutral-500 dark:text-zinc-400'}`} />
                 </button>
               );
             })}
@@ -101,7 +101,7 @@ export const HowItWorksAccordion: React.FC<HowItWorksProps> = ({ onStartEstimate
                 <div>
                   <span className="text-sm font-mono uppercase text-primary-400 font-extrabold">{steps[selectedStep].number} Specification</span>
                   <h3 className="text-2xl sm:text-3xl font-black mt-1">{steps[selectedStep].title}</h3>
-                  <p className="text-neutral-500 dark:text-neutral-400 text-sm font-semibold mt-0.5">{steps[selectedStep].subtitle}</p>
+                  <p className="text-neutral-900 dark:text-neutral-500 dark:text-neutral-400 text-sm font-semibold mt-0.5">{steps[selectedStep].subtitle}</p>
                 </div>
               </div>
 
@@ -110,10 +110,10 @@ export const HowItWorksAccordion: React.FC<HowItWorksProps> = ({ onStartEstimate
               </p>
 
               <div className="pt-2">
-                <h4 className="text-xs uppercase tracking-wider text-neutral-500 font-bold mb-3">Protocol Deliverables</h4>
+                <h4 className="text-xs uppercase tracking-wider text-neutral-900 dark:text-neutral-500 font-bold mb-3">Protocol Deliverables</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {steps[selectedStep].highlights.map((item, idx) => (
-                    <div key={idx} className="bg-neutral-950/60 border border-neutral-200 dark:border-neutral-800 p-4 rounded-[var(--radius-button)] flex flex-col justify-center gap-2">
+                    <div key={idx} className="bg-white dark:bg-neutral-950/60 border border-neutral-200 dark:border-neutral-800 p-4 rounded-[var(--radius-button)] flex flex-col justify-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary-400 shrink-0" />
                       <span className="text-xs font-bold text-neutral-700 dark:text-neutral-200">{item}</span>
                     </div>

@@ -36,14 +36,14 @@ export const HeroCenteredCta: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative bg-neutral-950 text-white overflow-hidden py-24 lg:py-32">
+    <div id="hero-quote-calculator" className="relative bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white overflow-hidden py-24 lg:py-32">
       {/* Decorative ambient gradient backdrop */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900/40 via-neutral-950 to-neutral-950 pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary-500/20 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Trust Pill */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300 text-xs sm:text-sm font-medium mb-8 shadow-lg">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-neutral-900 border border-neutral-800 text-neutral-300 text-xs sm:text-sm font-medium mb-8 shadow-lg">
           <Sparkles className="w-4 h-4 text-primary-400" />
           <span>{BRAND.rankingClaim}</span>
         </div>
@@ -58,7 +58,7 @@ export const HeroCenteredCta: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
         </p>
 
         {/* Centralized Quick Consultation Desk Card */}
-        <div className="max-w-4xl mx-auto bg-neutral-900/90 border border-neutral-800 p-6 sm:p-8 rounded-[var(--radius-card)] backdrop-blur-xl shadow-2xl mb-16">
+        <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-900/90 border border-neutral-800 p-6 sm:p-8 rounded-[var(--radius-card)] backdrop-blur-xl shadow-2xl mb-16">
           <form onSubmit={handleQuickSubmit} className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div className="text-left">
               <label className="block text-xs uppercase font-semibold text-neutral-400 mb-2">From Location</label>
@@ -68,7 +68,7 @@ export const HeroCenteredCta: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
                   type="text" 
                   value={fromLocation}
                   onChange={(e) => setFromLocation(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3 bg-neutral-950 border border-neutral-800 rounded-[var(--radius-button)] text-white focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-neutral-950 border border-neutral-800 rounded-[var(--radius-button)] text-neutral-900 dark:text-white focus:outline-none focus:border-primary-500 transition-colors"
                 />
               </div>
             </div>
@@ -76,12 +76,12 @@ export const HeroCenteredCta: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
             <div className="text-left">
               <label className="block text-xs uppercase font-semibold text-neutral-400 mb-2">To Location</label>
               <div className="relative">
-                <MapPin className="absolute left-3 top-3 w-5 h-5 text-neutral-500" />
+                <MapPin className="absolute left-3 top-3 w-5 h-5 text-neutral-900 dark:text-neutral-500" />
                 <input 
                   type="text" 
                   value={toLocation}
                   onChange={(e) => setToLocation(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3 bg-neutral-950 border border-neutral-800 rounded-[var(--radius-button)] text-white focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full pl-11 pr-4 py-3 bg-white dark:bg-neutral-950 border border-neutral-800 rounded-[var(--radius-button)] text-neutral-900 dark:text-white focus:outline-none focus:border-primary-500 transition-colors"
                 />
               </div>
             </div>
@@ -91,7 +91,7 @@ export const HeroCenteredCta: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
               <select 
                 value={selectedSize}
                 onChange={(e) => setSelectedSize(e.target.value)}
-                className="w-full px-4 py-3 bg-neutral-950 border border-neutral-800 rounded-[var(--radius-button)] text-white focus:outline-none focus:border-primary-500 transition-colors h-[50px]"
+                className="w-full px-4 py-3 bg-white dark:bg-neutral-950 border border-neutral-800 rounded-[var(--radius-button)] text-neutral-900 dark:text-white focus:outline-none focus:border-primary-500 transition-colors h-[50px]"
               >
                 <option value="studio">Studio Apartment</option>
                 <option value="1bed">1 Bedroom Condo</option>
@@ -110,7 +110,7 @@ export const HeroCenteredCta: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
             <div className="flex flex-wrap gap-4 w-full sm:w-auto">
               <a 
                 href={`tel:${BRAND.phoneRaw || BRAND.phone}`} 
-                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 bg-neutral-800 hover:bg-neutral-700 text-white font-semibold rounded-[var(--radius-button)] transition-all duration-[var(--anim-speed)]"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3 bg-neutral-800 hover:bg-neutral-700 text-neutral-900 dark:text-white font-semibold rounded-[var(--radius-button)] transition-all duration-[var(--anim-speed)]"
               >
                 <Phone className="w-4 h-4 text-primary-400" />
                 <span>Call {BRAND.phone}</span>
@@ -132,29 +132,29 @@ export const HeroCenteredCta: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
           <div className="flex items-start gap-3">
             <CheckCircle2 className="w-6 h-6 text-primary-400 shrink-0" />
             <div>
-              <h4 className="text-white font-semibold text-sm">Licensed & Insured</h4>
-              <p className="text-xs text-neutral-500">Full cargo liability coverage</p>
+              <h4 className="text-neutral-900 dark:text-white font-semibold text-sm">Licensed & Insured</h4>
+              <p className="text-xs text-neutral-900 dark:text-neutral-500">Full cargo liability coverage</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <Star className="w-6 h-6 text-primary-400 fill-primary-400 shrink-0" />
             <div>
-              <h4 className="text-white font-semibold text-sm">Top Rated Fleet</h4>
-              <p className="text-xs text-neutral-500">Verified 5-star customer reviews</p>
+              <h4 className="text-neutral-900 dark:text-white font-semibold text-sm">Top Rated Fleet</h4>
+              <p className="text-xs text-neutral-900 dark:text-neutral-500">Verified 5-star customer reviews</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <Award className="w-6 h-6 text-primary-400 shrink-0" />
             <div>
-              <h4 className="text-white font-semibold text-sm">Vetted Crews</h4>
-              <p className="text-xs text-neutral-500">Trained professional movers</p>
+              <h4 className="text-neutral-900 dark:text-white font-semibold text-sm">Vetted Crews</h4>
+              <p className="text-xs text-neutral-900 dark:text-neutral-500">Trained professional movers</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <Shield className="w-6 h-6 text-emerald-400 shrink-0" />
             <div>
-              <h4 className="text-white font-semibold text-sm">Zero Surprise Tolls</h4>
-              <p className="text-xs text-neutral-500">Guaranteed fixed price estimates</p>
+              <h4 className="text-neutral-900 dark:text-white font-semibold text-sm">Zero Surprise Tolls</h4>
+              <p className="text-xs text-neutral-900 dark:text-neutral-500">Guaranteed fixed price estimates</p>
             </div>
           </div>
         </div>

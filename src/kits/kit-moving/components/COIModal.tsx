@@ -24,7 +24,7 @@ export const COIModal: React.FC<COIModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-white dark:bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="coi-modal-title"
@@ -148,7 +148,7 @@ export const COIModal: React.FC<COIModalProps> = ({ isOpen, onClose }) => {
                 CERTIFICATE OF INSURANCE TRANSMITTED!
               </h4>
 
-              <p className="text-sm font-medium text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 max-w-md mx-auto">
+              <p className="text-sm font-medium text-neutral-900 dark:text-neutral-500 dark:text-neutral-600 dark:text-neutral-400 dark:text-zinc-400 max-w-md mx-auto">
                 An official PDF Certificate naming <span className="text-primary-600 font-bold">{condoCorp}</span> as Additional Insured has been emailed to <span className="text-neutral-900 dark:text-white font-bold">{conciergeEmail}</span>.
               </p>
 

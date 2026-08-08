@@ -148,7 +148,7 @@ export default function App() {
 
   return (
     <div 
-      className={`min-h-screen font-body bg-atmosphere selection:bg-primary-500 selection:text-zinc-950 ${isDarkMode ? 'dark text-zinc-50' : 'text-zinc-900'}`}
+      className={`min-h-screen font-body bg-atmosphere selection:bg-primary-500 selection:text-zinc-950 ${isDarkMode ? 'dark text-neutral-900 dark:text-zinc-50' : 'text-zinc-900'}`}
       style={{ backgroundColor: THEME.backgrounds.page }}
     >
       {/* Dynamic Design Token Injection — Controls Geometry, Physics, and Font Stacks Globally */}

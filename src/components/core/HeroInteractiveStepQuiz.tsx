@@ -57,7 +57,7 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
             {BRAND.heroSubtitle || "Take our 30-second quiz to get an instant, guaranteed flat-rate estimate tailored to your move."}
           </p>
           <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800">
-            <p className="text-sm text-zinc-500 flex items-center gap-2">
+            <p className="text-sm text-neutral-900 dark:text-zinc-500 flex items-center gap-2">
               <Shield className="w-4 h-4 text-emerald-500" />
               Fully licensed, bonded, and insured.
             </p>
@@ -80,7 +80,7 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
               {step === 2 && "How large is the move?"}
               {step === 3 && "Final details"}
             </h3>
-            <p className="text-zinc-500 text-sm mt-1">Step {step} of 3</p>
+            <p className="text-neutral-900 dark:text-zinc-500 text-sm mt-1">Step {step} of 3</p>
           </div>
 
           <form onSubmit={handleQuickSubmit} className="space-y-6">
@@ -137,7 +137,7 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h4 className="text-xl font-bold">You're all set!</h4>
-                <p className="text-zinc-500">Click below to generate your instant guaranteed estimate.</p>
+                <p className="text-neutral-900 dark:text-zinc-500">Click below to generate your instant guaranteed estimate.</p>
               </div>
             )}
 
@@ -146,7 +146,7 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
                 <button 
                   type="button" 
                   onClick={() => setStep(step - 1)}
-                  className="px-4 py-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 font-medium flex items-center gap-2"
+                  className="px-4 py-2 text-neutral-900 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-neutral-900 dark:text-zinc-50 font-medium flex items-center gap-2"
                 >
                   <ArrowLeft className="w-4 h-4" /> Back
                 </button>
