@@ -96,16 +96,17 @@ for (let i = 0; i < rawBatch.length; i++) {
     { nav: 'centered-split', hero: 'compact-banner', heroBackground: 'clean-minimal', services: 'accordion-panels', howItWorks: 'accordion-protocol', supplies: 'pricing-table', footer: 'minimal-compact', motion: 'playful-bounce', color: 'emerald', font: 'Plus Jakarta Sans', bodyFont: 'DM Sans', buttonRadius: '0px', cardRadius: '8px' },
     { nav: 'sticky-standard', hero: 'centered-cta', heroBackground: 'geometric-mesh', services: 'accordion-panels', howItWorks: 'cards-grid', supplies: 'cards-catalog', footer: 'cta-banner', motion: 'luxury-smooth', color: 'rose', font: 'Outfit', bodyFont: 'Inter', buttonRadius: '12px', cardRadius: '20px' },
     { nav: 'transparent-overlay', hero: 'compact-banner', heroBackground: 'dark-gradient-overlay', services: 'icon-grid', howItWorks: 'accordion-protocol', supplies: 'pricing-table', footer: 'minimal-compact', motion: 'snappy-tech', color: 'blue', font: 'Plus Jakarta Sans', bodyFont: 'DM Sans', buttonRadius: '9999px', cardRadius: '24px' },
-    { nav: 'centered-split', hero: 'calculator-split', heroBackground: 'clean-minimal', services: 'horizontal-cards', howItWorks: 'cards-grid', supplies: 'cards-catalog', footer: 'multi-column', motion: 'playful-bounce', color: 'violet', font: 'Roboto', bodyFont: 'Inter', buttonRadius: '6px', cardRadius: '12px' }
+    { nav: 'sticky-standard', hero: 'calculator-split', services: 'icon-grid', howItWorks: 'cards-grid', supplies: 'cards-catalog', footer: 'multi-column', motion: 'snappy-tech', color: 'amber', font: 'Montserrat', bodyFont: 'Inter', buttonRadius: '8px', cardRadius: '16px' },
+    { nav: 'transparent-overlay', hero: 'centered-cta', services: 'horizontal-cards', howItWorks: 'accordion-protocol', supplies: 'pricing-table', footer: 'cta-banner', motion: 'luxury-smooth', color: 'indigo', font: 'Space Grotesk', bodyFont: 'DM Sans', buttonRadius: '9999px', cardRadius: '24px' },
+    { nav: 'centered-split', hero: 'compact-banner', services: 'accordion-panels', howItWorks: 'accordion-protocol', supplies: 'pricing-table', footer: 'minimal-compact', motion: 'playful-bounce', color: 'emerald', font: 'Plus Jakarta Sans', bodyFont: 'DM Sans', buttonRadius: '0px', cardRadius: '8px' },
+    { nav: 'sticky-standard', hero: 'centered-cta', services: 'accordion-panels', howItWorks: 'cards-grid', supplies: 'cards-catalog', footer: 'cta-banner', motion: 'luxury-smooth', color: 'rose', font: 'Outfit', bodyFont: 'Inter', buttonRadius: '12px', cardRadius: '20px' },
+    { nav: 'transparent-overlay', hero: 'compact-banner', services: 'icon-grid', howItWorks: 'accordion-protocol', supplies: 'pricing-table', footer: 'minimal-compact', motion: 'snappy-tech', color: 'blue', font: 'Plus Jakarta Sans', bodyFont: 'DM Sans', buttonRadius: '9999px', cardRadius: '24px' },
+    { nav: 'centered-split', hero: 'calculator-split', services: 'horizontal-cards', howItWorks: 'cards-grid', supplies: 'cards-catalog', footer: 'multi-column', motion: 'playful-bounce', color: 'violet', font: 'Roboto', bodyFont: 'Inter', buttonRadius: '6px', cardRadius: '12px' }
   ];
 
   // Algorithmic expansion: generate all valid combinations for fleets > 6
   const navOptions = ['sticky-standard', 'transparent-overlay', 'centered-split', 'floating-pill-glass', 'dual-ribbon-bar', 'transparent-scroll-morph', 'brutalist-border-box', 'promo-ticker-nav', 'asymmetry-cta-dominant', 'minimal-dual-deck'];
   const heroOptions = ['calculator-split', 'centered-cta', 'compact-banner', 'interactive-step-quiz', 'slideout-executive-drawer', 'neomorphic-command-console', 'brutalist-tariff-ledger', 'glass-floating-widget'];
-  const bgOptions = [
-    'geometric-mesh', 'dark-gradient-overlay', 'clean-minimal', 'cyberpunk-grid-blueprint', 'floating-radial-blobs', 'luxury-editorial-ivory',
-    'logistics-radar-grid', 'floating-media-collage', 'architectural-arch-split', 'ambient-3d-glassmorphism', 'brutalist-diagonal-marquee', 'social-proof-orbit'
-  ];
   const svcOptions = ['icon-grid', 'horizontal-cards', 'accordion-panels'];
   const howOptions = ['cards-grid', 'accordion-protocol', 'timeline-horizontal'];
   const supOptions = ['cards-catalog', 'pricing-table', 'minimal-list'];
@@ -132,8 +133,7 @@ for (let i = 0; i < rawBatch.length; i++) {
 
   function getExpandedPermutation(index) {
     const nav = navOptions[index % navOptions.length];
-    const hero = heroOptions[(index * 3) % heroOptions.length];
-    const bg = bgOptions[(index + 2) % bgOptions.length];
+    const hero = heroOptions[(index * 2) % heroOptions.length];
     const svc = svcOptions[(index * 2 + 1) % svcOptions.length];
     const how = howOptions[index % howOptions.length];
     const sup = supOptions[(index + 1) % supOptions.length];
@@ -145,7 +145,7 @@ for (let i = 0; i < rawBatch.length; i++) {
     const seq = sectionOrderPermutations[index % sectionOrderPermutations.length];
     const font = fontOptions[index % fontOptions.length];
     const rad = radiusOptions[index % radiusOptions.length];
-    return { ui, sectionOrder: seq, nav, hero, heroBackground: bg, services: svc, howItWorks: how, supplies: sup, reviews: rev, footer, motion, color, font: font.heading, bodyFont: font.body, buttonRadius: rad.b, cardRadius: rad.c };
+    return { ui, sectionOrder: seq, nav, hero, services: svc, howItWorks: how, supplies: sup, reviews: rev, footer, motion, color, font: font.heading, bodyFont: font.body, buttonRadius: rad.b, cardRadius: rad.c };
   }
 
   const crypto = require('crypto');
@@ -178,7 +178,6 @@ for (let i = 0; i < rawBatch.length; i++) {
     uiProfile: existingVars.uiProfile || perm.ui,
     nav: existingVars.nav || perm.nav,
     hero: existingVars.hero || perm.hero,
-    heroBackground: existingVars.heroBackground || perm.heroBackground,
     services: existingVars.services || perm.services,
     howItWorks: existingVars.howItWorks || perm.howItWorks,
     supplies: existingVars.supplies || perm.supplies,

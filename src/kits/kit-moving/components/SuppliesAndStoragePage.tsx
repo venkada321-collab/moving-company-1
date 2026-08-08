@@ -5,6 +5,7 @@ import { GEO, PRICING } from '../../../config';
 import { THEME } from '../../../config/theme';
 import { LAYOUT } from '../../../config/layout';
 import { SuppliesTable } from './SuppliesTable';
+import { SuppliesMinimalList } from './SuppliesMinimalList';
 
 interface SuppliesAndStoragePageProps {
   onAddSupplyToEstimate: (supplyId: string) => void;
@@ -17,6 +18,10 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
 }) => {
   if (LAYOUT.variants.supplies === 'pricing-table') {
     return <SuppliesTable onSelectTab={() => onSelectStorageForEstimate('quote')} />;
+  }
+
+  if (LAYOUT.variants.supplies === 'minimal-list') {
+    return <SuppliesMinimalList onAddSupplyToEstimate={onAddSupplyToEstimate} onSelectStorageForEstimate={onSelectStorageForEstimate} />;
   }
 
   const [activeTab, setActiveTab] = useState<'supplies' | 'storage'>('supplies');

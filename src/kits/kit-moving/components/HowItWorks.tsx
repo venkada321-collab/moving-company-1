@@ -4,6 +4,7 @@ import { GEO, LEGAL } from '../../../config';
 import { THEME } from '../../../config/theme';
 import { LAYOUT } from '../../../config/layout';
 import { HowItWorksAccordion } from './HowItWorksAccordion';
+import { HowItWorksTimeline } from './HowItWorksTimeline';
 
 interface HowItWorksProps {
   onStartEstimate: () => void;
@@ -13,6 +14,10 @@ interface HowItWorksProps {
 export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartEstimate, onOpenCOIModal }) => {
   if (LAYOUT.variants.howItWorks === 'accordion-protocol') {
     return <HowItWorksAccordion onStartEstimate={onStartEstimate} onOpenCOIModal={onOpenCOIModal} />;
+  }
+
+  if (LAYOUT.variants.howItWorks === 'timeline-horizontal') {
+    return <HowItWorksTimeline onStartEstimate={onStartEstimate} onOpenCOIModal={onOpenCOIModal} />;
   }
 
   const steps = [

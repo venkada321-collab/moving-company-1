@@ -249,11 +249,15 @@ When the Master Template Engine architecture is already built and the task requi
    node scripts/batch_clone.cjs <path_to_batch.json>
    ```
    * *What happens:* Automatically creates isolated site builds under `./output/<brand-slug>/`, runs `populate_template.cjs` per brand, and executes Vite compiler testing across all builds with error isolation and resilience.
+
 2. **Automated Live Fleet Deployment (GitHub + Vercel):**
    ```powershell
    node scripts/batch_clone.cjs <path_to_batch.json> --deploy
    ```
    * *What happens:* After verification, initializes Git inside each isolated directory in `./output/<brand-slug>/`, provisions remote repositories, triggers Vercel Edge production deployments, and renders a unified tabular summary report of all production live URLs.
+
+3. **Structural Variant Verification (Pre-Deployment):**
+   Before executing the batch generator, the agent MUST explicitly inspect the `options` arrays defined inside `batch_clone.cjs` (e.g., `heroOptions`, `navOptions`, `howOptions`) and verify that every string explicitly maps to a reachable internal component route in `App.tsx` or the respective domain component (e.g. `HowItWorks.tsx`). Any variants lacking a corresponding component must be implemented and wired *before* triggering fleet generation to prevent silent fallbacks and the "illusion of variety."
 
 #### 🛡️ Deterministic Cryptographic Fingerprinting & Algorithmic Differentiation (Anti-Cloning Guarantee)
 To ensure that websites generated from the same template engine exhibit massive visual and structural divergence while maintaining deterministic build stability across deployments, the engine executes **Cryptographic SHA-256 Brand Fingerprinting** (`hashIdx`):
