@@ -158,7 +158,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                       {renderSupplyIcon(supply.id)}
                     </div>
 
-                    <h3 className="text-base font-bold text-black mb-1" style={{ fontFamily: 'var(--font-heading)' }}>
+                    <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-1" style={{ fontFamily: 'var(--font-heading)' }}>
                       {supply.name}
                     </h3>
 
@@ -211,7 +211,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
               <span className="text-xs font-black uppercase text-primary-700 tracking-widest bg-primary-200/50 px-3 py-1 rounded-full inline-flex items-center gap-1">
                 <Tag className="w-3 h-3" /> LIMITED {GEO.regionName} PROMOTION
               </span>
-              <h3 className="text-xl sm:text-2xl font-black text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+              <h3 className="text-xl sm:text-2xl font-black text-neutral-900 dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
                 {PRICING.storagePromoLabel}
               </h3>
               <p className="text-xs text-neutral-600 dark:text-zinc-300">
@@ -241,7 +241,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                         <span className="text-[10px] text-primary-700 font-bold bg-primary-100 px-2 py-0.5 rounded">{PRICING.storagePromoPercent}% Promo Active</span>
                       </div>
 
-                      <h3 className="text-xl font-extrabold text-black mb-1" style={{ fontFamily: 'var(--font-heading)' }}>
+                      <h3 className="text-xl font-extrabold text-neutral-900 dark:text-white mb-1" style={{ fontFamily: 'var(--font-heading)' }}>
                         {vault.name}
                       </h3>
                       <div className="text-xs text-neutral-900 dark:text-neutral-500 dark:text-zinc-400 font-medium mb-3">Ideal for: {vault.idealFor}</div>
@@ -263,7 +263,7 @@ export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({
                     <div>
                       <div className={`mb-4 text-center p-3 rounded-2xl border ${isFeatured ? 'bg-white dark:bg-zinc-900/60 border-primary-300' : 'bg-primary-50/50 border-neutral-200 dark:border-zinc-800'}`}>
                         <div className="text-[10px] text-neutral-900 dark:text-neutral-500 font-bold uppercase tracking-wider">First Month Special Price</div>
-                        <div className="text-3xl font-black text-black" style={{ fontFamily: 'var(--font-heading)' }}>
+                        <div className="text-3xl font-black text-neutral-900 dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
                           ${(vault.pricePerMonth * (PRICING.storagePromoPercent / 100)).toFixed(0)} <span className="text-xs text-neutral-900 dark:text-neutral-500 font-normal">/ month</span>
                         </div>
                         <div className="text-[11px] text-neutral-900 dark:text-neutral-500 dark:text-neutral-400 line-through">Regular ${vault.pricePerMonth}/mo</div>
