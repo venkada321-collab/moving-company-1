@@ -41,7 +41,7 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 py-20 lg:py-32 overflow-hidden">
+    <div id="hero-quote-calculator" className="relative bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 pt-32 lg:pt-40 pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* Left: Value Proposition */}

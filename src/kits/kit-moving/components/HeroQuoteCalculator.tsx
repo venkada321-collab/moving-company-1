@@ -147,7 +147,7 @@ export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuot
   };
 
   return (
-    <section id="hero-quote-calculator" className="relative pt-8 pb-16 overflow-hidden">
+    <section id="hero-quote-calculator" className="relative pt-32 lg:pt-40 pb-16 overflow-hidden">
       {/* Halo Lab signature dark subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-zinc-100/50 to-white pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary-500/10 rounded-full blur-[140px] pointer-events-none" />

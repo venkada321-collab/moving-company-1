@@ -34,7 +34,7 @@ export const HeroNeomorphicConsole: React.FC<HeroProps> = ({ onQuoteSubmitted })
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative min-h-[90vh] bg-[#e0e5ec] dark:bg-[#1a1e23] text-neutral-800 dark:text-neutral-200 flex items-center justify-center py-20 px-4 overflow-hidden">
+    <div id="hero-quote-calculator" className="relative min-h-[90vh] bg-[#e0e5ec] dark:bg-[#1a1e23] text-neutral-800 dark:text-neutral-200 flex items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary-500/10 dark:bg-primary-500/5 blur-[100px] rounded-full mix-blend-multiply dark:mix-blend-screen" />
         <div className="absolute top-[60%] -right-[10%] w-[40%] h-[40%] bg-blue-500/10 dark:bg-blue-500/5 blur-[100px] rounded-full mix-blend-multiply dark:mix-blend-screen" />

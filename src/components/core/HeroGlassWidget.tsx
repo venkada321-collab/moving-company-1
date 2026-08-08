@@ -35,7 +35,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative min-h-[90vh] flex items-center justify-center py-20 px-4 overflow-hidden bg-white dark:bg-zinc-950">
+    <div id="hero-quote-calculator" className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-4 overflow-hidden bg-white dark:bg-zinc-950">
       {/* Background Graphic & Atmosphere */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/40 via-zinc-950 to-zinc-900 mix-blend-screen" />

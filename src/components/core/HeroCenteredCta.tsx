@@ -36,7 +36,7 @@ export const HeroCenteredCta: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white overflow-hidden py-24 lg:py-32">
+    <div id="hero-quote-calculator" className="relative bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white overflow-hidden pt-32 lg:pt-40 pb-24">
       {/* Decorative ambient gradient backdrop */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900/40 via-neutral-950 to-neutral-950 pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary-500/20 blur-[120px] rounded-full pointer-events-none" />

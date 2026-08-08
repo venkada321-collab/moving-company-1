@@ -35,7 +35,7 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative min-h-[85vh] bg-white dark:bg-neutral-950 flex items-center overflow-hidden">
+    <div id="hero-quote-calculator" className="relative min-h-[85vh] pt-24 lg:pt-32 pb-12 bg-white dark:bg-neutral-950 flex items-center overflow-hidden">
       {/* Heavy dark luxury background */}
       <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-950">
         <div className="absolute right-0 top-0 w-1/2 h-full bg-primary-900/10 blur-[150px] mix-blend-screen pointer-events-none" />

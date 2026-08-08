@@ -34,7 +34,7 @@ export const HeroCompactBanner: React.FC<HeroProps> = ({ onQuoteSubmitted }) => 
   };
 
   return (
-    <div id="hero-quote-calculator" className="bg-white dark:bg-neutral-900 border-b border-neutral-800 text-neutral-900 dark:text-white py-16 sm:py-24">
+    <div id="hero-quote-calculator" className="bg-white dark:bg-neutral-900 border-b border-neutral-800 text-neutral-900 dark:text-white pt-32 lg:pt-40 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           

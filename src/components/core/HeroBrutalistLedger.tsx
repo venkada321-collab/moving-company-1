@@ -35,7 +35,7 @@ export const HeroBrutalistLedger: React.FC<HeroProps> = ({ onQuoteSubmitted }) =
   };
 
   return (
-    <div id="hero-quote-calculator" className="bg-white text-black border-b-8 border-black font-['var(--font-body)'] min-h-[80vh] flex flex-col justify-center py-16">
+    <div id="hero-quote-calculator" className="bg-white text-black border-b-8 border-black font-['var(--font-body)'] min-h-[80vh] flex flex-col justify-center pt-32 pb-16">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         
         {/* Brutalist Header Block */}
