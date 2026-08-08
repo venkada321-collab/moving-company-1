@@ -55,7 +55,7 @@ function toSlug(str) {
 }
 
 // Helper to copy directory recursively while filtering out artifacts and node_modules
-function copyDirectorySync(src, dest, excludeNames = ['.git', 'node_modules', 'dist', '.vercel', 'output', 'batch-output', '.system_generated', '.user_uploaded']) {
+function copyDirectorySync(src, dest, excludeNames = ['.git', 'node_modules', 'dist', '.wrangler', 'output', 'batch-output', '.system_generated', '.user_uploaded']) {
   fs.mkdirSync(dest, { recursive: true });
   const entries = fs.readdirSync(src, { withFileTypes: true });
 
@@ -363,7 +363,7 @@ for (let i = 0; i < rawBatch.length; i++) {
       // Cloudflare Pages Deployment
       try {
         console.log(`⚡ Deploying to Cloudflare Pages...`);
-        const cfProject = profile.cloudflareProject || profile.vercelProject || slug;
+        const cfProject = profile.cloudflareProject || slug;
         
         // Create project first if it doesn't exist
         try {

@@ -1,11 +1,11 @@
 ---
 name: white-label-deploy-pro-max
-description: Encapsulates end-to-end automated workflows for engineering standard website templates into dynamic modular engines, target website intelligence extraction, automated substitution, UI/UX Pro Max compliance enforcement, zero-error compile testing, GitHub provisioning, and Vercel edge deployment. Activate this skill whenever building a template engine from a static site, white-labeling, re-theming, or deploying brand variations.
+description: Encapsulates end-to-end automated workflows for engineering standard website templates into dynamic modular engines, target website intelligence extraction, automated substitution, UI/UX Pro Max compliance enforcement, zero-error compile testing, GitHub provisioning, and Cloudflare edge deployment. Activate this skill whenever building a template engine from a static site, white-labeling, re-theming, or deploying brand variations.
 ---
 
 # 🚀 White-Label Deploy Pro Max — Template Engine Engineering, Extraction & Deployment Protocol
 
-This authoritative operational protocol defines an end-to-end, deterministic AI framework for engineering static standard website templates into multi-tenant template engines, extracting target brand intelligence, and deploying production-grade bespoke web applications on Vercel and GitHub.
+This authoritative operational protocol defines an end-to-end, deterministic AI framework for engineering static standard website templates into multi-tenant template engines, extracting target brand intelligence, and deploying production-grade bespoke web applications on Cloudflare Pages and GitHub.
 
 ---
 
@@ -218,18 +218,18 @@ All customized builds **MUST** pass strict design quality controls:
 
 ---
 
-### Phase 5: Automated GitHub Provisioning & Vercel Live Edge Deployment
+### Phase 5: Automated GitHub Provisioning & Cloudflare Live Edge Deployment
 1. **Git Provisioning:**
    ```powershell
    git init; git add -A; git commit -m "feat: production build for <Brand Name>"; git branch -M main
    git remote add origin https://github.com/<GITHUB_USER_OR_ORG>/<new-repository-name>.git
    git push -u origin main --force
    ```
-2. **Live Vercel Edge Production Deployment:**
+2. **Live Cloudflare Edge Production Deployment:**
    ```powershell
-   npx --yes vercel@latest deploy --prod --yes --token <VERCEL_TOKEN>
+   npx --yes wrangler@latest pages deploy dist --project-name <new-project> --branch main
    ```
-3. Retrieve and output live production links (`https://<new-project>.vercel.app`).
+3. Retrieve and output live production links (`https://<new-project>.pages.dev`).
 
 ---
 
@@ -250,11 +250,11 @@ When the Master Template Engine architecture is already built and the task requi
    ```
    * *What happens:* Automatically creates isolated site builds under `./output/<brand-slug>/`, runs `populate_template.cjs` per brand, and executes Vite compiler testing across all builds with error isolation and resilience.
 
-2. **Automated Live Fleet Deployment (GitHub + Vercel):**
+2. **Automated Live Fleet Deployment (GitHub + Cloudflare):**
    ```powershell
    node scripts/batch_clone.cjs <path_to_batch.json> --deploy
    ```
-   * *What happens:* After verification, initializes Git inside each isolated directory in `./output/<brand-slug>/`, provisions remote repositories, triggers Vercel Edge production deployments, and renders a unified tabular summary report of all production live URLs.
+   * *What happens:* After verification, initializes Git inside each isolated directory in `./output/<brand-slug>/`, provisions remote repositories, triggers Cloudflare Edge production deployments, and renders a unified tabular summary report of all production live URLs.
 
 3. **Structural Variant Verification (Pre-Deployment):**
    Before executing the batch generator, the agent MUST explicitly inspect the `options` arrays defined inside `batch_clone.cjs` (e.g., `heroOptions`, `navOptions`, `howOptions`) and verify that every string explicitly maps to a reachable internal component route in `App.tsx` or the respective domain component (e.g. `HowItWorks.tsx`). Any variants lacking a corresponding component must be implemented and wired *before* triggering fleet generation to prevent silent fallbacks and the "illusion of variety."

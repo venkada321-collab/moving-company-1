@@ -33,7 +33,7 @@
       }
     },
     "githubRepo": "atlas-relocation-site",
-    "vercelProject": "atlas-relocation"
+    "cloudflareProject": "atlas-relocation"
   },
   {
     "name": "Titan Express Movers",
@@ -69,7 +69,7 @@
       }
     },
     "githubRepo": "titan-express-site",
-    "vercelProject": "titan-express"
+    "cloudflareProject": "titan-express"
   },
   {
     "name": "Elite Van Lines & Logistics",
@@ -105,6 +105,6 @@
       }
     },
     "githubRepo": "elite-van-lines-site",
-    "vercelProject": "elite-van-lines"
+    "cloudflareProject": "elite-van-lines"
   }
 ]

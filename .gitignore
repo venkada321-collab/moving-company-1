@@ -7,7 +7,7 @@ dist/
 mcp_config.json
 *.mcp*.json
 
-.vercel
+.wrangler
 output/
 batch-output/
 *.log
