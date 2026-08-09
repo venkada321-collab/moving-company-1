@@ -22,7 +22,7 @@ export const TrustStatsRibbon: React.FC = () => {
               Tested, Verified & Certified by {BRAND.shortName} Clients
             </h2>
           </div>
-          <div className="flex items-center justify-center md:justify-end gap-2 text-yellow-400 bg-neutral-800 px-4 py-2 rounded-[var(--radius-badge)] border border-neutral-700">
+          <div className="flex items-center justify-center md:justify-end gap-2 text-yellow-500 dark:text-yellow-400 bg-neutral-100 dark:bg-neutral-800 px-4 py-2 rounded-[var(--radius-badge)] border border-neutral-200 dark:border-neutral-700">
             <span className="text-lg font-bold">★★★★★</span>
             <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">Verified Client Feedback</span>
           </div>
@@ -31,9 +31,9 @@ export const TrustStatsRibbon: React.FC = () => {
         {/* Minimalist 4-Pillar Numerical Proof Matrix */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12">
           {stats.map((stat, i) => (
-            <div 
-              key={i} 
-              className="bg-neutral-800/80 border border-neutral-700 p-6 rounded-[var(--radius-card)] text-center transition-transform hover:-translate-y-1 duration-[var(--anim-speed)]"
+            <div
+              key={i}
+              className="bg-white dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700 p-6 rounded-[var(--radius-card)] text-center transition-transform hover:-translate-y-1 duration-[var(--anim-speed)]"
             >
               <div className="text-2xl sm:text-3xl font-black text-primary-400 mb-1 flex items-center justify-center gap-2">
                 <span>{stat.icon}</span>
@@ -47,15 +47,15 @@ export const TrustStatsRibbon: React.FC = () => {
         </div>
 
         {/* Featured Executive Quotation Banner */}
-        <div className="bg-gradient-to-r from-primary-900/40 via-neutral-800/60 to-primary-900/40 border border-primary-500/30 rounded-[var(--radius-card)] p-8 max-w-4xl mx-auto relative shadow-2xl">
+        <div className="bg-gradient-to-r from-neutral-50 via-white to-neutral-50 dark:from-primary-900/40 dark:via-neutral-800/60 dark:to-primary-900/40 border border-neutral-200 dark:border-primary-500/30 rounded-[var(--radius-card)] p-8 max-w-4xl mx-auto relative shadow-lg dark:shadow-2xl">
           <div className="absolute -top-4 left-8 bg-primary-500 text-black font-extrabold text-xs px-3 py-1 rounded-[var(--radius-badge)] uppercase tracking-wide">
             Featured Case Assessment
           </div>
-          <blockquote className="text-lg md:text-xl font-medium text-neutral-200 italic mb-6 leading-relaxed">
+          <blockquote className="text-lg md:text-xl font-medium text-neutral-800 dark:text-neutral-200 italic mb-6 leading-relaxed">
             "We required precision coordination and strict adherence to property management protocols during our commercial headquarters relocation. {BRAND.name} provided faultless logistical execution, flawless packaging systems, and complete adherence to our scheduled transport windows."
           </blockquote>
-          <div className="flex items-center gap-4 border-t border-neutral-700/80 pt-4">
-            <div className="w-12 h-12 rounded-full bg-primary-500/20 text-primary-300 font-bold flex items-center justify-center text-lg border border-primary-500/40">
+          <div className="flex items-center gap-4 border-t border-neutral-200 dark:border-neutral-700/80 pt-4">
+            <div className="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-500/20 text-primary-700 dark:text-primary-300 font-bold flex items-center justify-center text-lg border border-primary-200 dark:border-primary-500/40">
               DR
             </div>
             <div>

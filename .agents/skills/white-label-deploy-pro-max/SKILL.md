@@ -190,6 +190,7 @@ All customized builds **MUST** pass strict design quality controls:
 * **Touch Targets (WCAG 2.5.5):** All interactive elements minimum **44x44px** touch target area (`min-h-[44px] py-3.5 px-6`).
 * **Keyboard Focus Indicators:** Visible focus rings (`focus-visible:ring-2 focus-visible:ring-black`).
 * **Zero Generic Defaults:** High-impact visual hierarchy with zero unstyled placeholders.
+* **Light Mode Default Principle:** The master Dark Mode toggle is dynamically evaluated in `src/App.tsx` (Lines 147-151), injecting the `dark` class onto the root container based on the selected Theme Canvas. Because of this, **components MUST follow light mode styles by default** (e.g., `bg-white`, `text-neutral-900`), and must exclusively use the `dark:` prefix for dark mode styles (e.g., `dark:bg-neutral-800`). Hardcoding dark backgrounds without the `dark:` prefix fundamentally breaks the master toggle.
 
 ---
 
