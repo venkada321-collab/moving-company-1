@@ -1,0 +1,95 @@
+{
+  "name": "Metropolitan Movers",
+  "legalName": "Metropolitan Movers Inc.",
+  "shortName": "Metropolitan",
+  "slug": "metropolitanmovers-ca",
+  "domain": "metropolitanmovers.ca",
+  "websiteUrl": "https://www.metropolitanmovers.ca/",
+  "phone": "+1(888)587-5687",
+  "phoneRaw": "18885875687",
+  "email": "service@metropolitanmovers.ca",
+  "hqAddress": "",
+  "logoSymbol": "M",
+  "logoUrl": "https://metropolitanmovers.ca/wp-content/uploads/2024/02/Metropolitan-Movers-Canadas-Most-Trusted-Moving-Company-Local-Long-Distance-Movers.webp",
+  "faviconUrl": "https://metropolitanmovers.ca/wp-content/uploads/2024/02/Group-166.png",
+  "heroTagline": "CANADA'S MOST TRUSTED MOVING COMPANY - LOCAL & LONG DISTANCE MOVERS",
+  "heroSubtitle": "Canada's trusted moving company since 2010. 60,000+ successful local & long-distance moves. Licensed, insured movers. Get your free quote today!",
+  "rankingClaim": "Trusted by thousands — Metropolitan Movers",
+  "ctaText": "Get Your Free Estimate",
+  "pageTitle": "Metropolitan Movers | #1 Moving Company in Canada",
+  "metaDescription": "Canada's trusted moving company since 2010. 60,000+ successful local & long-distance moves. Licensed, insured movers. Get your free quote today!",
+  "theme": {
+    "primary": "slate",
+    "secondary": "amber",
+    "tertiary": "emerald",
+    "palette": {
+      "primary": "slate",
+      "secondary": "amber",
+      "tertiary": "emerald"
+    },
+    "designTokens": {
+      "colorPalette": "slate",
+      "colorTriad": {
+        "primary": "slate",
+        "secondary": "amber",
+        "tertiary": "emerald"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "Montserrat",
+        "body": "-apple-system"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/metropolitanmover/",
+    "instagram": "https://www.instagram.com/metropolitanmovers/",
+    "youtube": "https://www.youtube.com/@metropolitanmovers",
+    "linkedin": "https://www.linkedin.com/company/metropolitan-movers/"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Subdued Monolithic",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-08T20:59:20.198Z",
+    "sourceUrl": "https://www.metropolitanmovers.ca/",
+    "paletteScores": {
+      "emerald": 1,
+      "blue": 0,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 3,
+      "slate": 6
+    },
+    "colorSampleCount": 120,
+    "referenceScreenshot": "C:\\Users\\venka\\Projects\\WhiteLabelMovingFleet\\output\\references\\metropolitanmovers-existing-reference.png"
+  }
+}

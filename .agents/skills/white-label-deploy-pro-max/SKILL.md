@@ -248,6 +248,7 @@ When the Master Template Engine architecture is already built and the task requi
    ```powershell
    node scripts/batch_clone.cjs <path_to_batch.json>
    ```
+   *Note: This script will aggregate the fully-resolved `profile` configurations for the entire fleet and output them to `output/batch_variants_dump.json`. You can use this file for external verification or AI-driven copy enhancement workflows.*
    * *What happens:* Automatically creates isolated site builds under `./output/<brand-slug>/`, runs `populate_template.cjs` per brand, and executes Vite compiler testing across all builds with error isolation and resilience.
 
 2. **Automated Live Fleet Deployment (GitHub + Cloudflare):**

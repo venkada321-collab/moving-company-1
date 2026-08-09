@@ -1,5 +1,5 @@
 // ============================================================
-// MICROCOPY & TONE OF VOICE CONFIG — Moving Company Mississauga | Advance Moving
+// MICROCOPY & TONE OF VOICE CONFIG — Metropolitan Movers
 // ============================================================
 
 export const MICROCOPY = {

@@ -206,7 +206,7 @@ export default function App() {
               )}
             </div>
             <SectionDivider />
-            <div data-section="routes">
+            <div data-section="services">
               <ServiceNichesPage onSelectNicheForEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
             </div>
             <SectionDivider />
@@ -214,7 +214,7 @@ export default function App() {
               <HowItWorks onStartEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
             </div>
             <SectionDivider />
-            <div data-section="services">
+            <div data-section="routes">
               <GTARoutesPage onSelectRouteForEstimate={scrollToCalculator} />
             </div>
             <SectionDivider />

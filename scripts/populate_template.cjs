@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
@@ -142,6 +143,9 @@ if (profile.theme || profile.designTokens) {
   const acc = hybridResult.accentSpectrum;
   console.log(`🌈 Synthesized Hybrid HSL Spectrum for [${selectedColor.toUpperCase()}] -> Anchor: ${hybridResult.anchorHsl} | Secondary Accent: ${hybridResult.accentHsl} | Logo Override: ${hybridResult.logoTreatment}`);
 
+  const isDarkMode = parseInt(crypto.createHash('sha256').update(profile.slug || profile.name || 'default-slug').digest('hex').substring(14, 16), 16) % 2 === 0;
+  console.log(`🌗 Mode selected by hash: ${isDarkMode ? 'DARK MODE' : 'LIGHT MODE'}`);
+
   const themeConfigPath = path.join(__dirname, '..', 'src', 'config', 'theme.ts');
   const themeContent = `// ============================================================
 // THEME & DESIGN TOKENS CONFIG — ${profile.name || 'Custom Relocations'}
@@ -164,12 +168,12 @@ export const THEME = {
     }
   },
   backgrounds: {
-    page: ${s(t.bgPage, '#ffffff')},
-    section: ${s(t.bgSection, '#fffbeb')},
-    card: '#ffffff',
-    cardAlt: ${s(t.bgCardAlt, '#fef3c7')},
-    sectionAlt: ${s(t.bgSectionAlt, '#f8fafc')},
-    heroOverlay: ${s(t.bgHeroOverlay, '#fffcf5')},
+    page: ${s(t.bgPage, isDarkMode ? '#09090b' : '#ffffff')},
+    section: ${s(t.bgSection, isDarkMode ? '#18181b' : '#fffbeb')},
+    card: ${isDarkMode ? "'#18181b'" : "'#ffffff'"},
+    cardAlt: ${s(t.bgCardAlt, isDarkMode ? '#27272a' : '#fef3c7')},
+    sectionAlt: ${s(t.bgSectionAlt, isDarkMode ? '#09090b' : '#f8fafc')},
+    heroOverlay: ${s(t.bgHeroOverlay, isDarkMode ? '#000000' : '#fffcf5')},
     footerBottom: ${s(t.bgFooter, '#09090b')},
   },
   borderRadius: {

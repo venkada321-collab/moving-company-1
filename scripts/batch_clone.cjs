@@ -82,6 +82,7 @@ if (!fs.existsSync(outputRootDir)) {
 console.log(`🚀 Starting Batch Engine for ${rawBatch.length} target websites...`);
 
 const results = [];
+const allResolvedProfiles = [];
 const highPerceptionHistory = []; // Tracks sliding window of High-Perception features across variationWindow sites
 const masterRepoDir = path.resolve(__dirname, '..');
 const masterNodeModules = path.join(masterRepoDir, 'node_modules');
@@ -399,6 +400,7 @@ for (let i = 0; i < rawBatch.length; i++) {
   }
 
   results.push(itemResult);
+  allResolvedProfiles.push(profile);
 }
 
 // ============================================================
@@ -422,6 +424,11 @@ const successCount = results.length - failedCount;
 
 console.log(`\n🎉 Batch processing finished! Success: ${successCount} | Failed: ${failedCount}`);
 console.log(`📁 All independent generated websites are ready in: ./output/<brand-slug>/`);
+
+// Dump all resolved profiles to a single JSON file for verification/AI processing
+const dumpPath = path.join(outputRootDir, 'batch_variants_dump.json');
+fs.writeFileSync(dumpPath, JSON.stringify(allResolvedProfiles, null, 2), 'utf8');
+console.log(`📄 Saved full variant configuration dump to: ${dumpPath}`);
 if (failedCount > 0) {
   process.exit(1);
 }

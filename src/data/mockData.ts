@@ -106,7 +106,7 @@ export const SERVICE_NICHES: ServiceNiche[] = [
 export const SEO_ROUTES: SEORoute[] = [
   {
     id: 'woodbridge-to-toronto',
-    fromCity: 'Vaughan / Woodbridge (L4L)',
+    fromCity: 'Vaughan / Vaughan / Woodbridge (L4L)',
     fromState: 'ON',
     toCity: 'Metropolitan Toronto (M5V)',
     toState: 'ON',
@@ -233,7 +233,7 @@ export const SEO_ROUTES: SEORoute[] = [
     distance: 140,
     estHours: 4.5,
     avgCostRange: '$850 - $1,350',
-    description: 'Executive freight transfers linking Barrie to Kitchener-Waterloo corporate zones with precision scheduling.',
+    description: 'Executive freight transfers linking Northern Gateway to Tri-Cities Express-Waterloo corporate zones with precision scheduling.',
     highlights: [
       'Guaranteed transit times',
       'Pro-Certified Safety Academy certified drivers and loaders',

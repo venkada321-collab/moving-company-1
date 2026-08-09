@@ -1,5 +1,5 @@
 // ============================================================
-// LAYOUT & MODULAR COMPONENT ARCHITECTURE CONFIG — Moving Company Mississauga | Advance Moving
+// LAYOUT & MODULAR COMPONENT ARCHITECTURE CONFIG — Metropolitan Movers
 // ============================================================
 
 export type SectionId = 

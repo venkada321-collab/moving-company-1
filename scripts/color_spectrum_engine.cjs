@@ -222,6 +222,21 @@ function generateDynamicBrandPalette(brandSlug = 'default') {
   };
 }
 
+function generateNicheUniquePalette(brandSlug = 'default', niche = 'logistics-relocation', hashIdx = 0) {
+  const basePalette = generateDynamicBrandPalette(brandSlug + hashIdx);
+  return {
+    ...basePalette,
+    baseName: niche,
+    keyword: 'slate', // Fallback keyword
+    niche,
+    triad: {
+      primary: basePalette.synthesizedHex,
+      secondary: '#fbbf24',
+      tertiary: '#0ea5e9'
+    }
+  };
+}
+
 module.exports = {
   parseColorToRgb,
   rgbToHsl,
@@ -229,6 +244,7 @@ module.exports = {
   generateInfiniteSpectrum,
   synthesizeHybridAtmosphere,
   generateDynamicBrandPalette,
+  generateNicheUniquePalette,
 };
 
 // If run directly, demonstrate Niche-Restricted Bounded Uniqueness capability

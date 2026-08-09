@@ -1,0 +1,94 @@
+{
+  "name": "Moving Company Mississauga | Advance Moving",
+  "legalName": "Moving Company Mississauga | Advance Moving Inc.",
+  "shortName": "Moving",
+  "slug": "advancemoving-ca",
+  "domain": "advancemoving.ca",
+  "websiteUrl": "https://www.advancemoving.ca/",
+  "phone": "(437) 989-7726",
+  "phoneRaw": "4379897726",
+  "email": "info@advancemoving.ca",
+  "hqAddress": "25 City View Dr, Etobicoke, ON M9W 5A7",
+  "logoSymbol": "M",
+  "logoUrl": "/assets/brand/logo.png",
+  "faviconUrl": "/assets/brand/favicon.png",
+  "heroTagline": "MOVING COMPANY IN MISSISSAUGA FAST, RELIABLE, AND FULLY INSURED",
+  "heroSubtitle": "Advance Moving is a trusted moving company in Mississauga offering residential, commercial, packing, storage, and short-distance moving services. Book now!",
+  "rankingClaim": "Trusted by thousands — Moving Company Mississauga | Advance Moving",
+  "ctaText": "Get Your Free Estimate",
+  "pageTitle": "Moving Company Mississauga | Advance Moving",
+  "metaDescription": "Advance Moving is a trusted moving company in Mississauga offering residential, commercial, packing, storage, and short-distance moving services. Book now!",
+  "theme": {
+    "primary": "red",
+    "secondary": "blue",
+    "tertiary": "emerald",
+    "palette": {
+      "primary": "amber",
+      "secondary": "blue",
+      "tertiary": "emerald"
+    },
+    "designTokens": {
+      "colorPalette": "red",
+      "colorTriad": {
+        "primary": "amber",
+        "secondary": "blue",
+        "tertiary": "emerald"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "wfont_53d5fc_f1bf2c5ffad548059cb23e8aaee9bd1e",
+        "body": "Arial"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_quote_calculator": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "service_niches": true,
+      "gta_routes": true,
+      "supplies_and_storage": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "google": "https://www.google.com/maps/place/Advance+Moving-Etobicoke/@43.6940248,-79.5855748,17z/data=!4m15!1m8!3m7!1s0x882b398ad5d2015b:0x5f34d993609ea683!2s25+City+View+Dr,+Etobicoke,+ON+M9W+5A7!3b1!8m2!3d43.6940248!4d-79.5829945!16s%2Fg%2F11bw4l_crb!3m5!1s0x882b39e2f36bb4dd:0xfc608180b4d8c6d8!8m2!3d43.6940248!4d-79.5829945!16s%2Fg%2F11x0mvwf2b?entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D",
+    "facebook": "https://www.facebook.com/AMPRofessionalmovers/",
+    "instagram": "https://www.instagram.com/advancemoving/"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Vibrant HSL Triad",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-08T20:30:45.466Z",
+    "sourceUrl": "https://www.advancemoving.ca/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 15,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 198,
+      "slate": 0
+    },
+    "colorSampleCount": 292,
+    "referenceScreenshot": "C:\\Users\\venka\\Projects\\WhiteLabelMovingFleet\\output\\references\\advancemoving-existing-reference.png"
+  }
+}

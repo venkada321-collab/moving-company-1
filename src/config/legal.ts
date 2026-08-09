@@ -1,5 +1,5 @@
 // ============================================================
-// LEGAL CONFIG — Moving Company Mississauga | Advance Moving
+// LEGAL CONFIG — Metropolitan Movers
 // ============================================================
 
 export const LEGAL = {
@@ -8,12 +8,12 @@ export const LEGAL = {
   coiAmountShort: "$1M",
   coiDeliverySLA: "24 Hours",
   coiDeliverySLAShort: "24 Hrs",
-  coiPolicyNumber: "#MOV-POL-2026-ON",
-  coiCertificateNumber: "#COI-MOV-10042",
+  coiPolicyNumber: "#MET-POL-2026-ON",
+  coiCertificateNumber: "#COI-MET-10042",
   coiInsurer: "Aviva Canada & WSIB Bonded",
 
   // WSIB (Workplace Safety & Insurance Board)
-  wsibNumber: "#MOV-219485-ON",
+  wsibNumber: "#MET-219485-ON",
   wsibLabel: "WSIB Insured & Bonded",
   wsibCovered: "100% WSIB Covered",
 
