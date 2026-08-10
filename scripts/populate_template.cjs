@@ -17,6 +17,15 @@ const profile = JSON.parse(fs.readFileSync(profilePath, 'utf8'));
 // Helper to safely format string literals for TypeScript code generation
 const s = (val, defaultVal) => JSON.stringify(val !== undefined && val !== null ? val : defaultVal);
 
+const configJsonPath = path.join(__dirname, '..', 'src', 'config', 'variants.json');
+let configData = {};
+if (fs.existsSync(configJsonPath)) {
+  configData = JSON.parse(fs.readFileSync(configJsonPath, 'utf8'));
+}
+if (!configData.theme) configData.theme = {};
+if (!configData.layout) configData.layout = {};
+
+
 // Calculate batch index and assign a Structural Paradigm deterministically
 const batchIdxArg = process.argv.indexOf('--batch-index');
 const batchIdx = batchIdxArg !== -1 ? parseInt(process.argv[batchIdxArg + 1], 10) : ((profile.shortName || profile.name || 'A').charCodeAt(0) + (profile.name || '').length) % 6;
@@ -146,81 +155,17 @@ if (profile.theme || profile.designTokens) {
   const isDarkMode = parseInt(crypto.createHash('sha256').update(profile.slug || profile.name || 'default-slug').digest('hex').substring(14, 16), 16) % 2 === 0;
   console.log(`🌗 Mode selected by hash: ${isDarkMode ? 'DARK MODE' : 'LIGHT MODE'}`);
 
-  const themeConfigPath = path.join(__dirname, '..', 'src', 'config', 'theme.ts');
-  const themeContent = `// ============================================================
-// THEME & DESIGN TOKENS CONFIG — ${profile.name || 'Custom Relocations'}
-// UI/UX Pro Max Aesthetic: ${t.primary || 'amber'} (Major) + ${t.secondary || 'black'} (Minor)
-// ============================================================
-
-export type MotionProfile = "snappy-tech" | "luxury-smooth" | "playful-bounce";
-export type StructuralParadigm = 'SplitScreenSaaS' | 'LuxuryEditorial' | 'NeoBrutalist' | 'CinematicTrust';
-
-export const THEME = {
-  paradigm: '${paradigmName}' as StructuralParadigm,
-  colors: {
-    primary: ${s(t.primary, 'amber')},
-    secondary: ${s(t.secondary, 'black')},
-    semantic: {
-      success: ${s(tokens.semantic?.success, '#059669')},
-      warning: ${s(tokens.semantic?.warning, '#d97706')},
-      error: ${s(tokens.semantic?.error, '#e11d48')},
-      info: ${s(tokens.semantic?.info, '#0284c7')},
-    }
-  },
-  backgrounds: {
-    page: ${s(t.bgPage, isDarkMode ? '#09090b' : '#ffffff')},
-    section: ${s(t.bgSection, isDarkMode ? '#18181b' : '#fffbeb')},
-    card: ${isDarkMode ? "'#18181b'" : "'#ffffff'"},
-    cardAlt: ${s(t.bgCardAlt, isDarkMode ? '#27272a' : '#fef3c7')},
-    sectionAlt: ${s(t.bgSectionAlt, isDarkMode ? '#09090b' : '#f8fafc')},
-    heroOverlay: ${s(t.bgHeroOverlay, isDarkMode ? '#000000' : '#fffcf5')},
-    footerBottom: ${s(t.bgFooter, '#09090b')},
-  },
-  borderRadius: {
-    card: ${s(tokens.borderRadius?.card, '24px')},
-    button: ${s(tokens.borderRadius?.button, '16px')},
-    badge: ${s(tokens.borderRadius?.badge, '9999px')},
-    input: ${s(tokens.borderRadius?.input, '12px')},
-  },
-  shadows: {
-    card: ${s(tokens.shadows?.card, '0 20px 25px -5px rgba(245, 158, 11, 0.12), 0 8px 10px -6px rgba(245, 158, 11, 0.08)')},
-    hover: ${s(tokens.shadows?.hover, '0 25px 50px -12px rgba(0, 0, 0, 0.25)')},
-    button: ${s(tokens.shadows?.button, '0 10px 15px -3px rgba(0, 0, 0, 0.15)')},
-  },
-  animation: {
-    profile: ${s(tokens.animation?.profile, 'snappy-tech')} as MotionProfile,
-    speed: ${s(tokens.animation?.speed, '200ms')},
-    easing: ${s(tokens.animation?.easing, 'cubic-bezier(0.4, 0, 0.2, 1)')},
-    hoverScale: "scale(1.01)",
-  },
-  dividerStyle: {
-    type: ${s(tokens.dividerStyle?.type, 'soft-wave')},
-    color: ${s(tokens.dividerStyle?.color, t.bgSection || '#fffbeb')},
-  },
-  focus: {
-    ringColor: ${s(t.focusRing, '#d97706')},
-    selectionBg: ${s(t.selectionBg, '#fbbf24')},
-    selectionText: '#000000',
-  },
-    fonts: {
-      heading: ${s(headingFont, 'Montserrat')},
-      body: ${s(bodyFont, 'Inter')},
-      googleFontsUrl: ${s(finalGoogleFontsUrl, '')},
-    },
-    customArt: {
-      howItWorks: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
-      serviceNiches: "https://images.unsplash.com/photo-1542385151-efd9000785a0?auto=format&fit=crop&q=80",
-      storage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80",
-      referral: "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&q=80",
-    },
-    hybrid: {
-      atmosphericCanvas: ${JSON.stringify(hybridResult.atmosphericCanvas)},
-      logoTreatment: ${JSON.stringify(hybridResult.logoTreatment)} as "authentic-full-color" | "monochrome-luxury-white" | "monochrome-luxury-black",
-    }
-} as const;
-`;
-  fs.writeFileSync(themeConfigPath, themeContent, 'utf8');
-  console.log('✅ Updated src/config/theme.ts with global Design Tokens, Geometry, and Hybrid Atmosphere');
+  configData.theme.paradigm = paradigmName;
+  configData.theme.colors = configData.theme.colors || {};
+  configData.theme.colors.primary = t.primary || 'amber';
+  configData.theme.colors.secondary = t.secondary || 'black';
+  configData.theme.animation = configData.theme.animation || {};
+  configData.theme.animation.profile = tokens.animation?.profile || 'snappy-tech';
+  configData.theme.fonts = configData.theme.fonts || {};
+  configData.theme.fonts.heading = headingFont || 'Montserrat';
+  configData.theme.fonts.body = bodyFont || 'Inter';
+  
+  console.log('✅ Updated theme properties in memory for config.json');
 
   const tokenCssContent = `/* ============================================================
     DYNAMIC THEME TOKENS — INJECTED PALETTE: ${selectedColor.toUpperCase()} & TYPOGRAPHY: ${headingFont.toUpperCase()}
@@ -358,48 +303,22 @@ if (profile.layout) {
     'blog_page',
   ];
 
-  const layoutContent = `// ============================================================
-// LAYOUT & MODULAR COMPONENT ARCHITECTURE CONFIG — ${profile.name || 'Custom Relocations'}
-// ============================================================
+  configData.layout.sectionsEnabled = Object.assign({}, defaultEnabled, l.sectionsEnabled || {});
+  configData.layout.sectionOrder = l.sectionOrder || defaultOrder;
+  configData.layout.variants = {
+    uiProfile: l.variants?.uiProfile || 'modern-standard',
+    nav: l.variants?.nav || 'floating-pill-glass',
+    hero: l.variants?.hero || 'calculator-split',
+    heroBackground: l.variants?.heroBackground || 'geometric-mesh',
+    services: l.variants?.services || 'icon-grid',
+    howItWorks: l.variants?.howItWorks || 'cards-grid',
+    supplies: l.variants?.supplies || 'cards-catalog',
+    reviews: l.variants?.reviews || 'stats-ribbon-ticker',
+    footer: l.variants?.footer || 'saas-mega-directory',
+  };
 
-export type SectionId = 
-  | 'hero_quote_calculator'
-  | 'how_it_works'
-  | 'trust_signals'
-  | 'service_niches'
-  | 'gta_routes'
-  | 'supplies_and_storage'
-  | 'referral_program'
-  | 'blog_page';
-
-export type UIPersonality = "brutalist-high-contrast" | "soft-glassmorphic" | "luxury-minimalist" | "modern-standard" | string;
-export type NavVariant = "sticky-standard" | "transparent-overlay" | "centered-split" | "floating-pill-glass" | "dual-ribbon-bar" | "transparent-scroll-morph" | "brutalist-border-box" | "promo-ticker-nav" | "asymmetry-cta-dominant" | string;
-export type HeroVariant = "calculator-split" | "centered-cta" | "compact-banner" | "interactive-step-quiz" | "slideout-executive-drawer" | "neomorphic-command-console" | "brutalist-tariff-ledger" | "glass-floating-widget" | string;
-export type HeroBackground = "clean-minimal" | "geometric-mesh" | "dark-gradient-overlay" | "cyberpunk-grid-blueprint" | "floating-radial-blobs" | "luxury-editorial-ivory" | "logistics-radar-grid" | "floating-media-collage" | "architectural-arch-split" | "ambient-3d-glassmorphism" | "brutalist-diagonal-marquee" | "social-proof-orbit" | string;
-export type ServicesVariant = "icon-grid" | "horizontal-cards" | "accordion-panels" | string;
-export type HowItWorksVariant = "cards-grid" | "timeline-horizontal" | "accordion-protocol" | string;
-export type SuppliesVariant = "cards-catalog" | "pricing-table" | "minimal-list" | string;
-export type ReviewsVariant = "cards-grid" | "stats-ribbon" | "grid-carousel" | "stats-ribbon-ticker" | "brutalist-monospaced-audit" | "luxury-editorial-carousel" | "masonry-waterfall-deck" | "split-verification-portal" | string;
-export type FooterVariant = "multi-column" | "cta-banner" | "minimal-compact" | "gigantic-cta-banner" | "saas-mega-directory" | "brutalist-monospaced-ledger" | "minimal-dual-column" | string;
-
-export const LAYOUT = {
-  sectionsEnabled: ${JSON.stringify(Object.assign({}, defaultEnabled, l.sectionsEnabled || {}), null, 4)} as Record<SectionId, boolean>,
-  sectionOrder: ${JSON.stringify(l.sectionOrder || defaultOrder, null, 4)} as SectionId[],
-  variants: {
-    uiProfile: ${s(l.variants?.uiProfile, 'modern-standard')} as UIPersonality,
-    nav: ${s(l.variants?.nav, 'floating-pill-glass')} as NavVariant,
-    hero: ${s(l.variants?.hero, 'calculator-split')} as HeroVariant,
-    heroBackground: ${s(l.variants?.heroBackground, 'geometric-mesh')} as HeroBackground,
-    services: ${s(l.variants?.services, 'icon-grid')} as ServicesVariant,
-    howItWorks: ${s(l.variants?.howItWorks, 'cards-grid')} as HowItWorksVariant,
-    supplies: ${s(l.variants?.supplies, 'cards-catalog')} as SuppliesVariant,
-    reviews: ${s(l.variants?.reviews, 'stats-ribbon-ticker')} as ReviewsVariant,
-    footer: ${s(l.variants?.footer, 'saas-mega-directory')} as FooterVariant,
-  },
-} as const;
-`;
-  fs.writeFileSync(layoutConfigPath, layoutContent, 'utf8');
-  console.log('✅ Updated src/config/layout.ts with customizable component sequencing');
+  fs.writeFileSync(configJsonPath, JSON.stringify(configData, null, 2), 'utf8');
+  console.log('✅ Updated src/config.json with customizable component sequencing and theme variants');
 }
 
 // ============================================================
@@ -1213,7 +1132,33 @@ if (fs.existsSync(appTsxPath)) {
   let appContent = fs.readFileSync(appTsxPath, 'utf8');
   const palette = (profile.theme?.primary || profile.theme?.primaryColor || 'amber').toLowerCase();
 
-  if (mod3 === 1) {
+  const explicitDarkMode = profile.theme?.darkMode;
+  const shouldBeDark = explicitDarkMode === true || (explicitDarkMode === undefined && mod3 === 1);
+  const shouldBeWarm = explicitDarkMode === false ? false : (explicitDarkMode === undefined && mod3 === 2 && (palette === 'amber' || palette === 'slate'));
+  const shouldBeCrispDark = (explicitDarkMode === undefined && mod3 === 2 && !(palette === 'amber' || palette === 'slate'));
+
+  const themeTsPath = path.join(__dirname, '..', 'src', 'config', 'theme.ts');
+  if (fs.existsSync(themeTsPath)) {
+    let themeContent = fs.readFileSync(themeTsPath, 'utf8');
+    if (shouldBeWarm) {
+       themeContent = themeContent.replace(/page:\s*["']#[0-9a-fA-F]+["']/, 'page: "#FDFBF7"');
+       themeContent = themeContent.replace(/section:\s*["']#[0-9a-fA-F]+["']/, 'section: "#F3F0E6"');
+       themeContent = themeContent.replace(/card:\s*["']#[0-9a-fA-F]+["']/, 'card: "#FFFFFF"');
+       themeContent = themeContent.replace(/cardAlt:\s*["']#[0-9a-fA-F]+["']/, 'cardAlt: "#FDFBF7"');
+       themeContent = themeContent.replace(/sectionAlt:\s*["']#[0-9a-fA-F]+["']/, 'sectionAlt: "#FFFFFF"');
+       themeContent = themeContent.replace(/footerBottom:\s*["']#[0-9a-fA-F]+["']/, 'footerBottom: "#FDFBF7"');
+    } else if (!shouldBeDark && !shouldBeCrispDark) {
+       themeContent = themeContent.replace(/page:\s*["']#[0-9a-fA-F]+["']/, 'page: "#ffffff"');
+       themeContent = themeContent.replace(/section:\s*["']#[0-9a-fA-F]+["']/, 'section: "#f4f4f5"');
+       themeContent = themeContent.replace(/card:\s*["']#[0-9a-fA-F]+["']/, 'card: "#ffffff"');
+       themeContent = themeContent.replace(/cardAlt:\s*["']#[0-9a-fA-F]+["']/, 'cardAlt: "#f4f4f5"');
+       themeContent = themeContent.replace(/sectionAlt:\s*["']#[0-9a-fA-F]+["']/, 'sectionAlt: "#ffffff"');
+       themeContent = themeContent.replace(/footerBottom:\s*["']#[0-9a-fA-F]+["']/, 'footerBottom: "#ffffff"');
+    }
+    fs.writeFileSync(themeTsPath, themeContent, 'utf8');
+  }
+
+  if (shouldBeDark) {
     // 1. ATMOSPHERIC POLARIZATION: Midnight Executive Dark Mode
     appContent = appContent.replace(
       "min-h-screen bg-white text-neutral-900 font-['Montserrat',sans-serif]",
@@ -1223,7 +1168,29 @@ if (fs.existsSync(appTsxPath)) {
       'bg-gradient-to-b from-white via-primary-50/20 to-white',
       'bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-neutral-100'
     );
+  } else if (shouldBeWarm) {
+    // Warm Editorial Ivory Mode (Golden Toby)
+    appContent = appContent.replace(
+      "min-h-screen bg-white text-neutral-900 font-['Montserrat',sans-serif]",
+      "min-h-screen bg-[#FDFBF7] text-slate-900 selection:bg-amber-400 selection:text-neutral-900 font-['Plus_Jakarta_Sans',sans-serif]"
+    );
+    appContent = appContent.replace(
+      'bg-gradient-to-b from-white via-primary-50/20 to-white',
+      'bg-gradient-to-b from-[#FDFBF7] via-stone-100/60 to-[#FDFBF7] text-slate-900'
+    );
+  } else if (shouldBeCrispDark) {
+    // Crisp Dynamic Dark Mode (Get Movers - No Pink/Rose contamination)
+    appContent = appContent.replace(
+      "min-h-screen bg-white text-neutral-900 font-['Montserrat',sans-serif]",
+      "min-h-screen bg-neutral-950 text-white selection:bg-primary-500 selection:text-white font-['Roboto',sans-serif]"
+    );
+    appContent = appContent.replace(
+      'bg-gradient-to-b from-white via-primary-50/20 to-white',
+      'bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-white'
+    );
+  }
 
+  if (mod3 === 1) {
     // 2. DOM SECTION SCRAMBLING: Luxury Trust-First Funnel
     appContent = appContent.replace(
       "['hero_quote_calculator', 'service_niches', 'how_it_works', 'supplies_and_storage', 'trust_signals']",
@@ -1235,27 +1202,6 @@ if (fs.existsSync(appTsxPath)) {
       appContent = appContent.replace(/data-section="reviews-promoted"/g, 'data-section="services"');
     }
   } else if (mod3 === 2) {
-    if (palette === 'amber' || palette === 'slate') {
-      // Warm Editorial Ivory Mode (Golden Toby)
-      appContent = appContent.replace(
-        "min-h-screen bg-white text-neutral-900 font-['Montserrat',sans-serif]",
-        "min-h-screen bg-[#FDFBF7] text-slate-900 selection:bg-amber-400 selection:text-neutral-900 font-['Plus_Jakarta_Sans',sans-serif]"
-      );
-      appContent = appContent.replace(
-        'bg-gradient-to-b from-white via-primary-50/20 to-white',
-        'bg-gradient-to-b from-[#FDFBF7] via-stone-100/60 to-[#FDFBF7] text-slate-900'
-      );
-    } else {
-      // Crisp Dynamic Dark Mode (Get Movers - No Pink/Rose contamination)
-      appContent = appContent.replace(
-        "min-h-screen bg-white text-neutral-900 font-['Montserrat',sans-serif]",
-        "min-h-screen bg-neutral-950 text-white selection:bg-primary-500 selection:text-white font-['Roboto',sans-serif]"
-      );
-      appContent = appContent.replace(
-        'bg-gradient-to-b from-white via-primary-50/20 to-white',
-        'bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-white'
-      );
-    }
 
     // 2. DOM SECTION SCRAMBLING: Regional Coverage & Supplies First Funnel
     appContent = appContent.replace(

@@ -36,7 +36,40 @@
     "instagram": "https://www.instagram.com/corazamovers",
     "twitter": "https://x.com/CorazaMovers",
     "theme": {
-      "primary": "blue"
+      "primary": "blue",
+      "secondary": "amber",
+      "tokens": {
+        "fonts": {
+          "heading": "Outfit",
+          "body": "Inter"
+        },
+        "animation": {
+          "profile": "luxury-smooth"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "uiProfile": "luxury-minimalist",
+        "nav": "centered-split",
+        "hero": "interactive-step-quiz",
+        "heroBackground": "dark-gradient-overlay",
+        "services": "horizontal-cards",
+        "howItWorks": "timeline-horizontal",
+        "supplies": "pricing-table",
+        "reviews": "luxury-editorial-carousel",
+        "footer": "minimal-compact"
+      },
+      "sectionOrder": [
+        "hero_quote_calculator",
+        "service_niches",
+        "how_it_works",
+        "trust_signals",
+        "gta_routes",
+        "supplies_and_storage",
+        "referral_program",
+        "blog_page"
+      ]
     },
     "logoUrl": "https://corazamovers.ca/wp-content/uploads/2026/02/cropped-Coraza-Movers-Logo-e1772200772736.webp",
     "faviconUrl": "https://corazamovers.ca/wp-content/uploads/2026/02/cropped-Coraza-Movers-Logo-e1772200772736-1-32x32.webp"
@@ -54,7 +87,41 @@
     "reviews": 256,
     "facebook": "https://www.facebook.com/tetrismoving.ca",
     "theme": {
-      "primary": "slate"
+      "darkMode": false,
+      "primary": "slate",
+      "secondary": "amber",
+      "tokens": {
+        "fonts": {
+          "heading": "Outfit",
+          "body": "Inter"
+        },
+        "animation": {
+          "profile": "luxury-smooth"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "uiProfile": "luxury-minimalist",
+        "nav": "centered-split",
+        "hero": "interactive-step-quiz",
+        "heroBackground": "dark-gradient-overlay",
+        "services": "horizontal-cards",
+        "howItWorks": "timeline-horizontal",
+        "supplies": "pricing-table",
+        "reviews": "luxury-editorial-carousel",
+        "footer": "minimal-compact"
+      },
+      "sectionOrder": [
+        "hero_quote_calculator",
+        "service_niches",
+        "how_it_works",
+        "trust_signals",
+        "gta_routes",
+        "supplies_and_storage",
+        "referral_program",
+        "blog_page"
+      ]
     },
     "faviconUrl": "https://tetrismoving.ca/wp-content/uploads/2021/10/cropped-tetris-moving-copy-32x32.jpg"
   }
