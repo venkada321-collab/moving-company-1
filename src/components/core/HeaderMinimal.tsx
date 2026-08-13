@@ -22,11 +22,11 @@ export const HeaderMinimal: React.FC<HeaderProps> = ({ activeTab, setActiveTab, 
   }, []);
 
   const navLinks = [
-    { id: 'hero_quote_calculator', label: 'Rate Calculator', enabled: true },
-    { id: 'service_niches', label: 'Relocation Services', enabled: LAYOUT.sectionsEnabled.service_niches },
-    { id: 'gta_routes', label: `${GEO.regionName} Network`, enabled: LAYOUT.sectionsEnabled.gta_routes },
+    { id: 'hero_lead_capture', label: 'Rate Calculator', enabled: true },
+    { id: 'core_services', label: 'Core Services', enabled: LAYOUT.sectionsEnabled.core_services },
+    { id: 'service_areas', label: `${GEO.regionName} Network`, enabled: LAYOUT.sectionsEnabled.service_areas },
     { id: 'how_it_works', label: 'Our Protocol', enabled: LAYOUT.sectionsEnabled.how_it_works },
-    { id: 'supplies_and_storage', label: 'Vault Storage', enabled: LAYOUT.sectionsEnabled.supplies_and_storage },
+    { id: 'supplemental_services', label: 'Supplemental Services', enabled: LAYOUT.sectionsEnabled.supplemental_services },
     { id: 'referral_program', label: `Refer Rewards (${BRAND.referralGetAmount})`, enabled: LAYOUT.sectionsEnabled.referral_program }
   ].filter(item => item.enabled !== false);
 
@@ -55,7 +55,7 @@ export const HeaderMinimal: React.FC<HeaderProps> = ({ activeTab, setActiveTab, 
                   {BRAND.name}
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-600 dark:text-neutral-400 font-semibold">
-                  {GEO.regionName} Certified Relocation
+                  {GEO.regionName} Certified Service Provider
                 </span>
               </div>
             )}

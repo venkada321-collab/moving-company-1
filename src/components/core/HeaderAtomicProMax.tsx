@@ -31,7 +31,7 @@ const LogoCapsule: React.FC<{ compact?: boolean }> = ({ compact = false }) => {
   );
 };
 
-export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenCOIModal }) => {
+export const HeaderAtomicProMax: React.FC<HeaderProps & { navLinks?: any[] }> = ({ activeTab, setActiveTab, onOpenCOIModal, navLinks: overrideNavLinks }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const variant = LAYOUT.variants.nav || 'sticky-standard';
@@ -45,10 +45,10 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
   }, []);
 
   const navLinks = [
-    { id: 'hero_quote_calculator', label: 'Home' },
-    { id: 'service_niches', label: 'Services' },
+    { id: 'hero_lead_capture', label: 'Home' },
+    { id: 'core_services', label: 'Services' },
     { id: 'how_it_works', label: 'Our Process' },
-    { id: 'supplies_and_storage', label: 'Storage & Boxes' },
+    { id: 'supplemental_services', label: 'Storage & Boxes' },
     { id: 'trust_signals', label: 'Reviews' },
     { id: 'blog', label: 'Resources' },
   ];
@@ -65,7 +65,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
     return (
       <header className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 flex justify-center pointer-events-none">
         <div className="pointer-events-auto w-full max-w-6xl rounded-full bg-white/95 dark:bg-white dark:bg-neutral-950/95 text-neutral-900 dark:text-neutral-900 dark:text-white backdrop-blur-xl border border-neutral-200 dark:border-neutral-300 dark:border-neutral-700 shadow-2xl px-6 py-2.5 flex items-center justify-between transition-all duration-300 hover:border-primary-400/50">
-          <div onClick={() => handleNavClick('hero_quote_calculator')}>
+          <div onClick={() => handleNavClick('hero_lead_capture')}>
             <LogoCapsule compact />
           </div>
           <nav className="hidden md:flex items-center gap-1 bg-neutral-100/80 dark:bg-neutral-800/80 rounded-full px-4 py-1.5 border border-neutral-200 dark:border-neutral-300 dark:border-neutral-700">
@@ -114,7 +114,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
           </div>
         </div>
         <div className="max-w-7xl mx-auto w-full px-6 py-3 flex justify-between items-center">
-          <div onClick={() => handleNavClick('hero_quote_calculator')}>
+          <div onClick={() => handleNavClick('hero_lead_capture')}>
             <LogoCapsule />
           </div>
           <nav className="hidden lg:flex items-center gap-8 text-sm font-black tracking-tight text-neutral-600 dark:text-neutral-200">
@@ -140,7 +140,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
     return (
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 px-6 py-3 bg-white/90 dark:bg-neutral-950/90 text-neutral-900 dark:text-neutral-900 dark:text-white backdrop-blur-xl border-b border-neutral-200 dark:border-neutral-200 dark:border-neutral-800 shadow-2xl ${isScrolled ? 'py-2' : 'py-4'}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div onClick={() => handleNavClick('hero_quote_calculator')}>
+          <div onClick={() => handleNavClick('hero_lead_capture')}>
             <LogoCapsule />
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-extrabold text-neutral-700 dark:text-neutral-200">
@@ -166,7 +166,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
     return (
       <header className="sticky top-0 z-50 bg-white text-black dark:bg-black dark:text-neutral-900 dark:text-white border-b-4 border-black dark:border-white px-6 py-4 font-mono shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div onClick={() => handleNavClick('hero_quote_calculator')}>
+          <div onClick={() => handleNavClick('hero_lead_capture')}>
             <LogoCapsule />
           </div>
           <nav className="hidden lg:flex items-center gap-3 text-xs font-extrabold uppercase">
@@ -199,10 +199,10 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
       <header className="sticky top-0 z-50 bg-white dark:bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-900 dark:text-white shadow-2xl">
         <div className="bg-gradient-to-r from-primary-600 via-primary-500 to-primary-700 text-[color:var(--primary-contrast-text)] text-xs font-black py-1.5 px-4 text-center overflow-hidden uppercase tracking-widest flex items-center justify-center gap-2">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>VOTED #1 WHITE-GLOVE RELOCATION CARRIER • WSIB BONDED & INSURED • ZERO STAIR SURCHARGES</span>
+          <span>VOTED #1 WHITE-GLOVE SERVICE PROVIDER • WSIB BONDED & INSURED • ZERO STAIR SURCHARGES</span>
         </div>
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center border-b border-neutral-200 dark:border-neutral-200 dark:border-neutral-800">
-          <div onClick={() => handleNavClick('hero_quote_calculator')}>
+          <div onClick={() => handleNavClick('hero_lead_capture')}>
             <LogoCapsule />
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-extrabold text-neutral-600 dark:text-neutral-200">
@@ -228,7 +228,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
     return (
       <header className="sticky top-0 z-50 w-full flex bg-white dark:bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-900 dark:text-white shadow-2xl border-b border-neutral-200 dark:border-neutral-200 dark:border-neutral-800">
         <div className="w-full lg:w-3/5 px-6 py-3 flex items-center justify-between">
-          <div onClick={() => handleNavClick('hero_quote_calculator')}>
+          <div onClick={() => handleNavClick('hero_lead_capture')}>
             <LogoCapsule />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm font-bold text-neutral-700 dark:text-neutral-200">
@@ -256,7 +256,7 @@ export const HeaderAtomicProMax: React.FC<HeaderProps> = ({ activeTab, setActive
   return (
     <header className="sticky top-0 z-50 bg-white/95 dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-900 dark:text-white backdrop-blur-md border-b border-neutral-200 dark:border-neutral-200 dark:border-neutral-800 shadow-xl px-6 py-3.5">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div onClick={() => handleNavClick('hero_quote_calculator')}>
+        <div onClick={() => handleNavClick('hero_lead_capture')}>
           <LogoCapsule />
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm font-extrabold text-neutral-700 dark:text-neutral-200">

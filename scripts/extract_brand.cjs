@@ -511,12 +511,12 @@ async function extractBrand() {
       layout: {
         variants: {},
         sectionsEnabled: {
-          hero_quote_calculator: true,
+          hero_lead_capture: true,
           how_it_works: true,
           trust_signals: true,
-          service_niches: true,
-          gta_routes: true,
-          supplies_and_storage: true,
+          core_services: true,
+          service_areas: true,
+          supplemental_services: true,
           referral_program: true,
           blog_page: true,
         },

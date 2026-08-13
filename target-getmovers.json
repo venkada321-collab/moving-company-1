@@ -41,12 +41,12 @@
         "footer": "gigantic-cta-banner"
       },
       "sectionsEnabled": {
-        "hero_quote_calculator": true,
-        "service_niches": true,
+        "hero_lead_capture": true,
+        "core_services": true,
         "how_it_works": true,
-        "supplies_and_storage": true,
+        "supplemental_services": true,
         "trust_signals": true,
-        "gta_routes": true,
+        "service_areas": true,
         "referral_program": true
       }
     },

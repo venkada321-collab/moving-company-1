@@ -32,8 +32,8 @@
         "footer": "saas-mega-directory"
       },
       "sectionsEnabled": {
-        "hero_quote_calculator": true,
-        "service_niches": true,
+        "hero_lead_capture": true,
+        "core_services": true,
         "trust_signals": true,
         "how_it_works": true
       }

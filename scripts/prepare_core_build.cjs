@@ -35,10 +35,10 @@ headers.forEach(headerFile => {
   const oldNav = /const navItems = \[[^\]]+\];/m;
   const newNav = `const navItems = [
     { id: 'quote', label: 'Home & Estimate', icon: Tag, enabled: true },
-    { id: 'niches', label: 'Service Niches', icon: Truck, enabled: LAYOUT.sectionsEnabled.service_niches },
-    { id: 'routes', label: \`\${GEO.regionName} Routes\`, icon: MapPin, enabled: LAYOUT.sectionsEnabled.gta_routes },
+    { id: 'niches', label: 'Service Niches', icon: Truck, enabled: LAYOUT.sectionsEnabled.core_services },
+    { id: 'routes', label: \`\${GEO.regionName} Routes\`, icon: MapPin, enabled: LAYOUT.sectionsEnabled.service_areas },
     { id: 'how-it-works', label: 'How It Works', icon: ShieldCheck, enabled: LAYOUT.sectionsEnabled.how_it_works },
-    { id: 'supplies-storage', label: 'Supplies & Storage', icon: Box, enabled: LAYOUT.sectionsEnabled.supplies_and_storage },
+    { id: 'supplies-storage', label: 'Supplies & Storage', icon: Box, enabled: LAYOUT.sectionsEnabled.supplemental_services },
     { id: 'blog', label: \`\${GEO.regionName} Blog\`, icon: Award, enabled: LAYOUT.sectionsEnabled.blog_page },
     { id: 'referral', label: \`Referral ($\${BRAND.referralGetAmount})\`, icon: Gift, highlight: true, enabled: LAYOUT.sectionsEnabled.referral_program },
   ].filter(item => item.enabled !== false);`;

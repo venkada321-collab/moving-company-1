@@ -13,6 +13,7 @@ if (!profilePath || !fs.existsSync(profilePath)) {
 
 console.log(`📥 Loading target website asset profile from: ${profilePath}...`);
 const profile = JSON.parse(fs.readFileSync(profilePath, 'utf8'));
+const niche = profile.niche || 'moving';
 
 // Helper to safely format string literals for TypeScript code generation
 const s = (val, defaultVal) => JSON.stringify(val !== undefined && val !== null ? val : defaultVal);
@@ -68,6 +69,7 @@ export const BRAND = {
   logoUrl: ${s(profile.logoUrl || '', '')},
   faviconUrl: ${s(profile.faviconUrl || profile.logoUrl || '', '')},
   heroImage: "${assignedContextualImage}",
+  heroBgUrl: ${s(profile.heroBgUrl || '', '')},
 
   // Domain & URLs
   domain: ${s(profile.domain, 'customrelocations.com')},
@@ -282,23 +284,23 @@ if (profile.layout) {
   const layoutConfigPath = path.join(__dirname, '..', 'src', 'config', 'layout.ts');
   
   const defaultEnabled = {
-    hero_quote_calculator: true,
+    hero_lead_capture: true,
     how_it_works: true,
     trust_signals: true,
-    service_niches: true,
-    gta_routes: true,
-    supplies_and_storage: true,
+    core_services: true,
+    service_areas: true,
+    supplemental_services: true,
     referral_program: true,
     blog_page: true,
   };
 
   const defaultOrder = [
-    'hero_quote_calculator',
+    'hero_lead_capture',
     'how_it_works',
     'trust_signals',
-    'service_niches',
-    'gta_routes',
-    'supplies_and_storage',
+    'core_services',
+    'service_areas',
+    'supplemental_services',
     'referral_program',
     'blog_page',
   ];
@@ -332,6 +334,60 @@ if (profile.layout) {
 // ============================================================
 
 export const MICROCOPY = {
+  hero: {
+    proclamation: ${s(m.hero?.proclamation, 'Professional Certified Service')},
+    trustBadge: ${s(m.hero?.trustBadge, 'Vetted Professionals')},
+    insuranceBadge: ${s(m.hero?.insuranceBadge, 'Fully Insured')},
+    ratesBadge: ${s(m.hero?.ratesBadge, 'Transparent Rates')},
+    contactHeading: ${s(m.hero?.contactHeading, 'Need Immediate Service?')},
+    quizTitle: ${s(m.hero?.quizTitle, 'Take our 30-second quiz to get an instant estimate tailored to your needs.')},
+    step1Question: ${s(m.hero?.step1Question, 'Where do you need service?')},
+    step2Question: ${s(m.hero?.step2Question, 'What is the scope of the service?')}
+  },
+  formFields: {
+    scopeLabel: ${s(m.formFields?.scopeLabel, 'Select Service Scope')},
+    location1Label: ${s(m.formFields?.location1Label, 'Origin / Service Postal')},
+    location2Label: ${s(m.formFields?.location2Label, 'Destination (If applicable)')},
+    dateLabel: ${s(m.formFields?.dateLabel, 'Service Date')}
+  },
+  formOptions: ${m.formOptions ? JSON.stringify(m.formOptions) : `[
+    { value: 'studio', label: 'Studio / Small Area' },
+    { value: '1bed', label: '1 Bedroom Scope' },
+    { value: '2bed', label: '2 Bedroom Scope' },
+    { value: '3bed+', label: '3+ Bedroom Scope' },
+    { value: 'office', label: 'Commercial Office Scope' }
+  ]`},
+  trustFilters: ${m.trustFilters ? JSON.stringify(m.trustFilters) : `['All', 'Residential', 'Commercial', 'Premium', 'Express']`},
+  trustStats: ${m.trustStats ? JSON.stringify(m.trustStats) : `[
+    { label: "Successful Projects", value: "10,000+", icon: "✔" },
+    { label: "Verified Reviews", value: "4,500+", icon: "★" },
+    { label: "Active Professionals", value: "150+", icon: "user" }
+  ]`},
+  footer: {
+    cta: ${s(m.footer?.cta, "READY TO START? LET'S TALK.")},
+    description: ${s(m.footer?.description, "Setting the canonical standard for residential and commercial services.")},
+    newsletterText: ${s(m.footer?.newsletterText, "Enter your email to receive a $50 promotional credit.")},
+    bondedText: ${s(m.footer?.bondedText, "Fully WSIB insured with verified customer ratings.")}
+  },
+  images: ${m.images ? JSON.stringify(m.images) : (niche === 'cleaning' ? `{
+    hero: "Professional Cleaning Service",
+    coi: "Insurance Certificate",
+    addons: "Cleaning Add-ons",
+    map: "Service Areas Map",
+    process: "Cleaning Process Flow",
+    referral: "Referral Program",
+    blog: "Cleaning Article",
+    services: "Cleaning Services"
+  }` : `{
+    hero: "Professional Moving Service",
+    coi: "Insurance Certificate",
+    addons: "Secure Storage Unit",
+    map: "Service Areas Map",
+    process: "Moving Process Flow",
+    referral: "Referral Program",
+    blog: "Moving Article",
+    services: "Moving Services"
+  }`)},
   buttons: {
     getQuote: ${s(m.buttons?.getQuote, 'Calculate Your Instant Estimate')},
     submitQuote: ${s(m.buttons?.submitQuote, 'Lock In Your All-Inclusive Rate')},
@@ -1130,6 +1186,10 @@ console.log(`🧬 Active Atomic Matrix Blueprint for ${brandSlug} under ${paradi
 const appTsxPath = path.join(__dirname, '..', 'src', 'App.tsx');
 if (fs.existsSync(appTsxPath)) {
   let appContent = fs.readFileSync(appTsxPath, 'utf8');
+
+  // 1.5 REWRITE KIT REGISTRY IMPORT BASED ON NICHE
+  appContent = appContent.replace(/import \{ NicheComponents, NicheConfig \} from '\.\/kits\/kit-[a-z]+';/g, `import { NicheComponents, NicheConfig } from './kits/kit-${niche}';`);
+
   const palette = (profile.theme?.primary || profile.theme?.primaryColor || 'amber').toLowerCase();
 
   const explicitDarkMode = profile.theme?.darkMode;
@@ -1191,28 +1251,10 @@ if (fs.existsSync(appTsxPath)) {
   }
 
   if (mod3 === 1) {
-    // 2. DOM SECTION SCRAMBLING: Luxury Trust-First Funnel
-    appContent = appContent.replace(
-      "['hero_quote_calculator', 'service_niches', 'how_it_works', 'supplies_and_storage', 'trust_signals']",
-      "['hero_quote_calculator', 'trust_signals', 'service_niches', 'how_it_works', 'supplies_and_storage']"
-    );
-    if (appContent.indexOf('data-section="reviews"') !== -1 && appContent.indexOf('data-section="services"') !== -1) {
-      appContent = appContent.replace(/data-section="reviews"/g, 'data-section="reviews-promoted"');
-      appContent = appContent.replace(/data-section="services"/g, 'data-section="reviews"');
-      appContent = appContent.replace(/data-section="reviews-promoted"/g, 'data-section="services"');
-    }
+    // DOM Scrambling logic removed because sectionOrder is now config-driven
   } else if (mod3 === 2) {
 
-    // 2. DOM SECTION SCRAMBLING: Regional Coverage & Supplies First Funnel
-    appContent = appContent.replace(
-      "['hero_quote_calculator', 'service_niches', 'how_it_works', 'supplies_and_storage', 'trust_signals']",
-      "['hero_quote_calculator', 'supplies_and_storage', 'service_niches', 'trust_signals', 'how_it_works']"
-    );
-    if (appContent.indexOf('data-section="routes"') !== -1 && appContent.indexOf('data-section="services"') !== -1) {
-      appContent = appContent.replace(/data-section="routes"/g, 'data-section="routes-promoted"');
-      appContent = appContent.replace(/data-section="services"/g, 'data-section="routes"');
-      appContent = appContent.replace(/data-section="routes-promoted"/g, 'data-section="services"');
-    }
+    // DOM Scrambling logic removed because sectionOrder is now config-driven
   }
   fs.writeFileSync(appTsxPath, appContent, 'utf8');
   console.log('✅ Injected Atmospheric Polarization & DOM Section Scrambling in src/App.tsx');

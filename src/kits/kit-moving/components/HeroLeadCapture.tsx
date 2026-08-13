@@ -9,7 +9,7 @@ import { MICROCOPY } from '../../../config/microcopy';
 import { SERVICE_NICHES, PACKING_SUPPLIES, STORAGE_OPTIONS } from '../../../data/mockData';
 import { QuoteRequest } from '../../../types';
 
-interface HeroQuoteCalculatorProps {
+interface HeroLeadCaptureProps {
   onQuoteSubmitted: (quote: QuoteRequest, totalEstimate: { min: number; max: number }) => void;
   onOpenCOIModal: () => void;
 }
@@ -29,7 +29,7 @@ const MOVE_SIZES = [
   { id: 'office', label: 'Commercial Office Space', estHours: 6.0, movers: 4, icon: Briefcase },
 ];
 
-export const HeroQuoteCalculator: React.FC<HeroQuoteCalculatorProps> = ({ onQuoteSubmitted, onOpenCOIModal }) => {
+export const HeroLeadCapture: React.FC<HeroLeadCaptureProps> = ({ onQuoteSubmitted, onOpenCOIModal }) => {
   const [currentStep, setCurrentStep] = useState<number>(1);
 
   // Form State

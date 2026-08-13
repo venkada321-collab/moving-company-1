@@ -73,7 +73,7 @@ export const HeroCanvasProMax: React.FC<HeroCanvasProMaxProps> = ({ variant = 'l
             $2M COI Bonded
           </div>
           <div className="absolute bottom-3 left-3 bg-white dark:bg-black/80 backdrop-blur-md text-primary-400 text-xs font-bold px-3 py-1.5 rounded-xl border border-neutral-700">
-            {LEGAL.reviewCount}+ Moves Done
+            {LEGAL.reviewCount}+ Projects Done
           </div>
         </div>
       </div>
@@ -188,7 +188,7 @@ export const HeroCanvasProMax: React.FC<HeroCanvasProMaxProps> = ({ variant = 'l
             4.9★
           </div>
           <div>
-            <div className="text-[11px] text-neutral-300 italic font-medium">&ldquo;Flawless move, zero breakages!&rdquo;</div>
+            <div className="text-[11px] text-neutral-300 italic font-medium">&ldquo;Flawless service, highly recommended!&rdquo;</div>
             <div className="text-[10px] font-bold text-primary-400 mt-0.5">✔ Sarah M. • Toronto Condo</div>
           </div>
         </div>

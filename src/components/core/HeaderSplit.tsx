@@ -12,11 +12,11 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const allLinks = [
-    { id: 'hero_quote_calculator', label: 'Estimator', enabled: true },
-    { id: 'service_niches', label: 'Services', enabled: LAYOUT.sectionsEnabled.service_niches },
-    { id: 'gta_routes', label: 'Routes & Network', enabled: LAYOUT.sectionsEnabled.gta_routes },
+    { id: 'hero_lead_capture', label: 'Estimator', enabled: true },
+    { id: 'core_services', label: 'Services', enabled: LAYOUT.sectionsEnabled.core_services },
+    { id: 'service_areas', label: 'Routes & Network', enabled: LAYOUT.sectionsEnabled.service_areas },
     { id: 'how_it_works', label: 'Safety Protocol', enabled: LAYOUT.sectionsEnabled.how_it_works },
-    { id: 'supplies_and_storage', label: 'Vault Storage', enabled: LAYOUT.sectionsEnabled.supplies_and_storage },
+    { id: 'supplemental_services', label: 'Supplemental Services', enabled: LAYOUT.sectionsEnabled.supplemental_services },
     { id: 'referral_program', label: `Refer Rewards`, enabled: LAYOUT.sectionsEnabled.referral_program },
   ].filter(item => item.enabled !== false);
 
@@ -68,7 +68,7 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
 
         {/* Majestic Centered Brand Identity */}
         <button
-          onClick={() => setActiveTab('quote')}
+          onClick={() => setActiveTab('hero_lead_capture')}
           className="text-center group focus:outline-none flex flex-col items-center shrink-0 mx-2"
         >
           {BRAND.logoUrl ? (
@@ -79,7 +79,7 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
             </div>
           )}
           <div className="text-[9px] tracking-[0.25em] text-neutral-900 dark:text-neutral-500 font-extrabold uppercase mt-0.5">
-            {GEO.regionName} • Executive Relocations
+            {GEO.regionName} • Executive Services
           </div>
         </button>
 
@@ -100,8 +100,8 @@ export const HeaderSplit: React.FC<HeaderProps> = ({ activeTab, setActiveTab, on
           </nav>
           
           <button
-            onClick={() => setActiveTab('quote')}
-            className="px-5 py-2.5 bg-white dark:bg-neutral-950 hover:bg-neutral-800 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-wider rounded-md shadow transition-transform hover:scale-[1.02] shrink-0"
+            onClick={() => setActiveTab('hero_lead_capture')}
+            className="px-5 py-2.5 bg-primary-500 text-white hover:bg-primary-600 font-bold text-xs uppercase tracking-wider rounded-md shadow transition-transform hover:scale-[1.02] shrink-0"
           >
             Calculate Rate
           </button>

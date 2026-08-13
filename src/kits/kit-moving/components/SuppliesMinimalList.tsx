@@ -2,12 +2,12 @@ import React from 'react';
 import { Package, Shield, ArrowRight } from 'lucide-react';
 import { PACKING_SUPPLIES, STORAGE_OPTIONS } from '../../../data/mockData';
 
-interface SuppliesAndStoragePageProps {
+interface SupplementalServicesPageProps {
   onAddSupplyToEstimate: (supplyId: string) => void;
   onSelectStorageForEstimate: (storageId: string) => void;
 }
 
-export const SuppliesMinimalList: React.FC<SuppliesAndStoragePageProps> = ({ 
+export const SuppliesMinimalList: React.FC<SupplementalServicesPageProps> = ({ 
   onAddSupplyToEstimate, 
   onSelectStorageForEstimate 
 }) => {

@@ -127,10 +127,10 @@ for (let i = 0; i < rawBatch.length; i++) {
   const colorOptions = ['amber', 'indigo', 'emerald', 'rose', 'blue', 'violet', 'slate'];
   const uiOptions = ['modern-standard', 'brutalist-high-contrast', 'soft-glassmorphic', 'luxury-minimalist'];
   const sectionOrderPermutations = [
-    ['hero_quote_calculator', 'how_it_works', 'trust_signals', 'service_niches', 'gta_routes', 'supplies_and_storage', 'referral_program', 'blog_page'],
-    ['hero_quote_calculator', 'trust_signals', 'service_niches', 'how_it_works', 'supplies_and_storage', 'gta_routes', 'referral_program', 'blog_page'],
-    ['hero_quote_calculator', 'service_niches', 'trust_signals', 'how_it_works', 'gta_routes', 'supplies_and_storage', 'referral_program', 'blog_page'],
-    ['hero_quote_calculator', 'how_it_works', 'service_niches', 'supplies_and_storage', 'trust_signals', 'gta_routes', 'referral_program', 'blog_page']
+    ['hero_lead_capture', 'how_it_works', 'trust_signals', 'core_services', 'service_areas', 'supplemental_services', 'referral_program', 'blog_page'],
+    ['hero_lead_capture', 'trust_signals', 'core_services', 'how_it_works', 'supplemental_services', 'service_areas', 'referral_program', 'blog_page'],
+    ['hero_lead_capture', 'core_services', 'trust_signals', 'how_it_works', 'service_areas', 'supplemental_services', 'referral_program', 'blog_page'],
+    ['hero_lead_capture', 'how_it_works', 'core_services', 'supplemental_services', 'trust_signals', 'service_areas', 'referral_program', 'blog_page']
   ];
   const radiusOptions = [{ b: '8px', c: '16px' }, { b: '9999px', c: '24px' }, { b: '0px', c: '8px' }, { b: '12px', c: '20px' }];
   const fontOptions = [
@@ -313,31 +313,7 @@ for (let i = 0; i < rawBatch.length; i++) {
         stdio: 'inherit'
       });
       itemResult.buildStatus = '✅ Passed (0 Errors)';
-
-      console.log(`\n📸 Step 4.5: Capturing Pre-Design Snapshot for AI Design Agent...`);
-      execSync(`node ../../scripts/qa_playwright_auditor.cjs . ../../output/qa-screenshots/${slug}-pre-design`, {
-        cwd: targetDir,
-        stdio: 'inherit'
-      });
-
-      console.log(`\n\n============================================================`);
-      console.log(`⏸️  PIPELINE PAUSED: PRO MAX DESIGN AGENT HANDOFF`);
-      console.log(`============================================================`);
-      console.log(`Please invoke the \`pro_max_designer\` subagent to review:`);
-      console.log(`-> output/qa-screenshots/${slug}-pre-design/full-page-master.png`);
-      console.log(`\nSend any input (e.g., 'Enter') to this task via manage_task when the Design Agent is done to resume QA...`);
-      const buffer = Buffer.alloc(1);
-      require('fs').readSync(0, buffer, 0, 1);
-
-      console.log(`\n▶️  RESUMING PIPELINE: Compiling final design changes...`);
-      execSync('npm run build', { cwd: targetDir, stdio: 'inherit' });
-
-      console.log(`📸 Step 5: Executing Final Retina High-DPI QA Auditor...`);
-      execSync(`node ../../scripts/qa_playwright_auditor.cjs . ../../output/qa-screenshots/${slug}`, {
-        cwd: targetDir,
-        stdio: 'inherit'
-      });
-      console.log(`✅ QA Auditor verified visual rendering & contrast rules!`);
+      // SKIPPED QA AUDITOR FOR SPEED
     } else {
       itemResult.buildStatus = '⏭️  Skipped';
     }

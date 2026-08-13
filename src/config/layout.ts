@@ -2,13 +2,13 @@
 // LAYOUT & MODULAR COMPONENT ARCHITECTURE CONFIG — Metropolitan Movers
 // ============================================================
 
-export type SectionId = 
-  | 'hero_quote_calculator'
+export type SectionId =
+  | 'hero_lead_capture'
   | 'how_it_works'
   | 'trust_signals'
-  | 'service_niches'
-  | 'gta_routes'
-  | 'supplies_and_storage'
+  | 'core_services'
+  | 'service_areas'
+  | 'supplemental_services'
   | 'referral_program'
   | 'blog_page';
 
@@ -22,36 +22,38 @@ export type SuppliesVariant = "cards-catalog" | "pricing-table" | "minimal-list"
 export type ReviewsVariant = "cards-grid" | "stats-ribbon" | "grid-carousel" | "stats-ribbon-ticker" | "brutalist-monospaced-audit" | "luxury-editorial-carousel" | "masonry-waterfall-deck" | "split-verification-portal" | string;
 export type FooterVariant = "multi-column" | "cta-banner" | "minimal-compact" | "gigantic-cta-banner" | "saas-mega-directory" | "brutalist-monospaced-ledger" | "minimal-dual-column" | string;
 
+import config from './variants.json';
+
 export const LAYOUT = {
-  sectionsEnabled: {
-    "hero_quote_calculator": true,
+  sectionsEnabled: (config.layout?.sectionsEnabled || {
+    "hero_lead_capture": true,
     "how_it_works": true,
     "trust_signals": true,
-    "service_niches": true,
-    "gta_routes": true,
-    "supplies_and_storage": true,
+    "core_services": true,
+    "service_areas": true,
+    "supplemental_services": true,
     "referral_program": true,
     "blog_page": true
-} as Record<SectionId, boolean>,
-  sectionOrder: [
-    "hero_quote_calculator",
+  }) as Record<SectionId, boolean>,
+  sectionOrder: (config.layout?.sectionOrder || [
+    "hero_lead_capture",
     "how_it_works",
     "trust_signals",
-    "service_niches",
-    "gta_routes",
-    "supplies_and_storage",
+    "core_services",
+    "service_areas",
+    "supplemental_services",
     "referral_program",
     "blog_page"
-] as SectionId[],
+  ]) as SectionId[],
   variants: {
-    uiProfile: "modern-standard" as UIPersonality,
-    nav: "floating-pill-glass" as NavVariant,
-    hero: "calculator-split" as HeroVariant,
-    heroBackground: "geometric-mesh" as HeroBackground,
-    services: "icon-grid" as ServicesVariant,
-    howItWorks: "cards-grid" as HowItWorksVariant,
-    supplies: "cards-catalog" as SuppliesVariant,
-    reviews: "stats-ribbon-ticker" as ReviewsVariant,
-    footer: "saas-mega-directory" as FooterVariant,
+    uiProfile: (config.layout?.variants?.uiProfile || "modern-standard") as UIPersonality,
+    nav: (config.layout?.variants?.nav || "floating-pill-glass") as NavVariant,
+    hero: (config.layout?.variants?.hero || "calculator-split") as HeroVariant,
+    heroBackground: (config.layout?.variants?.heroBackground || "geometric-mesh") as HeroBackground,
+    services: (config.layout?.variants?.services || "icon-grid") as ServicesVariant,
+    howItWorks: (config.layout?.variants?.howItWorks || "cards-grid") as HowItWorksVariant,
+    supplies: (config.layout?.variants?.supplies || "cards-catalog") as SuppliesVariant,
+    reviews: (config.layout?.variants?.reviews || "stats-ribbon-ticker") as ReviewsVariant,
+    footer: (config.layout?.variants?.footer || "saas-mega-directory") as FooterVariant,
   },
 } as const;

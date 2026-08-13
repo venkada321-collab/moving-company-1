@@ -1,0 +1,49 @@
+{
+  "layout": {
+    "sectionsEnabled": {
+      "hero_lead_capture": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "core_services": true,
+      "service_areas": true,
+      "supplemental_services": true,
+      "referral_program": true,
+      "blog_page": true
+    },
+    "sectionOrder": [
+      "hero_lead_capture",
+      "how_it_works",
+      "trust_signals",
+      "core_services",
+      "service_areas",
+      "supplemental_services",
+      "referral_program",
+      "blog_page"
+    ],
+    "variants": {
+      "uiProfile": "modern-standard",
+      "nav": "floating-pill-glass",
+      "hero": "calculator-split",
+      "heroBackground": "geometric-mesh",
+      "services": "icon-grid",
+      "howItWorks": "cards-grid",
+      "supplies": "cards-catalog",
+      "reviews": "stats-ribbon-ticker",
+      "footer": "saas-mega-directory"
+    }
+  },
+  "theme": {
+    "paradigm": "SplitScreenSaaS",
+    "colors": {
+      "primary": "slate",
+      "secondary": "amber"
+    },
+    "animation": {
+      "profile": "snappy-tech"
+    },
+    "fonts": {
+      "heading": "Montserrat",
+      "body": "Inter"
+    }
+  }
+}

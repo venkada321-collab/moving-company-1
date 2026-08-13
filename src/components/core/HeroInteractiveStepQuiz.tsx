@@ -41,11 +41,26 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
   };
 
   return (
-    <div id="hero-quote-calculator" className="relative bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 pt-32 lg:pt-40 pb-20 overflow-hidden">
+    <div id="hero-quote-calculator" className="relative min-h-[90vh] bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 pt-32 lg:pt-40 pb-20 overflow-hidden">
+      {/* Background Layer: Image or Mesh Gradient */}
+      {BRAND.heroBgUrl ? (
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${BRAND.heroBgUrl})` }}
+        >
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+      ) : (
+        <div className="absolute inset-0 w-full h-full opacity-60 dark:opacity-20 pointer-events-none">
+          <div className="absolute top-0 -left-1/4 w-full h-full bg-gradient-to-br from-primary-200/50 via-transparent to-transparent rounded-full blur-[120px] mix-blend-multiply" />
+          <div className="absolute bottom-0 -right-1/4 w-full h-full bg-gradient-to-tl from-emerald-200/50 via-transparent to-transparent rounded-full blur-[120px] mix-blend-multiply" />
+        </div>
+      )}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* Left: Value Proposition */}
-        <div className="text-left space-y-6">
+        <div className={`text-left space-y-6 ${BRAND.heroBgUrl ? 'text-white' : ''}`}>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-semibold mb-4">
             <CheckCircle2 className="w-4 h-4" />
             <span>{BRAND.rankingClaim}</span>
@@ -53,11 +68,11 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
           <h1 className="text-5xl lg:text-7xl font-bold tracking-tight font-['var(--font-heading)'] leading-tight">
             {BRAND.heroTagline || BRAND.name}
           </h1>
-          <p className="text-xl text-zinc-600 dark:text-zinc-400 font-['var(--font-body)'] max-w-lg">
-            {BRAND.heroSubtitle || "Take our 30-second quiz to get an instant, guaranteed flat-rate estimate tailored to your move."}
+          <p className={`text-xl font-['var(--font-body)'] max-w-lg ${BRAND.heroBgUrl ? 'text-white/90' : 'text-zinc-600 dark:text-zinc-400'}`}>
+            {BRAND.heroSubtitle || MICROCOPY.hero?.quizTitle || "Take our 30-second quiz to get an instant, guaranteed flat-rate estimate tailored to your needs."}
           </p>
-          <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800">
-            <p className="text-sm text-neutral-900 dark:text-zinc-500 flex items-center gap-2">
+          <div className={`pt-6 border-t ${BRAND.heroBgUrl ? 'border-white/20' : 'border-zinc-200 dark:border-zinc-800'}`}>
+            <p className={`text-sm flex items-center gap-2 ${BRAND.heroBgUrl ? 'text-white/80' : 'text-neutral-900 dark:text-zinc-500'}`}>
               <Shield className="w-4 h-4 text-emerald-500" />
               Fully licensed, bonded, and insured.
             </p>
@@ -76,8 +91,8 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
 
           <div className="mb-8 mt-2">
             <h3 className="text-2xl font-bold font-['var(--font-heading)']">
-              {step === 1 && "Where are we moving?"}
-              {step === 2 && "How large is the move?"}
+              {step === 1 && (MICROCOPY.hero?.step1Question || "Where do you need service?")}
+              {step === 2 && "How large is the project?"}
               {step === 3 && "Final details"}
             </h3>
             <p className="text-neutral-900 dark:text-zinc-500 text-sm mt-1">Step {step} of 3</p>
@@ -87,7 +102,7 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
             {step === 1 && (
               <div className="space-y-4 animate-in fade-in slide-in-from-right-4 duration-500">
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Moving From</label>
+                  <label className="block text-sm font-semibold mb-2">{MICROCOPY.formFields?.location1Label || 'Origin / Service Address'}</label>
                   <div className="relative">
                     <MapPin className="absolute left-3 top-3 w-5 h-5 text-zinc-400" />
                     <input 
@@ -98,18 +113,20 @@ export const HeroInteractiveStepQuiz: React.FC<HeroProps> = ({ onQuoteSubmitted 
                     />
                   </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Moving To</label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-3 w-5 h-5 text-zinc-400" />
-                    <input 
-                      type="text" 
-                      value={toLocation}
-                      onChange={(e) => setToLocation(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-[var(--radius-button)] focus:outline-none focus:ring-2 focus:ring-primary-500"
-                    />
+                {MICROCOPY.formFields?.location2Label && (
+                  <div>
+                    <label className="block text-sm font-semibold mb-2">{MICROCOPY.formFields.location2Label}</label>
+                    <div className="relative">
+                      <MapPin className="absolute left-3 top-3 w-5 h-5 text-zinc-400" />
+                      <input 
+                        type="text" 
+                        value={toLocation}
+                        onChange={(e) => setToLocation(e.target.value)}
+                        className="w-full pl-10 pr-4 py-3 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-[var(--radius-button)] focus:outline-none focus:ring-2 focus:ring-primary-500"
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             )}
 

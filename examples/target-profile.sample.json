@@ -48,24 +48,24 @@
   },
   "layout": {
     "sectionsEnabled": {
-      "hero_quote_calculator": true,
+      "hero_lead_capture": true,
       "how_it_works": true,
       "trust_signals": true,
-      "service_niches": true,
-      "gta_routes": false,
-      "supplies_and_storage": true,
+      "core_services": true,
+      "service_areas": false,
+      "supplemental_services": true,
       "referral_program": true,
       "blog_page": true
     },
     "sectionOrder": [
-      "hero_quote_calculator",
+      "hero_lead_capture",
       "trust_signals",
       "how_it_works",
-      "service_niches",
-      "supplies_and_storage",
+      "core_services",
+      "supplemental_services",
       "referral_program",
       "blog_page",
-      "gta_routes"
+      "service_areas"
     ],
     "variants": {
       "hero": "centered-cta"

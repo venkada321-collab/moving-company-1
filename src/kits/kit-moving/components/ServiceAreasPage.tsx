@@ -3,11 +3,11 @@ import { MapPin, Navigation, Clock, DollarSign, ArrowRight, Star, ShieldCheck, C
 import { SEO_ROUTES } from '../../../data/mockData';
 import { GEO } from '../../../config';
 
-interface GTARoutesPageProps {
+interface ServiceAreasPageProps {
   onSelectRouteForEstimate: (from: string, to: string) => void;
 }
 
-export const GTARoutesPage: React.FC<GTARoutesPageProps> = ({ onSelectRouteForEstimate }) => {
+export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({ onSelectRouteForEstimate }) => {
   const [selectedRouteId, setSelectedRouteId] = useState<string>(SEO_ROUTES[0].id);
 
   const activeRoute = SEO_ROUTES.find(r => r.id === selectedRouteId) || SEO_ROUTES[0];

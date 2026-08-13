@@ -5,12 +5,12 @@ import { GEO, LEGAL, BRAND } from '../../../config';
 import { THEME } from '../../../config/theme';
 import { LAYOUT } from '../../../config/layout';
 
-interface ServiceNichesPageProps {
+interface CoreServicesPageProps {
   onSelectNicheForEstimate: (nicheId: string) => void;
   onOpenCOIModal: () => void;
 }
 
-export const ServiceNichesPage: React.FC<ServiceNichesPageProps> = ({ onSelectNicheForEstimate, onOpenCOIModal }) => {
+export const CoreServicesPage: React.FC<CoreServicesPageProps> = ({ onSelectNicheForEstimate, onOpenCOIModal }) => {
   const [activeNicheId, setActiveNicheId] = useState<string>('condo-moves');
   const [openAccordionId, setOpenAccordionId] = useState<string>('condo-moves');
   

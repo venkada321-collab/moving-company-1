@@ -12,11 +12,11 @@ export const HeaderStandard: React.FC<HeaderProps> = ({ activeTab, setActiveTab,
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'hero_quote_calculator', label: 'Home & Estimate', icon: Tag, enabled: true },
-    { id: 'service_niches', label: 'Service Niches', icon: Truck, enabled: LAYOUT.sectionsEnabled.service_niches },
-    { id: 'gta_routes', label: `${GEO.regionName} Routes`, icon: MapPin, enabled: LAYOUT.sectionsEnabled.gta_routes },
+    { id: 'hero_lead_capture', label: 'Home & Estimate', icon: Tag, enabled: true },
+    { id: 'core_services', label: 'Service Niches', icon: Truck, enabled: LAYOUT.sectionsEnabled.core_services },
+    { id: 'service_areas', label: `${GEO.regionName} Routes`, icon: MapPin, enabled: LAYOUT.sectionsEnabled.service_areas },
     { id: 'how_it_works', label: 'How It Works', icon: ShieldCheck, enabled: LAYOUT.sectionsEnabled.how_it_works },
-    { id: 'supplies_and_storage', label: 'Supplies & Storage', icon: Box, enabled: LAYOUT.sectionsEnabled.supplies_and_storage },
+    { id: 'supplemental_services', label: 'Supplemental Services', icon: Box, enabled: LAYOUT.sectionsEnabled.supplemental_services },
     { id: 'blog', label: `${GEO.regionName} Blog`, icon: Award, enabled: LAYOUT.sectionsEnabled.blog_page },
     { id: 'referral_program', label: `Referral (${BRAND.referralGetAmount})`, icon: Gift, highlight: true, enabled: LAYOUT.sectionsEnabled.referral_program },
   ].filter(item => item.enabled !== false);

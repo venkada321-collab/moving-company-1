@@ -48,12 +48,12 @@
         "footer": "multi-column"
       },
       "sectionsEnabled": {
-        "hero_quote_calculator": true,
+        "hero_lead_capture": true,
         "how_it_works": false,
         "trust_signals": true,
-        "service_niches": false,
-        "gta_routes": false,
-        "supplies_and_storage": false,
+        "core_services": false,
+        "service_areas": false,
+        "supplemental_services": false,
         "referral_program": false,
         "blog_page": false
       }
@@ -113,12 +113,12 @@
         "footer": "cta-banner"
       },
       "sectionsEnabled": {
-        "hero_quote_calculator": true,
+        "hero_lead_capture": true,
         "how_it_works": false,
         "trust_signals": true,
-        "service_niches": false,
-        "gta_routes": false,
-        "supplies_and_storage": false,
+        "core_services": false,
+        "service_areas": false,
+        "supplemental_services": false,
         "referral_program": false,
         "blog_page": false
       }
@@ -178,12 +178,12 @@
         "footer": "minimal-compact"
       },
       "sectionsEnabled": {
-        "hero_quote_calculator": true,
+        "hero_lead_capture": true,
         "how_it_works": false,
         "trust_signals": true,
-        "service_niches": false,
-        "gta_routes": false,
-        "supplies_and_storage": false,
+        "core_services": false,
+        "service_areas": false,
+        "supplemental_services": false,
         "referral_program": false,
         "blog_page": false
       }

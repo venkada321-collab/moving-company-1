@@ -64,7 +64,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
                 <div className="text-sm font-bold text-neutral-900 dark:text-white">{quote.details.fullName}</div>
               </div>
               <div className="sm:text-right">
-                <div className="text-[10px] text-neutral-900 dark:text-neutral-500 font-bold uppercase mb-1">Move Date</div>
+                <div className="text-[10px] text-neutral-900 dark:text-neutral-500 font-bold uppercase mb-1">Service Date</div>
                 <div className="text-sm font-bold text-primary-700 flex items-center sm:justify-end gap-1">
                   <Calendar className="w-4 h-4" /> {quote.details.moveDate}
                 </div>
@@ -85,7 +85,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
             <div className="pt-4 border-t border-zinc-800 space-y-3">
               <div className="flex justify-between items-center text-sm text-zinc-300">
                 <span>Selected Niche Care:</span>
-                <span className="font-bold text-neutral-900 dark:text-white">{selectedNiche?.name || 'Standard Local Move'}</span>
+                <span className="font-bold text-neutral-900 dark:text-white">{selectedNiche?.name || 'Standard Service'}</span>
               </div>
 
               <div className="flex justify-between items-center text-sm text-zinc-300">
@@ -95,7 +95,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
 
               {selectedStorage && (
                 <div className="flex justify-between items-center text-sm text-zinc-300">
-                  <span>Vault Storage Addition:</span>
+                  <span>Supplemental Addition:</span>
                   <span className="font-bold text-neutral-900 dark:text-white">{selectedStorage.name} (50% Promo)</span>
                 </div>
               )}
@@ -135,7 +135,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <span className="text-primary-700 bg-primary-100 p-2 rounded-xl font-bold flex-shrink-0 w-8 h-8 flex items-center justify-center text-sm shadow-sm border border-zinc-800/50">1</span>
-                <p className="text-zinc-300 text-sm mt-1 leading-relaxed">Check your email for the detailed PDF receipt and move preparation guide.</p>
+                <p className="text-zinc-300 text-sm mt-1 leading-relaxed">Check your email for the detailed PDF receipt and service preparation guide.</p>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-700 bg-primary-100 p-2 rounded-xl font-bold flex-shrink-0 w-8 h-8 flex items-center justify-center text-sm shadow-sm border border-zinc-800/50">2</span>

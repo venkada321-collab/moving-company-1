@@ -1,5 +1,6 @@
 [
   {
+    "niche": "moving",
     "name": "Orbit International Moving Logistics Ltd",
     "phone": "+1 416-661-4228",
     "email": "info@orbitmoving.com",
@@ -21,6 +22,7 @@
     "faviconUrl": "https://www.orbitmoving.com/wp-content/uploads/2025/09/App-Icon-Template-1-66x66.png"
   },
   {
+    "niche": "moving",
     "name": "Coraza Movers",
     "phone": "+1 647-245-4370",
     "email": "info@corazamovers.ca",
@@ -61,12 +63,12 @@
         "footer": "minimal-compact"
       },
       "sectionOrder": [
-        "hero_quote_calculator",
-        "service_niches",
+        "hero_lead_capture",
+        "core_services",
         "how_it_works",
         "trust_signals",
-        "gta_routes",
-        "supplies_and_storage",
+        "service_areas",
+        "supplemental_services",
         "referral_program",
         "blog_page"
       ]
@@ -75,6 +77,7 @@
     "faviconUrl": "https://corazamovers.ca/wp-content/uploads/2026/02/cropped-Coraza-Movers-Logo-e1772200772736-1-32x32.webp"
   },
   {
+    "niche": "moving",
     "name": "Tetris Moving",
     "phone": "+1 647-784-3687",
     "email": "contact@tetrismoving.ca",
@@ -113,12 +116,12 @@
         "footer": "minimal-compact"
       },
       "sectionOrder": [
-        "hero_quote_calculator",
-        "service_niches",
+        "hero_lead_capture",
+        "core_services",
         "how_it_works",
         "trust_signals",
-        "gta_routes",
-        "supplies_and_storage",
+        "service_areas",
+        "supplemental_services",
         "referral_program",
         "blog_page"
       ]

@@ -7,12 +7,12 @@ import { LAYOUT } from '../../../config/layout';
 import { SuppliesTable } from './SuppliesTable';
 import { SuppliesMinimalList } from './SuppliesMinimalList';
 
-interface SuppliesAndStoragePageProps {
+interface SupplementalServicesPageProps {
   onAddSupplyToEstimate: (supplyId: string) => void;
   onSelectStorageForEstimate: (storageId: string) => void;
 }
 
-export const SuppliesAndStoragePage: React.FC<SuppliesAndStoragePageProps> = ({ 
+export const SupplementalServicesPage: React.FC<SupplementalServicesPageProps> = ({ 
   onAddSupplyToEstimate, 
   onSelectStorageForEstimate 
 }) => {

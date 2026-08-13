@@ -3,11 +3,13 @@
 // UI/UX Pro Max Aesthetic: slate (Major) + amber (Minor)
 // ============================================================
 
+import config from './variants.json';
+
 export type MotionProfile = "snappy-tech" | "luxury-smooth" | "playful-bounce";
 export type StructuralParadigm = 'SplitScreenSaaS' | 'LuxuryEditorial' | 'NeoBrutalist' | 'CinematicTrust';
 
 function getParadigmFromUrl(): StructuralParadigm {
-  if (typeof window === 'undefined') return 'SplitScreenSaaS';
+  if (typeof window === 'undefined') return (config.theme?.paradigm as StructuralParadigm) || 'SplitScreenSaaS';
 
   // 1. Check URL Hash (e.g. #LuxuryEditorial)
   const hash = window.location.hash.replace(/^#/, '');
@@ -23,14 +25,14 @@ function getParadigmFromUrl(): StructuralParadigm {
     return paramParadigm as StructuralParadigm;
   }
 
-  return 'SplitScreenSaaS';
+  return (config.theme?.paradigm as StructuralParadigm) || 'SplitScreenSaaS';
 }
 
 export const THEME = {
-  paradigm: 'SplitScreenSaaS' as StructuralParadigm,
+  paradigm: getParadigmFromUrl(),
   colors: {
-    primary: "slate",
-    secondary: "amber",
+    primary: config.theme?.colors?.primary || "slate",
+    secondary: config.theme?.colors?.secondary || "amber",
     semantic: {
       success: "#059669",
       warning: "#d97706",
@@ -59,7 +61,7 @@ export const THEME = {
     button: "0 10px 15px -3px rgba(0, 0, 0, 0.15)",
   },
   animation: {
-    profile: "snappy-tech" as MotionProfile,
+    profile: (config.theme?.animation?.profile as MotionProfile) || "snappy-tech",
     speed: "0.2s",
     easing: "cubic-bezier(0.16, 1, 0.3, 1)",
     hoverScale: "scale(1.01)",
@@ -74,8 +76,8 @@ export const THEME = {
     selectionText: '#000000',
   },
   fonts: {
-    heading: "Montserrat",
-    body: "Inter",
+    heading: config.theme?.fonts?.heading || "Montserrat",
+    body: config.theme?.fonts?.body || "Inter",
     googleFontsUrl: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap",
   },
   customArt: {

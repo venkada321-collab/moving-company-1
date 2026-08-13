@@ -3,6 +3,41 @@
 // ============================================================
 
 export const MICROCOPY = {
+  hero: {
+    proclamation: "Professional Certified Service",
+    trustBadge: "Vetted Professionals",
+    insuranceBadge: "Fully Insured",
+    ratesBadge: "Transparent Rates",
+    contactHeading: "Need Immediate Service?",
+    quizTitle: "Take our 30-second quiz to get an instant estimate tailored to your needs.",
+    step1Question: "Where do you need service?",
+    step2Question: "What is the scope of the service?"
+  },
+  formFields: {
+    scopeLabel: "Select Service Scope",
+    location1Label: "Origin / Service Postal",
+    location2Label: "Destination (If applicable)",
+    dateLabel: "Service Date"
+  },
+  formOptions: [
+    { value: 'studio', label: 'Studio / Small Area' },
+    { value: '1bed', label: '1 Bedroom Scope' },
+    { value: '2bed', label: '2 Bedroom Scope' },
+    { value: '3bed+', label: '3+ Bedroom Scope' },
+    { value: 'office', label: 'Commercial Office Scope' }
+  ],
+  trustFilters: ['All', 'Residential', 'Commercial', 'Premium', 'Express'],
+  trustStats: [
+    { label: "Successful Projects", value: "10,000+", icon: "✔" },
+    { label: "Verified Reviews", value: "4,500+", icon: "★" },
+    { label: "Active Professionals", value: "150+", icon: "user" }
+  ],
+  footer: {
+    cta: "READY TO START? LET'S TALK.",
+    description: "Setting the canonical standard for residential and commercial services.",
+    newsletterText: "Enter your email to receive a $50 promotional credit.",
+    bondedText: "Fully WSIB insured with verified customer ratings."
+  },
   buttons: {
     getQuote: "Calculate Your Instant Estimate",
     submitQuote: "Lock In Your All-Inclusive Rate",

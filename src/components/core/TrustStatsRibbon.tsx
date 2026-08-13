@@ -4,7 +4,7 @@ import { BRAND } from '../../config/brand';
 export const TrustStatsRibbon: React.FC = () => {
   const stats = [
     { label: "Verified Client Rating", value: "4.9 / 5.0", icon: "★" },
-    { label: "Successful Relocations", value: "10,000+", icon: "✔" },
+    { label: "Successful Projects", value: "10,000+", icon: "✔" },
     { label: "On-Time Completion Rate", value: "99.4%", icon: "⌚" },
     { label: "Full Cargo Insurance", value: "$2.0M Bonded", icon: "🛡️" }
   ];

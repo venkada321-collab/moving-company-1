@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Header } from './components/core/Header';
-import { HeroQuoteCalculator } from './kits/kit-moving/components/HeroQuoteCalculator';
 import { HeroCenteredCta } from './components/core/HeroCenteredCta';
 import { HeroCompactBanner } from './components/core/HeroCompactBanner';
 import { HeroInteractiveStepQuiz } from './components/core/HeroInteractiveStepQuiz';
@@ -8,24 +7,37 @@ import { HeroSlideoutExecutive } from './components/core/HeroSlideoutExecutive';
 import { HeroNeomorphicConsole } from './components/core/HeroNeomorphicConsole';
 import { HeroBrutalistLedger } from './components/core/HeroBrutalistLedger';
 import { HeroGlassWidget } from './components/core/HeroGlassWidget';
-import { HowItWorks } from './kits/kit-moving/components/HowItWorks';
 import { TrustSignals } from './components/core/TrustSignals';
 import { TrustStatsRibbon } from './components/core/TrustStatsRibbon';
 import { TrustSignalsAtomicProMax } from './components/core/TrustSignalsAtomicProMax';
-import { ServiceNichesPage } from './kits/kit-moving/components/ServiceNichesPage';
-import { GTARoutesPage } from './kits/kit-moving/components/GTARoutesPage';
-import { SuppliesAndStoragePage } from './kits/kit-moving/components/SuppliesAndStoragePage';
-import { BlogPage } from './kits/kit-moving/components/BlogPage';
-import { ReferralProgram } from './kits/kit-moving/components/ReferralProgram';
-import { COIModal } from './kits/kit-moving/components/COIModal';
 import { BookingConfirmationModal } from './components/core/BookingConfirmationModal';
 import { Footer } from './components/core/Footer';
 import { SectionDivider } from './components/core/SectionDivider';
 import { THEME } from './config/theme';
 import { LAYOUT, SectionId } from './config/layout';
 import { QuoteRequest } from './types';
+import { NicheComponents, NicheConfig } from './kits/kit-moving';
+
+const CoreComponents = {
+  HeroCenteredCta,
+  HeroCompactBanner,
+  HeroInteractiveStepQuiz,
+  HeroSlideoutExecutive,
+  HeroNeomorphicConsole,
+  HeroBrutalistLedger,
+  HeroGlassWidget,
+  TrustSignals,
+  TrustStatsRibbon,
+  TrustSignalsAtomicProMax,
+  BookingConfirmationModal,
+  Footer,
+  SectionDivider,
+  Header
+};
+
 
 export default function App() {
+  const navLinks = NicheConfig.getNavLinks();
   const isAuditAllMode = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('audit') === 'all';
   const [activeTab, setActiveTab] = useState<string>('quote');
   const [isCOIModalOpen, setIsCOIModalOpen] = useState<boolean>(false);
@@ -41,7 +53,7 @@ export default function App() {
   const scrollToCalculator = () => {
     setActiveTab('quote');
     setTimeout(() => {
-      const el = document.getElementById('hero_quote_calculator') || document.getElementById('hero-quote-calculator');
+      const el = document.getElementById('hero_lead_capture') || document.getElementById('hero-quote-calculator');
       if (el) {
         const topPos = el.getBoundingClientRect().top + window.scrollY - 85;
         window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
@@ -54,7 +66,7 @@ export default function App() {
   const handleUniversalNavigation = (targetId: string) => {
     setActiveTab('quote');
     setTimeout(() => {
-      if (targetId === 'hero_quote_calculator' || targetId === 'quote') {
+      if (targetId === 'hero_lead_capture' || targetId === 'quote') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         const el = document.getElementById(targetId);
@@ -71,67 +83,60 @@ export default function App() {
     if (sectionId in LAYOUT.sectionsEnabled && !(LAYOUT.sectionsEnabled as any)[sectionId]) return null;
 
     let component: React.ReactNode = null;
-    let sectionTag = '';
+    let sectionTag = sectionId;
 
-    switch (sectionId) {
-      case 'hero_quote_calculator':
-        sectionTag = 'hero';
-        if (LAYOUT.variants.hero === 'centered-cta') {
-          component = <HeroCenteredCta key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        } else if (LAYOUT.variants.hero === 'compact-banner') {
-          component = <HeroCompactBanner key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        } else if (LAYOUT.variants.hero === 'interactive-step-quiz') {
-          component = <HeroInteractiveStepQuiz key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        } else if (LAYOUT.variants.hero === 'slideout-executive-drawer') {
-          component = <HeroSlideoutExecutive key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        } else if (LAYOUT.variants.hero === 'neomorphic-command-console') {
-          component = <HeroNeomorphicConsole key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        } else if (LAYOUT.variants.hero === 'brutalist-tariff-ledger') {
-          component = <HeroBrutalistLedger key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        } else if (LAYOUT.variants.hero === 'glass-floating-widget') {
-          component = <HeroGlassWidget key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        } else {
-          component = <HeroQuoteCalculator key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        }
-        break;
-      case 'service_niches':
-        sectionTag = 'services';
-        component = <ServiceNichesPage key="services" onSelectNicheForEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
-        break;
-      case 'how_it_works':
-        sectionTag = 'process';
-        component = (
-          <HowItWorks
-            key="how_it_works"
-            onStartEstimate={scrollToCalculator}
-            onOpenCOIModal={() => setIsCOIModalOpen(true)}
-          />
-        );
-        break;
-      case 'supplies_and_storage':
-        sectionTag = 'supplies';
-        component = <SuppliesAndStoragePage key="supplies" onAddSupplyToEstimate={scrollToCalculator} onSelectStorageForEstimate={scrollToCalculator} />;
-        break;
-      case 'trust_signals':
-        sectionTag = 'reviews';
-        if (LAYOUT.variants.reviews === 'stats-ribbon' || LAYOUT.variants.reviews === 'stats-ribbon-ticker') {
-          component = <TrustStatsRibbon key="trust-ribbon" />;
-        } else if (LAYOUT.variants.reviews === 'brutalist-monospaced-audit' || LAYOUT.variants.reviews === 'luxury-editorial-carousel') {
-          component = <TrustSignalsAtomicProMax key="trust" />;
-        } else {
-          component = <TrustSignals key="trust" />;
-        }
-        break;
-      case 'blog':
-        sectionTag = 'blog';
-        component = <BlogPage key="blog" />;
-        break;
-      case 'referral_program':
-        sectionTag = 'referral';
-        component = <ReferralProgram key="referral" />;
-        break;
-      default:
-        return null;
+    // Runtime Check: verify component exists in registries
+    // We do a soft check because some sectionIds map to specific niche components or core variants
+    let ResolvedComponent: any = null;
+
+    if (sectionId === 'hero_lead_capture') {
+      sectionTag = 'hero';
+      if (LAYOUT.variants.hero === 'centered-cta') ResolvedComponent = CoreComponents.HeroCenteredCta;
+      else if (LAYOUT.variants.hero === 'compact-banner') ResolvedComponent = CoreComponents.HeroCompactBanner;
+      else if (LAYOUT.variants.hero === 'interactive-step-quiz') ResolvedComponent = CoreComponents.HeroInteractiveStepQuiz;
+      else if (LAYOUT.variants.hero === 'slideout-executive-drawer') ResolvedComponent = CoreComponents.HeroSlideoutExecutive;
+      else if (LAYOUT.variants.hero === 'neomorphic-command-console') ResolvedComponent = CoreComponents.HeroNeomorphicConsole;
+      else if (LAYOUT.variants.hero === 'brutalist-tariff-ledger') ResolvedComponent = CoreComponents.HeroBrutalistLedger;
+      else if (LAYOUT.variants.hero === 'glass-floating-widget') ResolvedComponent = CoreComponents.HeroGlassWidget;
+      else ResolvedComponent = NicheComponents.HeroLeadCapture;
+      
+      if (ResolvedComponent) component = <ResolvedComponent key="hero" onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
+    } else if (sectionId === 'core_services') {
+      sectionTag = 'services';
+      ResolvedComponent = NicheComponents.CoreServicesPage;
+      if (ResolvedComponent) component = <ResolvedComponent key="services" onSelectNicheForEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
+    } else if (sectionId === 'how_it_works') {
+      sectionTag = 'process';
+      ResolvedComponent = NicheComponents.HowItWorks;
+      if (ResolvedComponent) component = <ResolvedComponent key="how_it_works" onStartEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />;
+    } else if (sectionId === 'supplemental_services') {
+      sectionTag = 'supplies';
+      ResolvedComponent = NicheComponents.SupplementalServicesPage;
+      if (ResolvedComponent) component = <ResolvedComponent key="supplies" onAddSupplyToEstimate={scrollToCalculator} onSelectStorageForEstimate={scrollToCalculator} />;
+    } else if (sectionId === 'trust_signals') {
+      sectionTag = 'reviews';
+      if (LAYOUT.variants.reviews === 'stats-ribbon' || LAYOUT.variants.reviews === 'stats-ribbon-ticker') ResolvedComponent = CoreComponents.TrustStatsRibbon;
+      else if (LAYOUT.variants.reviews === 'brutalist-monospaced-audit' || LAYOUT.variants.reviews === 'luxury-editorial-carousel') ResolvedComponent = CoreComponents.TrustSignalsAtomicProMax;
+      else ResolvedComponent = CoreComponents.TrustSignals;
+      
+      if (ResolvedComponent) component = <ResolvedComponent key="trust" />;
+    } else if (sectionId === 'blog' || sectionId === 'blog_page') {
+      sectionTag = 'blog';
+      ResolvedComponent = NicheComponents.BlogPage;
+      if (ResolvedComponent) component = <ResolvedComponent key="blog" />;
+    } else if (sectionId === 'referral_program') {
+      sectionTag = 'referral';
+      ResolvedComponent = NicheComponents.ReferralProgram;
+      if (ResolvedComponent) component = <ResolvedComponent key="referral" />;
+    } else if (sectionId === 'service_areas') {
+      sectionTag = 'routes';
+      ResolvedComponent = NicheComponents.ServiceAreasPage;
+      if (ResolvedComponent) component = <ResolvedComponent key="routes" onSelectRouteForEstimate={scrollToCalculator} />;
+    }
+
+    if (!ResolvedComponent) {
+      console.warn(`⚠️ Runtime Config Check Failed: Component for section '${sectionId}' not found in NicheComponents or CoreComponents registry. Skipping render.`);
+      return null;
     }
 
     return (
@@ -178,6 +183,7 @@ export default function App() {
           activeTab={activeTab}
           setActiveTab={handleUniversalNavigation}
           onOpenCOIModal={() => setIsCOIModalOpen(true)}
+          navLinks={navLinks}
         />
       </div>
 
@@ -202,24 +208,24 @@ export default function App() {
               ) : LAYOUT.variants.hero === 'glass-floating-widget' ? (
                 <HeroGlassWidget onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
               ) : (
-                <HeroQuoteCalculator onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
+                <NicheComponents.HeroLeadCapture onQuoteSubmitted={handleQuoteSubmitted} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
               )}
             </div>
             <SectionDivider />
             <div data-section="services">
-              <ServiceNichesPage onSelectNicheForEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
+              <NicheComponents.CoreServicesPage onSelectNicheForEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
             </div>
             <SectionDivider />
             <div data-section="process">
-              <HowItWorks onStartEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
+              <NicheComponents.HowItWorks onStartEstimate={scrollToCalculator} onOpenCOIModal={() => setIsCOIModalOpen(true)} />
             </div>
             <SectionDivider />
             <div data-section="routes">
-              <GTARoutesPage onSelectRouteForEstimate={scrollToCalculator} />
+              <NicheComponents.ServiceAreasPage onSelectRouteForEstimate={scrollToCalculator} />
             </div>
             <SectionDivider />
             <div data-section="supplies">
-              <SuppliesAndStoragePage onAddSupplyToEstimate={scrollToCalculator} onSelectStorageForEstimate={scrollToCalculator} />
+              <NicheComponents.SupplementalServicesPage onAddSupplyToEstimate={scrollToCalculator} onSelectStorageForEstimate={scrollToCalculator} />
             </div>
             <SectionDivider />
             <div data-section="reviews">
@@ -229,11 +235,11 @@ export default function App() {
             </div>
             <SectionDivider />
             <div data-section="blog">
-              <BlogPage />
+              <NicheComponents.BlogPage />
             </div>
             <SectionDivider />
             <div data-section="referral">
-              <ReferralProgram />
+              <NicheComponents.ReferralProgram />
             </div>
           </div>
         ) : (
@@ -241,27 +247,28 @@ export default function App() {
           <>
             {activeTab === 'quote' && (
               <div className="flex flex-col">
-                {['hero_quote_calculator', 'service_niches', 'how_it_works', 'supplies_and_storage', 'trust_signals', 'blog']
+                {LAYOUT.sectionOrder
+                  .filter((sectionId) => LAYOUT.sectionsEnabled[sectionId as SectionId] !== false)
                   .map((sectionId, idx) => renderHomeSection(sectionId as SectionId, idx))}
               </div>
             )}
 
-            {activeTab === 'niches' && LAYOUT.sectionsEnabled.service_niches && (
-              <ServiceNichesPage
+            {activeTab === 'niches' && LAYOUT.sectionsEnabled.core_services && (
+              <NicheComponents.CoreServicesPage
                 onSelectNicheForEstimate={() => scrollToCalculator()}
                 onOpenCOIModal={() => setIsCOIModalOpen(true)}
               />
             )}
 
-            {activeTab === 'routes' && LAYOUT.sectionsEnabled.gta_routes && (
-              <GTARoutesPage
+            {activeTab === 'routes' && LAYOUT.sectionsEnabled.service_areas && (
+              <NicheComponents.ServiceAreasPage
                 onSelectRouteForEstimate={() => scrollToCalculator()}
               />
             )}
 
             {activeTab === 'how-it-works' && LAYOUT.sectionsEnabled.how_it_works && (
               <>
-                <HowItWorks
+                <NicheComponents.HowItWorks
                   onStartEstimate={() => scrollToCalculator()}
                   onOpenCOIModal={() => setIsCOIModalOpen(true)}
                 />
@@ -270,19 +277,19 @@ export default function App() {
               </>
             )}
 
-            {activeTab === 'supplies-storage' && LAYOUT.sectionsEnabled.supplies_and_storage && (
-              <SuppliesAndStoragePage
+            {activeTab === 'supplies-storage' && LAYOUT.sectionsEnabled.supplemental_services && (
+              <NicheComponents.SupplementalServicesPage
                 onAddSupplyToEstimate={() => scrollToCalculator()}
                 onSelectStorageForEstimate={() => scrollToCalculator()}
               />
             )}
 
             {activeTab === 'blog' && LAYOUT.sectionsEnabled.blog_page && (
-              <BlogPage />
+              <NicheComponents.BlogPage />
             )}
 
             {activeTab === 'referral' && LAYOUT.sectionsEnabled.referral_program && (
-              <ReferralProgram />
+              <NicheComponents.ReferralProgram />
             )}
           </>
         )}
@@ -293,11 +300,12 @@ export default function App() {
         <Footer
           onNavigateTab={handleUniversalNavigation}
           onOpenCOIModal={() => setIsCOIModalOpen(true)}
+          navLinks={navLinks}
         />
       </div>
 
       {/* Condo Certificate of Insurance (COI) Instant Modal */}
-      <COIModal
+      <NicheComponents.COIModal
         isOpen={isCOIModalOpen}
         onClose={() => setIsCOIModalOpen(false)}
       />

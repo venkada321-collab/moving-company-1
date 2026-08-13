@@ -44,6 +44,7 @@ To eliminate structural DOM repetition across multi-tenant fleets, the engine in
 * **Palette-Aware Backgrounds:** Matches atmospheric mode directly to the brand's extracted primary colors so each site feels completely custom built.
 
 ### 6. Distinct Content & Microcopy Matrix
+* **Industry-Agnostic Core Generalization (Niche Kits):** All structural core layouts (e.g., 7+ Hero Banners, Lead Capture Forms, Navigations, Trust Signals) strictly avoid hardcoded industry terminology. Conversational variables, form labels (e.g., "Service Postal" vs. "Origin"), and service scopes are injected dynamically via generic `MICROCOPY` structures (e.g., `formFields`, `hero`, `trustFilters`). This permits complex architectural component permutations to be shared across vastly divergent industries (Logistics, Cleaning, Pest Control) without layout breakage.
 * **Unique Value Propositions (UVPs):** Tailored hero headers, regional ranking claims, and niche value statements.
 * **Personality-Driven Microcopy & Legal Rigor:** Rotates conversational CTA text, WSIB registration IDs, provincial transit numbers, insurance policies ($1M vs $5M COI), and verified review counts across all 10 modules.
 
@@ -52,7 +53,7 @@ To eliminate structural DOM repetition across multi-tenant fleets, the engine in
 ## 📋 Operational Execution Workflow
 
 ### Phase 0: Master Template Engine Engineering (Refactoring Normal Templates)
-When tasked with starting from a standard, static website template that lacks modular customization architecture, the agent **MUST** execute autonomous inspection and engineer the template into an automated white-label engine before attempting brand extraction or site cloning:
+When tasked with starting from a standard, static website template that lacks modular customization architecture, the agent **MUST** execute autonomous inspection and engineer the template into an automated white-label engine before attempting brand extraction or site cloning. First, extensive research is conducted based on a list of existing real-world companies within the target niche to inform the separation of layouts into universal **basic** (core) components and highly specialized **premium** components:
 
 1. **Extract Global Design Tokens (`src/config/theme.ts`, `theme-tokens.css` & `src/index.css`):**
    - Audit all component source files to identify hardcoded color hex codes, typography selections, border radii (e.g., `rounded-3xl`), elevation drop shadows, and transition timings.
@@ -62,7 +63,8 @@ When tasked with starting from a standard, static website template that lacks mo
    - Automatically discover every physical section block within the template (e.g., hero banner, service matrices, calculators/estimators, pricing tables, case studies, FAQ accordions, newsletter opt-ins, or contact forms).
    - Extract each discovered section into an independent modular React component and synthesize a custom `SectionId` union type and boolean visibility matrix (`sectionsEnabled`) in `src/config/layout.ts` tailored precisely to the discovered architectural blocks of that specific template.
 3. **Centralize Copywriting & Microcopy Registries (`src/config/microcopy.ts` & `src/config/brand.ts`):**
-   - Isolate company identities, addresses, legal disclaimers, button call-to-action text, form placeholder strings, and value claims into configuration modules aligned with the discovered niche.
+   - Isolate company identities, addresses, legal disclaimers, button call-to-action text, form placeholder strings, and value claims into generic configuration modules.
+   - Decouple any deep industry-specific workflows into standalone **Niche Kits** (e.g., `src/kits/kit-<niche>/`) to preserve the absolute industry-agnostic structural integrity of the `core` components.
 4. **Implement Shape Divider & Geometry Overlays (`src/components/SectionDivider.tsx`):**
    - Build customizable decorative SVG section boundaries (`soft-wave`, `diagonal-cut`, `rounded-curve`, `flat`) between structural page blocks.
 5. **Develop Automated Substitution Automation (`scripts/populate_template.cjs`):**

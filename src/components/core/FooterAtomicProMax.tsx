@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BRAND, GEO, LEGAL, LAYOUT } from '../../config';
+import { MICROCOPY } from '../../config/microcopy';
 
 interface FooterProps {
   onNavigateTab: (tab: string) => void;
@@ -42,7 +43,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
       <footer className="bg-white dark:bg-neutral-950 text-neutral-900 dark:text-white pt-24 pb-12 overflow-hidden border-t border-neutral-200 dark:border-neutral-900">
         <div className="max-w-7xl mx-auto px-6 mb-20 text-center">
           <h2 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-none mb-8 bg-gradient-to-r from-white via-neutral-300 to-primary-400 bg-clip-text text-transparent">
-            READY TO RELOCATE? LET&apos;S TALK.
+            {MICROCOPY.footer?.cta || "READY TO START? LET'S TALK."}
           </h2>
           <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 font-medium max-w-3xl mx-auto mb-10">
             Secure your preferred moving date with {BRAND.name}. Fully insured under WSIB (#{LEGAL.wsibNumber || 'WSIB-98842-CA'}) with complete zero-deductible goods-in-transit coverage.
@@ -51,7 +52,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             <a href={`tel:${BRAND.phone}`} className="btn-atomic-primary !py-4 !px-10 !text-base shadow-2xl hover:scale-105 transition-transform">
               <span>📞 CALL DIRECT: {BRAND.phone}</span>
             </a>
-            <button onClick={() => onNavigateTab('hero_quote_calculator')} className="px-8 py-4 rounded-xl bg-neutral-50 dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 font-extrabold hover:bg-neutral-800 hover:border-primary-500 text-neutral-900 dark:text-white transition-all">
+            <button onClick={() => onNavigateTab('hero_lead_capture')} className="px-8 py-4 rounded-xl bg-neutral-50 dark:bg-neutral-900 border-2 border-neutral-300 dark:border-neutral-700 font-extrabold hover:bg-neutral-800 hover:border-primary-500 text-neutral-900 dark:text-white transition-all">
               Launch Estimate Calculator &rarr;
             </button>
           </div>
@@ -62,9 +63,9 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             <span>&copy; {new Date().getFullYear()} {BRAND.legalName || BRAND.name}. All rights reserved.</span>
           </div>
           <div className="flex flex-wrap items-center gap-6">
-            <button onClick={() => onNavigateTab('hero_quote_calculator')} className="hover:text-primary-400 transition-colors">Estimate Calculator</button>
-            <button onClick={() => onNavigateTab('service_niches')} className="hover:text-primary-400 transition-colors">Services</button>
-            <button onClick={() => onNavigateTab('supplies_and_storage')} className="hover:text-primary-400 transition-colors">Packing Storage</button>
+            <button onClick={() => onNavigateTab('hero_lead_capture')} className="hover:text-primary-400 transition-colors">Estimate Calculator</button>
+            <button onClick={() => onNavigateTab('core_services')} className="hover:text-primary-400 transition-colors">Services</button>
+            <button onClick={() => onNavigateTab('supplemental_services')} className="hover:text-primary-400 transition-colors">Additional Services</button>
             <button onClick={scrollToTop} className="hover:text-neutral-900 dark:text-white font-bold underline">Back to top &uarr;</button>
           </div>
         </div>
@@ -84,7 +85,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
               <FooterLogoCapsule />
             </div>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-sm">
-              {BRAND.name} sets the canonical standard for residential and office relocations across {GEO.regionName || 'Canada'}. Precision dispatch, professional packing teams, and transparent zero-hidden-fee tariffs.
+              {MICROCOPY.footer?.description || BRAND.name + " sets the canonical standard for residential and commercial services across " + (GEO.regionName || 'Canada') + "."}
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/80 text-emerald-400 border border-emerald-800 text-xs font-bold">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -100,18 +101,18 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
           <div>
             <h3 className="text-sm font-black uppercase tracking-widest text-neutral-900 dark:text-white mb-5">Core Services</h3>
             <ul className="space-y-3 text-sm">
-              <li><button onClick={() => onNavigateTab('service_niches')} className="hover:text-primary-400 transition-colors">Condo &amp; Apartment Relocations</button></li>
-              <li><button onClick={() => onNavigateTab('service_niches')} className="hover:text-primary-400 transition-colors">Commercial Office Transit</button></li>
-              <li><button onClick={() => onNavigateTab('service_niches')} className="hover:text-primary-400 transition-colors">Piano &amp; Heavy Safe Specialists</button></li>
-              <li><button onClick={() => onNavigateTab('supplies_and_storage')} className="hover:text-primary-400 transition-colors">Climate-Regulated Storage Vaults</button></li>
-              <li><button onClick={() => onNavigateTab('supplies_and_storage')} className="hover:text-primary-400 transition-colors">Professional Packing Supplies</button></li>
+              <li><button onClick={() => onNavigateTab('core_services')} className="hover:text-primary-400 transition-colors">Residential Services</button></li>
+              <li><button onClick={() => onNavigateTab('core_services')} className="hover:text-primary-400 transition-colors">Commercial Office Transit</button></li>
+              <li><button onClick={() => onNavigateTab('core_services')} className="hover:text-primary-400 transition-colors">Piano &amp; Heavy Safe Specialists</button></li>
+              <li><button onClick={() => onNavigateTab('supplemental_services')} className="hover:text-primary-400 transition-colors">Supplemental Services</button></li>
+              <li><button onClick={() => onNavigateTab('supplemental_services')} className="hover:text-primary-400 transition-colors">Professional Packing Supplies</button></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-black uppercase tracking-widest text-neutral-900 dark:text-white mb-5">Client Resources</h3>
             <ul className="space-y-3 text-sm">
-              <li><button onClick={() => onNavigateTab('hero_quote_calculator')} className="hover:text-primary-400 transition-colors">Instant Rate Calculator</button></li>
+              <li><button onClick={() => onNavigateTab('hero_lead_capture')} className="hover:text-primary-400 transition-colors">Instant Rate Calculator</button></li>
               <li><button onClick={() => onNavigateTab('how_it_works')} className="hover:text-primary-400 transition-colors">Our 6-Step Transit Protocol</button></li>
               <li><button onClick={() => onNavigateTab('trust_signals')} className="hover:text-primary-400 transition-colors">Verified Customer Testimonials</button></li>
               <li><button onClick={onOpenCOIModal} className="text-primary-400 font-bold hover:underline">Verify COI Insurance Status</button></li>
@@ -122,7 +123,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
           <div>
             <h3 className="text-sm font-black uppercase tracking-widest text-neutral-900 dark:text-white mb-5">VIP Priority Dispatch</h3>
             <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-4 leading-normal">
-              Enter your corporate email to receive immediate relocation checklist guidelines and $50 promotional packing credit.
+              {MICROCOPY.footer?.newsletterText || "Enter your email to receive a $50 promotional credit."}
             </p>
             <form onSubmit={handleSubscribe} className="space-y-3">
               <input
@@ -173,10 +174,10 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
               // OPERATIONAL INDEX
             </div>
             <div className="grid grid-cols-2 gap-3 text-xs font-bold">
-              <button onClick={() => onNavigateTab('hero_quote_calculator')} className="text-left hover:underline">&gt; Estimate Calc</button>
-              <button onClick={() => onNavigateTab('service_niches')} className="text-left hover:underline">&gt; Relocation Niches</button>
+              <button onClick={() => onNavigateTab('hero_lead_capture')} className="text-left hover:underline">&gt; Estimate Calc</button>
+              <button onClick={() => onNavigateTab('core_services')} className="text-left hover:underline">&gt; Relocation Niches</button>
               <button onClick={() => onNavigateTab('how_it_works')} className="text-left hover:underline">&gt; Transit Protocol</button>
-              <button onClick={() => onNavigateTab('supplies_and_storage')} className="text-left hover:underline">&gt; Storage Vaults</button>
+              <button onClick={() => onNavigateTab('supplemental_services')} className="text-left hover:underline">&gt; Storage Vaults</button>
               <button onClick={() => onNavigateTab('trust_signals')} className="text-left hover:underline">&gt; Client Ledgers</button>
               <button onClick={onOpenCOIModal} className="text-left text-primary-600 dark:text-primary-400 font-black">&gt; COI Certificate</button>
             </div>
@@ -215,7 +216,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
               <FooterLogoCapsule />
             </div>
             <p className="text-sm text-neutral-900 dark:text-neutral-500 font-normal leading-relaxed">
-              Dedicated to delivering flawless residential and commercial relocation experiences across {GEO.regionName || 'North America'}. Licensed, bonded, and committed to complete precision transit.
+              {MICROCOPY.footer?.description || "Dedicated to delivering flawless experiences. Licensed, bonded, and committed to complete precision."}
             </p>
           </div>
           <div className="flex flex-wrap gap-12 text-sm font-bold">
@@ -227,8 +228,8 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             </div>
             <div className="space-y-3 flex flex-col items-start">
               <div className="text-xs font-extrabold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">Navigation</div>
-              <button onClick={() => onNavigateTab('hero_quote_calculator')} className="hover:text-primary-600 transition-colors">Online Quotation</button>
-              <button onClick={() => onNavigateTab('service_niches')} className="hover:text-primary-400 transition-colors">Specialized Niches</button>
+              <button onClick={() => onNavigateTab('hero_lead_capture')} className="hover:text-primary-600 transition-colors">Online Quotation</button>
+              <button onClick={() => onNavigateTab('core_services')} className="hover:text-primary-400 transition-colors">Specialized Niches</button>
               <button onClick={onOpenCOIModal} className="text-primary-600 dark:text-primary-400 hover:underline font-extrabold">COI Verification</button>
             </div>
           </div>
@@ -252,7 +253,7 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
             <FooterLogoCapsule />
           </div>
           <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Canada&apos;s premier relocation team. Fully WSIB insured with verified customer ratings and dependable white-glove service.
+            {MICROCOPY.footer?.bondedText || "Fully WSIB insured with verified customer ratings and dependable white-glove service."}
           </p>
           <div>
             <a href={`tel:${BRAND.phone}`} className="btn-atomic-primary !py-2 !px-5 !text-xs mt-2">
@@ -261,19 +262,19 @@ export const FooterAtomicProMax: React.FC<FooterProps> = ({ onNavigateTab, onOpe
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-xs uppercase tracking-widest text-primary-400 mb-4">Relocation Services</h3>
+          <h3 className="font-bold text-xs uppercase tracking-widest text-primary-400 mb-4">Our Services</h3>
           <ul className="space-y-2 text-xs text-neutral-700 dark:text-neutral-300">
-            <li><button onClick={() => onNavigateTab('service_niches')} className="hover:text-neutral-900 dark:text-white transition-colors">Residential Moving</button></li>
-            <li><button onClick={() => onNavigateTab('service_niches')} className="hover:text-neutral-900 dark:text-white transition-colors">Commercial Office Moving</button></li>
-            <li><button onClick={() => onNavigateTab('supplies_and_storage')} className="hover:text-neutral-900 dark:text-white transition-colors">Packing Materials &amp; Boxes</button></li>
-            <li><button onClick={() => onNavigateTab('supplies_and_storage')} className="hover:text-neutral-900 dark:text-white transition-colors">Secure Climate Storage</button></li>
+            <li><button onClick={() => onNavigateTab('core_services')} className="hover:text-neutral-900 dark:text-white transition-colors">Residential Moving</button></li>
+            <li><button onClick={() => onNavigateTab('core_services')} className="hover:text-neutral-900 dark:text-white transition-colors">Commercial Services</button></li>
+            <li><button onClick={() => onNavigateTab('supplemental_services')} className="hover:text-neutral-900 dark:text-white transition-colors">Packing Materials &amp; Boxes</button></li>
+            <li><button onClick={() => onNavigateTab('supplemental_services')} className="hover:text-neutral-900 dark:text-white transition-colors">Supplemental Services</button></li>
           </ul>
         </div>
         <div>
           <h3 className="font-bold text-xs uppercase tracking-widest text-primary-400 mb-4">Client Support</h3>
           <ul className="space-y-2 text-xs text-neutral-700 dark:text-neutral-300">
-            <li><button onClick={() => onNavigateTab('hero_quote_calculator')} className="hover:text-neutral-900 dark:text-white transition-colors">Get Instant Estimate</button></li>
-            <li><button onClick={() => onNavigateTab('how_it_works')} className="hover:text-neutral-900 dark:text-white transition-colors">Moving Checklist &amp; Protocol</button></li>
+            <li><button onClick={() => onNavigateTab('hero_lead_capture')} className="hover:text-neutral-900 dark:text-white transition-colors">Get Instant Estimate</button></li>
+            <li><button onClick={() => onNavigateTab('how_it_works')} className="hover:text-neutral-900 dark:text-white transition-colors">Our Process</button></li>
             <li><button onClick={() => onNavigateTab('trust_signals')} className="hover:text-neutral-900 dark:text-white transition-colors">Customer Review Verification</button></li>
             <li><button onClick={onOpenCOIModal} className="text-primary-400 hover:underline">Request Condo COI Insurance</button></li>
           </ul>

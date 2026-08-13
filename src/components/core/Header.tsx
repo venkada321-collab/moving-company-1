@@ -9,6 +9,7 @@ interface HeaderProps {
   activeTab: string;
   setActiveTab: (tab: string) => void;
   onOpenCOIModal: () => void;
+  navLinks?: { id: string; label: string }[];
 }
 
 export const Header: React.FC<HeaderProps> = (props) => {

@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { Star, ShieldCheck, Award, Quote, CheckCircle, ArrowLeft, ArrowRight, Shield, TrendingUp, Users } from 'lucide-react';
 import { TESTIMONIALS, AWARDS } from '../../data/mockData';
 import { GEO, LEGAL, BRAND, LAYOUT } from '../../config';
+import { MICROCOPY } from '../../config/microcopy';
 
 export const TrustSignalsAtomicProMax: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('All');
   const [activeTestimonialIdx, setActiveTestimonialIdx] = useState<number>(0);
   const variant = LAYOUT.variants.reviews || 'cards-grid';
 
-  const filters = ['All', 'Condo & High-Rise Move', 'Piano & Heavy Instrument', 'White-Glove Packing', 'Long-Distance Express'];
+  const filters = MICROCOPY.trustFilters || ['All', 'Residential', 'Commercial'];
   const filteredTestimonials = selectedFilter === 'All' 
     ? TESTIMONIALS 
     : TESTIMONIALS.filter(t => t.serviceType === selectedFilter);
@@ -40,7 +41,7 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
             </div>
             <div className="card-atomic-surface !bg-white dark:bg-neutral-900/90 !p-8 text-center border !border-neutral-200 dark:border-neutral-800 rounded-3xl hover:border-primary-500/50 transition-all">
               <div className="text-4xl sm:text-5xl font-black text-emerald-400 mb-2">{LEGAL.totalMoves}+</div>
-              <div className="text-xs font-bold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">Flawless Relocations</div>
+              <div className="text-xs font-bold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">Successful Projects</div>
             </div>
             <div className="card-atomic-surface !bg-white dark:bg-neutral-900/90 !p-8 text-center border !border-neutral-200 dark:border-neutral-800 rounded-3xl hover:border-primary-500/50 transition-all">
               <div className="text-4xl sm:text-5xl font-black text-neutral-900 dark:text-white mb-2">100%</div>

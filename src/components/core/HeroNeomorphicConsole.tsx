@@ -17,8 +17,8 @@ export const HeroNeomorphicConsole: React.FC<HeroProps> = ({ onQuoteSubmitted })
     const dummyQuote: QuoteRequest = {
       fromZip: commandStr || 'Origin',
       fromAddress: commandStr || 'Origin',
-      toZip: 'Destination',
-      toAddress: 'Destination',
+      toZip: '',
+      toAddress: '',
       moveDate: new Date().toISOString().split('T')[0],
       size: '2bed',
       serviceNicheId: 'residential',
