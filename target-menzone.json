@@ -1,0 +1,98 @@
+{
+  "name": "Men Zone Barbershop - The Well, Toronto",
+  "legalName": "Men Zone Barbershop - The Well, Toronto Inc.",
+  "shortName": "Men",
+  "slug": "menzone-ca",
+  "domain": "menzone.ca",
+  "websiteUrl": "https://www.menzone.ca/toronto/the-well",
+  "phone": "+1 (416) 205-1112",
+  "phoneRaw": "14162051112",
+  "email": "info-thewell@menzone.ca",
+  "hqAddress": "",
+  "logoSymbol": "M",
+  "logoUrl": "https://www.menzone.ca/public/front/images/menzone-logo.svg",
+  "faviconUrl": "https://www.menzone.ca/public/front/images/favicon.png",
+  "heroTagline": "MEN ZONE BARBERSHOP - THE WELL, TORONTO",
+  "heroSubtitle": "Best Barbershop in The Well, Toronto",
+  "rankingClaim": "Trusted by thousands — Men Zone Barbershop - The Well, Toronto",
+  "ctaText": "BUY NOW - THE WELL",
+  "pageTitle": "Best Barbershop in Toronto, The Well with Best Barbers Near Me",
+  "metaDescription": "Looking for a barbershop near you? Visit Men Zone Barbershop in The Well, Toronto for best haircuts, skin fades, beard trims, and premium grooming. Walk-ins welcome!",
+  "theme": {
+    "primary": "slate",
+    "secondary": "amber",
+    "tertiary": "blue",
+    "palette": {
+      "primary": "slate",
+      "secondary": "amber",
+      "tertiary": "blue"
+    },
+    "designTokens": {
+      "colorPalette": "slate",
+      "colorTriad": {
+        "primary": "slate",
+        "secondary": "amber",
+        "tertiary": "blue"
+      },
+      "fonts": {
+        "heading": "Roboto",
+        "body": "Roboto"
+      },
+      "discoveredFonts": {
+        "heading": "Roboto",
+        "body": "Roboto"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_lead_capture": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "core_services": true,
+      "service_areas": true,
+      "supplemental_services": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "google": "https://maps.app.goo.gl/Xypf11uxMZbRfdPv6",
+    "facebook": "https://www.facebook.com/menzone.ca",
+    "instagram": "https://www.instagram.com/menzone_ca/",
+    "tiktok": "https://www.tiktok.com/@menzone_ca/",
+    "twitter": "https://twitter.com/MENZONE_ca",
+    "linkedin": "https://www.linkedin.com/company/menzone.ca",
+    "youtube": "https://www.youtube.com/@menzone_ca"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Subdued Monolithic",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-13T19:49:40.175Z",
+    "sourceUrl": "https://www.menzone.ca/toronto/the-well",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 6,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 3,
+      "amber": 21,
+      "slate": 119.5
+    },
+    "colorSampleCount": 541,
+    "referenceScreenshot": "C:\\Users\\venka\\Projects\\WhiteLabelMovingFleet\\output\\references\\menzone-existing-reference.png"
+  }
+}

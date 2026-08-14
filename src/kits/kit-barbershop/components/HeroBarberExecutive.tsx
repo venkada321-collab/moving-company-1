@@ -1,44 +1,35 @@
 import React, { useState } from 'react';
-import { Shield, ArrowRight, MapPin, Search } from 'lucide-react';
-import { BRAND } from '../../config';
-import { MICROCOPY } from '../../config/microcopy';
-import { QuoteRequest } from '../../types';
+import { Shield, ArrowRight, Calendar, Scissors } from 'lucide-react';
+import { BRAND, GEO } from '../../../config';
+import { MICROCOPY } from '../../../config/microcopy';
 
 interface HeroProps {
-  onQuoteSubmitted: (quote: QuoteRequest, totalEstimate: { min: number; max: number }) => void;
-  onOpenCOIModal: () => void;
+  onQuoteSubmitted?: (quote: any, totalEstimate: any) => void;
+  onOpenCOIModal?: () => void;
 }
 
-export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
-  const [fromLocation, setFromLocation] = useState('');
-  const [toLocation, setToLocation] = useState('');
+export const HeroBarberExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
+  const [service, setService] = useState('');
+  const [date, setDate] = useState('');
 
   const handleQuickSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const dummyQuote: QuoteRequest = {
-      fromZip: fromLocation || 'Toronto',
-      fromAddress: fromLocation || 'Toronto',
-      toZip: toLocation || 'Vancouver',
-      toAddress: toLocation || 'Vancouver',
-      moveDate: new Date().toISOString().split('T')[0],
-      size: '2bed',
-      serviceNicheId: 'residential',
-      packingSupplies: {},
-      storageOptionId: null,
-      fullName: 'Executive Client',
-      email: '',
-      phone: '',
-      promoCode: '',
-      referralCode: ''
-    };
-    onQuoteSubmitted(dummyQuote, { min: 800, max: 1500 });
+    if (onQuoteSubmitted) {
+      onQuoteSubmitted({}, { min: 40, max: 120 });
+    }
   };
 
   return (
     <div id="hero-quote-calculator" className="relative min-h-[85vh] pt-24 lg:pt-32 pb-12 bg-white dark:bg-neutral-950 flex items-center overflow-hidden">
       {/* Heavy dark luxury background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-950">
-        <div className="absolute right-0 top-0 w-1/2 h-full bg-primary-900/10 blur-[150px] mix-blend-screen pointer-events-none" />
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/90 to-neutral-950/95 z-10" />
+        <div className="absolute right-0 top-0 w-1/2 h-full bg-primary-900/20 blur-[150px] mix-blend-screen pointer-events-none z-20" />
+        <img 
+          src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=2000&auto=format&fit=crop" 
+          alt={`${GEO.regionName} Barbershop`} 
+          className="w-full h-full object-cover opacity-40 grayscale"
+        />
       </div>
 
       <div className="w-full max-w-screen-2xl mx-auto px-0 lg:px-8 relative z-10 flex flex-col lg:flex-row h-full">
@@ -46,11 +37,11 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
         {/* Left: Luxury Editorial Typography */}
         <div className="flex-1 py-20 px-8 lg:px-12 flex flex-col justify-center max-w-3xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-neutral-900 dark:text-white mb-6 font-['var(--font-heading)'] leading-[1.1]">
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-white">Premium</span> Relocation.
-            <br /> Without Compromise.
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-white">{GEO.regionName}'s</span>
+            <br /> Premier Grooming.
           </h1>
           <p className="text-lg text-neutral-400 font-['var(--font-body)'] mb-10 max-w-xl font-light">
-            {BRAND.heroSubtitle || MICROCOPY.hero?.proclamation || "Premium white-glove services tailored for your exact needs and complex transitions."}
+            {BRAND.heroSubtitle || MICROCOPY.hero?.proclamation || "Exacting standards and classic techniques tailored for the modern gentleman."}
           </p>
           <div className="flex items-center gap-6">
             <div className="flex -space-x-4">
@@ -69,34 +60,33 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
           <div className="p-8 lg:p-12 flex-1 flex flex-col justify-center">
             <div className="mb-8">
               <div className="w-12 h-1 bg-primary-500 mb-6" />
-              <h2 className="text-2xl font-bold font-['var(--font-heading)'] mb-2">Request an Audit</h2>
-              <p className="text-neutral-900 dark:text-neutral-500 text-sm">Speak directly with an executive logistics coordinator.</p>
+              <h2 className="text-2xl font-bold font-['var(--font-heading)'] mb-2">Book an Appointment</h2>
+              <p className="text-neutral-900 dark:text-neutral-500 text-sm">Secure your time with a master barber.</p>
             </div>
 
             <form onSubmit={handleQuickSubmit} className="space-y-6">
               <div className="space-y-1">
-                <label className="text-xs uppercase font-bold tracking-wider text-neutral-400">Current Residence</label>
+                <label className="text-xs uppercase font-bold tracking-wider text-neutral-400">Service Type</label>
                 <div className="flex items-center border-b-2 border-neutral-200 focus-within:border-primary-500 transition-colors py-2">
-                  <MapPin className="w-5 h-5 text-neutral-400 mr-3" />
+                  <Scissors className="w-5 h-5 text-neutral-400 mr-3" />
                   <input 
                     type="text" 
-                    placeholder="Enter city or postal code"
-                    value={fromLocation}
-                    onChange={e => setFromLocation(e.target.value)}
+                    placeholder="e.g. Haircut & Royal Shave"
+                    value={service}
+                    onChange={e => setService(e.target.value)}
                     className="w-full bg-transparent focus:outline-none text-neutral-900 font-medium placeholder:font-normal"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs uppercase font-bold tracking-wider text-neutral-400">Destination</label>
+                <label className="text-xs uppercase font-bold tracking-wider text-neutral-400">Preferred Date</label>
                 <div className="flex items-center border-b-2 border-neutral-200 focus-within:border-primary-500 transition-colors py-2">
-                  <Search className="w-5 h-5 text-neutral-400 mr-3" />
+                  <Calendar className="w-5 h-5 text-neutral-400 mr-3" />
                   <input 
-                    type="text" 
-                    placeholder="Enter destination"
-                    value={toLocation}
-                    onChange={e => setToLocation(e.target.value)}
+                    type="date" 
+                    value={date}
+                    onChange={e => setDate(e.target.value)}
                     className="w-full bg-transparent focus:outline-none text-neutral-900 font-medium placeholder:font-normal"
                   />
                 </div>
@@ -104,16 +94,16 @@ export const HeroSlideoutExecutive: React.FC<HeroProps> = ({ onQuoteSubmitted })
 
               <button 
                 type="submit" 
-                className="w-full mt-8 flex items-center justify-between px-6 py-4 bg-white dark:bg-neutral-950 hover:bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white font-bold rounded-[var(--radius-button)] transition-all group"
+                className="w-full mt-8 flex items-center justify-between px-6 py-4 bg-white dark:bg-neutral-950 hover:bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white font-bold rounded-[var(--radius-button)] transition-all group btn-atomic-primary"
               >
-                <span>{MICROCOPY.buttons?.getQuote || "Initiate Consultation"}</span>
+                <span>{MICROCOPY.buttons?.getQuote || "Confirm Booking"}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
 
             <div className="mt-8 flex items-center justify-center gap-2 text-xs font-semibold text-neutral-400 uppercase tracking-widest">
               <Shield className="w-4 h-4 text-primary-500" />
-              Fully Bonded & Insured
+              Sanitation Certified & Licensed
             </div>
           </div>
         </div>

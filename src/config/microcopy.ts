@@ -1,5 +1,5 @@
 // ============================================================
-// MICROCOPY & TONE OF VOICE CONFIG — Metropolitan Movers
+// MICROCOPY & TONE OF VOICE CONFIG — Wellington and Co.
 // ============================================================
 
 export const MICROCOPY = {
@@ -37,6 +37,16 @@ export const MICROCOPY = {
     description: "Setting the canonical standard for residential and commercial services.",
     newsletterText: "Enter your email to receive a $50 promotional credit.",
     bondedText: "Fully WSIB insured with verified customer ratings."
+  },
+  images: {
+    hero: "Professional Moving Service",
+    coi: "Insurance Certificate",
+    addons: "Secure Storage Unit",
+    map: "Service Areas Map",
+    process: "Moving Process Flow",
+    referral: "Referral Program",
+    blog: "Moving Article",
+    services: "Moving Services"
   },
   buttons: {
     getQuote: "Calculate Your Instant Estimate",

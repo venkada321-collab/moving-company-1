@@ -1,0 +1,47 @@
+{
+  "layout": {
+    "sectionsEnabled": {
+      "hero_lead_capture": true,
+      "core_services": true,
+      "team_roster": true,
+      "lookbook_gallery": false,
+      "vip_membership": false,
+      "location_hours": true,
+      "trust_signals": true,
+      "contact_conversion": true
+    },
+    "sectionOrder": [
+      "hero_lead_capture",
+      "core_services",
+      "team_roster",
+      "trust_signals",
+      "location_hours",
+      "contact_conversion"
+    ],
+    "variants": {
+      "uiProfile": "modern-standard",
+      "nav": "floating-pill-glass",
+      "hero": "calculator-split",
+      "heroBackground": "clean-minimal",
+      "services": "horizontal-cards",
+      "howItWorks": "timeline-horizontal",
+      "supplies": "minimal-list",
+      "reviews": "grid-carousel",
+      "footer": "cta-banner"
+    }
+  },
+  "theme": {
+    "paradigm": "ModernStandard",
+    "colors": {
+      "primary": "emerald",
+      "secondary": "slate"
+    },
+    "animation": {
+      "profile": "bouncy-energetic"
+    },
+    "fonts": {
+      "heading": "Outfit",
+      "body": "Inter"
+    }
+  }
+}

@@ -14,6 +14,10 @@ export const SectionDivider: React.FC<SectionDividerProps> = ({
   className = '',
   flip = false,
 }) => {
+  if (type === 'none') {
+    return null;
+  }
+  
   if (type === 'flat' || !type) {
     return <div className={`w-full border-b border-zinc-800/40 ${className}`} />;
   }

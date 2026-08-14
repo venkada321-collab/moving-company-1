@@ -55,7 +55,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
             {BRAND.heroTagline || BRAND.name}
           </h1>
           <p className="text-lg text-zinc-400 font-['var(--font-body)'] max-w-xl mx-auto lg:mx-0">
-            {BRAND.heroSubtitle || "Seamless, transparent, and completely stress-free moving services designed for your lifestyle."}
+            {BRAND.heroSubtitle || "Seamless, transparent, and completely stress-free services designed for your lifestyle."}
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
                 value={fromZip}
                 onChange={(e) => setFromZip(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white dark:bg-black/20 border border-white/10 rounded-xl text-neutral-900 dark:text-white placeholder-zinc-500 focus:outline-none focus:border-primary-400 focus:bg-white dark:bg-black/40 transition-all backdrop-blur-sm"
-                placeholder="Moving from (Postal/City)"
+                placeholder={MICROCOPY.placeholders?.originRegion || "Location / City"}
               />
             </div>
 
@@ -86,7 +86,7 @@ export const HeroGlassWidget: React.FC<HeroProps> = ({ onQuoteSubmitted }) => {
                 value={toZip}
                 onChange={(e) => setToZip(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white dark:bg-black/20 border border-white/10 rounded-xl text-neutral-900 dark:text-white placeholder-zinc-500 focus:outline-none focus:border-primary-400 focus:bg-white dark:bg-black/40 transition-all backdrop-blur-sm"
-                placeholder="Moving to (Postal/City)"
+                placeholder={MICROCOPY.placeholders?.destinationRegion || "Service Request Type"}
               />
             </div>
 

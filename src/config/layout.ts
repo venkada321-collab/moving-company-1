@@ -10,6 +10,11 @@ export type SectionId =
   | 'service_areas'
   | 'supplemental_services'
   | 'referral_program'
+  | 'team_roster'
+  | 'lookbook_gallery'
+  | 'vip_membership'
+  | 'location_hours'
+  | 'contact_conversion'
   | 'blog_page';
 
 export type UIPersonality = "brutalist-high-contrast" | "soft-glassmorphic" | "luxury-minimalist" | "modern-standard" | string;

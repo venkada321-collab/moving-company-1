@@ -44,12 +44,12 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
               <div className="text-xs font-bold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">Successful Projects</div>
             </div>
             <div className="card-atomic-surface !bg-white dark:bg-neutral-900/90 !p-8 text-center border !border-neutral-200 dark:border-neutral-800 rounded-3xl hover:border-primary-500/50 transition-all">
-              <div className="text-4xl sm:text-5xl font-black text-neutral-900 dark:text-white mb-2">100%</div>
-              <div className="text-xs font-bold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">WSIB &amp; COI Insured</div>
+              <div className="text-4xl sm:text-5xl font-black text-neutral-900 dark:text-white mb-2">{MICROCOPY.trustStats?.[2]?.value || '100%'}</div>
+              <div className="text-xs font-bold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">{MICROCOPY.trustStats?.[2]?.label || 'WSIB & COI Insured'}</div>
             </div>
             <div className="card-atomic-surface !bg-white dark:bg-neutral-900/90 !p-8 text-center border !border-neutral-200 dark:border-neutral-800 rounded-3xl hover:border-primary-500/50 transition-all">
-              <div className="text-4xl sm:text-5xl font-black text-primary-300 mb-2">$0</div>
-              <div className="text-xs font-bold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">Transit Damage Deductible</div>
+              <div className="text-4xl sm:text-5xl font-black text-primary-300 mb-2">{MICROCOPY.trustStats?.[3]?.value || '$0'}</div>
+              <div className="text-xs font-bold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">{MICROCOPY.trustStats?.[3]?.label || 'Transit Damage Deductible'}</div>
             </div>
           </div>
 
@@ -89,7 +89,8 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
               ASSURANCES VERIFIED: {BRAND.name}
             </h2>
             <p className="text-sm font-bold">
-              REGISTRY STATUS: WSIB ACTIVE ({LEGAL.wsibNumber || 'TR-09884-CA'}) // INSURANCE BOND: $5,000,000 COI COVERAGE // RATING INDEX: 4.98/5.0
+              {/* @ts-ignore */}
+              {MICROCOPY.reassurances?.auditLedger || `REGISTRY STATUS: WSIB ACTIVE (${LEGAL.wsibNumber || 'TR-09884-CA'}) // INSURANCE BOND: $5,000,000 COI COVERAGE`} // RATING INDEX: 4.98/5.0
             </p>
           </div>
 
@@ -124,7 +125,8 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
                 <p className="text-sm font-bold mb-6 leading-relaxed">&quot;{t.text}&quot;</p>
                 <div className="border-t border-black dark:border-white pt-4 flex justify-between items-center text-xs font-extrabold">
                   <span>► {t.author.toUpperCase()} ({t.location})</span>
-                  <span className="bg-emerald-300 text-black px-2 py-0.5">✔ WSIB VERIFIED</span>
+                  {/* @ts-ignore */}
+                  <span className="bg-emerald-300 text-black px-2 py-0.5">✔ {MICROCOPY.reassurances?.auditBadge || "WSIB VERIFIED"}</span>
                 </div>
               </div>
             ))}
@@ -236,7 +238,8 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex text-amber-400 text-sm">{'★'.repeat(item.rating)}</div>
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800">
-                    Verified Transit
+                    {/* @ts-ignore */}
+                    {MICROCOPY.reassurances?.auditBadge || "Verified Transit"}
                   </span>
                 </div>
                 <p className="text-sm text-neutral-600 dark:text-zinc-300 dark:text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6 italic">&ldquo;{item.text}&rdquo;</p>
@@ -255,8 +258,9 @@ export const TrustSignalsAtomicProMax: React.FC = () => {
         {/* Awards Badges Deck */}
         <div className="bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-white p-8 sm:p-10 rounded-3xl border border-neutral-200 dark:border-neutral-800 shadow-xl">
           <div className="text-center mb-8">
-            <h3 className="text-lg sm:text-xl font-extrabold">Official Industry Recognitions &amp; Insurance Status</h3>
-            <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">WSIB Licensed &bull; $1,000,000+ Zero-Deductible Cargo Insurance &bull; BBB Accredited</p>
+            <h3 className="text-lg sm:text-xl font-extrabold">Official Industry Recognitions</h3>
+            {/* @ts-ignore */}
+            <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">{MICROCOPY.reassurances?.trustFooter || "WSIB Licensed • $1,000,000+ Zero-Deductible Cargo Insurance • BBB Accredited"}</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {AWARDS.map((award) => (

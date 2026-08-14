@@ -30,13 +30,18 @@ if (!configData.layout) configData.layout = {};
 // Calculate batch index and assign a Structural Paradigm deterministically
 const batchIdxArg = process.argv.indexOf('--batch-index');
 const batchIdx = batchIdxArg !== -1 ? parseInt(process.argv[batchIdxArg + 1], 10) : ((profile.shortName || profile.name || 'A').charCodeAt(0) + (profile.name || '').length) % 6;
-const mod4 = batchIdx % 4;
-let paradigmName = 'SplitScreenSaaS';
-if (mod4 === 1) paradigmName = 'LuxuryEditorial';
-else if (mod4 === 2) paradigmName = 'NeoBrutalist';
-else if (mod4 === 3) paradigmName = 'CinematicTrust';
 
-console.log(`🏰 Structurally assigning paradigm: ${paradigmName} (batchIdx: ${batchIdx})`);
+let paradigmName = profile.theme && profile.theme.paradigm;
+if (!paradigmName) {
+  const mod4 = batchIdx % 4;
+  paradigmName = 'SplitScreenSaaS';
+  if (mod4 === 1) paradigmName = 'LuxuryEditorial';
+  else if (mod4 === 2) paradigmName = 'NeoBrutalist';
+  else if (mod4 === 3) paradigmName = 'CinematicTrust';
+  console.log(`🏰 Structurally assigning fallback paradigm: ${paradigmName} (batchIdx: ${batchIdx})`);
+} else {
+  console.log(`🏰 Using explicit target paradigm: ${paradigmName}`);
+}
 
 // Contextual Art Array (High-Resolution Logistics/Real Estate Imagery)
 const contextualImages = [
@@ -128,8 +133,8 @@ if (profile.theme || profile.designTokens) {
     'Source Sans 3': 'family=Source+Sans+3:wght@300;400;500;600;700',
     'DM Sans': 'family=DM+Sans:wght@400;500;600;700',
   };
-  const headingFont = tokens.fonts?.heading || 'Montserrat';
-  const bodyFont = tokens.fonts?.body || 'Inter';
+  const headingFont = t.fonts?.heading || tokens.fonts?.heading || 'Montserrat';
+  const bodyFont = t.fonts?.body || tokens.fonts?.body || 'Inter';
   
   let generatedGoogleFontsUrl = '';
   if (headingFont === bodyFont) {
@@ -168,6 +173,11 @@ if (profile.theme || profile.designTokens) {
   configData.theme.fonts.body = bodyFont || 'Inter';
   
   console.log('✅ Updated theme properties in memory for config.json');
+
+  if (t.backgrounds) {
+    configData.theme.backgrounds = t.backgrounds;
+    console.log(`🎨 Assigned explicit backgrounds: ${JSON.stringify(t.backgrounds)}`);
+  }
 
   const tokenCssContent = `/* ============================================================
     DYNAMIC THEME TOKENS — INJECTED PALETTE: ${selectedColor.toUpperCase()} & TYPOGRAPHY: ${headingFont.toUpperCase()}

@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "mock:throne": "copy src\\config\\brand.throne.ts src\\config\\brand.ts /Y && copy src\\config\\variants.throne.json src\\config\\variants.json /Y && copy src\\data\\mockData.barbershop.ts src\\data\\mockData.ts /Y",
+    "mock:franchise": "copy src\\config\\brand.franchise.ts src\\config\\brand.ts /Y && copy src\\config\\variants.franchise.json src\\config\\variants.json /Y && copy src\\data\\mockData.barbershop.ts src\\data\\mockData.ts /Y",
+    "mock:heritage": "copy src\\config\\brand.heritage.ts src\\config\\brand.ts /Y && copy src\\config\\variants.heritage.json src\\config\\variants.json /Y && copy src\\data\\mockData.barbershop.ts src\\data\\mockData.ts /Y",
+    "mock:hybrid": "copy src\\config\\brand.hybrid.ts src\\config\\brand.ts /Y && copy src\\config\\variants.hybrid.json src\\config\\variants.json /Y && copy src\\data\\mockData.barbershop.ts src\\data\\mockData.ts /Y"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",

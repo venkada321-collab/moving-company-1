@@ -54,7 +54,7 @@ export const HeroCanvasProMax: React.FC<HeroCanvasProMaxProps> = ({ variant = 'l
         <div className="absolute top-12 left-6 w-56 h-80 rounded-t-[100px] rounded-b-3xl border-4 border-white dark:border-neutral-800 shadow-2xl overflow-hidden hidden xl:block pointer-events-auto transform -rotate-3 hover:rotate-0 transition-transform duration-500">
           <img 
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" 
-            alt="White glove moving professional" 
+            alt="Professional service personnel" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">

@@ -1,0 +1,54 @@
+{
+  "layout": {
+    "sectionsEnabled": {
+      "hero_lead_capture": true,
+      "how_it_works": false,
+      "trust_signals": true,
+      "core_services": true,
+      "service_areas": false,
+      "supplemental_services": false,
+      "referral_program": false,
+      "blog_page": false,
+      "team_roster": true,
+      "lookbook_gallery": true,
+      "vip_membership": true,
+      "location_hours": true,
+      "contact_conversion": true
+    },
+    "sectionOrder": [
+      "hero_lead_capture",
+      "core_services",
+      "team_roster",
+      "lookbook_gallery",
+      "vip_membership",
+      "trust_signals",
+      "location_hours",
+      "contact_conversion"
+    ],
+    "variants": {
+      "uiProfile": "luxury-minimalist",
+      "nav": "floating-pill-glass",
+      "hero": "neomorphic-command-console",
+      "heroBackground": "clean-minimal",
+      "services": "icon-grid",
+      "howItWorks": "cards-grid",
+      "supplies": "cards-catalog",
+      "reviews": "luxury-editorial-carousel",
+      "footer": "minimal-compact"
+    }
+  },
+  "theme": {
+    "paradigm": "LuxuryMinimalism",
+    "colors": {
+      "primary": "amber",
+      "secondary": "slate"
+    },
+    "animation": {
+      "profile": "smooth-cinematic"
+    },
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Inter"
+    }
+  }
+}

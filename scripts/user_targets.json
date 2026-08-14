@@ -127,5 +127,122 @@
       ]
     },
     "faviconUrl": "https://tetrismoving.ca/wp-content/uploads/2021/10/cropped-tetris-moving-copy-32x32.jpg"
+  },
+  {
+    "niche": "barbershop",
+    "name": "Wellington and Co.",
+    "shortName": "Wellington and Co.",
+    "phone": "555-888-0021",
+    "email": "concierge@wellingtonandco.fake",
+    "websiteUrl": "https://wellingtonandco.fake/",
+    "domain": "wellingtonandco.fake",
+    "address": "142 Heritage Row, Old Town",
+    "neighborhood": "Old Town",
+    "category": "Barbershop",
+    "rating": 4.9,
+    "reviews": 1024,
+    "facebook": "https://www.facebook.com/wellingtonandco",
+    "theme": {
+      "paradigm": "HeritageLuxury",
+      "primary": "slate",
+      "secondary": "amber",
+      "backgrounds": {
+        "page": "#1e293b",
+        "section": "#0f172a",
+        "card": "#1e293b"
+      },
+      "tokens": {
+        "fonts": {
+          "heading": "Oswald",
+          "body": "DM Sans"
+        },
+        "animation": {
+          "profile": "smooth-cinematic"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "uiProfile": "luxury-minimalist",
+        "nav": "editorial",
+        "hero": "editorial",
+        "heroBackground": "luxury-editorial-ivory",
+        "services": "accordion-panels",
+        "howItWorks": "accordion-protocol",
+        "supplies": "minimal-list",
+        "reviews": "luxury-editorial-carousel",
+        "footer": "minimal-dual-column"
+      },
+      "sectionOrder": [
+        "hero_lead_capture",
+        "core_services",
+        "lookbook_gallery",
+        "vip_membership",
+        "team_roster",
+        "location_hours",
+        "contact_conversion"
+      ]
+    },
+    "logoSymbol": "W",
+    "logoUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=150&q=80",
+    "faviconUrl": ""
+  },
+  {
+    "niche": "barbershop",
+    "name": "Apex Fade Academy",
+    "shortName": "Apex",
+    "phone": "555-888-0099",
+    "email": "hello@apexfade.fake",
+    "websiteUrl": "https://apexfade.fake/",
+    "domain": "apexfade.fake",
+    "address": "99 Brutal St, Downtown",
+    "neighborhood": "Downtown",
+    "category": "Barbershop",
+    "rating": 4.8,
+    "reviews": 300,
+    "facebook": "https://www.facebook.com/apexfade",
+    "theme": {
+      "paradigm": "NeoBrutalist",
+      "primary": "rose",
+      "secondary": "zinc",
+      "backgrounds": {
+        "page": "#0a0a0a",
+        "section": "#0f0f0f",
+        "card": "#171717"
+      },
+      "tokens": {
+        "fonts": {
+          "heading": "Oswald",
+          "body": "Space Grotesk"
+        },
+        "animation": {
+          "profile": "snappy-tech"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "uiProfile": "brutalist-high-contrast",
+        "nav": "centered-split",
+        "hero": "streetwear-poster",
+        "heroBackground": "geometric-mesh",
+        "services": "icon-grid",
+        "howItWorks": "cards-grid",
+        "supplies": "cards-catalog",
+        "reviews": "brutalist-monospaced-audit",
+        "footer": "saas-mega-directory"
+      },
+      "sectionOrder": [
+        "hero_lead_capture",
+        "trust_signals",
+        "core_services",
+        "team_roster",
+        "location_hours",
+        "contact_conversion"
+      ]
+    },
+    "logoSymbol": "A",
+    "logoUrl": "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=150&q=80",
+    "faviconUrl": ""
   }
 ]

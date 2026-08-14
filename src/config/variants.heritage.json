@@ -2,13 +2,13 @@
   "layout": {
     "sectionsEnabled": {
       "hero_lead_capture": true,
-      "how_it_works": true,
-      "trust_signals": true,
       "core_services": true,
-      "service_areas": true,
-      "supplemental_services": true,
-      "referral_program": true,
-      "blog_page": true
+      "team_roster": true,
+      "lookbook_gallery": true,
+      "vip_membership": true,
+      "location_hours": true,
+      "trust_signals": false,
+      "contact_conversion": true
     },
     "sectionOrder": [
       "hero_lead_capture",

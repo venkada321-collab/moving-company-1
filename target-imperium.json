@@ -1,0 +1,94 @@
+{
+  "name": "Best Barbershop Toronto | Imperium Barbershop",
+  "legalName": "Best Barbershop Toronto | Imperium Barbershop Inc.",
+  "shortName": "Best",
+  "slug": "imperiumbarber-com",
+  "domain": "imperiumbarber.com",
+  "websiteUrl": "https://www.imperiumbarber.com/",
+  "phone": "(647) 348-9393",
+  "phoneRaw": "6473489393",
+  "email": "",
+  "hqAddress": "",
+  "logoSymbol": "B",
+  "logoUrl": "",
+  "faviconUrl": "https://assets.squarespace.com/universal/default-favicon.ico",
+  "heroTagline": "IMPERIUM BARBERSHOP   TORONTO'S BEST CUTS",
+  "heroSubtitle": "Toronto's award-winning barbershop on Queen St. Expert men's haircuts, shaves & beard trims. Book your appointment today!",
+  "rankingClaim": "Trusted by thousands — Best Barbershop Toronto | Imperium Barbershop",
+  "ctaText": "Book Appointment",
+  "pageTitle": "Best Barbershop Toronto | Imperium Barbershop",
+  "metaDescription": "Toronto's award-winning barbershop on Queen St. Expert men's haircuts, shaves & beard trims. Book your appointment today!",
+  "theme": {
+    "primary": "amber",
+    "secondary": "emerald",
+    "tertiary": "blue",
+    "palette": {
+      "primary": "amber",
+      "secondary": "emerald",
+      "tertiary": "blue"
+    },
+    "designTokens": {
+      "colorPalette": "amber",
+      "colorTriad": {
+        "primary": "amber",
+        "secondary": "emerald",
+        "tertiary": "blue"
+      },
+      "fonts": {
+        "heading": "Montserrat",
+        "body": "Inter"
+      },
+      "discoveredFonts": {
+        "heading": "bebas-neue",
+        "body": "calluna-sans"
+      },
+      "animation": {
+        "speed": "0.2s",
+        "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      },
+      "borderRadius": {
+        "card": "16px",
+        "button": "8px",
+        "badge": "9999px"
+      }
+    }
+  },
+  "layout": {
+    "variants": {},
+    "sectionsEnabled": {
+      "hero_lead_capture": true,
+      "how_it_works": true,
+      "trust_signals": true,
+      "core_services": true,
+      "service_areas": true,
+      "supplemental_services": true,
+      "referral_program": true,
+      "blog_page": true
+    }
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/bane_thebarber/",
+    "google": "https://www.google.com/maps/place/Empire+Barbershop+Toronto/@43.648881,-79.3974108,17z/data=!4m12!1m6!3m5!1s0x882b34db105eb0ff:0xf55e9e0e0e0d0089!2sEmpire+Barbershop+Toronto!8m2!3d43.6488771!4d-79.3952221!3m4!1s0x882b34db105eb0ff:0xf55e9e0e0e0d0089!8m2!3d43.6488771!4d-79.3952221",
+    "facebook": "https://www.facebook.com/Empirebarbertoronto/"
+  },
+  "brandVibes": {
+    "architecture": "Content-Dense Classic",
+    "chromaticIntensity": "Subdued Monolithic",
+    "improvementCategory": "UI/UX Pro Max Upgrade — High-Contrast Glassmorphic & Neomorphic Conversion Console"
+  },
+  "_extraction": {
+    "extractedAt": "2026-08-13T19:49:27.347Z",
+    "sourceUrl": "https://www.imperiumbarber.com/",
+    "paletteScores": {
+      "emerald": 0,
+      "blue": 0,
+      "indigo": 0,
+      "violet": 0,
+      "rose": 0,
+      "amber": 21,
+      "slate": 0
+    },
+    "colorSampleCount": 196,
+    "referenceScreenshot": "C:\\Users\\venka\\Projects\\WhiteLabelMovingFleet\\output\\references\\imperiumbarber-existing-reference.png"
+  }
+}

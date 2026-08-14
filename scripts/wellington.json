@@ -1,0 +1,51 @@
+{
+    "niche": "barbershop",
+    "name": "Wellington & Co.",
+    "phone": "555-888-0021",
+    "email": "concierge@wellingtongrooming.fake",
+    "websiteUrl": "https://wellingtongrooming.fake/",
+    "domain": "wellingtongrooming.fake",
+    "address": "142 Heritage Row, Old Town",
+    "neighborhood": "Old Town",
+    "category": "Barbershop",
+    "rating": 4.9,
+    "reviews": 1024,
+    "facebook": "https://www.facebook.com/wellingtongrooming",
+    "theme": {
+      "primary": "slate",
+      "secondary": "amber",
+      "tokens": {
+        "fonts": {
+          "heading": "Playfair Display",
+          "body": "DM Sans"
+        },
+        "animation": {
+          "profile": "smooth-cinematic"
+        }
+      }
+    },
+    "layout": {
+      "variants": {
+        "uiProfile": "luxury-minimalist",
+        "nav": "editorial",
+        "hero": "editorial",
+        "heroBackground": "luxury-editorial-ivory",
+        "services": "accordion-panels",
+        "howItWorks": "accordion-protocol",
+        "supplies": "minimal-list",
+        "reviews": "luxury-editorial-carousel",
+        "footer": "minimal-dual-column"
+      },
+      "sectionOrder": [
+        "hero_lead_capture",
+        "core_services",
+        "lookbook_gallery",
+        "vip_membership",
+        "team_roster",
+        "location_hours",
+        "contact_conversion"
+      ]
+    },
+    "logoUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=150&q=80",
+    "faviconUrl": ""
+  }

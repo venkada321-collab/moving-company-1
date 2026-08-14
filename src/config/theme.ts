@@ -41,13 +41,13 @@ export const THEME = {
     }
   },
   backgrounds: {
-    page: "#09090b",
-    section: "#18181b",
-    card: '#18181b',
-    cardAlt: "#27272a",
-    sectionAlt: "#09090b",
-    heroOverlay: "#000000",
-    footerBottom: "#09090b",
+    page: config.theme?.backgrounds?.page || "#09090b",
+    section: config.theme?.backgrounds?.section || "#18181b",
+    card: config.theme?.backgrounds?.card || '#18181b',
+    cardAlt: config.theme?.backgrounds?.cardAlt || "#27272a",
+    sectionAlt: config.theme?.backgrounds?.sectionAlt || "#09090b",
+    heroOverlay: config.theme?.backgrounds?.heroOverlay || "#000000",
+    footerBottom: config.theme?.backgrounds?.footerBottom || "#09090b",
   },
   borderRadius: {
     card: "16px",
@@ -67,8 +67,8 @@ export const THEME = {
     hoverScale: "scale(1.01)",
   },
   dividerStyle: {
-    type: "soft-wave",
-    color: "#fffbeb",
+    type: (config.theme as any)?.dividerStyle?.type || "soft-wave",
+    color: (config.theme as any)?.dividerStyle?.color || "#fffbeb",
   },
   focus: {
     ringColor: "#d97706",

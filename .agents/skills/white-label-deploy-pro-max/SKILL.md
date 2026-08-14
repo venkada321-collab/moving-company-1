@@ -53,7 +53,7 @@ To eliminate structural DOM repetition across multi-tenant fleets, the engine in
 ## 📋 Operational Execution Workflow
 
 ### Phase 0: Master Template Engine Engineering (Refactoring Normal Templates)
-When tasked with starting from a standard, static website template that lacks modular customization architecture, the agent **MUST** execute autonomous inspection and engineer the template into an automated white-label engine before attempting brand extraction or site cloning. First, extensive research is conducted based on a list of existing real-world companies within the target niche to inform the separation of layouts into universal **basic** (core) components and highly specialized **premium** components:
+When tasked with starting from a standard, static website template that lacks modular customization architecture, the agent **MUST** execute autonomous inspection and engineer the template into an automated white-label engine before attempting brand extraction or site cloning. First, extensive research is conducted based on a list of existing real-world companies within the target niche to inform the separation of layouts into universal **basic** (core) components and highly specialized **premium** components. **During this research phase, the agent MUST utilize the spatial skeleton scrapers (e.g., `node scripts/hybrid_markdown_scraper.cjs <url>`) to extract the structural hierarchy, Playwright visual screenshots, and spatial bounding boxes (`x, y, w, h`) of top-ranking competitor sites. This spatial intelligence guarantees that white-label clones mathematically match the UI grids of premium industry competitors. These scrapers should also be heavily utilized for SEO purposes, harvesting the exact industry vocabulary, high-value keywords, and microcopy patterns used by top sites to ensure the resulting template components are SEO-optimized:**
 
 1. **Extract Global Design Tokens (`src/config/theme.ts`, `theme-tokens.css` & `src/index.css`):**
    - Audit all component source files to identify hardcoded color hex codes, typography selections, border radii (e.g., `rounded-3xl`), elevation drop shadows, and transition timings.
@@ -69,6 +69,12 @@ When tasked with starting from a standard, static website template that lacks mo
    - Build customizable decorative SVG section boundaries (`soft-wave`, `diagonal-cut`, `rounded-curve`, `flat`) between structural page blocks.
 5. **Develop Automated Substitution Automation (`scripts/populate_template.cjs`):**
    - Write a Node automation script that ingests target JSON onboarding profiles and programmatically modifies `brand.ts`, `theme.ts`, `theme-tokens.css`, `layout.ts`, and `microcopy.ts` to transform the application without manual code editing.
+
+### 🌍 Niche Variation Generation Protocol
+Whenever deploying or generating structural variants for any new industry or niche (e.g., Barbershops, Cleaning, Logistics), variations MUST strictly mirror 4-5 primary archetypes discovered through live organic search scraping of top non-sponsored competitors in that specific market:
+1. **Target Market Research:** Always execute spatial skeleton scrapers (`hybrid_markdown_scraper.cjs`) against top-ranking local competitors to extract actual spatial intelligence, hero messaging, and layout conversion patterns.
+2. **Data-Driven Archetypes:** Formulate 4-5 distinct design variations (e.g., "The Modern Franchise", "The Heritage Luxury") based *strictly* on the data extracted from those competitors.
+*Never generate generic, hallucinatory, or arbitrary variations (e.g., "Cyberpunk"). Stick strictly to data-driven, real-world competitor frameworks.*
 
 ---
 

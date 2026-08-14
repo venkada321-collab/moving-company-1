@@ -1,5 +1,5 @@
 // ============================================================
-// LEGAL CONFIG — Metropolitan Movers
+// LEGAL CONFIG — Wellington and Co.
 // ============================================================
 
 export const LEGAL = {
@@ -8,12 +8,12 @@ export const LEGAL = {
   coiAmountShort: "$1M",
   coiDeliverySLA: "24 Hours",
   coiDeliverySLAShort: "24 Hrs",
-  coiPolicyNumber: "#MET-POL-2026-ON",
-  coiCertificateNumber: "#COI-MET-10042",
+  coiPolicyNumber: "#WEL-POL-2026-ON",
+  coiCertificateNumber: "#COI-WEL-10042",
   coiInsurer: "Aviva Canada & WSIB Bonded",
 
   // WSIB (Workplace Safety & Insurance Board)
-  wsibNumber: "#MET-219485-ON",
+  wsibNumber: "#WEL-219485-ON",
   wsibLabel: "WSIB Insured & Bonded",
   wsibCovered: "100% WSIB Covered",
 
